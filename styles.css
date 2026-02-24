@@ -111,6 +111,29 @@ body {
   outline: none;
   border-color: var(--primary);
 }
+
+/* Loan amount: max 8 digits – narrow input, no spinner, minimal padding */
+#amount {
+  width: calc(8ch + 0.4rem);
+  max-width: calc(8ch + 0.4rem);
+  padding: 0.4rem 0.2rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--text);
+  box-sizing: border-box;
+  -moz-appearance: textfield;
+}
+#amount::-webkit-outer-spin-button,
+#amount::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#amount:focus {
+  outline: none;
+  border-color: var(--primary);
+}
 .query-inputs select {
   min-width: 12rem;
   padding: 0.4rem 0.5rem;

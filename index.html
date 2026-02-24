@@ -82,6 +82,7 @@
       z-index: 20;
     }
     /* Results table card: MUST stay full-width (same as .query-card) so table uses full horizontal space. Do not remove width/margin. */
+    /* CRITICAL: No backdrop-filter/transform here – they create a new containing block and break position:sticky on thead th. */
     .results-card {
       z-index: 1;
       position: relative;
@@ -91,6 +92,7 @@
       margin-left: -1.5rem;
       margin-right: -1.5rem;
       border-radius: 0;
+      backdrop-filter: none;
     }
     .card h2 {
       font-size: 0.95rem;
@@ -353,25 +355,42 @@
     .table-wrap {
       --sticky-col1-width: 20ch;
       --sticky-col2-width: 15ch;
-      overflow-x: auto;
-      overflow-y: auto;
-      max-height: 75vh;
+      --sticky-col3-width: 3.5ch;
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(12, 17, 22, 0.7);
       position: relative;
       z-index: 1;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
     }
-    .table-wrap::-webkit-scrollbar {
-      display: none;
+    /* Single scroll container for BOTH axes so sticky left + sticky top work in Chrome */
+    .table-scroll-inner {
+      overflow: auto;
+      width: 100%;
+      max-height: 75vh;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    }
+    .table-scroll-inner::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .table-scroll-inner::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .table-scroll-inner::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
     }
     table {
       width: 100%;
-      border-collapse: collapse;
+      min-width: max-content;
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 0.78rem;
     }
+    #results-table col.sticky-col-1 { width: var(--sticky-col1-width); }
+    #results-table col.sticky-col-2 { width: var(--sticky-col2-width); }
+    #results-table col.sticky-col-3 { width: var(--sticky-col3-width); }
     th, td {
       text-align: left;
       padding: 0.2rem 0.95rem;
@@ -413,40 +432,73 @@
       color: var(--accent-2);
       opacity: 1;
     }
+    #results-table thead {
+      position: relative;
+      z-index: 1;
+    }
     #results-table thead th {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
-      z-index: 2;
-      background: rgba(12, 17, 22, 0.98);
+      z-index: 20;
+      background: #0c1116;
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
     }
     #results-table thead th:first-child {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
       left: 0;
-      z-index: 4;
+      z-index: 21;
       width: var(--sticky-col1-width);
       min-width: var(--sticky-col1-width);
       max-width: var(--sticky-col1-width);
       box-sizing: border-box;
       box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
-      isolation: isolate;
-      transform: translateZ(0);
+      background: #0c1116;
+      will-change: transform;
     }
     #results-table thead th:nth-child(2) {
+      position: -webkit-sticky;
       position: sticky;
       top: 0;
       left: var(--sticky-col1-width);
-      z-index: 4;
+      z-index: 21;
       width: var(--sticky-col2-width);
       min-width: var(--sticky-col2-width);
       max-width: var(--sticky-col2-width);
       box-sizing: border-box;
       background: #0c1116;
       box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
-      isolation: isolate;
-      transform: translateZ(0);
+      will-change: transform;
     }
+    #results-table thead th:nth-child(3) {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      left: calc(var(--sticky-col1-width) + var(--sticky-col2-width));
+      z-index: 21;
+      width: var(--sticky-col3-width);
+      min-width: var(--sticky-col3-width);
+      max-width: var(--sticky-col3-width);
+      box-sizing: border-box;
+      padding-left: 0;
+      padding-right: 0;
+      background: #0c1116;
+      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
+      will-change: transform;
+    }
+    #results-table thead th.offer-checkbox-header {
+      padding: 0.2rem 0;
+      text-align: center;
+    }
+    #results-table thead th.offer-checkbox-header .th-head {
+      padding: 0;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #results-table thead th.offer-checkbox-header input { cursor: pointer; accent-color: var(--accent); }
     #results-table th[data-column-key="Course"],
     #results-table th[data-column-key="Delayed EMI payment"],
     #results-table td[data-column-key="Course"],
@@ -481,10 +533,9 @@
       background: #0f1418;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
-      isolation: isolate;
-      transform: translateZ(0);
     }
     #results-table td.sector-name-cell {
+      position: -webkit-sticky;
       position: sticky;
       left: var(--sticky-col1-width);
       z-index: 3;
@@ -497,9 +548,31 @@
       background: #0f1418;
       border-right: 1px solid rgba(255, 255, 255, 0.08);
       box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
-      isolation: isolate;
-      transform: translateZ(0);
     }
+    #results-table td.offer-checkbox-cell {
+      position: -webkit-sticky;
+      position: sticky;
+      left: calc(var(--sticky-col1-width) + var(--sticky-col2-width));
+      z-index: 10;
+      width: var(--sticky-col3-width);
+      min-width: var(--sticky-col3-width);
+      max-width: var(--sticky-col3-width);
+      box-sizing: border-box;
+      padding: 0.2rem 0;
+      background: #0f1418;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      vertical-align: middle;
+      text-align: center;
+    }
+    #results-table td.offer-checkbox-cell .offer-checkbox,
+    #results-table td.offer-checkbox-cell input {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      accent-color: var(--accent);
+    }
+    tr:hover td.offer-checkbox-cell { background: #0f1c1a; }
     td.bank-name-cell { font-weight: 600; }
     td.sector-name-cell { font-weight: 500; }
     tr.bank-group-first td.bank-name-cell,
@@ -699,6 +772,41 @@
     .loading { opacity: 0.7; pointer-events: none; }
     .th-head-clickable { cursor: pointer; }
     .th-sort-filter-icon--active { color: var(--accent-2); opacity: 1; }
+    .th-info-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      margin-left: 0.15rem;
+      color: var(--muted);
+      opacity: 0.85;
+      cursor: help;
+      border-radius: 50%;
+      border: 1px solid currentColor;
+      font-size: 0.65rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .th-info-icon:hover { color: var(--accent-2); opacity: 1; }
+    .th-info-icon svg { width: 100%; height: 100%; }
+    .th-info-popover {
+      position: fixed;
+      z-index: 10003;
+      max-width: 280px;
+      padding: 0.6rem 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+      display: none;
+    }
+    .th-info-popover.is-open { display: block; }
     .column-filter-dropdown {
       position: fixed;
       z-index: 10001;
@@ -783,6 +891,150 @@
     .filter-by-values-panel .fbv-row:hover { background: rgba(45,212,191,0.1); }
     .filter-by-values-panel .fbv-row input { margin: 0; }
     .filter-by-values-panel .fbv-footer { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); flex-shrink: 0; }
+    .column-filter-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      min-width: 260px;
+      max-width: 320px;
+      max-height: 80vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: #1c2128;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      padding: 0.5rem 0.65rem;
+    }
+    .column-filter-panel .cfp-section {
+      flex-shrink: 0;
+      margin-bottom: 0.5rem;
+    }
+    .column-filter-panel .cfp-section:last-child { margin-bottom: 0; display: flex; flex-direction: column; min-height: 140px; }
+    .column-filter-panel .cfp-section-title {
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin: 0 0 0.3rem 0;
+      text-transform: uppercase;
+    }
+    .column-filter-panel .cfp-sort-opts {
+      padding-left: 0.35rem;
+    }
+    .column-filter-panel .cfp-sort-opt {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: #f1f5f9;
+      padding: 0.25rem 0;
+      font: inherit;
+      font-size: 0.82rem;
+      cursor: pointer;
+      margin: 0;
+    }
+    .column-filter-panel .cfp-sort-opt:hover { background: rgba(255,255,255,0.08); }
+    .column-filter-panel .cfp-sort-opt.cfp-active {
+      font-weight: 600;
+      color: var(--accent-2);
+    }
+    .column-filter-panel .cfp-sort-opt.cfp-active::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      margin-right: 0.3rem;
+      vertical-align: 0.12em;
+    }
+    .column-filter-panel .cfp-clear-sort,
+    .column-filter-panel .cfp-clear-filter {
+      margin-top: 0.15rem; margin-left: 0.25rem; font-size: 0.7rem; background: none; border: none; color: var(--accent-2); cursor: pointer; padding: 0;
+    }
+    .column-filter-panel .cfp-clear-sort:hover,
+    .column-filter-panel .cfp-clear-filter:hover { text-decoration: underline; }
+    .column-filter-panel .cfp-condition-select {
+      width: 100%;
+      padding: 0.28rem 1.5rem 0.28rem 0.4rem;
+      font: inherit;
+      background: #252b33;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 5px;
+      color: #f1f5f9;
+      font-size: 0.78rem;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23f1f5f9' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.35rem center;
+    }
+    .column-filter-panel .cfp-condition-inputs { margin-top: 0.2rem; }
+    .column-filter-panel .cfp-condition-inputs input {
+      width: 100%;
+      padding: 0.25rem 0.4rem;
+      font: inherit;
+      background: #252b33;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 5px;
+      color: #f1f5f9;
+      margin-top: 0.15rem;
+      box-sizing: border-box;
+      font-size: 0.78rem;
+    }
+    .column-filter-panel .cfp-fbv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.22rem;
+      margin-bottom: 0.25rem;
+    }
+    .column-filter-panel .cfp-fbv-actions button {
+      padding: 0.2rem 0.35rem;
+      font: inherit;
+      font-size: 0.74rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: #252b33;
+      color: #f1f5f9;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .column-filter-panel .cfp-fbv-actions button:hover { background: rgba(255,255,255,0.1); }
+    .column-filter-panel .cfp-fbv-actions .cfp-fbv-ok { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .column-filter-panel .cfp-fbv-search {
+      width: 100%;
+      padding: 0.25rem 0.4rem;
+      margin-bottom: 0.25rem;
+      font: inherit;
+      background: #252b33;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 5px;
+      color: #f1f5f9;
+      font-size: 0.78rem;
+      box-sizing: border-box;
+    }
+    .column-filter-panel .cfp-fbv-list {
+      min-height: 72px;
+      max-height: 160px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 5px;
+      padding: 0.15rem;
+      background: #252b33;
+    }
+    .column-filter-panel .cfp-fbv-row {
+      display: flex;
+      align-items: center;
+      gap: 0.28rem;
+      padding: 0.15rem 0.22rem;
+      cursor: pointer;
+      color: #f1f5f9;
+      font-size: 0.78rem;
+    }
+    .column-filter-panel .cfp-fbv-row:hover { background: rgba(255,255,255,0.08); }
+    .column-filter-panel .cfp-fbv-row input { margin: 0; }
   </style>
 </head>
 <body>
@@ -806,7 +1058,7 @@
         </div>
         <div class="field">
           <label for="amount">Loan amount (₹)</label>
-          <input type="number" id="amount" name="amount" min="1" step="1" value="7000000" placeholder="e.g. 7000000">
+          <input type="number" id="amount" name="amount" min="1" max="99999999" step="1" value="7000000" placeholder="e.g. 7000000">
         </div>
         <div class="field">
           <label for="secured-yes">Loan type</label>
@@ -861,7 +1113,13 @@
     <div class="card results-card">
       <p class="query-summary muted" id="query-summary" aria-live="polite"></p>
       <div class="table-wrap">
+        <div class="table-scroll-inner">
         <table id="results-table">
+          <colgroup>
+            <col class="sticky-col-1">
+            <col class="sticky-col-2">
+            <col class="sticky-col-3">
+          </colgroup>
           <thead id="results-thead">
             <tr><th>Lender</th><th>Sector</th></tr>
           </thead>
@@ -869,6 +1127,7 @@
             <tr><td colspan="2" class="empty">No results yet. Set criteria and click Run query.</td></tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   </div>
@@ -903,6 +1162,7 @@
     let filterByValuesDraft = null;
     let columnFilterDropdownEl = null;
     let filterByValuesPanelEl = null;
+    let headerInfoPopoverEl = null;
     let lastRenderedRows = [];
     let lastRenderParams = null;
     let countryOptions = [];
@@ -1250,6 +1510,13 @@
       return cols;
     }
 
+    // Optional tooltip text for column headers (hover + click). Add entries to show an info icon with this text.
+    const COLUMN_HEADER_TOOLTIP = {
+      'Interest Rate': 'Annual interest rate (e.g. fixed or floating) offered for this offer.',
+      'Preferred University': 'Whether this lender has the selected university in their preferred list.',
+      'Security coverage %': 'Percentage of the loan amount that must be secured (e.g. collateral).'
+    };
+
     const COLUMN_TYPE = {
       'Lender': 'text',
       'Sector': 'text',
@@ -1308,18 +1575,27 @@
     }
 
     const SORT_FILTER_ICON = '<span class="th-sort-filter-icon" aria-label="Sort or filter" title="Sort or filter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
+    const INFO_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
     function thWithIcon(label, columnKey) {
       const key = columnKey != null ? columnKey : label;
       const activeClass = (columnFilterState[key] || columnSortState[key]) ? ' th-sort-filter-icon--active' : '';
       const icon = '<span class="th-sort-filter-icon' + activeClass + '" aria-label="Sort or filter" title="' + ((columnFilterState[key] || columnSortState[key]) ? 'Filter applied' : 'Sort or filter') + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
-      return '<th data-column-key="' + escapeHtml(key) + '"><span class="th-head th-head-clickable">' + escapeHtml(label) + icon + '</span></th>';
+      const tooltipText = COLUMN_HEADER_TOOLTIP[key] != null ? COLUMN_HEADER_TOOLTIP[key] : (label || key);
+      const infoIconHtml = '<span class="th-info-icon" aria-label="Info" title="' + escapeHtml(tooltipText) + '" data-column-tooltip="' + escapeHtml(tooltipText) + '">' + INFO_ICON_SVG + '</span>';
+      return '<th data-column-key="' + escapeHtml(key) + '"><span class="th-head th-head-clickable">' + escapeHtml(label) + infoIconHtml + icon + '</span></th>';
+    }
+    function buildHeaderRow(cols) {
+      const firstTwo = cols.slice(0, 2).map(function(c) { return thWithIcon(c, c); }).join('');
+      const checkboxTh = '<th class="offer-checkbox-header" data-column-key="OfferSelect"><span class="th-head"><input type="checkbox" class="select-all-offers" aria-label="Select all offers" title="Select all offers"></span></th>';
+      const rest = cols.slice(2).map(function(c) { return thWithIcon(c, c); }).join('');
+      return '<tr>' + firstTwo + checkboxTh + rest + '</tr>';
     }
     // Initial header (secured = true, with Security coverage column)
     (function initTable() {
       const cols = getColumns(true, '', '');
-      thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
+      thead.innerHTML = buildHeaderRow(cols);
       const empty = document.querySelector('#results-body .empty');
-      if (empty) empty.setAttribute('colspan', String(cols.length));
+      if (empty) empty.setAttribute('colspan', String(cols.length + 1));
     })();
 
     function getCountryScopeLabel(offer) {
@@ -1656,8 +1932,8 @@
       const includePreferredUniversity = !!selectedUniversityNorm && selectedUniversityNorm !== normalizeText(NOT_IN_LIST_UNIVERSITY) && selectedCountryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
       const cols = getColumns(secured, selectedUniversity, selectedCountry);
       const dataColumns = cols.slice(2);
-      const colCount = cols.length;
-      thead.innerHTML = '<tr>' + cols.map(function(c) { return thWithIcon(c, c); }).join('') + '</tr>';
+      const colCount = cols.length + 1;
+      thead.innerHTML = buildHeaderRow(cols);
       if (!flatRows.length) {
         countEl.textContent = '0 matches.';
         resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
@@ -1694,7 +1970,8 @@
           }
           return '<td class="' + cls + '"' + dataCol + '>' + (cell != null ? escapeHtml(String(cell)) : 'N/A') + '</td>';
         });
-        return '<tr><td class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td class="sector-name-cell">' + escapeHtml(sector) + '</td>' + tds.join('') + '</tr>';
+        const checkboxTd = '<td class="offer-checkbox-cell"><input type="checkbox" class="offer-checkbox" aria-label="Select offer"></td>';
+        return '<tr><td class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td class="sector-name-cell">' + escapeHtml(sector) + '</td>' + checkboxTd + tds.join('') + '</tr>';
       });
       resultsBody.innerHTML = tableRows.join('');
       const byExactKey = new Map();
@@ -1753,9 +2030,242 @@
       if (filterByValuesPanelEl) return filterByValuesPanelEl;
       filterByValuesPanelEl = document.createElement('div');
       filterByValuesPanelEl.className = 'filter-by-values-panel';
-      filterByValuesPanelEl.innerHTML = '<div class="fbv-title">Filter by values</div><div class="fbv-toolbar"><span class="fbv-displaying">Displaying 0</span><span><button type="button" class="fbv-select-all">Select all</button> | <button type="button" class="fbv-clear">Clear</button></span></div><input type="text" class="fbv-search" placeholder="Search..." autocomplete="off"/><div class="fbv-list"></div><div class="fbv-footer"><button type="button" class="fbv-cancel">Cancel</button><button type="button" class="fbv-ok">OK</button></div>';
       document.body.appendChild(filterByValuesPanelEl);
       return filterByValuesPanelEl;
+    }
+
+    function openColumnFilterPanel(columnKey, thEl) {
+      closeColumnFilterDropdown();
+      const panel = ensureFilterByValuesPanel();
+      if (!lastRenderParams) return;
+      const colType = getColumnType(columnKey);
+      const sortAscLabel = colType === 'number' ? 'Sort A to Z / Smallest to Largest' : 'Sort A to Z / Smallest to Largest';
+      const sortDescLabel = colType === 'number' ? 'Sort Z to A / Largest to Smallest' : 'Sort Z to A / Largest to Smallest';
+      const sortState = columnSortState[columnKey];
+      const filterState = columnFilterState[columnKey];
+      const operators = getOperatorsForColumn(columnKey);
+      const currentCondition = filterState && filterState.type === 'condition' && filterState.condition ? filterState.condition : { operator: 'none', value: '', value2: '' };
+      const operatorsOptions = operators.map(function(op) {
+        const sel = op.id === currentCondition.operator ? ' selected' : '';
+        return '<option value="' + escapeHtml(op.id) + '"' + sel + '>' + escapeHtml(op.label) + '</option>';
+      }).join('');
+      var hasSort = sortState && sortState.direction;
+      var hasFilter = filterState && (filterState.type === 'condition' || filterState.type === 'values');
+      panel.className = 'filter-by-values-panel column-filter-panel';
+      panel.innerHTML =
+        '<div class="cfp-section">' +
+          '<div class="cfp-section-title">Sort</div>' +
+          '<div class="cfp-sort-opts">' +
+            '<button type="button" class="cfp-sort-opt" data-dir="asc">' + escapeHtml(sortAscLabel) + '</button>' +
+            '<button type="button" class="cfp-sort-opt" data-dir="desc">' + escapeHtml(sortDescLabel) + '</button>' +
+            (hasSort ? '<button type="button" class="cfp-clear-sort">Clear sort</button>' : '') +
+          '</div>' +
+        '</div>' +
+        '<div class="cfp-section">' +
+          '<div class="cfp-section-title">Filter by condition</div>' +
+          '<select class="cfp-condition-select">' + operatorsOptions + '</select>' +
+          '<div class="cfp-condition-inputs"></div>' +
+          (hasFilter ? '<button type="button" class="cfp-clear-filter">Clear filter</button>' : '') +
+        '</div>' +
+        '<div class="cfp-section">' +
+          '<div class="cfp-section-title">Filter by values</div>' +
+          '<div class="cfp-fbv-actions">' +
+            '<button type="button" class="cfp-fbv-select-all">Select all</button>' +
+            '<button type="button" class="cfp-fbv-clear">Clear all</button>' +
+            '<button type="button" class="cfp-fbv-cancel">Cancel</button>' +
+            '<button type="button" class="cfp-fbv-ok">OK</button>' +
+          '</div>' +
+          '<input type="text" class="cfp-fbv-search" placeholder="Search values..." autocomplete="off"/>' +
+          '<div class="cfp-fbv-list"></div>' +
+        '</div>';
+      panel.dataset.columnKey = columnKey;
+      function getThForColumn(key) {
+        var thead = document.getElementById('results-thead');
+        if (!thead) return null;
+        var headers = thead.querySelectorAll('th[data-column-key]');
+        for (var i = 0; i < headers.length; i++) {
+          if (headers[i].getAttribute('data-column-key') === key) return headers[i];
+        }
+        return null;
+      }
+      var sortOpts = panel.querySelectorAll('.cfp-sort-opt');
+      sortOpts.forEach(function(btn) {
+        if (sortState && sortState.direction === btn.dataset.dir) btn.classList.add('cfp-active');
+        btn.onclick = function() {
+          columnSortState = {};
+          columnSortState[columnKey] = { direction: btn.dataset.dir };
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+          requestAnimationFrame(function() {
+            var th = getThForColumn(columnKey);
+            if (th) openColumnFilterPanel(columnKey, th); else panel.classList.remove('is-open');
+          });
+        };
+      });
+      var condSelect = panel.querySelector('.cfp-condition-select');
+      var condInputs = panel.querySelector('.cfp-condition-inputs');
+      function renderConditionInputs(opId) {
+        var op = FILTER_OPERATORS.find(function(o) { return o.id === opId; });
+        if (!op || op.inputKind === 'none') { condInputs.innerHTML = ''; return; }
+        var kind = op.inputKind;
+        var ph = kind === 'text' ? 'Enter text' : (kind === 'typeAware' ? (getColumnType(columnKey) === 'number' ? 'Enter value' : 'Enter text') : 'Enter value');
+        var existing = columnFilterState[columnKey] && columnFilterState[columnKey].condition;
+        var val = (existing && existing.operator === opId && existing.value != null) ? existing.value : '';
+        var val2 = (existing && existing.operator === opId && existing.value2 != null) ? existing.value2 : '';
+        var inputType = (kind === 'number' || kind === 'numberRange') ? 'number' : 'text';
+        if (kind === 'numberRange') {
+          condInputs.innerHTML = '<input type="number" class="cfp-cond-value" placeholder="From" value="' + escapeHtml(val) + '"/><input type="number" class="cfp-cond-value2" placeholder="To" value="' + escapeHtml(val2) + '"/>';
+        } else {
+          condInputs.innerHTML = '<input type="' + inputType + '" class="cfp-cond-value" placeholder="' + escapeHtml(ph) + '" value="' + escapeHtml(val) + '"/>';
+        }
+      }
+      renderConditionInputs(condSelect.value);
+      condSelect.onchange = function() {
+        renderConditionInputs(condSelect.value);
+        var op = FILTER_OPERATORS.find(function(o) { return o.id === condSelect.value; });
+        if (op && op.inputKind === 'none') {
+          delete columnFilterState[columnKey];
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+        }
+      };
+      var clearSortBtn = panel.querySelector('.cfp-clear-sort');
+      if (clearSortBtn) {
+        clearSortBtn.onclick = function() {
+          delete columnSortState[columnKey];
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+          requestAnimationFrame(function() {
+            var th = getThForColumn(columnKey);
+            if (th) openColumnFilterPanel(columnKey, th); else panel.classList.remove('is-open');
+          });
+        };
+      }
+      var clearFilterBtn = panel.querySelector('.cfp-clear-filter');
+      if (clearFilterBtn) {
+        clearFilterBtn.onclick = function() {
+          delete columnFilterState[columnKey];
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+          requestAnimationFrame(function() {
+            var th = getThForColumn(columnKey);
+            if (th) openColumnFilterPanel(columnKey, th); else panel.classList.remove('is-open');
+          });
+        };
+      }
+      function applyCondition() {
+        var opId = condSelect.value;
+        var op = FILTER_OPERATORS.find(function(o) { return o.id === opId; });
+        if (!op || opId === 'none') { delete columnFilterState[columnKey]; return; }
+        var valEl = condInputs.querySelector('.cfp-cond-value');
+        var val2El = condInputs.querySelector('.cfp-cond-value2');
+        var value = valEl ? valEl.value : '';
+        var value2 = val2El ? val2El.value : '';
+        columnFilterState[columnKey] = { type: 'condition', condition: { operator: opId, value: value, value2: value2 } };
+      }
+      condInputs.addEventListener('change', function() { applyCondition(); if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry); });
+      condInputs.addEventListener('blur', function() { applyCondition(); if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry); });
+      var includePreferredUniversity = !!normalizeText(lastRenderParams.selectedUniversity) && normalizeText(lastRenderParams.selectedUniversity) !== normalizeText(NOT_IN_LIST_UNIVERSITY) && normalizeText(lastRenderParams.selectedCountry) !== normalizeText(NOT_IN_LIST_COUNTRY);
+      var cols = getColumns(lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.selectedCountry);
+      var dataColumns = cols.slice(2);
+      var filteredForValues = applyFilters(lastRenderedRows, cols, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry, columnKey);
+      var rowsToUse = hasActiveFilterOrSort() ? applySort(filteredForValues, cols, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry) : filteredForValues;
+      var uniqueValues = [];
+      var seen = {};
+      rowsToUse.forEach(function(row) {
+        var raw = getCellValueForColumn(row, columnKey, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, institutesList, lastRenderParams.levelOfStudy, includePreferredUniversity);
+        var displayStr = getCellDisplayForFilterValues(raw);
+        if (!seen[displayStr]) { seen[displayStr] = true; uniqueValues.push(displayStr); }
+      });
+      uniqueValues.sort(function(a, b) {
+        if (a === '(Blanks)') return 1;
+        if (b === '(Blanks)') return -1;
+        return a.localeCompare(b, undefined, { sensitivity: 'base' });
+      });
+      var applied = (filterState && filterState.type === 'values' && filterState.selectedValues) ? filterState.selectedValues.slice() : uniqueValues.slice();
+      filterByValuesDraft = { columnKey: columnKey, selectedValues: applied.slice(), allValues: uniqueValues };
+      var listEl = panel.querySelector('.cfp-fbv-list');
+      listEl.innerHTML = uniqueValues.map(function(v) {
+        var checked = applied.indexOf(v) !== -1 ? ' checked' : '';
+        return '<label class="cfp-fbv-row"><input type="checkbox" data-value="' + escapeHtml(v) + '"' + checked + '/><span>' + escapeHtml(v) + '</span></label>';
+      }).join('');
+      function updateDisplaying() {
+        var chks = listEl.querySelectorAll('input:checked');
+        filterByValuesDraft.selectedValues = Array.from(chks).map(function(c) { return c.dataset.value; });
+      }
+      listEl.querySelectorAll('input').forEach(function(cb) { cb.onchange = updateDisplaying; });
+      panel.querySelector('.cfp-fbv-select-all').onclick = function() {
+        listEl.querySelectorAll('input').forEach(function(c) { c.checked = true; });
+        updateDisplaying();
+      };
+      panel.querySelector('.cfp-fbv-clear').onclick = function() {
+        listEl.querySelectorAll('input').forEach(function(c) { c.checked = false; });
+        updateDisplaying();
+      };
+      panel.querySelector('.cfp-fbv-search').oninput = function() {
+        var q = (this.value || '').toLowerCase();
+        listEl.querySelectorAll('.cfp-fbv-row').forEach(function(row) {
+          var text = (row.textContent || '').toLowerCase();
+          row.style.display = q && !text.includes(q) ? 'none' : '';
+        });
+      };
+      panel.querySelector('.cfp-fbv-cancel').onclick = function() {
+        panel.classList.remove('is-open');
+        filterByValuesDraft = null;
+      };
+      panel.querySelector('.cfp-fbv-ok').onclick = function() {
+        var selected = filterByValuesDraft.selectedValues.slice();
+        var allVals = filterByValuesDraft.allValues;
+        var effectivelyNoFilter = selected.length === allVals.length && selected.every(function(v) { return allVals.indexOf(v) !== -1; });
+        if (effectivelyNoFilter) {
+          delete columnFilterState[columnKey];
+        } else {
+          columnFilterState[columnKey] = { type: 'values', selectedValues: selected };
+        }
+        panel.classList.remove('is-open');
+        filterByValuesDraft = null;
+        if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+      };
+      var anchorTh = getThForColumn(columnKey);
+      if (anchorTh) {
+        thEl = anchorTh;
+        anchorTh.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'auto' });
+      }
+      var rect = thEl.getBoundingClientRect();
+      panel.style.left = rect.left + 'px';
+      panel.style.top = (rect.bottom + 4) + 'px';
+      panel.classList.add('is-open');
+      var panelRect = panel.getBoundingClientRect();
+      var vw = window.innerWidth || document.documentElement.clientWidth;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      if (panelRect.right > vw) panel.style.left = (vw - panelRect.width - 8) + 'px';
+      if (panelRect.left < 8) panel.style.left = '8px';
+      if (panelRect.bottom > vh) panel.style.top = (vh - panelRect.height - 8) + 'px';
+      if (panelRect.top < 8) panel.style.top = '8px';
+    }
+
+    function ensureHeaderInfoPopover() {
+      if (headerInfoPopoverEl) return headerInfoPopoverEl;
+      headerInfoPopoverEl = document.createElement('div');
+      headerInfoPopoverEl.className = 'th-info-popover';
+      headerInfoPopoverEl.setAttribute('role', 'tooltip');
+      document.body.appendChild(headerInfoPopoverEl);
+      return headerInfoPopoverEl;
+    }
+
+    function closeHeaderInfoPopover() {
+      if (headerInfoPopoverEl) headerInfoPopoverEl.classList.remove('is-open');
+    }
+
+    function openHeaderInfoPopover(text, anchorEl) {
+      const popover = ensureHeaderInfoPopover();
+      popover.textContent = text;
+      popover.classList.add('is-open');
+      const rect = anchorEl.getBoundingClientRect();
+      const popoverWidth = 280;
+      let left = rect.left;
+      let top = rect.bottom + 6;
+      if (left + popoverWidth > (window.innerWidth || document.documentElement.clientWidth)) left = Math.max(8, (window.innerWidth || document.documentElement.clientWidth) - popoverWidth - 8);
+      if (left < 8) left = 8;
+      if (top + 120 > (window.innerHeight || document.documentElement.clientHeight)) top = Math.max(8, rect.top - 10);
+      popover.style.left = left + 'px';
+      popover.style.top = top + 'px';
     }
 
     function closeColumnFilterDropdown() {
@@ -1982,22 +2492,50 @@
     function bindColumnFilterDropdown() {
       if (thead.dataset.columnFilterBound) return;
       thead.dataset.columnFilterBound = '1';
-      thead.addEventListener('click', handleThHeadClick);
+      thead.addEventListener('change', function(e) {
+        const selectAll = e.target.closest('.select-all-offers');
+        if (selectAll) {
+          const checked = selectAll.checked;
+          resultsBody.querySelectorAll('.offer-checkbox').forEach(function(cb) { cb.checked = checked; });
+          return;
+        }
+      });
+      thead.addEventListener('click', function(e) {
+        const selectAll = e.target.closest('.select-all-offers');
+        if (selectAll) {
+          e.stopPropagation();
+          return;
+        }
+        const infoIcon = e.target.closest('.th-info-icon');
+        if (infoIcon) {
+          e.preventDefault();
+          e.stopPropagation();
+          const text = infoIcon.getAttribute('data-column-tooltip');
+          if (text) openHeaderInfoPopover(text, infoIcon);
+          return;
+        }
+        handleThHeadClick(e);
+      });
     }
+
     function handleThHeadClick(e) {
+      if (e.target.closest('.th-info-icon')) return;
       const head = e.target.closest('.th-head-clickable');
       if (!head) return;
       const th = head.closest('th');
       if (!th || !th.dataset.columnKey) return;
       e.preventDefault();
       e.stopPropagation();
-      openColumnFilterDropdown(th.dataset.columnKey, th);
+      openColumnFilterPanel(th.dataset.columnKey, th);
     }
     document.addEventListener('click', function(e) {
       if (!document.contains(e.target)) return;
       var insideDropdown = columnFilterDropdownEl && columnFilterDropdownEl.contains(e.target);
       var insidePanel = filterByValuesPanelEl && filterByValuesPanelEl.contains(e.target);
+      var insideInfoPopover = headerInfoPopoverEl && headerInfoPopoverEl.contains(e.target);
+      var onThInfoIcon = e.target.closest('.th-info-icon');
       var onTh = e.target.closest('th');
+      if (!insideInfoPopover && !onThInfoIcon && headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open')) closeHeaderInfoPopover();
       if (insideDropdown || insidePanel || onTh) return;
       if (columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open')) closeColumnFilterDropdown();
       if (filterByValuesPanelEl && filterByValuesPanelEl.classList.contains('is-open')) {
@@ -2007,7 +2545,11 @@
     });
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') {
-        closeColumnFilterDropdown();
+        if (headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open')) {
+          closeHeaderInfoPopover();
+        } else {
+          closeColumnFilterDropdown();
+        }
         if (filterByValuesPanelEl && filterByValuesPanelEl.classList.contains('is-open')) {
           filterByValuesPanelEl.classList.remove('is-open');
           filterByValuesDraft = null;
@@ -2039,12 +2581,12 @@
         && selectedCountryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
       const cols = getColumns(secured, selectedUniversity, selectedCountry);
       const dataColumns = cols.slice(2);
-      const colCount = cols.length;
+      const colCount = cols.length + 1;
       lastRenderedRows = orderedRows;
       lastRenderParams = { secured: secured, selectedUniversity: selectedUniversity, levelOfStudy: levelOfStudy, selectedCountry: selectedCountry };
       if (!orderedRows.length) {
         countEl.textContent = '0 matches.';
-        thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
+        thead.innerHTML = buildHeaderRow(cols);
         resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
         previousRenderSnapshot = { byExactKey: new Map(), byGroupKey: new Map() };
         bindColumnFilterDropdown();
@@ -2059,7 +2601,7 @@
       const canDiffWithPrevious = ENABLE_DIFF_HIGHLIGHT
         && !!previousRenderSnapshot;
       const currentSnapshotEntries = [];
-      thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
+      thead.innerHTML = buildHeaderRow(cols);
 
       const bankGroups = [];
       const seen = new Set();
@@ -2119,6 +2661,7 @@
               }
             }
           }
+          const checkboxTd = '<td class="offer-checkbox-cell"><input type="checkbox" class="offer-checkbox" aria-label="Select offer"></td>';
           const tds = cells.map((cell, cellIdx) => {
             const columnName = dataColumns[cellIdx];
             const dataCol = ` data-column-key="${escapeHtml(columnName)}"`;
@@ -2153,9 +2696,9 @@
           if (isFirst) trClass = ' bank-group-first';
           if (isLast) trClass += ' bank-group-last';
           if (isFirst) {
-            return '<tr class="bank-block' + trClass + '"><td rowspan="' + n + '" class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td rowspan="' + n + '" class="sector-name-cell">' + escapeHtml(sector) + '</td>' + tds + '</tr>';
+            return '<tr class="bank-block' + trClass + '"><td rowspan="' + n + '" class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td rowspan="' + n + '" class="sector-name-cell">' + escapeHtml(sector) + '</td>' + checkboxTd + tds + '</tr>';
           }
-          return '<tr class="bank-block' + trClass + '">' + tds + '</tr>';
+          return '<tr class="bank-block' + trClass + '">' + checkboxTd + tds + '</tr>';
         });
         return rowsHtml.join('');
       }).join('');
