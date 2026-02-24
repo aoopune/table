@@ -1,0 +1,1001 @@
+ID,Gender,Amount,Type,Country,University,Course,Banks Returned,Top Banks,Success
+1,Male,"₹1",Secured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+2,Female,"₹1",Secured,"Australia","Australian National University","Art; Arts; Design; Economics & Econometrics; Law; Management; Performing; STEM and Medical Courses",0,"",YES
+3,Male,"₹1",Secured,"Armenia","Yerevan State University","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+4,Female,"₹1",Secured,"Austria","Karl-Franzens-Universitat Graz","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+5,Male,"₹1",Secured,"Argentina","Universidad Nacional del Sur","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+6,Female,"₹1",Secured,"Argentina","Universidad Nacional de Cuyo Mendoza","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+7,Male,"₹1",Secured,"Australia","Flinders University","Art; Arts; Design; Economics & Econometrics; Law; Management; Performing; STEM and Medical Courses",0,"",YES
+8,Female,"₹1",Secured,"Austria","Wirtschaftsuniversitat Wien","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+9,Male,"₹1",Secured,"Australia","University of New England Australia","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+10,Female,"₹1",Secured,"Argentina","Instituto Universitario del Hospital Italiano de Buenos Aires","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+11,Male,"₹1",Secured,"Azerbaijan","Azerbaijan Technical University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+12,Female,"₹1",Secured,"Australia","Griffith University","Art; Arts; Design; Economics & Econometrics; Law; Management; Performing; STEM and Medical Courses",0,"",YES
+13,Male,"₹1",Secured,"Argentina","Universidad Nacional de Cordoba","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+14,Female,"₹1",Secured,"Argentina","Universidad Nacional de Rosario","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+15,Male,"₹1",Secured,"Argentina","Universidad Nacional de Cuyo Mendoza","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+16,Female,"₹50,000",Secured,"Australia","Central Queensland University Australia (CQUniversity)","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+17,Male,"₹50,000",Secured,"Austria","Sigmund Freud PrivatUniversitat Wien","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+18,Female,"₹50,000",Secured,"Armenia","Yerevan State University","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+19,Male,"₹50,000",Secured,"Armenia","Yerevan State University","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+20,Female,"₹50,000",Secured,"Armenia","Yerevan State University","Art; Design and Management; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+21,Male,"₹50,000",Secured,"Australia","Central Queensland University CQUniversity","Any course",11,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+22,Female,"₹50,000",Secured,"Armenia","Yerevan State University","Art; Design Management and All other Courses.; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM",0,"",YES
+23,Male,"₹50,000",Secured,"Bahrain","University of Bahrain","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+24,Female,"₹50,000",Secured,"Australia","University of Sydney","Art; Arts; Design; Economics & Econometrics; Law; Management; Performing; STEM and Medical Courses",0,"",YES
+25,Male,"₹50,000",Secured,"Armenia","Yerevan State University","Art; Design Management and All other Courses.; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM",0,"",YES
+26,Female,"₹50,000",Secured,"Azerbaijan","Khazar University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+27,Male,"₹50,000",Secured,"Armenia","Yerevan State University","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+28,Female,"₹50,000",Secured,"Australia","Southern Cross University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+29,Male,"₹50,000",Secured,"Australia","University of Tasmania","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+30,Female,"₹75,000",Secured,"Bangladesh","Brac University","Art; Design and Management; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+31,Male,"₹75,000",Secured,"Australia","Flinders University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+32,Female,"₹75,000",Secured,"Bahrain","Applied Science University - Bahrain","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+33,Male,"₹75,000",Secured,"Austria","Sigmund Freud PrivatUniversitat Wien","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+34,Female,"₹75,000",Secured,"Azerbaijan","Azerbaijan Technical University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+35,Male,"₹75,000",Secured,"Australia","University of Queensland","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+36,Female,"₹75,000",Secured,"Austria","Medizinische Universitat Wien","Art; Arts; Design; Economics & Econometrics; Law; Management; Performing; STEM and Medical Courses",0,"",YES
+37,Male,"₹75,000",Secured,"Bahrain","Ahlia University","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+38,Female,"₹75,000",Secured,"Belarus","Belarusian National Technical University","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+39,Male,"₹75,000",Secured,"Belarus","Belarusian State University","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+40,Female,"₹75,000",Secured,"Bangladesh","Rajshahi University of Engineering and Technology","Art; Design Management and All other Courses.; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM",0,"",YES
+41,Male,"₹75,000",Secured,"Austria","Medizinische Universitat Innsbruck","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+42,Female,"₹75,000",Secured,"Azerbaijan","Khazar University","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+43,Male,"₹75,000",Secured,"Austria","Sigmund Freud PrivatUniversitat Wien","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+44,Female,"₹1L",Secured,"Austria","Johannes Kepler University Linz","Art; Design and Management; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+45,Male,"₹1L",Secured,"Azerbaijan","Azerbaijan State University of Economics","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+46,Female,"₹1L",Secured,"Belgium","University Catholique de Louvain","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+47,Male,"₹1L",Secured,"Bahrain","Applied Science University - Bahrain","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+48,Female,"₹1L",Secured,"Azerbaijan","Azerbaijan State Oil and Industry University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+49,Male,"₹1L",Secured,"Bahrain","University of Bahrain","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+50,Female,"₹1L",Secured,"Bahrain","Applied Science University - Bahrain","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+51,Male,"₹1L",Secured,"Bangladesh","Daffodil International University","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+52,Female,"₹1L",Secured,"Belarus","Belarusian National Technical University","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+53,Male,"₹1L",Secured,"Belarus","Belarusian National Technical University","Art; Design and Management; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+54,Female,"₹1L",Secured,"Bahrain","Applied Science University - Bahrain","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+55,Male,"₹1L",Secured,"Bangladesh","Brac University","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+56,Female,"₹1L",Secured,"Bolivia","Universidad Mayor de San Andres","Art; Design and Management.; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+57,Male,"₹1L",Secured,"Belarus","Belarusian National Technical University","Art; Design and Management; Economics & Econometrics; Law; Medical; Performing Arts; STEM",0,"",YES
+58,Female,"₹2L",Secured,"Bahrain","Ahlia University","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+59,Male,"₹2L",Secured,"Belgium","University of Antwerp","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+60,Female,"₹2L",Secured,"Bahrain","Applied Science University - Bahrain","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+61,Male,"₹2L",Secured,"Bangladesh","North South University Bangladesh","Art; Design; Economics & Econometrics; Law; Management and Medical.; Performing Arts; STEM",0,"",YES
+62,Female,"₹2L",Secured,"Belgium","University of Namur","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+63,Male,"₹2L",Secured,"Bolivia","Universidad Mayor de San Andres","Art; Design; Economics & Econometrics; Law; Management and Medical.; Performing Arts; STEM",0,"",YES
+64,Female,"₹2L",Secured,"Bangladesh","Daffodil International University","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+65,Male,"₹2L",Secured,"Bolivia","Universidad Mayor de San Andres","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+66,Female,"₹2L",Secured,"Bangladesh","North South University","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+67,Male,"₹2L",Secured,"Bangladesh","North South University Bangladesh","Art; Design and Management; Law; Medical; Performing Arts; STEM",0,"",YES
+68,Female,"₹2L",Secured,"Belgium","Institute of Tropical Medicine Antwerp","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+69,Male,"₹2L",Secured,"Bangladesh","Bangladesh Agricultural University","Art; Design; Economics & Econometrics; Law; Management and Medical.; Performing Arts; STEM",0,"",YES
+70,Female,"₹2L",Secured,"Belarus","Belarusian National Technical University","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+71,Male,"₹2L",Secured,"Belarus","Belarusian State University","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+72,Female,"₹2.50L",Secured,"Bosnia and Herzegovina","University of Sarajevo","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+73,Male,"₹2.50L",Secured,"Belarus","Belarusian National Technical University","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+74,Female,"₹2.50L",Secured,"Bolivia","Universidad Mayor de San Andres","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+75,Male,"₹2.50L",Secured,"Bolivia","Universidad Mayor de San Andres","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+76,Female,"₹2.50L",Secured,"Belgium","University Libre de Bruxelles (ULB)","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+77,Male,"₹2.50L",Secured,"Belgium","University of Mons","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+78,Female,"₹2.50L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+79,Male,"₹2.50L",Secured,"Bosnia and Herzegovina","University of Sarajevo","Art; Design; Economics & Econometrics; Law; Management Courses and Public Policy.; Medical; Performing Arts; STEM",0,"",YES
+80,Female,"₹2.50L",Secured,"Brazil","Universidade Federal do Rio Grande do Sul UFRGS","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+81,Male,"₹2.50L",Secured,"Bosnia and Herzegovina","University of Sarajevo","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+82,Female,"₹2.50L",Secured,"Bosnia and Herzegovina","University of East Sarajevo","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM and Medical Courses.",0,"",YES
+83,Male,"₹2.50L",Secured,"Brazil","Universidade Estadual de Londrina","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+84,Female,"₹2.50L",Secured,"Brazil","Universidade Federal do Rio Grande FURG","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+85,Male,"₹2.50L",Secured,"Bosnia and Herzegovina","University of East Sarajevo","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+86,Female,"₹3L",Secured,"Bosnia and Herzegovina","University of Sarajevo","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+87,Male,"₹3L",Secured,"Bosnia and Herzegovina","University of Banja Luka","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+88,Female,"₹3L",Secured,"Bosnia and Herzegovina","University of East Sarajevo","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+89,Male,"₹3L",Secured,"Brunei Darussalam","Universiti Brunei Darussalam (UBD)","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+90,Female,"₹3L",Secured,"Bosnia and Herzegovina","University of East Sarajevo","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+91,Male,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management Courses; Performing Arts; STEM; and Medical.",0,"",YES
+92,Female,"₹3L",Secured,"Bosnia and Herzegovina","University of East Sarajevo","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+93,Male,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+94,Female,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+95,Male,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+96,Female,"₹3L",Secured,"Brazil","Universidade Federal do Rio Grande FURG","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+97,Male,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and All other Courses.; Medical; Performing Arts; STEM",0,"",YES
+98,Female,"₹3L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and Public Service.; Medical; Performing Arts; STEM",0,"",YES
+99,Male,"₹3L",Secured,"Brazil","Universidade Federal Rural de Pernambuco UFRPE","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+100,Female,"₹4L",Secured,"Bulgaria","Medical University Sofia","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+101,Male,"₹4L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Management and Medical; Performing Arts; STEM",0,"",YES
+102,Female,"₹4L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management; Medical; Performing Arts; STEM; and Public Affairs.",0,"",YES
+103,Male,"₹4L",Secured,"Brunei Darussalam","Universiti Brunei Darussalam (UBD)","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+104,Female,"₹4L",Secured,"Bulgaria","Sofia University ""St. Kliment Ohridski""","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+105,Male,"₹4L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+106,Female,"₹4L",Secured,"Brazil","Universidade Federal de Santa Catarina","Art; Design; Economics & Econometrics; Law; Management and Public Service.; Medical; Performing Arts; STEM",0,"",YES
+107,Male,"₹4L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+108,Female,"₹4L",Secured,"Brunei Darussalam","Universiti Teknologi Brunei","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+109,Male,"₹4L",Secured,"Canada","University du Quebec Chicoutimi","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+110,Female,"₹4L",Secured,"Bulgaria","Sofia University ""St. Kliment Ohridski""","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+111,Male,"₹4L",Secured,"Bulgaria","Medical University Sofia","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+112,Female,"₹4L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+113,Male,"₹4L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+114,Female,"₹4.00L",Secured,"Canada","Lakehead University","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+115,Male,"₹4.00L",Secured,"Botswana","University of Botswana","Art; Design; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM; and Management",0,"",YES
+116,Female,"₹4.00L",Secured,"Brunei Darussalam","Universiti Teknologi Brunei","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+117,Male,"₹4.00L",Secured,"Brazil","Universidade de Brasilia (UnB)","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+118,Female,"₹4.00L",Secured,"Brunei Darussalam","Universiti Teknologi Brunei","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+119,Male,"₹4.00L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM; and Management",0,"",YES
+120,Female,"₹4.00L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Management and Public Affairs.; Medical; Performing Arts; STEM",0,"",YES
+121,Male,"₹4.00L",Secured,"Brazil","Universidade Estadual de Santa Cruz UESC","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+122,Female,"₹4.00L",Secured,"Brunei Darussalam","Universiti Teknologi Brunei","Art; Design; Economics & Econometrics; Law; Management; Medical; Performing Arts; STEM; and Public Affairs.",0,"",YES
+123,Male,"₹4.00L",Secured,"Chile","Pontificia Universidad Catolica de Valparaiso","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+124,Female,"₹4.00L",Secured,"Brunei Darussalam","Universiti Teknologi Brunei","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+125,Male,"₹4.00L",Secured,"Canada","University of Lethbridge","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+126,Female,"₹4.00L",Secured,"Brunei Darussalam","University of Brunei Darussalam","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+127,Male,"₹4.00L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Medical and Management.; Performing Arts; STEM",0,"",YES
+128,Female,"₹4.50L",Secured,"Bulgaria","Medical University Sofia","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+129,Male,"₹4.50L",Secured,"Bulgaria","Medical University Sofia","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+130,Female,"₹4.50L",Secured,"Canada","Northeastern University-Vancouver","Art; Design; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM; and Management",0,"",YES
+131,Male,"₹4.50L",Secured,"Chile","Universidad de los Lagos","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+132,Female,"₹4.50L",Secured,"Chile","Universidad Mayor Chile","Art; Design; Economics & Econometrics; Law; Management; Medical; Performing Arts; STEM; and Public Affairs.",0,"",YES
+133,Male,"₹4.50L",Secured,"Chile","Universidad de los Lagos","Art; Design; Economics & Econometrics; Law; Management; Medical; Performing Arts; STEM; and Public Affairs.",0,"",YES
+134,Female,"₹4.50L",Secured,"Chile","Pontificia Universidad Catolica de Chile","Art; Design; Economics & Econometrics; Law; Management and Public Studies; Medical; Performing Arts; STEM",0,"",YES
+135,Male,"₹4.50L",Secured,"Bulgaria","Sofia University St Kliment Ohridski","Art; Design; Economics & Econometrics; Law; Medical and Management.; Performing Arts; STEM",0,"",YES
+136,Female,"₹4.50L",Secured,"Colombia","Universidad del Cauca","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+137,Male,"₹4.50L",Secured,"China","Yunnan University","Art; Design; Economics & Econometrics; Law; Medical; Performing Arts; STEM; and Management",0,"",YES
+138,Female,"₹4.50L",Secured,"China","Chongqing Normal University","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+139,Male,"₹4.50L",Secured,"China","Hangzhou Normal University","Art; Design; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM; and Management",0,"",YES
+140,Female,"₹4.50L",Secured,"Chile","Universidad del Bio-Bio","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+141,Male,"₹4.50L",Secured,"Bulgaria","Medical University Sofia","Art; Design; Economics & Econometrics; Law; Management and STEM; Medical; Performing Arts",0,"",YES
+142,Female,"₹5L",Secured,"Canada","University of Toronto","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+143,Male,"₹5L",Secured,"Costa Rica","Universidad Nacional Costa Rica","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+144,Female,"₹5L",Secured,"Canada","University of Sherbrooke","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+145,Male,"₹5L",Secured,"Chile","Pontificia Universidad Catolica de Chile","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+146,Female,"₹5L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Design; Economics & Econometrics; Law; Medical Courses; Performing Arts; STEM; and Management",0,"",YES
+147,Male,"₹5L",Secured,"Chile","Universidad Catolica de la Santisima Concepcion","Art; Design; Economics & Econometrics; Law; Management; Medical; Performing Arts; STEM; and Public Affairs.",0,"",YES
+148,Female,"₹5L",Secured,"Chile","Universidad de Santiago de Chile - USACH","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+149,Male,"₹5L",Secured,"Costa Rica","Universidad Nacional Costa Rica","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+150,Female,"₹5L",Secured,"Canada","University of Victoria British Columbia","Art; Design; Economics & Econometrics; Law; Medical; Performing Arts; STEM; and Management",0,"",YES
+151,Male,"₹5L",Secured,"Colombia","Universidad del Norte Barranquilla","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+152,Female,"₹5L",Secured,"Croatia","University of Zadar","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+153,Male,"₹5L",Secured,"China","Zhejiang University of Science & Technology","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+154,Female,"₹5L",Secured,"Costa Rica","Universidad Nacional Costa Rica","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+155,Male,"₹5L",Secured,"China","Harbin Normal University","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+156,Female,"₹5.00L",Secured,"Chile","Universidad Catolica de la Santisima Concepcion","Art; Design; Economics & Econometrics; Law; Management; Performing Arts; STEM and Medical Courses",0,"",YES
+157,Male,"₹5.00L",Secured,"Croatia","University of Rijeka","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+158,Female,"₹5.00L",Secured,"China","Qingdao University","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+159,Male,"₹5.00L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses; STEM",0,"",YES
+160,Female,"₹5.00L",Secured,"Colombia","Universidad del Rosario","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+161,Male,"₹5.00L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Design; Economics & Econometrics; Law; Medical and Management.; Performing Arts; STEM",0,"",YES
+162,Female,"₹5.00L",Secured,"Croatia","University of Rijeka","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+163,Male,"₹5.00L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses; STEM",0,"",YES
+164,Female,"₹5.00L",Secured,"Cuba","Universidad de la Habana","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+165,Male,"₹5.00L",Secured,"Colombia","Universidad ICESI","Art; Design; Economics & Econometrics; Law; Medical; Performing Arts; STEM; and Management",0,"",YES
+166,Female,"₹5.00L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+167,Male,"₹5.00L",Secured,"Colombia","Universidad Tecnologica de Pereira","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+168,Female,"₹5.00L",Secured,"Cyprus","University of Cyprus","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+169,Male,"₹5.00L",Secured,"Cuba","Universidad de la Habana","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+170,Female,"₹5.00L",Secured,"Cyprus","Cyprus University of Technology","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+171,Male,"₹6.25L",Secured,"Cyprus","University of Cyprus","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+172,Female,"₹6.25L",Secured,"Cuba","Universidad de la Habana","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+173,Male,"₹6.25L",Secured,"Cyprus","European University Cyprus","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+174,Female,"₹6.25L",Secured,"Cuba","Universidad de la Habana","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+175,Male,"₹6.25L",Secured,"Cuba","Universidad de la Habana","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses; STEM",0,"",YES
+176,Female,"₹6.25L",Secured,"Colombia","Universidad Externado de Colombia","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+177,Male,"₹6.25L",Secured,"Croatia","Josip Juraj Strossmayer University of Osijek","Art; Design; Economics & Econometrics; Law; Medical and Management; Performing Arts; STEM",0,"",YES
+178,Female,"₹6.25L",Secured,"Croatia","University of Zagreb","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses; STEM",0,"",YES
+179,Male,"₹6.25L",Secured,"Cuba","Universidad de la Habana","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses; STEM",0,"",YES
+180,Female,"₹6.25L",Secured,"Czechia","Czech University of Life Sciences Prague","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses; STEM",0,"",YES
+181,Male,"₹6.25L",Secured,"Cuba","Universidad de la Habana","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+182,Female,"₹6.25L",Secured,"Cyprus","University of Nicosia","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+183,Male,"₹6.25L",Secured,"Czechia","University of Ostrava","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses; STEM",0,"",YES
+184,Female,"₹6.25L",Secured,"Costa Rica","Universidad de Costa Rica","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses; STEM",0,"",YES
+185,Male,"₹7.50L",Secured,"Cuba","Universidad de la Habana","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+186,Female,"₹7.50L",Secured,"Cuba","Universidad de la Habana","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+187,Male,"₹7.50L",Secured,"Denmark","Aarhus University","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+188,Female,"₹7.50L",Secured,"Denmark","Roskilde University","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+189,Male,"₹7.50L",Secured,"Denmark","University of Copenhagen","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+190,Female,"₹7.50L",Secured,"Croatia","Josip Juraj Strossmayer University of Osijek","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+191,Male,"₹7.50L",Secured,"Cyprus","European University Cyprus","Art; Design; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+192,Female,"₹7.50L",Secured,"Denmark","Aarhus University","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses",0,"",YES
+193,Male,"₹7.50L",Secured,"Denmark","Aarhus University","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+194,Female,"₹7.50L",Secured,"Ecuador","Universidad San Francisco de Quito","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+195,Male,"₹7.50L",Secured,"Denmark","Aarhus University","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+196,Female,"₹7.50L",Secured,"Denmark","Technical University of Denmark","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+197,Male,"₹7.50L",Secured,"Cyprus","Cyprus University of Technology","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+198,Female,"₹7.50L",Secured,"Cuba","Universidad de la Habana","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+199,Male,"₹7.50L",Secured,"Cyprus","University of Cyprus","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+200,Female,"₹7.50L",Secured,"Czechia","University of Ostrava","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+201,Male,"₹7.50L",Secured,"Cyprus","University of Nicosia","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+202,Female,"₹7.50L",Secured,"Cuba","Universidad de la Habana","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+203,Male,"₹7.50L",Secured,"Czechia","Mendel University in Brno","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+204,Female,"₹7.50L",Secured,"Czechia","Czech Technical University in Prague","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+205,Male,"₹7.50L",Secured,"Czechia","Technical University of Liberec","Art; Econamics & Econometrics; Law; Management; Medical; Performing Arts and Design Courses; STEM",0,"",YES
+206,Female,"₹7.50L",Secured,"Ecuador","Escuela Politecnica Nacional","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+207,Male,"₹7.50L",Secured,"Cyprus","University of Cyprus","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+208,Female,"₹7.50L",Secured,"Egypt","American University in Cairo","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+209,Male,"₹7.50L",Secured,"Egypt","British University in Egypt","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+210,Female,"₹7.50L",Secured,"Egypt","Assiut University","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+211,Male,"₹7.50L",Secured,"Cyprus","University of Cyprus","Art; Econamics & Econometrics; Law; Management; Performing Arts and Design Courses",0,"",YES
+212,Female,"₹7.50L",Secured,"Egypt","The American University in Cairo","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+213,Male,"₹8.75L",Secured,"Ecuador","Universidad San Francisco de Quito","Business & Management",0,"",YES
+214,Female,"₹8.75L",Secured,"Egypt","Kafr El Sheikh University","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+215,Male,"₹8.75L",Secured,"Ecuador","Universidad de las Americas Ecuador","Arts; Business & Management; Communications & Journalism; Computer Science & IT; Design & Architecture; Education; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+216,Female,"₹8.75L",Secured,"Denmark","University of Southern Denmark","Arts; Business & Management; Communications & Journalism; Computer Science & IT; Design & Architecture; Education; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+217,Male,"₹8.75L",Secured,"Egypt","Future University in Egypt","Arts; Business & Management; Communications & Journalism; Computer Science & IT; Design & Architecture; Education; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+218,Female,"₹8.75L",Secured,"Egypt","Zagazig University","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+219,Male,"₹8.75L",Secured,"Ecuador","Universidad Politecnica Salesiana Ecuador","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+220,Female,"₹8.75L",Secured,"Egypt","The American University in Cairo","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+221,Male,"₹8.75L",Secured,"Egypt","Arab Academy for Science & Technology and Maritime Transport","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+222,Female,"₹8.75L",Secured,"Denmark","University of Copenhagen","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+223,Male,"₹8.75L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT",0,"",YES
+224,Female,"₹8.75L",Secured,"Egypt","Menoufia University","Art; Economics & Econometrics; Law; Performing Arts; STEM; and Management",0,"",YES
+225,Male,"₹8.75L",Secured,"Ethiopia","Addis Ababa University","Business & Management",0,"",YES
+226,Female,"₹8.75L",Secured,"Ethiopia","Bahir Dar University","Art; Economics & Econometrics; Law; Management; Medical and Management; Performing Arts; STEM",0,"",YES
+227,Male,"₹9.99L",Secured,"Ecuador","Pontificia Universidad Catolica del Ecuador","Business & Management; Computer Science & IT",0,"",YES
+228,Female,"₹9.99L",Secured,"Ecuador","Pontificia Universidad Catolica del Ecuador","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+229,Male,"₹9.99L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+230,Female,"₹9.99L",Secured,"Ethiopia","Bahir Dar University","Arts; Business & Management; Communications & Journalism; Computer Science & IT; Design & Architecture; Education; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+231,Male,"₹9.99L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+232,Female,"₹9.99L",Secured,"Ecuador","Universidad de Cuenca","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+233,Male,"₹9.99L",Secured,"Fiji","University of the South Pacific","Arts; Business & Management; Communications & Journalism; Computer Science & IT; Design & Architecture; Education; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+234,Female,"₹9.99L",Secured,"Egypt","Mansoura University","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+235,Male,"₹9.99L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+236,Female,"₹9.99L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT",0,"",YES
+237,Male,"₹9.99L",Secured,"Ethiopia","University of Gondar","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+238,Female,"₹9.99L",Secured,"Egypt","Arab Academy for Science & Technology and Maritime Transport","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+239,Male,"₹9.99L",Secured,"Finland","Lappeenranta-Lahti University of Technology LUT","Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+240,Female,"₹9.99L",Secured,"Estonia","University of Tartu","Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+241,Male,"₹10L",Secured,"Fiji","University of the South Pacific","Business & Management",0,"",YES
+242,Female,"₹10L",Secured,"Estonia","Tallinn University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+243,Male,"₹10L",Secured,"Fiji","University of the South Pacific","Arts; Business & Management; Computer Science & IT; Design & Architecture; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+244,Female,"₹10L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+245,Male,"₹10L",Secured,"Estonia","Tallinn University of Technology","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+246,Female,"₹10L",Secured,"Egypt","Ain Shams University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+247,Male,"₹10L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+248,Female,"₹10L",Secured,"Finland","Jyvaskyla University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+249,Male,"₹10L",Secured,"Ethiopia","Jimma University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+250,Female,"₹10L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT",0,"",YES
+251,Male,"₹10L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT",0,"",YES
+252,Female,"₹10L",Secured,"Estonia","Tallinn University of Technology","Business & Management",0,"",YES
+253,Male,"₹10L",Secured,"Finland","University of Lapland","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+254,Female,"₹10L",Secured,"France","Ecole Normale Superieure de Lyon","Business & Management",0,"",YES
+255,Male,"₹10.00L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+256,Female,"₹10.00L",Secured,"France","Toulouse School of Economics","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+257,Male,"₹10.00L",Secured,"Ethiopia","Addis Ababa University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+258,Female,"₹10.00L",Secured,"Ethiopia","Bahir Dar University","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+259,Male,"₹10.00L",Secured,"France","Institut National des Sciences Appliquees de Lyon","Business & Management; Computer Science & IT",0,"",YES
+260,Female,"₹10.00L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+261,Male,"₹10.00L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+262,Female,"₹10.00L",Secured,"Finland","University of Helsinki","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+263,Male,"₹10.00L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+264,Female,"₹10.00L",Secured,"France","Institut de Physique du Globe de Paris IPGP (Alliance Sorbonne Paris Cite)","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+265,Male,"₹10.00L",Secured,"Fiji","University of the South Pacific","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+266,Female,"₹10.00L",Secured,"Georgia","Ilia State University","Business & Management; Computer Science & IT; Engineering & Technology; Law",0,"",YES
+267,Male,"₹10.00L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Education; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+268,Female,"₹10.00L",Secured,"France","University of Paris X","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+269,Male,"₹10.01L",Secured,"France","Montpellier Business School (MBS)","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+270,Female,"₹10.01L",Secured,"Germany","Martin Luther Universitat Halle Wittenberg","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+271,Male,"₹10.01L",Secured,"Germany","Universitat Dusseldorf","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+272,Female,"₹10.01L",Secured,"Finland","Hanken School of Economics","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+273,Male,"₹10.01L",Secured,"France","Institut polytechnique de Grenoble - Grenoble Institute of Technology","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+274,Female,"₹10.01L",Secured,"Ghana","University of Ghana","Business & Management; Computer Science & IT; Education; Engineering & Technology; Public Policy",0,"",YES
+275,Male,"₹10.01L",Secured,"Ghana","University of Cape Coast","Business & Management; Computer Science & IT; Engineering & Technology; Law",0,"",YES
+276,Female,"₹10.01L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+277,Male,"₹10.01L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+278,Female,"₹10.01L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+279,Male,"₹10.01L",Secured,"Georgia","Ilia State University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+280,Female,"₹10.01L",Secured,"Finland","Lappeenranta University of Technology","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+281,Male,"₹10.01L",Secured,"Germany","Ernst Moritz Arndt Universitat Greifswald","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+282,Female,"₹10.01L",Secured,"Germany","Universitat Osnabruck","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+283,Male,"₹12L",Secured,"Ghana","University of Cape Coast","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+284,Female,"₹12L",Secured,"Georgia","Ilia State University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+285,Male,"₹12L",Secured,"Ghana","University of Cape Coast","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+286,Female,"₹12L",Secured,"Germany","Universitat Rostock","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+287,Male,"₹12L",Secured,"France","Montpellier Business School (MBS)","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+288,Female,"₹12L",Secured,"Germany","University of Munster","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+289,Male,"₹12L",Secured,"Georgia","Georgian Technical University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+290,Female,"₹12L",Secured,"Ghana","Kwame Nkrumah University of Science & Technology","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+291,Male,"₹12L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Hospitality & Leisure; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+292,Female,"₹12L",Secured,"Georgia","Ivane Javakhishvili Tbilisi State University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+293,Male,"₹12L",Secured,"Germany","Hochschule Furtwangen","Business & Management; Computer Science & IT; Engineering & Technology; Law; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+294,Female,"₹12L",Secured,"Ghana","Kwame Nkrumah University of Science & Technology","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+295,Male,"₹12L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+296,Female,"₹12L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+297,Male,"₹12.50L",Secured,"Greece","Agricultural University of Athens","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+298,Female,"₹12.50L",Secured,"Greece","Athens University of Economics And Business","Business & Management; Computer Science & IT; Engineering & Technology; Humanities",0,"",YES
+299,Male,"₹12.50L",Secured,"Ghana","Kwame Nkrumah University of Science & Technology","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+300,Female,"₹12.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+301,Male,"₹12.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+302,Female,"₹12.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law",0,"",YES
+303,Male,"₹12.50L",Secured,"Ghana","University of Cape Coast","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+304,Female,"₹12.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+305,Male,"₹12.50L",Secured,"Greece","Agricultural University of Athens","Business & Management; Computer Science & IT; Engineering & Technology; Humanities; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+306,Female,"₹12.50L",Secured,"Ghana","University for Development Studies","Business & Management; Computer Science & IT; Engineering & Technology; Law; Natural Sciences; Social Sciences",0,"",YES
+307,Male,"₹12.50L",Secured,"Germany","University of Tubingen","Business & Management; Computer Science & IT; Engineering & Technology; Law",0,"",YES
+308,Female,"₹12.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+309,Male,"₹12.50L",Secured,"Hungary","Hungarian University of Agriculture and Life Sciences","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+310,Female,"₹12.50L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+311,Male,"₹15L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+312,Female,"₹15L",Secured,"Greece","Ionian University","Business & Management; Computer Science & IT; Engineering & Technology; Law",0,"",YES
+313,Male,"₹15L",Secured,"Greece","Agricultural University of Athens","Business & Management; Computer Science & IT; Engineering & Technology; Law; Natural Sciences; Social Sciences",0,"",YES
+314,Female,"₹15L",Secured,"Ghana","University of Ghana","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+315,Male,"₹15L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+316,Female,"₹15L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+317,Male,"₹15L",Secured,"Greece","University of Peloponnese","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+318,Female,"₹15L",Secured,"Hungary","University of Szeged","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+319,Male,"₹15L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+320,Female,"₹15L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences",0,"",YES
+321,Male,"₹15L",Secured,"Hungary","Central European University Budapest","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+322,Female,"₹15L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+323,Male,"₹15L",Secured,"Greece","National and Kapodistrian University of Athens","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+324,Female,"₹15L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+325,Male,"₹17.50L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+326,Female,"₹17.50L",Secured,"Hungary","University of Debrecen","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+327,Male,"₹17.50L",Secured,"Indonesia","UNIVERSITAS INDONESIA","Business & Management; Computer Science & IT; Engineering & Technology; Law; Natural Sciences; Social Sciences",0,"",YES
+328,Female,"₹17.50L",Secured,"Hungary","Pazmany Peter Catholic University Budapest","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+329,Male,"₹17.50L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+330,Female,"₹17.50L",Secured,"Grenada","Saint Georges University","Business & Management; Computer Science & IT; Engineering & Technology; Law; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+331,Male,"₹17.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Law; Natural Sciences; Social Sciences",0,"",YES
+332,Female,"₹17.50L",Secured,"Guatemala","Universidad de San Carlos de Guatemala","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+333,Male,"₹17.50L",Secured,"Hungary","Corvinus University of Budapest","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+334,Female,"₹17.50L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+335,Male,"₹17.50L",Secured,"Indonesia","Bandung Institute of Technology (ITB)","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+336,Female,"₹17.50L",Secured,"Hungary","Corvinus University of Budapest","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+337,Male,"₹17.50L",Secured,"Iceland","Reykjavik University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+338,Female,"₹17.50L",Secured,"Iran","University of Tehran","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+339,Male,"₹17.50L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+340,Female,"₹18L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+341,Male,"₹18L",Secured,"Indonesia","Universitas Kristen Satya Wacana","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+342,Female,"₹18L",Secured,"Hungary","Obuda University (Budapest Polytechnic)","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+343,Male,"₹18L",Secured,"Iran","Ahvaz Jundishapur University of Medical Sciences","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+344,Female,"₹18L",Secured,"Iceland","Reykjavik University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+345,Male,"₹18L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+346,Female,"₹18L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+347,Male,"₹18L",Secured,"Iraq","Al Furat Al Awsat Technical University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+348,Female,"₹18L",Secured,"Indonesia","Universitas Pendidikan Indonesia","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+349,Male,"₹18L",Secured,"Iran","Iran University of Medical Sciences","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Public Policy",0,"",YES
+350,Female,"₹18L",Secured,"Hungary","University of Debrecen","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+351,Male,"₹18L",Secured,"Indonesia","Universitas Bina Nusantara","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+352,Female,"₹18L",Secured,"Ireland","Technological University of Dublin","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+353,Male,"₹18L",Secured,"Ireland","Technological University of the Shannon","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+354,Female,"₹20L",Secured,"Iceland","Reykjavik University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+355,Male,"₹20L",Secured,"Iceland","Reykjavik University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health",0,"",YES
+356,Female,"₹20L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+357,Male,"₹20L",Secured,"Iraq","Kufa University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+358,Female,"₹20L",Secured,"Ireland","Technological University of the Shannon","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Social Sciences",0,"",YES
+359,Male,"₹20L",Secured,"Iceland","University of Iceland","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+360,Female,"₹20L",Secured,"Indonesia","Bandung Institute of Technology (ITB)","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+361,Male,"₹20L",Secured,"Israel","Tel Aviv University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+362,Female,"₹20L",Secured,"Iraq","Diyala University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Public Policy",0,"",YES
+363,Male,"₹20L",Secured,"Indonesia","Universitas Bina Nusantara","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Public Policy",0,"",YES
+364,Female,"₹20L",Secured,"Israel","Hebrew University of Jerusalem","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+365,Male,"₹20L",Secured,"Israel","Al Quds University Arab University in Jerusalem","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+366,Female,"₹20L",Secured,"Iraq","University of Babylon","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Social Sciences",0,"",YES
+367,Male,"₹20L",Secured,"Iran","Kharazmi University (Tarbiat Moallem University Tehran)","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+368,Female,"₹20.00L",Secured,"Israel","Tel Aviv University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+369,Male,"₹20.00L",Secured,"Israel","Bar-Ilan University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+370,Female,"₹20.00L",Secured,"Italy","Catania University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Public Policy",0,"",YES
+371,Male,"₹20.00L",Secured,"Israel","Ben Gurion University of The Negev","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+372,Female,"₹20.00L",Secured,"Iraq","University of Baghdad","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+373,Male,"₹20.00L",Secured,"Israel","Ariel University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+374,Female,"₹20.00L",Secured,"Israel","Bar Ilan University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+375,Male,"₹20.00L",Secured,"Ireland","Munster Technological University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+376,Female,"₹20.00L",Secured,"Ireland","Atlantic Technological University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Social Sciences",0,"",YES
+377,Male,"₹20.00L",Secured,"Israel","Technion Israel Institute of Technology","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+378,Female,"₹20.00L",Secured,"Iran","Bu Ali Sina University Hamedan","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+379,Male,"₹20.00L",Secured,"Iraq","University of Anbar","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+380,Female,"₹20.00L",Secured,"Iraq","Diyala University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+381,Male,"₹20.00L",Secured,"Japan","Kyorin University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+382,Female,"₹22.50L",Secured,"Japan","University of Tokyo","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+383,Male,"₹22.50L",Secured,"Ireland","Trinity College Dublin University of Dublin","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+384,Female,"₹22.50L",Secured,"Ireland","University of Limerick","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+385,Male,"₹22.50L",Secured,"Ireland","University College Dublin","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+386,Female,"₹22.50L",Secured,"Ireland","Munster Technological University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+387,Male,"₹22.50L",Secured,"Japan","Tokyo Medical and Dental University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+388,Female,"₹22.50L",Secured,"Japan","University of Tsukuba","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+389,Male,"₹22.50L",Secured,"Israel","Tel Aviv University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Public Policy",0,"",YES
+390,Female,"₹22.50L",Secured,"Israel","Ariel University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+391,Male,"₹22.50L",Secured,"Jordan","Amman Arab University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+392,Female,"₹22.50L",Secured,"Israel","University of Haifa","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+393,Male,"₹22.50L",Secured,"Jordan","Philadelphia University","Business & Management; Computer Science & IT; Engineering & Technology; Medicine & Health; Social Sciences",0,"",YES
+394,Female,"₹22.50L",Secured,"Jordan","Al Ahliyya Amman University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+395,Male,"₹22.50L",Secured,"Japan","Mie University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+396,Female,"₹25L",Secured,"Jordan","Princess Sumaya University for Technology","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+397,Male,"₹25L",Secured,"Jordan","Hashemite University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+398,Female,"₹25L",Secured,"Jordan","Princess Sumaya University for Technology","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+399,Male,"₹25L",Secured,"Israel","Reichman University (IDC Herzliya)","Business & Management; Computer Science & IT; Engineering & Technology; Social Sciences",0,"",YES
+400,Female,"₹25L",Secured,"Israel","Tel Aviv University","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+401,Male,"₹25L",Secured,"Israel","Ben Gurion University of the Negev","Business & Management; Computer Science & IT; Engineering & Technology; Social Sciences",0,"",YES
+402,Female,"₹25L",Secured,"Kazakhstan","Karaganda Buketov University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+403,Male,"₹25L",Secured,"Jordan","German Jordanian University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+404,Female,"₹25L",Secured,"Israel","Hebrew University of Jerusalem","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+405,Male,"₹25L",Secured,"Kazakhstan","Al-Farabi Kazakh National University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+406,Female,"₹25L",Secured,"Japan","Tokyo City University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+407,Male,"₹25L",Secured,"Japan","Tokyo University of Agriculture","Business & Management; Computer Science & IT; Law",0,"",YES
+408,Female,"₹25L",Secured,"Kazakhstan","Khoja Akhmet Yassawi International Kazakh-Turkish University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+409,Male,"₹25L",Secured,"Italy","University of Camerino","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy",0,"",YES
+410,Female,"₹27.50L",Secured,"Japan","Tokyo University of Agriculture","Business & Management; Computer Science & IT; Engineering & Technology; Social Sciences",0,"",YES
+411,Male,"₹27.50L",Secured,"Kenya","University of Nairobi","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Public Policy; Social Sciences",0,"",YES
+412,Female,"₹27.50L",Secured,"Kenya","University of Nairobi","Business & Management; Computer Science & IT; Law",0,"",YES
+413,Male,"₹27.50L",Secured,"Japan","Chubu University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+414,Female,"₹27.50L",Secured,"Kazakhstan","L.N. Gumilyov Eurasian National University","Business & Management; Computer Science & IT; Engineering & Technology; Social Sciences",0,"",YES
+415,Male,"₹27.50L",Secured,"Jordan","University of Jordan","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+416,Female,"₹27.50L",Secured,"Jordan","Al Balqa Applied University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+417,Male,"₹27.50L",Secured,"Jordan","Al Balqa Applied University","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+418,Female,"₹27.50L",Secured,"Kuwait","Kuwait University","Business & Management; Computer Science & IT; Law",0,"",YES
+419,Male,"₹27.50L",Secured,"Japan","Shibaura Institute of Technology","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+420,Female,"₹27.50L",Secured,"Kenya","Kenyatta University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+421,Male,"₹27.50L",Secured,"Kuwait","American University of the Middle East","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+422,Female,"₹27.50L",Secured,"Kazakhstan","Abylkas Saginov Karaganda Technical University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+423,Male,"₹27.50L",Secured,"Kazakhstan","Kazakh National University Al Farabi","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+424,Female,"₹30L",Secured,"Kazakhstan","Satbayev University","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+425,Male,"₹30L",Secured,"Kazakhstan","Kazakh National Pedagogical University Abai","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+426,Female,"₹30L",Secured,"Kuwait","College of Technological Studies","Business & Management; Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+427,Male,"₹30L",Secured,"Jordan","Al Balqa Applied University","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+428,Female,"₹30L",Secured,"Jordan","Al Balqa Applied University","Business & Management; Computer Science & IT; Engineering & Technology; Social Sciences",0,"",YES
+429,Male,"₹30L",Secured,"Kuwait","Gulf University for Science and Technology (GUST)","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+430,Female,"₹30L",Secured,"Kazakhstan","Auezov South Kazakhstan State University (SKSU)","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy",0,"",YES
+431,Male,"₹30L",Secured,"Latvia","University of Latvia","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+432,Female,"₹30L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+433,Male,"₹30L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+434,Female,"₹30L",Secured,"Kenya","Jomo Kenyatta University of Agriculture and Technology","Business & Management; Computer Science & IT; Engineering & Technology; Public Policy; Social Sciences",0,"",YES
+435,Male,"₹30L",Secured,"Latvia","Riga Technical University","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+436,Female,"₹30L",Secured,"Kenya","University of Nairobi","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+437,Male,"₹30L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+438,Female,"₹30.00L",Secured,"Kenya","Jomo Kenyatta University of Agriculture and Technology","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+439,Male,"₹30.00L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+440,Female,"₹30.00L",Secured,"Kuwait","College of Technological Studies","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+441,Male,"₹30.00L",Secured,"Lebanon","Beirut Arab University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+442,Female,"₹30.00L",Secured,"Lebanon","Saint Joseph University of Beirut (USJ)","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+443,Male,"₹30.00L",Secured,"Latvia","University of Latvia","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+444,Female,"₹30.00L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+445,Male,"₹30.00L",Secured,"Kuwait","Kuwait University","Business & Management; Computer Science & IT; Law",0,"",YES
+446,Female,"₹30.00L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+447,Male,"₹30.00L",Secured,"Kuwait","American University of the Middle East","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+448,Female,"₹30.00L",Secured,"Latvia","University of Latvia","Business & Management; Computer Science & IT; Law",0,"",YES
+449,Male,"₹30.00L",Secured,"Lithuania","Vilnius Gediminas Technical University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+450,Female,"₹30.00L",Secured,"Kyrgyzstan","American University of Central Asia","Business & Management; Computer Science & IT; Law",0,"",YES
+451,Male,"₹30.00L",Secured,"Kuwait","College of Technological Studies","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+452,Female,"₹35L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences",0,"",YES
+453,Male,"₹35L",Secured,"Lithuania","Lithuanian University of Health Sciences","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+454,Female,"₹35L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+455,Male,"₹35L",Secured,"Kuwait","Gulf University for Science and Technology (GUST)","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences",0,"",YES
+456,Female,"₹35L",Secured,"Lithuania","Vytautas Magnus University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+457,Male,"₹35L",Secured,"Lebanon","American University of Beirut (AUB)","Business & Management; Computer Science & IT; Law; Medicine & Health; Public Policy; Social Sciences",0,"",YES
+458,Female,"₹35L",Secured,"Lebanon","Saint Joseph University of Beirut (USJ)","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+459,Male,"₹35L",Secured,"Kyrgyzstan","Kyrgyz-Turkish Manas University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+460,Female,"₹35L",Secured,"Lebanon","Beirut Arab University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+461,Male,"₹35L",Secured,"Latvia","Riga Technical University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+462,Female,"₹35L",Secured,"Luxembourg","University of Luxembourg","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+463,Male,"₹35L",Secured,"Lebanon","Saint Joseph University of Beirut (USJ)","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+464,Female,"₹35L",Secured,"Luxembourg","University du Luxembourg","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+465,Male,"₹35L",Secured,"Latvia","Riga Technical University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+466,Female,"₹40L",Secured,"Lithuania","Mykolas Romeris University","Business & Management; Computer Science & IT; Law; Social Sciences",0,"",YES
+467,Male,"₹40L",Secured,"Malaysia","International Islamic University Malaysia (IIUM)","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+468,Female,"₹40L",Secured,"Lithuania","Vilnius University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+469,Male,"₹40L",Secured,"Malaysia","SEGi University","Business & Management; Computer Science & IT; Law; Natural Sciences; Social Sciences",0,"",YES
+470,Female,"₹40L",Secured,"Lebanon","American University of Beirut (AUB)","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+471,Male,"₹40L",Secured,"Latvia","University of Latvia","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+472,Female,"₹40L",Secured,"Malaysia","INTI International University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences",0,"",YES
+473,Male,"₹40L",Secured,"Latvia","Riga Technical University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+474,Female,"₹40L",Secured,"Latvia","University of Latvia","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+475,Male,"₹40L",Secured,"Luxembourg","University du Luxembourg","Business & Management; Computer Science & IT; Natural Sciences",0,"",YES
+476,Female,"₹40L",Secured,"Malaysia","International Islamic University Malaysia (IIUM)","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+477,Male,"₹40L",Secured,"Lebanon","Lebanese American University","Business & Management; Engineering & Technology",0,"",YES
+478,Female,"₹40L",Secured,"Luxembourg","University of Luxembourg","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+479,Male,"₹40L",Secured,"Malta","University of Malta","Business & Management; Engineering & Technology",0,"",YES
+480,Female,"₹40.00L",Secured,"Lebanon","Lebanese American University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences",0,"",YES
+481,Male,"₹40.00L",Secured,"Luxembourg","University of Luxembourg","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+482,Female,"₹40.00L",Secured,"Malta","University of Malta","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+483,Male,"₹40.00L",Secured,"Lithuania","Mykolas Romeris University","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Public Policy",0,"",YES
+484,Female,"₹40.00L",Secured,"Malta","University of Malta","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+485,Male,"₹40.00L",Secured,"Luxembourg","University of Luxembourg","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+486,Female,"₹40.00L",Secured,"Malaysia","Universiti Sains Islam Malaysia","Business & Management; Computer Science & IT; Medicine & Health; Natural Sciences; Social Sciences",0,"",YES
+487,Male,"₹40.00L",Secured,"Malaysia","UCSI University","Business & Management; Engineering & Technology",0,"",YES
+488,Female,"₹40.00L",Secured,"Malaysia","Universiti Tunku Abdul Rahman (UTAR)","Business & Management; Computer Science & IT; Social Sciences",0,"",YES
+489,Male,"₹40.00L",Secured,"Malta","University of Malta","Business & Management; Computer Science & IT; Social Sciences",0,"",YES
+490,Female,"₹40.00L",Secured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology",0,"",YES
+491,Male,"₹40.00L",Secured,"Malta","University of Malta","Business & Management; Computer Science & IT; Natural Sciences",0,"",YES
+492,Female,"₹40.00L",Secured,"Luxembourg","University du Luxembourg","Business & Management; Computer Science & IT; Natural Sciences",0,"",YES
+493,Male,"₹40.00L",Secured,"Luxembourg","University du Luxembourg","Business & Management; Engineering & Technology; Natural Sciences",0,"",YES
+494,Female,"₹45L",Secured,"Luxembourg","University du Luxembourg","Business & Management; Computer Science & IT; Social Sciences",0,"",YES
+495,Male,"₹45L",Secured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology; Law",0,"",YES
+496,Female,"₹45L",Secured,"Mexico","Universidad Autonoma del Estado de Hidalgo","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+497,Male,"₹45L",Secured,"Malaysia","SEGi University","Business & Management; Engineering & Technology; Law",0,"",YES
+498,Female,"₹45L",Secured,"Mexico","Red de Universidades Anahuac","Business & Management; Engineering & Technology; Law",0,"",YES
+499,Male,"₹45L",Secured,"Malaysia","Universiti Tunku Abdul Rahman","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+500,Female,"₹45L",Secured,"Luxembourg","University of Luxembourg","Business & Management; Engineering & Technology",0,"",YES
+501,Male,"₹45L",Unsecured,"Malaysia","Universiti Malaysia Sarawak","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+502,Female,"₹45L",Unsecured,"Malaysia","Universiti Putra Malaysia (UPM)","Business & Management; Engineering & Technology; Law",0,"",YES
+503,Male,"₹45L",Unsecured,"Malta","University of Malta","Business & Management; Engineering & Technology; Natural Sciences",0,"",YES
+504,Female,"₹45L",Unsecured,"Malta","University of Malta","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+505,Male,"₹45L",Unsecured,"Mexico","Universidad Panamericana (UP)","Business & Management; Engineering & Technology; Natural Sciences",0,"",YES
+506,Female,"₹45L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Computer Science & IT; Natural Sciences; Social Sciences",0,"",YES
+507,Male,"₹45L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology",0,"",YES
+508,Female,"₹45L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+509,Male,"₹49.99L",Unsecured,"Malaysia","Universiti Pendidikan Sultan Idris (UPSI)","Business & Management; Engineering & Technology",0,"",YES
+510,Female,"₹49.99L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology; Natural Sciences",0,"",YES
+511,Male,"₹49.99L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology",0,"",YES
+512,Female,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+513,Male,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Medicine & Health",0,"",YES
+514,Female,"₹49.99L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology; Public Policy",0,"",YES
+515,Male,"₹49.99L",Unsecured,"Morocco","University Ibn Tofail Kenitra","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+516,Female,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Computer Science & IT; Social Sciences",0,"",YES
+517,Male,"₹49.99L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology",0,"",YES
+518,Female,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Medicine & Health",0,"",YES
+519,Male,"₹49.99L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Natural Sciences",0,"",YES
+520,Female,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+521,Male,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Engineering & Technology",0,"",YES
+522,Female,"₹49.99L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Natural Sciences",0,"",YES
+523,Male,"₹50L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Engineering & Technology",0,"",YES
+524,Female,"₹50L",Unsecured,"Morocco","University Ibn Tofail Kenitra","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+525,Male,"₹50L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Natural Sciences",0,"",YES
+526,Female,"₹50L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Engineering & Technology; Public Policy",0,"",YES
+527,Male,"₹50L",Unsecured,"Mauritius","University of Mauritius","Business & Management; Engineering & Technology; Law",0,"",YES
+528,Female,"₹50L",Unsecured,"Morocco","University Ibn Tofail Kenitra","Business & Management; Engineering & Technology; Law",0,"",YES
+529,Male,"₹50L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Engineering & Technology; Law",0,"",YES
+530,Female,"₹50L",Unsecured,"Morocco","University Cadi Ayyad Marrakech","Business & Management; Engineering & Technology; Natural Sciences",0,"",YES
+531,Male,"₹50L",Unsecured,"Morocco","University Sultan Moulay Slimane Beni Mellal","Business & Management; Natural Sciences",0,"",YES
+532,Female,"₹50L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Medicine & Health",0,"",YES
+533,Male,"₹50L",Unsecured,"Nepal","Tribhuvan University","Business & Management; Natural Sciences",0,"",YES
+534,Female,"₹50L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Public Policy",0,"",YES
+535,Male,"₹50L",Unsecured,"Morocco","University Sidi Mohammed Ben Abdellah Fes","Business & Management; Medicine & Health",0,"",YES
+536,Female,"₹50L",Unsecured,"Nepal","Tribhuvan University","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+537,Male,"₹50.01L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Public Policy",0,"",YES
+538,Female,"₹50.01L",Unsecured,"Nepal","Tribhuvan University","Business & Management; Natural Sciences; Social Sciences",0,"",YES
+539,Male,"₹50.01L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Natural Sciences; Social Sciences",0,"",YES
+540,Female,"₹50.01L",Unsecured,"Nepal","Kathmandu University","Business & Management; Engineering & Technology; Public Policy",0,"",YES
+541,Male,"₹50.01L",Unsecured,"Morocco","University Ibn Tofail Kenitra","Business & Management; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+542,Female,"₹50.01L",Unsecured,"Montenegro","University of Montenegro","Business & Management; Medicine & Health",0,"",YES
+543,Male,"₹50.01L",Unsecured,"Netherlands","Radboud University","Business & Management; Natural Sciences",0,"",YES
+544,Female,"₹50.01L",Unsecured,"Morocco","University Sultan Moulay Slimane Beni Mellal","Business & Management; Engineering & Technology; Public Policy",0,"",YES
+545,Male,"₹50.01L",Unsecured,"Morocco","University Ibn Tofail Kenitra","Computer Science & IT",0,"",YES
+546,Female,"₹50.01L",Unsecured,"Nepal","Kathmandu University","Business & Management; Natural Sciences",0,"",YES
+547,Male,"₹50.01L",Unsecured,"Nepal","Tribhuvan University","Computer Science & IT",0,"",YES
+548,Female,"₹50.01L",Unsecured,"Morocco","University Sultan Moulay Slimane Beni Mellal","Computer Science & IT; Engineering & Technology",0,"",YES
+549,Male,"₹50.01L",Unsecured,"Netherlands","Leiden University","Business & Management; Natural Sciences",0,"",YES
+550,Female,"₹50.01L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Public Policy",0,"",YES
+551,Male,"₹55L",Unsecured,"Morocco","University Mohammed V de Rabat","Business & Management; Natural Sciences",0,"",YES
+552,Female,"₹55L",Unsecured,"Nepal","Kathmandu University","Business & Management; Public Policy",0,"",YES
+553,Male,"₹55L",Unsecured,"Morocco","University Sultan Moulay Slimane Beni Mellal","Business & Management; Natural Sciences",0,"",YES
+554,Female,"₹55L",Unsecured,"New Zealand","University of Canterbury","Computer Science & IT; Engineering & Technology",0,"",YES
+555,Male,"₹55L",Unsecured,"Nigeria","University of Benin","Business & Management; Medicine & Health",0,"",YES
+556,Female,"₹55L",Unsecured,"Nepal","Tribhuvan University","Business & Management; Natural Sciences",0,"",YES
+557,Male,"₹55L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Medicine & Health",0,"",YES
+558,Female,"₹55L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Public Policy",0,"",YES
+559,Male,"₹55L",Unsecured,"New Zealand","University of Canterbury","Computer Science & IT; Engineering & Technology",0,"",YES
+560,Female,"₹55L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Business & Management; Public Policy",0,"",YES
+561,Male,"₹55L",Unsecured,"Nigeria","University of Ilorin","Computer Science & IT",0,"",YES
+562,Female,"₹55L",Unsecured,"Mozambique","Universidade Eduardo Mondlane","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+563,Male,"₹55L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Business & Management; Public Policy",0,"",YES
+564,Female,"₹55L",Unsecured,"New Zealand","Victoria University of Wellington","Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+565,Male,"₹60L",Unsecured,"New Zealand","University of Waikato","Computer Science & IT",0,"",YES
+566,Female,"₹60L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Business & Management; Public Policy",0,"",YES
+567,Male,"₹60L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Business & Management; Natural Sciences; Social Sciences",0,"",YES
+568,Female,"₹60L",Unsecured,"Netherlands","University of Amsterdam","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+569,Male,"₹60L",Unsecured,"New Zealand","Victoria University of Wellington","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+570,Female,"₹60L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Engineering & Technology",0,"",YES
+571,Male,"₹60L",Unsecured,"Nigeria","Federal University of Technology Akure","Business & Management; Natural Sciences; Social Sciences",0,"",YES
+572,Female,"₹60L",Unsecured,"Northern Cyprus","Near East University","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+573,Male,"₹60L",Unsecured,"Nigeria","Federal University of Technology Minna","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+574,Female,"₹60L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+575,Male,"₹60L",Unsecured,"New Zealand","Auckland University of Technology","Computer Science & IT; Engineering & Technology",0,"",YES
+576,Female,"₹60L",Unsecured,"Northern Cyprus","Eastern Mediterranean University","Computer Science & IT",0,"",YES
+577,Male,"₹60L",Unsecured,"Northern Cyprus","Eastern Mediterranean University","Computer Science & IT",0,"",YES
+578,Female,"₹60L",Unsecured,"Northern Cyprus","Near East University","Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+579,Male,"₹61L",Unsecured,"Nigeria","Ladoke Akintola University of Technology","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+580,Female,"₹61L",Unsecured,"Norway","Inland Norway University of Applied Sciences","Business & Management; Public Policy",0,"",YES
+581,Male,"₹61L",Unsecured,"Norway","Western Norway University of Applied Sciences","Computer Science & IT",0,"",YES
+582,Female,"₹61L",Unsecured,"New Zealand","University of Otago","Business & Management; Public Policy",0,"",YES
+583,Male,"₹61L",Unsecured,"Northern Cyprus","Eastern Mediterranean University","Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+584,Female,"₹61L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Natural Sciences",0,"",YES
+585,Male,"₹61L",Unsecured,"New Zealand","University of Waikato","Computer Science & IT; Engineering & Technology; Medicine & Health; Natural Sciences",0,"",YES
+586,Female,"₹61L",Unsecured,"Nigeria","Covenant University Ota","Computer Science & IT; Natural Sciences",0,"",YES
+587,Male,"₹61L",Unsecured,"New Zealand","Auckland University of Technology","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+588,Female,"₹61L",Unsecured,"New Zealand","Lincoln University","Computer Science & IT",0,"",YES
+589,Male,"₹61L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Natural Sciences",0,"",YES
+590,Female,"₹61L",Unsecured,"Nigeria","Bayero University Kano","Computer Science & IT; Natural Sciences",0,"",YES
+591,Male,"₹61L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+592,Female,"₹61L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Natural Sciences",0,"",YES
+593,Male,"₹62L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+594,Female,"₹62L",Unsecured,"Norway","University of Tromso","DESIGN; STEM",0,"",YES
+595,Male,"₹62L",Unsecured,"Norway","Norwegian University of Life Sciences (UMB)","Computer Science & IT; Engineering & Technology",0,"",YES
+596,Female,"₹62L",Unsecured,"Oman","Sultan Qaboos University","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+597,Male,"₹62L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Natural Sciences",0,"",YES
+598,Female,"₹62L",Unsecured,"Norway","Western Norway University of Applied Sciences","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+599,Male,"₹62L",Unsecured,"Pakistan","University of Lahore","Design; Management; Medical; STEM",0,"",YES
+600,Female,"₹62L",Unsecured,"Oman","Dhofar University","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+601,Male,"₹62L",Unsecured,"Oman","Dhofar University","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+602,Female,"₹62L",Unsecured,"Oman","Sohar University","Design; Management; Medical; STEM",0,"",YES
+603,Male,"₹62L",Unsecured,"Oman","Dhofar University","Computer Science & IT; Natural Sciences",0,"",YES
+604,Female,"₹62L",Unsecured,"Oman","Sohar University","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+605,Male,"₹62L",Unsecured,"North Macedonia","Ss Cyril and Methodius University Skopje","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+606,Female,"₹62L",Unsecured,"Norway","Inland Norway University of Applied Sciences","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+607,Male,"₹62.00L",Unsecured,"Pakistan","Pakistan Institute of Engineering and Applied Sciences (PIEAS)","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+608,Female,"₹62.00L",Unsecured,"Norway","Høyskolen Kristiania","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+609,Male,"₹62.00L",Unsecured,"Palestine","Islamic University of Gaza","DESIGN; STEM",0,"",YES
+610,Female,"₹62.00L",Unsecured,"Norway","Norwegian School of Economics","Computer Science & IT; Engineering & Technology; Natural Sciences",0,"",YES
+611,Male,"₹62.00L",Unsecured,"Oman","University of Nizwa","Design; Medical and Management; STEM",0,"",YES
+612,Female,"₹62.00L",Unsecured,"Palestine","Al-Quds University","Design; Medical and Management; STEM",0,"",YES
+613,Male,"₹62.00L",Unsecured,"Norway","University of Agder","Computer Science & IT; Natural Sciences",0,"",YES
+614,Female,"₹62.00L",Unsecured,"Palestine","Islamic University of Gaza","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+615,Male,"₹62.00L",Unsecured,"Palestine","Islamic University of Gaza","DESIGN; STEM",0,"",YES
+616,Female,"₹62.00L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Computer Science & IT; Natural Sciences",0,"",YES
+617,Male,"₹62.00L",Unsecured,"Palestine","Islamic University of Gaza","Computer Science & IT; Engineering & Technology; Natural Sciences; Social Sciences",0,"",YES
+618,Female,"₹62.00L",Unsecured,"Palestine","Birzeit University","Design; STEM; and Management",0,"",YES
+619,Male,"₹62.00L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","DESIGN; LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+620,Female,"₹62.00L",Unsecured,"Norway","University of Stavanger","DESIGN; STEM",0,"",YES
+621,Male,"₹68.50L",Unsecured,"Oman","Sohar University","DESIGN; STEM",0,"",YES
+622,Female,"₹68.50L",Unsecured,"Palestine","Birzeit University","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+623,Male,"₹68.50L",Unsecured,"Norway","Norwegian University of Science & Technology","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+624,Female,"₹68.50L",Unsecured,"Palestine","Birzeit University","Design; Management; Medical; STEM",0,"",YES
+625,Male,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; Management; Medical; STEM",0,"",YES
+626,Female,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; Medical and Management; STEM",0,"",YES
+627,Male,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; STEM; and Management",0,"",YES
+628,Female,"₹68.50L",Unsecured,"Oman","University of Nizwa","Design; STEM; and Management",0,"",YES
+629,Male,"₹68.50L",Unsecured,"Peru","Universidad Nacional Agraria La Molina","Design; Medical and Management; STEM",0,"",YES
+630,Female,"₹68.50L",Unsecured,"Peru","Universidad Cientifica del Sur","Design; Medical and Management; STEM",0,"",YES
+631,Male,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; Medical and Management; STEM",0,"",YES
+632,Female,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+633,Male,"₹68.50L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+634,Female,"₹68.50L",Unsecured,"Pakistan","University of Sindh","Design; STEM; and Management",0,"",YES
+635,Male,"₹70L",Unsecured,"Pakistan","Bahauddin Zakariya University","DESIGN; STEM",0,"",YES
+636,Female,"₹70L",Unsecured,"Pakistan","Mehran University of Engineering & Technology","Design; Management; Medical; STEM",0,"",YES
+637,Male,"₹70L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; STEM; and Management",0,"",YES
+638,Female,"₹70L",Unsecured,"Pakistan","Government College University Faisalabad","ECONOMICS; LAW; STEM",0,"",YES
+639,Male,"₹70L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+640,Female,"₹70L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; STEM; and Management",0,"",YES
+641,Male,"₹70L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","Design; STEM; and Management",0,"",YES
+642,Female,"₹70L",Unsecured,"Paraguay","Universidad Nacional de Asuncion","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+643,Male,"₹70L",Unsecured,"Palestine","Al-Quds University","Design; Medical and Management; STEM",0,"",YES
+644,Female,"₹70L",Unsecured,"Poland","Wroclaw University of Science and Technology (WUST)","Design; STEM; and Management",0,"",YES
+645,Male,"₹70L",Unsecured,"Peru","Universidad Cientifica del Sur","ECONOMICS; MANAGEMENT; STEM",0,"",YES
+646,Female,"₹70L",Unsecured,"Palestine","An Najah National University","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+647,Male,"₹70L",Unsecured,"Peru","Universidad de Lima","Design; STEM; and Management",0,"",YES
+648,Female,"₹70L",Unsecured,"Peru","Universidad de Lima","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+649,Male,"₹75L",Unsecured,"Poland","Warsaw University of Life Sciences (Agricultural University)","ECONOMICS; LAW; STEM",0,"",YES
+650,Female,"₹75L",Unsecured,"Palestine","Islamic University of Gaza","Design; STEM; and Management",0,"",YES
+651,Male,"₹75L",Unsecured,"Poland","Agricultural University of Krakow","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+652,Female,"₹75L",Unsecured,"Portugal","Universidade da Beira Interior","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+653,Male,"₹75L",Unsecured,"Peru","Universidad Nacional Mayor de San Marcos","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+654,Female,"₹75L",Unsecured,"Portugal","Universidade dos Acores","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+655,Male,"₹75L",Unsecured,"Poland","Poznan University of Medical Sciences","ECONOMICS; MANAGEMENT; STEM",0,"",YES
+656,Female,"₹75L",Unsecured,"Peru","Universidad Nacional Mayor de San Marcos","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+657,Male,"₹75L",Unsecured,"Philippines","University of the Philippines Diliman","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+658,Female,"₹75L",Unsecured,"Philippines","College of Nursing and Allied Health Sciences","Design; STEM; and Management",0,"",YES
+659,Male,"₹75L",Unsecured,"Portugal","Instituto Politecnico do Porto","Design; STEM; and Management",0,"",YES
+660,Female,"₹75L",Unsecured,"Poland","Catholic University of Lublin","Design; STEM; and Management",0,"",YES
+661,Male,"₹75L",Unsecured,"Peru","Universidad Peruana de Ciencias Aplicadas","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+662,Female,"₹75L",Unsecured,"Qatar","Hamad Bin Khalifa University","ECONOMICS; MEDICAL; STEM",0,"",YES
+663,Male,"₹77.50L",Unsecured,"Portugal","ISCTE Instituto Universitario de Lisboa","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+664,Female,"₹77.50L",Unsecured,"Philippines","College of Nursing and Allied Health Sciences","ECONOMICS; STEM",0,"",YES
+665,Male,"₹77.50L",Unsecured,"Philippines","De La Salle University Manila","ECONOMICS; LAW; STEM",0,"",YES
+666,Female,"₹77.50L",Unsecured,"Philippines","University of the Philippines","ECONOMICS; LAW; MANAGEMENT; STEM",0,"",YES
+667,Male,"₹77.50L",Unsecured,"Poland","Poznan University of Medical Sciences","ECONOMICS; LAW; STEM",0,"",YES
+668,Female,"₹77.50L",Unsecured,"Portugal","Instituto Politecnico de Santarem","Engineering & Technology",0,"",YES
+669,Male,"₹77.50L",Unsecured,"Philippines","University of the Philippines","Engineering & Technology; Natural Sciences",0,"",YES
+670,Female,"₹77.50L",Unsecured,"Poland","Military University of Technology in Warsaw","ECONOMICS; STEM",0,"",YES
+671,Male,"₹77.50L",Unsecured,"Portugal","Instituto Politecnico de Santarem","ECONOMICS; LAW; STEM",0,"",YES
+672,Female,"₹77.50L",Unsecured,"Portugal","Instituto Politecnico de Lisboa","ECONOMICS; MANAGEMENT; STEM",0,"",YES
+673,Male,"₹77.50L",Unsecured,"Poland","Adam Mickiewicz University","Engineering & Technology; Natural Sciences",0,"",YES
+674,Female,"₹77.50L",Unsecured,"Qatar","Qatar University","ECONOMICS; LAW; MEDICAL; STEM",0,"",YES
+675,Male,"₹77.50L",Unsecured,"Qatar","Hamad Bin Khalifa University","Engineering & Technology",0,"",YES
+676,Female,"₹77.50L",Unsecured,"Romania","Carol Davila University of Medicine and Pharmacy","Engineering & Technology; Natural Sciences",0,"",YES
+677,Male,"₹77.50L",Unsecured,"Qatar","Hamad Bin Khalifa University","ECONOMICS; STEM",0,"",YES
+678,Female,"₹80L",Unsecured,"Portugal","Universidade Catolica Portuguesa","ECONOMICS; MEDICAL; STEM",0,"",YES
+679,Male,"₹80L",Unsecured,"Romania","Politehnica University Timisoara","ECONOMICS; MEDICAL; STEM",0,"",YES
+680,Female,"₹80L",Unsecured,"Portugal","Universidade de Coimbra","Engineering & Technology",0,"",YES
+681,Male,"₹80L",Unsecured,"Russia","Saint Petersburg State Electrotechnical University","ECONOMICS; MANAGEMENT; STEM",0,"",YES
+682,Female,"₹80L",Unsecured,"Poland","University of Warsaw","Engineering & Technology",0,"",YES
+683,Male,"₹80L",Unsecured,"Poland","Tadeusz Kosciuszko Cracow University of Technology","Engineering & Technology",0,"",YES
+684,Female,"₹80L",Unsecured,"Russia","Immanuel Kant Baltic Federal University","Engineering & Technology",0,"",YES
+685,Male,"₹80L",Unsecured,"Poland","Jagiellonian University","Healthcare & MBA (Within 2 yrs of UG); STEM",0,"",YES
+686,Female,"₹80L",Unsecured,"Portugal","Universidade de Coimbra","ECONOMICS; MANAGEMENT; STEM",0,"",YES
+687,Male,"₹80L",Unsecured,"Romania","Gheorghe Asachi Technical University","ECONOMICS; STEM",0,"",YES
+688,Female,"₹80L",Unsecured,"Portugal","Universidade da Beira Interior","Engineering & Technology; Natural Sciences",0,"",YES
+689,Male,"₹80L",Unsecured,"Qatar","Qatar University","Engineering & Technology; Natural Sciences",0,"",YES
+690,Female,"₹80L",Unsecured,"Romania","Babes-Bolyai University","LAW; MANAGEMENT",0,"",YES
+691,Male,"₹80L",Unsecured,"Rwanda","University of Rwanda","Engineering & Technology",0,"",YES
+692,Female,"₹80.00L",Unsecured,"Rwanda","University of Rwanda","ECONOMICS; MEDICAL; STEM",0,"",YES
+693,Male,"₹80.00L",Unsecured,"Qatar","Qatar University","ECONOMICS; STEM",0,"",YES
+694,Female,"₹80.00L",Unsecured,"Romania","Oradea University","Engineering & Technology; Natural Sciences",0,"",YES
+695,Male,"₹80.00L",Unsecured,"Russia","Tomsk Polytechnic University","Engineering & Technology; Natural Sciences",0,"",YES
+696,Female,"₹80.00L",Unsecured,"Qatar","Hamad Bin Khalifa University","ECONOMICS; MEDICAL; STEM",0,"",YES
+697,Male,"₹80.00L",Unsecured,"Russia","ITMO University","LAW and MEDICAL; MANAGEMENT; STEM",0,"",YES
+698,Female,"₹80.00L",Unsecured,"Romania","Gheorghe Asachi Technical University","LAW and MEDICAL; MANAGEMENT; STEM",0,"",YES
+699,Male,"₹80.00L",Unsecured,"Russia","Saint Petersburg State University","ECONOMICS; STEM",0,"",YES
+700,Female,"₹80.00L",Unsecured,"Saint Vincent and the Grenadines","St. James School of Medicine","Engineering & Technology; Natural Sciences",0,"",YES
+701,Male,"₹80.00L",Unsecured,"Qatar","Hamad Bin Khalifa University","LAW; MANAGEMENT",0,"",YES
+702,Female,"₹80.00L",Unsecured,"Romania","West University of Timisoara","Healthcare & MBA (Within 2 yrs of UG); STEM",0,"",YES
+703,Male,"₹80.00L",Unsecured,"Saudi Arabia","Al Imam Muhammad Ibn Saud Islamic University","LAW; MANAGEMENT; MEDICAL",0,"",YES
+704,Female,"₹80.00L",Unsecured,"Russia","Novosibirsk State University","Engineering & Technology",0,"",YES
+705,Male,"₹80.00L",Unsecured,"Rwanda","University of Rwanda","Healthcare & MBA (Within 2 yrs of UG); STEM",0,"",YES
+706,Female,"₹82.50L",Unsecured,"Russia","Russian Presidential Academy of National Economy and Public Administration","LAW; MANAGEMENT; MEDICAL",0,"",YES
+707,Male,"₹82.50L",Unsecured,"Rwanda","University of Rwanda","Healthcare & MBA (Within 2 yrs of UG); STEM",0,"",YES
+708,Female,"₹82.50L",Unsecured,"Romania","Dunarea de Jos University Galati","LAW; MANAGEMENT",0,"",YES
+709,Male,"₹82.50L",Unsecured,"Rwanda","University of Rwanda","Engineering & Technology; Natural Sciences",0,"",YES
+710,Female,"₹82.50L",Unsecured,"Rwanda","University of Rwanda","LAW and MEDICAL; MANAGEMENT; STEM",0,"",YES
+711,Male,"₹82.50L",Unsecured,"Saudi Arabia","Jazan University","LAW; MANAGEMENT",0,"",YES
+712,Female,"₹82.50L",Unsecured,"Saudi Arabia","Imam Muhammad Ibn Saud Islamic University - IMSIU","Engineering & Technology; Natural Sciences",0,"",YES
+713,Male,"₹82.50L",Unsecured,"Saudi Arabia","Effat University","LAW; MANAGEMENT; MEDICAL",0,"",YES
+714,Female,"₹82.50L",Unsecured,"Russia","Tomsk State University","LAW; MANAGEMENT; STEM",0,"",YES
+715,Male,"₹82.50L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT",0,"",YES
+716,Female,"₹82.50L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT; STEM",0,"",YES
+717,Male,"₹82.50L",Unsecured,"Russia","MGIMO University","LAW; MANAGEMENT; STEM",0,"",YES
+718,Female,"₹82.50L",Unsecured,"Russia","National University of Science & Technology MISIS (Moscow Institute of Steel and Alloys)","LAW; MANAGEMENT",0,"",YES
+719,Male,"₹82.50L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT",0,"",YES
+720,Female,"₹85L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT",0,"",YES
+721,Male,"₹85L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT; STEM",0,"",YES
+722,Female,"₹85L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+723,Male,"₹85L",Unsecured,"Serbia","University of Belgrade","LAW; MANAGEMENT; MEDICAL",0,"",YES
+724,Female,"₹85L",Unsecured,"Saint Vincent and the Grenadines","St. James School of Medicine","LAW; MANAGEMENT; STEM",0,"",YES
+725,Male,"₹85L",Unsecured,"Serbia","University of Nis","LAW; MANAGEMENT; STEM",0,"",YES
+726,Female,"₹85L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+727,Male,"₹85L",Unsecured,"Serbia","University of Belgrade","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+728,Female,"₹85L",Unsecured,"Rwanda","University of Rwanda","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+729,Male,"₹85L",Unsecured,"Saudi Arabia","King Abdulaziz University","LAW; STEM",0,"",YES
+730,Female,"₹85L",Unsecured,"Saint Vincent and the Grenadines","St. James School of Medicine","LAW; STEM",0,"",YES
+731,Male,"₹85L",Unsecured,"Serbia","University of Novi Sad","LAW; STEM",0,"",YES
+732,Female,"₹85L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT; MEDICAL",0,"",YES
+733,Male,"₹85L",Unsecured,"Saint Vincent and the Grenadines","St. James School of Medicine","LAW; STEM",0,"",YES
+734,Female,"₹90L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT; STEM",0,"",YES
+735,Male,"₹90L",Unsecured,"Serbia","University of Kragujevac","LAW; MANAGEMENT; MEDICAL",0,"",YES
+736,Female,"₹90L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+737,Male,"₹90L",Unsecured,"Saudi Arabia","Imam Abdulrahman Bin Faisal University","LAW; STEM",0,"",YES
+738,Female,"₹90L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MEDICAL; STEM",0,"",YES
+739,Male,"₹90L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MEDICAL; STEM",0,"",YES
+740,Female,"₹90L",Unsecured,"Singapore","Nanyang Technological University, Singapore","LAW; STEM",0,"",YES
+741,Male,"₹90L",Unsecured,"Saudi Arabia","Jazan University","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+742,Female,"₹90L",Unsecured,"Singapore","Singapore University of Technology and Design","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+743,Male,"₹90L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","Law and Medical.; Management; STEM",0,"",YES
+744,Female,"₹90L",Unsecured,"Saudi Arabia","Al Imam Muhammad Ibn Saud Islamic University","LAW; MANAGEMENT; STEM",0,"",YES
+745,Male,"₹90L",Unsecured,"Serbia","University of Belgrade","LAW; MEDICAL; STEM",0,"",YES
+746,Female,"₹90L",Unsecured,"Singapore","Nanyang Technological University","LAW; MEDICAL; STEM",0,"",YES
+747,Male,"₹90L",Unsecured,"Slovakia","University of Zilina","LAW; MANAGEMENT; STEM",0,"",YES
+748,Female,"₹92.50L",Unsecured,"Singapore","Nanyang Technological University, Singapore","LAW; MANAGEMENT; STEM",0,"",YES
+749,Male,"₹92.50L",Unsecured,"Serbia","University of Novi Sad","LAW; STEM",0,"",YES
+750,Female,"₹92.50L",Unsecured,"Slovenia","University of Maribor","Law and Management; Medical; STEM",0,"",YES
+751,Male,"₹92.50L",Unsecured,"Singapore","Singapore University of Technology and Design","Law and Medical; Management; Medical; STEM",0,"",YES
+752,Female,"₹92.50L",Unsecured,"Senegal","University Cheikh Anta Diop de Dakar","LAW; MANAGEMENT; MEDICAL; STEM",0,"",YES
+753,Male,"₹92.50L",Unsecured,"Singapore","Singapore University of Technology and Design","LAW; MANAGEMENT; STEM",0,"",YES
+754,Female,"₹92.50L",Unsecured,"Slovakia","Slovak University of Technology in Bratislava","Law and Medical.; Management; STEM",0,"",YES
+755,Male,"₹92.50L",Unsecured,"Slovakia","Comenius University Bratislava","LAW; STEM",0,"",YES
+756,Female,"₹92.50L",Unsecured,"Serbia","University of Nis","LAW; MANAGEMENT; STEM",0,"",YES
+757,Male,"₹92.50L",Unsecured,"South Africa","University of South Africa","LAW; MANAGEMENT; STEM",0,"",YES
+758,Female,"₹92.50L",Unsecured,"Slovakia","Matej Bel University in Banska Bystrica","LAW; STEM",0,"",YES
+759,Male,"₹92.50L",Unsecured,"Singapore","Nanyang Technological University","LAW; STEM",0,"",YES
+760,Female,"₹92.50L",Unsecured,"Slovakia","Matej Bel University in Banska Bystrica","MANAGEMENT",0,"",YES
+761,Male,"₹92.50L",Unsecured,"Serbia","University of Belgrade","Law and Management; Medical; STEM",0,"",YES
+762,Female,"₹99.99L",Unsecured,"South Africa","Stellenbosch University","LAW; MEDICAL; STEM",0,"",YES
+763,Male,"₹99.99L",Unsecured,"Serbia","University of Nis","Law and Medical; Management; Medical; STEM",0,"",YES
+764,Female,"₹99.99L",Unsecured,"South Africa","Tshwane University of Technology","LAW; STEM",0,"",YES
+765,Male,"₹99.99L",Unsecured,"Singapore","Nanyang Technological University, Singapore","Law and Medical; Management; Medical; STEM",0,"",YES
+766,Female,"₹99.99L",Unsecured,"Singapore","Nanyang Technological University","Law and Management; Medical; STEM",0,"",YES
+767,Male,"₹99.99L",Unsecured,"South Africa","Durban University of Technology","LAW; STEM",0,"",YES
+768,Female,"₹99.99L",Unsecured,"Slovakia","Technical University of Kosice","Law and Medical; Management; STEM",0,"",YES
+769,Male,"₹99.99L",Unsecured,"Slovenia","University of Primorska","MANAGEMENT AND STEM",0,"",YES
+770,Female,"₹99.99L",Unsecured,"Slovakia","Technical University in Zvolen","MANAGEMENT AND STEM",0,"",YES
+771,Male,"₹99.99L",Unsecured,"Slovakia","Comenius University in Bratislava","Law and Medical.; Management; STEM",0,"",YES
+772,Female,"₹99.99L",Unsecured,"South Africa","University of The Witwatersrand","Law and Medical; Management; Medical; STEM",0,"",YES
+773,Male,"₹99.99L",Unsecured,"Slovenia","University of Ljubljana","Law and Medical; Management; Medical; STEM",0,"",YES
+774,Female,"₹99.99L",Unsecured,"South Africa","University of Fort Hare","MANAGEMENT",0,"",YES
+775,Male,"₹99.99L",Unsecured,"Spain","Universidad Catolica de Valencia San Vicente Martir","Law and Medical; Management; Medical; STEM",0,"",YES
+776,Female,"₹1Cr",Unsecured,"Slovenia","University of Marburg","MANAGEMENT; MEDICAL; STEM",0,"",YES
+777,Male,"₹1Cr",Unsecured,"South Korea","Hanbat National University","Law and Management; Medical; STEM",0,"",YES
+778,Female,"₹1Cr",Unsecured,"Spain","Universidad de Las Palmas de Gran Canaria","Law and Medical; Management; STEM",0,"",YES
+779,Male,"₹1Cr",Unsecured,"South Africa","North-West University","MANAGEMENT AND STEM",0,"",YES
+780,Female,"₹1Cr",Unsecured,"Spain","Universidad de Sevilla","Law and Medical.; Management; STEM",0,"",YES
+781,Male,"₹1Cr",Unsecured,"Slovakia","Slovak University of Technology in Bratislava","Law and Medical; Management; Medical; STEM",0,"",YES
+782,Female,"₹1Cr",Unsecured,"Slovenia","University of Primorska","MANAGEMENT",0,"",YES
+783,Male,"₹1Cr",Unsecured,"Sri Lanka","University of Peradeniya","MANAGEMENT AND STEM",0,"",YES
+784,Female,"₹1Cr",Unsecured,"Slovenia","University of Marburg","MANAGEMENT; MEDICAL; STEM",0,"",YES
+785,Male,"₹1Cr",Unsecured,"Spain","Universitat de Girona","MANAGEMENT AND STEM",0,"",YES
+786,Female,"₹1Cr",Unsecured,"Sri Lanka","University of Ruhuna","Law and Medical; Management; STEM",0,"",YES
+787,Male,"₹1Cr",Unsecured,"South Korea","Pohang University of Science & Technology","MANAGEMENT AND STEM",0,"",YES
+788,Female,"₹1Cr",Unsecured,"Sri Lanka","University of Ruhuna","Law and Medical; Management; STEM",0,"",YES
+789,Male,"₹1Cr",Unsecured,"Sri Lanka","University of Peradeniya","MANAGEMENT; STEM",0,"",YES
+790,Female,"₹1.00Cr",Unsecured,"South Africa","University of Fort Hare","MEDICAL",0,"",YES
+791,Male,"₹1.00Cr",Unsecured,"Sudan","Future University","Law and Medical; Management; STEM",0,"",YES
+792,Female,"₹1.00Cr",Unsecured,"Sudan","Future University","MANAGEMENT; STEM",0,"",YES
+793,Male,"₹1.00Cr",Unsecured,"Spain","Universitat Ramon Llull","MANAGEMENT; STEM",0,"",YES
+794,Female,"₹1.00Cr",Unsecured,"Sri Lanka","University of Moratuwa","Law and Medical; Management; Medical; STEM",0,"",YES
+795,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Sri Jayewardenepura","Law and Medical; Management; STEM",0,"",YES
+796,Female,"₹1.00Cr",Unsecured,"Sri Lanka","University of Sri Jayewardenepura","MEDICAL; STEM",0,"",YES
+797,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Kelaniya","MEDICAL",0,"",YES
+798,Female,"₹1.00Cr",Unsecured,"South Korea","Korea Institute for Advanced Study","MANAGEMENT AND STEM",0,"",YES
+799,Male,"₹1.00Cr",Unsecured,"Sudan","University of Khartoum","Law and Medical; Management; STEM",0,"",YES
+800,Female,"₹1.00Cr",Unsecured,"South Korea","Soonchunhyang University","MANAGEMENT; STEM",0,"",YES
+801,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Colombo","MANAGEMENT; MEDICAL; STEM",0,"",YES
+802,Female,"₹1.00Cr",Unsecured,"Sweden","University of Skovde","MANAGEMENT; MEDICAL; STEM",0,"",YES
+803,Male,"₹1.00Cr",Unsecured,"Sweden","Umea University","MANAGEMENT; STEM",0,"",YES
+804,Female,"₹1.00Cr",Unsecured,"Sri Lanka","University of Ruhuna","MANAGEMENT; STEM",0,"",YES
+805,Male,"₹1.00Cr",Unsecured,"Sudan","Future University","MEDICAL; STEM",0,"",YES
+806,Female,"₹1.00Cr",Unsecured,"Spain","Universitat Autonoma de Barcelona","MANAGEMENT; MEDICAL; STEM",0,"",YES
+807,Male,"₹1.00Cr",Unsecured,"South Korea","Sungkyunkwan University GSB","MEDICAL",0,"",YES
+808,Female,"₹1.00Cr",Unsecured,"Sudan","University of Khartoum","MANAGEMENT; STEM",0,"",YES
+809,Male,"₹1.00Cr",Unsecured,"Spain","Universidad Internacional Valenciana","MEDICAL; STEM",0,"",YES
+810,Female,"₹1.00Cr",Unsecured,"Switzerland","University of Fribourg","MEDICAL",0,"",YES
+811,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Moratuwa","MANAGEMENT; MEDICAL; STEM",0,"",YES
+812,Female,"₹1.00Cr",Unsecured,"Spain","Universidad Pontificia Comillas","Management & Medical; STEM",0,"",YES
+813,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Moratuwa","Management & Medical; STEM",0,"",YES
+814,Female,"₹1.00Cr",Unsecured,"Switzerland","Fachhochschule Nordwestschweiz","MANAGEMENT AND STEM",0,"",YES
+815,Male,"₹1.00Cr",Unsecured,"Sri Lanka","University of Sri Jayewardenepura","Management & Medical; STEM",0,"",YES
+816,Female,"₹1.00Cr",Unsecured,"Sweden","Chalmers University of Technology","MANAGEMENT AND STEM",0,"",YES
+817,Male,"₹1.00Cr",Unsecured,"Sweden","Stockholm University","MEDICAL; STEM",0,"",YES
+818,Female,"₹1.10Cr",Unsecured,"Sweden","KTH Royal Institute of Technology","Management",0,"",YES
+819,Male,"₹1.10Cr",Unsecured,"Sudan","Future University","Management & Medical; STEM",0,"",YES
+820,Female,"₹1.10Cr",Unsecured,"Syria","Damascus University","MEDICAL",0,"",YES
+821,Male,"₹1.10Cr",Unsecured,"Sudan","University of Khartoum","MANAGEMENT; MEDICAL; STEM",0,"",YES
+822,Female,"₹1.10Cr",Unsecured,"Syria","Damascus University","MANAGEMENT; STEM",0,"",YES
+823,Male,"₹1.10Cr",Unsecured,"Sri Lanka","University of Kelaniya","MEDICAL; STEM",0,"",YES
+824,Female,"₹1.10Cr",Unsecured,"Sri Lanka","University of Kelaniya","MEDICAL; STEM",0,"",YES
+825,Male,"₹1.10Cr",Unsecured,"Sudan","Future University","Management",0,"",YES
+826,Female,"₹1.10Cr",Unsecured,"Switzerland","Universitat Luzern","Management and Law; Medical; STEM",0,"",YES
+827,Male,"₹1.10Cr",Unsecured,"Sudan","Future University","Management and Law; Medical; STEM",0,"",YES
+828,Female,"₹1.10Cr",Unsecured,"Sweden","Chalmers University of Technology","MEDICAL; STEM",0,"",YES
+829,Male,"₹1.10Cr",Unsecured,"Switzerland","University of Geneva","MANAGEMENT; STEM",0,"",YES
+830,Female,"₹1.10Cr",Unsecured,"Sweden","Blekinge Institute of Technology","Management and Law; Medical; STEM",0,"",YES
+831,Male,"₹1.10Cr",Unsecured,"Syria","Damascus University","Management & Medical; STEM",0,"",YES
+832,Female,"₹1.13Cr",Unsecured,"Syria","Damascus University","Management and Law; Medical; STEM",0,"",YES
+833,Male,"₹1.13Cr",Unsecured,"Taiwan","National Yang Ming Chiao Tung University‎","Management & Medical; STEM",0,"",YES
+834,Female,"₹1.13Cr",Unsecured,"Sweden","Karolinska Institutet","Management & Medical; STEM",0,"",YES
+835,Male,"₹1.13Cr",Unsecured,"Sweden","Malardalens Universitet","Management and Law; Medical; STEM",0,"",YES
+836,Female,"₹1.13Cr",Unsecured,"Taiwan","National Taiwan University","MEDICAL",0,"",YES
+837,Male,"₹1.13Cr",Unsecured,"Taiwan","National Chung Cheng University","Management",0,"",YES
+838,Female,"₹1.13Cr",Unsecured,"Sweden","Stockholm School of Economics","Management & Medical; STEM",0,"",YES
+839,Male,"₹1.13Cr",Unsecured,"Sweden","Stockholm School of Economics","Management and Law; STEM",0,"",YES
+840,Female,"₹1.13Cr",Unsecured,"Tanzania","Sokoine University of Agriculture","Management & Medical; STEM",0,"",YES
+841,Male,"₹1.13Cr",Unsecured,"Syria","Damascus University","Management",0,"",YES
+842,Female,"₹1.13Cr",Unsecured,"Switzerland","University of St. Gallen","Management and STEM",0,"",YES
+843,Male,"₹1.13Cr",Unsecured,"Syria","Damascus University","Management & Medical; STEM",0,"",YES
+844,Female,"₹1.13Cr",Unsecured,"Thailand","Asian Institute of Technology Thailand","Management and Law; STEM",0,"",YES
+845,Male,"₹1.13Cr",Unsecured,"Syria","Damascus University","Management and Medical; STEM",0,"",YES
+846,Female,"₹1.13Cr",Unsecured,"Tanzania","Indian Institute of Technology-Madras","Management and Law; Medical; STEM",0,"",YES
+847,Male,"₹1.25Cr",Unsecured,"Thailand","Walailak University","Management and Law; STEM",0,"",YES
+848,Female,"₹1.25Cr",Unsecured,"Switzerland","Hochschule Luzern","Management and STEM; Medical",0,"",YES
+849,Male,"₹1.25Cr",Unsecured,"Thailand","University of Phayao","Management and Medical; STEM",0,"",YES
+850,Female,"₹1.25Cr",Unsecured,"Thailand","Thammasat University","Management and Law; STEM",0,"",YES
+851,Male,"₹1.25Cr",Unsecured,"Switzerland","University of Basel","Management & Medical; STEM",0,"",YES
+852,Female,"₹1.25Cr",Unsecured,"Syria","Damascus University","Management & Medical; STEM",0,"",YES
+853,Male,"₹1.25Cr",Unsecured,"Taiwan","National Chengchi University","Management and STEM; Medical",0,"",YES
+854,Female,"₹1.25Cr",Unsecured,"Tanzania","Sokoine University of Agriculture","Management and STEM; Medical",0,"",YES
+855,Male,"₹1.25Cr",Unsecured,"Tanzania","Indian Institute of Technology-Madras","Management & Medical; STEM",0,"",YES
+856,Female,"₹1.25Cr",Unsecured,"Thailand","Mahidol University","Management & Medical; STEM",0,"",YES
+857,Male,"₹1.25Cr",Unsecured,"Taiwan","National Chin Yi University of Technology","Management and STEM",0,"",YES
+858,Female,"₹1.25Cr",Unsecured,"Syria","Damascus University","Management and Medical; STEM",0,"",YES
+859,Male,"₹1.25Cr",Unsecured,"Tanzania","Indian Institute of Technology-Madras","Management and STEM",0,"",YES
+860,Female,"₹1.25Cr",Unsecured,"Tanzania","Sokoine University of Agriculture","Management and Law; STEM",0,"",YES
+861,Male,"₹1.38Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management and Law; STEM",0,"",YES
+862,Female,"₹1.38Cr",Unsecured,"Taiwan","Tzu Chi University","Management and Medical; STEM",0,"",YES
+863,Male,"₹1.38Cr",Unsecured,"Thailand","Rajamangala University of Technology Isan","Management and STEM; Medical",0,"",YES
+864,Female,"₹1.38Cr",Unsecured,"Tanzania","Sokoine University of Agriculture","Management and STEM; Medical",0,"",YES
+865,Male,"₹1.38Cr",Unsecured,"Turkey","Bogazici University","Management and Law; Medical; STEM",0,"",YES
+866,Female,"₹1.38Cr",Unsecured,"Thailand","Chiang Mai University","Management and Medical; STEM",0,"",YES
+867,Male,"₹1.38Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management; Medical; STEM",0,"",YES
+868,Female,"₹1.38Cr",Unsecured,"Tanzania","University of Dar Es Salaam","Management and STEM",0,"",YES
+869,Male,"₹1.38Cr",Unsecured,"Turkey","Izmir Institute of Technology","Management and STEM",0,"",YES
+870,Female,"₹1.38Cr",Unsecured,"Uganda","Kampala International University","Management and STEM",0,"",YES
+871,Male,"₹1.38Cr",Unsecured,"Tanzania","Indian Institute of Technology-Madras","Management; Medical; STEM",0,"",YES
+872,Female,"₹1.38Cr",Unsecured,"Turkey","Bingol University","Management and STEM",0,"",YES
+873,Male,"₹1.38Cr",Unsecured,"Uganda","Kampala International University","Management and STEM",0,"",YES
+874,Female,"₹1.38Cr",Unsecured,"Uganda","Kampala International University","Management; STEM",0,"",YES
+875,Male,"₹1.50Cr",Unsecured,"Uganda","Kampala International University","Management; Medical; STEM",0,"",YES
+876,Female,"₹1.50Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management and STEM; Medical",0,"",YES
+877,Male,"₹1.50Cr",Unsecured,"Turkey","Bogazici University","Management; STEM",0,"",YES
+878,Female,"₹1.50Cr",Unsecured,"Thailand","Chulalongkorn University","Management; Medical; STEM",0,"",YES
+879,Male,"₹1.50Cr",Unsecured,"Thailand","Thammasat University","Management and STEM",0,"",YES
+880,Female,"₹1.50Cr",Unsecured,"Ukraine","V.N. Karazin Kharkiv National University","Management; Medical; STEM",0,"",YES
+881,Male,"₹1.50Cr",Unsecured,"Thailand","Naresuan University","Management; STEM",0,"",YES
+882,Female,"₹1.50Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management; STEM",0,"",YES
+883,Male,"₹1.50Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management and STEM; Medical",0,"",YES
+884,Female,"₹1.50Cr",Unsecured,"Ukraine","Sumy State University","Management; Medical; STEM",0,"",YES
+885,Male,"₹1.50Cr",Unsecured,"Turkey","Sinop University","Management; STEM",0,"",YES
+886,Female,"₹1.50Cr",Unsecured,"Ukraine","Lviv Polytechnic National University","Management and STEM; Medical",0,"",YES
+887,Male,"₹1.50Cr",Unsecured,"Tunisia","University of Tunis El Manar","Management; STEM",0,"",YES
+888,Female,"₹1.50Cr",Unsecured,"United Arab Emirates","Ajman University","Medical",0,"",YES
+889,Male,"₹1.75Cr",Unsecured,"Ukraine","Taras Shevchenko National University of Kyiv","Management; STEM; and Medical",0,"",YES
+890,Female,"₹1.75Cr",Unsecured,"Turkey","Istanbul University","Management; Medical",0,"",YES
+891,Male,"₹1.75Cr",Unsecured,"Ukraine","Sumy State University","Medical",0,"",YES
+892,Female,"₹1.75Cr",Unsecured,"United Arab Emirates","Abu Dhabi University","Management; Medical",0,"",YES
+893,Male,"₹1.75Cr",Unsecured,"Ukraine","Taras Shevchenko National University of Kyiv","Management; STEM; and Medical",0,"",YES
+894,Female,"₹1.75Cr",Unsecured,"Ukraine","Taras Shevchenko National University of Kyiv","Management and STEM; Medical",0,"",YES
+895,Male,"₹1.75Cr",Unsecured,"Tunisia","University of Tunis El Manar","Medical; STEM",0,"",YES
+896,Female,"₹1.75Cr",Unsecured,"Uganda","Kampala International University","Medical and STEM",0,"",YES
+897,Male,"₹1.75Cr",Unsecured,"United Kingdom","London Metropolitan University","Management; Medical; STEM",0,"",YES
+898,Female,"₹1.75Cr",Unsecured,"Uganda","Kampala International University","Medical; STEM",0,"",YES
+899,Male,"₹1.75Cr",Unsecured,"Ukraine","National Technical University of Ukraine ""Igor Sikorsky Kyiv Polytechnic Institute""","Management; Medical",0,"",YES
+900,Female,"₹1.75Cr",Unsecured,"United Arab Emirates","American University of Ras Al Khaimah ( AURAK )","Management; STEM; and Medical",0,"",YES
+901,Male,"₹1.75Cr",Unsecured,"Ukraine","Sumy State University","Management; Medical",0,"",YES
+902,Female,"₹1.75Cr",Unsecured,"Turkey","Pamukkale University","Medical; STEM Management and Law",0,"",YES
+903,Male,"₹1.80Cr",Unsecured,"United Kingdom","University of the Arts London","Management; STEM; and Medical",0,"",YES
+904,Female,"₹1.80Cr",Unsecured,"Ukraine","Sumy State University","Medical",0,"",YES
+905,Male,"₹1.80Cr",Unsecured,"United Kingdom","Liverpool Hope University","Medical; STEM",0,"",YES
+906,Female,"₹1.80Cr",Unsecured,"Uganda","Kampala International University","Medical; STEM",0,"",YES
+907,Male,"₹1.80Cr",Unsecured,"United Kingdom","University of Oxford","Management; STEM; and Medical",0,"",YES
+908,Female,"₹1.80Cr",Unsecured,"United Kingdom","Durham University","Medical",0,"",YES
+909,Male,"₹1.80Cr",Unsecured,"Ukraine","National Technical University of Ukraine ""Igor Sikorsky Kyiv Polytechnic Institute""","Medical; STEM",0,"",YES
+910,Female,"₹1.80Cr",Unsecured,"United Kingdom","University of Reading","Medical and STEM",0,"",YES
+911,Male,"₹1.80Cr",Unsecured,"United States of America","Ball State University","Management; STEM; and Medical",0,"",YES
+912,Female,"₹1.80Cr",Unsecured,"United Arab Emirates","University of Sharjah","Management; STEM",0,"",YES
+913,Male,"₹1.80Cr",Unsecured,"United Arab Emirates","Canadian University of Dubai","Medical and STEM",0,"",YES
+914,Female,"₹1.80Cr",Unsecured,"Ukraine","Sumy State University","Medical; STEM and Management",0,"",YES
+915,Male,"₹1.80Cr",Unsecured,"United Arab Emirates","American University of Ras Al Khaimah ( AURAK )","Medical; STEM Management and Law",0,"",YES
+916,Female,"₹1.80Cr",Unsecured,"United Kingdom","Liverpool Hope University","Medical",0,"",YES
+917,Male,"₹2.00Cr",Unsecured,"United States of America","Boise State University","Medical",0,"",YES
+918,Female,"₹2.00Cr",Unsecured,"Ukraine","Sumy State University","Medical",0,"",YES
+919,Male,"₹2.00Cr",Unsecured,"Ukraine","Taras Shevchenko National University of Kyiv","Medical; STEM; and Management",0,"",YES
+920,Female,"₹2.00Cr",Unsecured,"Uruguay","Universidad Catolica del Uruguay (UCU)","Medical",0,"",YES
+921,Male,"₹2.00Cr",Unsecured,"Ukraine","V.N. Karazin Kharkiv National University","Medical and STEM",0,"",YES
+922,Female,"₹2.00Cr",Unsecured,"United Kingdom","University of Manchester","Medical",0,"",YES
+923,Male,"₹2.00Cr",Unsecured,"United Arab Emirates","Ajman University","Medical and STEM",0,"",YES
+924,Female,"₹2.00Cr",Unsecured,"United Kingdom","Royal College of Art","Natural Sciences; Social Sciences",0,"",YES
+925,Male,"₹2.00Cr",Unsecured,"United States of America","Haverford College","Medical; STEM and Management",0,"",YES
+926,Female,"₹2.00Cr",Unsecured,"United Kingdom","SOAS University of London","Medical; STEM",0,"",YES
+927,Male,"₹2.00Cr",Unsecured,"United Kingdom","University of Chester","Natural Sciences; Social Sciences",0,"",YES
+928,Female,"₹2.00Cr",Unsecured,"United Kingdom","Loughborough University","Medical and STEM",0,"",YES
+929,Male,"₹2.00Cr",Unsecured,"Uzbekistan","Tashkent Institute of Irrigation and Agricultural Mechanization Engineers - National Research University (TIIAME-NRU)","Medical; STEM",0,"",YES
+930,Female,"₹2.00Cr",Unsecured,"United States of America","University of Washington-Tacoma Campus","Medical; STEM and Management",0,"",YES
+931,Male,"₹2Cr",Unsecured,"Uzbekistan","Tashkent State Technical University","Medical; STEM",0,"",YES
+932,Female,"₹2Cr",Unsecured,"Venezuela","Universidad Central de Venezuela","Medical; STEM",0,"",YES
+933,Male,"₹2Cr",Unsecured,"Uruguay","Universidad Catolica del Uruguay (UCU)","Medical; STEM",0,"",YES
+934,Female,"₹2Cr",Unsecured,"Uruguay","Universidad de Montevideo","Medical; STEM",0,"",YES
+935,Male,"₹2Cr",Unsecured,"United States of America","Tufts University","Medical; STEM",0,"",YES
+936,Female,"₹2Cr",Unsecured,"United Kingdom","University of Central Lancashire","Medical; STEM Management and Law",0,"",YES
+937,Male,"₹2Cr",Unsecured,"Uzbekistan","National University of Uzbekistan","Medical and STEM",0,"",YES
+938,Female,"₹2Cr",Unsecured,"United States of America","University of Colorado Colorado Springs","Medical; STEM and Management",0,"",YES
+939,Male,"₹2Cr",Unsecured,"United Kingdom","University of Plymouth","Natural Sciences; Social Sciences",0,"",YES
+940,Female,"₹2Cr",Unsecured,"Uruguay","Universidad de la Republica (UdelaR)","STEM and Management",0,"",YES
+941,Male,"₹2Cr",Unsecured,"Uzbekistan","Tashkent Institute of Irrigation and Agricultural Mechanization Engineers - National Research University (TIIAME-NRU)","Medical; STEM; and Management",0,"",YES
+942,Female,"₹2Cr",Unsecured,"Uzbekistan","National University of Uzbekistan","Medical; STEM; and Management",0,"",YES
+943,Male,"₹2Cr",Unsecured,"Venezuela","Universidad Central de Venezuela","Medical; STEM; and Management",0,"",YES
+944,Female,"₹2Cr",Unsecured,"United States of America","University of Washington-Tacoma Campus","Medical; STEM Management and Law",0,"",YES
+945,Male,"₹2.00Cr",Unsecured,"Uruguay","Universidad de la Republica (UdelaR)","STEM and Management",0,"",YES
+946,Female,"₹2.00Cr",Unsecured,"Uzbekistan","National University of Uzbekistan","Natural Sciences; Social Sciences",0,"",YES
+947,Male,"₹2.00Cr",Unsecured,"Vietnam","University of Economics Ho Chi Minh City","STEM and Medical",0,"",YES
+948,Female,"₹2.00Cr",Unsecured,"Uruguay","Universidad Catolica del Uruguay (UCU)","Medical; STEM Management and Law",0,"",YES
+949,Male,"₹2.00Cr",Unsecured,"Zambia","University of Zambia","Medical; STEM; and Management",0,"",YES
+950,Female,"₹2.00Cr",Unsecured,"Venezuela","Universidad Central de Venezuela","STEM and Medical",0,"",YES
+951,Male,"₹2.00Cr",Unsecured,"Venezuela","Universidad Catolica Andres Bello - UCAB","Medical; STEM Management and Law",0,"",YES
+952,Female,"₹2.00Cr",Unsecured,"Uruguay","Universidad Catolica del Uruguay (UCU)","Medical; STEM; and Management",0,"",YES
+953,Male,"₹2.00Cr",Unsecured,"Uzbekistan","Tashkent Institute of Irrigation and Agricultural Mechanization Engineers - National Research University (TIIAME-NRU)","Medical; STEM; and Management",0,"",YES
+954,Female,"₹2.00Cr",Unsecured,"Venezuela","Universidad Catolica Andres Bello - UCAB","STEM",0,"",YES
+955,Male,"₹2.00Cr",Unsecured,"Venezuela","Universidad Catolica Andres Bello - UCAB","STEM, Management",0,"",YES
+956,Female,"₹2.00Cr",Unsecured,"Vietnam","RMIT University Vietnam","Medical; STEM and Management",0,"",YES
+957,Male,"₹2.00Cr",Unsecured,"Uzbekistan","National University of Uzbekistan","STEM",0,"",YES
+958,Female,"₹2.00Cr",Unsecured,"Uzbekistan","Tashkent Institute of Irrigation and Agricultural Mechanization Engineers - National Research University (TIIAME-NRU)","Natural Sciences; Social Sciences",0,"",YES
+959,Male,"₹2.50Cr",Unsecured,"Venezuela","Universidad Central de Venezuela - UCV","Natural Sciences; Social Sciences",0,"",YES
+960,Female,"₹2.50Cr",Unsecured,"Vietnam","Hanoi University of Science and Technology","STEM",0,"",YES
+961,Male,"₹2.50Cr",Unsecured,"Venezuela","Universidad Central de Venezuela","STEM and Medical",0,"",YES
+962,Female,"₹2.50Cr",Unsecured,"Zambia","University of Zambia","STEM and Management",0,"",YES
+963,Male,"₹2.50Cr",Unsecured,"Zambia","University of Zambia","Medical; STEM; and Management",0,"",YES
+964,Female,"₹2.50Cr",Unsecured,"Venezuela","Universidad Catolica Andres Bello - UCAB","STEM, Management",0,"",YES
+965,Male,"₹2.50Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+966,Female,"₹2.50Cr",Unsecured,"Vietnam","Vietnam National University, Hanoi","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+967,Male,"₹2.50Cr",Unsecured,"Venezuela","Universidad Central de Venezuela","STEM",0,"",YES
+968,Female,"₹2.50Cr",Unsecured,"Zambia","University of Zambia","Natural Sciences; Social Sciences",0,"",YES
+969,Male,"₹2.50Cr",Unsecured,"Zambia","University of Zambia","STEM",0,"",YES
+970,Female,"₹2.50Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","STEM",0,"",YES
+971,Male,"₹2.50Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+972,Female,"₹2.50Cr",Unsecured,"Vietnam","RMIT University Vietnam","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+973,Male,"₹3.00Cr",Unsecured,"Zimbabwe","University of Zimbabwe","STEM and Medical",0,"",YES
+974,Female,"₹3.00Cr",Unsecured,"Vietnam","Nguyen Tat Thanh University","STEM and Management",0,"",YES
+975,Male,"₹3.00Cr",Unsecured,"Zimbabwe","University of Zimbabwe","STEM",0,"",YES
+976,Female,"₹3.00Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","STEM, Management",0,"",YES
+977,Male,"₹3.00Cr",Unsecured,"Argentina","Universidad Nacional del Nordeste","STEM and Management",0,"",YES
+978,Female,"₹3.00Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+979,Male,"₹3.00Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","STEM, Management",0,"",YES
+980,Female,"₹3.00Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","STEM and Management",0,"",YES
+981,Male,"₹3.00Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+982,Female,"₹3.00Cr",Unsecured,"Vietnam","Thuyloi University","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+983,Male,"₹3.00Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+984,Female,"₹3.00Cr",Unsecured,"Zambia","University of Zambia","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+985,Male,"₹3.00Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","STEM and Management",0,"",YES
+986,Female,"₹3.00Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+987,Male,"₹3Cr",Unsecured,"Zambia","University of Zambia","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+988,Female,"₹3Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+989,Male,"₹3Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+990,Female,"₹3Cr",Unsecured,"Armenia","Yerevan State University","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+991,Male,"₹3Cr",Unsecured,"Zambia","University of Zambia","STEM, Management",0,"",YES
+992,Female,"₹3Cr",Unsecured,"Zimbabwe","University of Zimbabwe","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+993,Male,"₹3Cr",Unsecured,"Zimbabwe","University of Zimbabwe","STEM and Medical",0,"",YES
+994,Female,"₹3Cr",Unsecured,"Armenia","Yerevan State University","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+995,Male,"₹3Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Agriculture; Business & Management; Computer Science & IT; Engineering & Technology",0,"",YES
+996,Female,"₹3Cr",Unsecured,"Argentina","Universidad Torcuato Di Tella","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+997,Male,"₹3Cr",Unsecured,"Argentina","Universidad Nacional de La Plata","Art; Arts; Design and Management.; Economics & Econometrics; Law; Performing; STEM",0,"",YES
+998,Female,"₹3Cr",Unsecured,"Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank",YES
+999,Male,"₹3Cr",Unsecured,"Australia","University of the Sunshine Coast","Agriculture; Arts; Business & Management; Computer Science & IT; Design & Architecture; Law; Social Sciences",0,"",YES
+1000,Female,"₹3Cr",Unsecured,"Zimbabwe","University of Zimbabwe","STEM, Management",0,"",YES

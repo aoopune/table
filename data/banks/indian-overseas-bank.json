@@ -1,0 +1,753 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Indian Overseas Bank",
+      "sector": "Public - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses",
+        "nationality": "Indian / NRI / PIO / OCI",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": "HSC",
+        "coApplicant": null,
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "0.20%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 0.2
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.2,
+            "max_percent": 0.2,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 10,
+          "max": 15
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Branch only"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Indian Overseas Bank",
+    "sector": "Public - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400000,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 30000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 to 200 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400000,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 to 200 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 20000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 50 to 200 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 200 to 300 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400000,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 200 to 300 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 15000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 200 to 300 as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 300+ as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400000,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 300+ as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 15000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 11,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 300+ as per QS Rankings 2026",
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    }
+  ]
+}

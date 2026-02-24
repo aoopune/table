@@ -1,0 +1,350 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Yes Bank",
+      "sector": "Private - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "XXXXXX",
+        "nationality": "Indian",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": "HSC / Equivalent",
+        "coApplicant": "Parents, Siblings, and Uncle/Aunt.",
+        "universityStrictness": "Open to all [List exists]",
+        "delayed_emi_payment": {
+          "structure": "contract",
+          "displayText": "As per contract",
+          "period": "per_month",
+          "rules": [],
+          "summary": {
+            "min_percent": null,
+            "max_percent": null,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": true,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 5,
+          "max": 10
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "Hybrid"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Yes Bank",
+    "sector": "Private - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 12500000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 10.99,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Mandatory"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 5000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 10.99,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 75 as per QS Rankings 2026",
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Mandatory"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 4000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 10.99,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 75-300 as per QS Rankings 2026",
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Mandatory"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 3000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 10.99,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 300-500 as per QS Rankings 2026",
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Mandatory"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 2500000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 10.99,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": true,
+        "criteria": "Top 500 -1000 as per QS Rankings 2026",
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Mandatory"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    }
+  ]
+}

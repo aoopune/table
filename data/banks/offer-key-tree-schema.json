@@ -1,0 +1,77 @@
+{
+  "_description": "Expression-tree of keys: flat field names grouped into logical relations. Use this to nest/flatten offer data.",
+  "root": {
+    "lender": {
+      "name": "← lender",
+      "sector": "← sector"
+    },
+    "offers": {
+      "[]": "array of offer",
+      "offer": {
+        "loan": {
+          "amount": {
+            "min": "← minLoan",
+            "max": "← maxLoan"
+          }
+        },
+        "security": {
+          "required": "← security",
+          "weightage": "← securityWeightage"
+        },
+        "interest": {
+          "rate": "← interestRate",
+          "type": "← typeOfInterestRate",
+          "margin": "← margin"
+        },
+        "processing_fees": {
+          "structure": "← processingFeeStructure",
+          "displayText": "← processingFeeDisplayText",
+          "flat_inr": "← processingFeeFlatInr",
+          "percent": "← processingFeePercent",
+          "min_inr": "← processingFeeMinInr",
+          "max_inr": "← processingFeeMaxInr",
+          "refundable": "← processingFeeRefundable",
+          "summary": {
+            "min_inr": "← processingFeeSummaryMinInr",
+            "max_inr": "← processingFeeSummaryMaxInr",
+            "percent": "← processingFeeSummaryPercent",
+            "is_nil": "← processingFeeSummaryIsNil",
+            "is_flat_only": "← processingFeeSummaryIsFlatOnly",
+            "has_percent": "← processingFeeSummaryHasPercent",
+            "has_cap": "← processingFeeSummaryHasCap"
+          }
+        },
+        "repayment": {
+          "tenure": "← repaymentTenure",
+          "moratorium": {
+            "period": "← moratoriumPeriod",
+            "paymentDuring": "← paymentDuringMoratorium"
+          }
+        },
+        "eligibility": {
+          "gender": "← gender",
+          "nationality": "← nationality",
+          "age": "← age | Min. age",
+          "qualification": "← qualification",
+          "coApplicant": "← coApplicant",
+          "universityStrictness": "← universityStrictness"
+        },
+        "institute": {
+          "levelOfStudy": "← levelOfStudy",
+          "wiseChanges": "← instituteWiseChanges",
+          "criteria": "← instituteCriteria"
+        },
+        "process": {
+          "delayedEmiPayment": "← delayedEmiPayment",
+          "avgTimeToSanction": "← avgTimeToSanction | minavgTimeToSanction/maxavgTimeToSanction",
+          "dedicatedCaseManager": "← dedicatedCaseManager",
+          "onboarding": "← onboardingProcess"
+        },
+        "other": {
+          "notes": "← others",
+          "select": "← select"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "ICICI Bank",
+      "sector": "Private - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Doctrate courses",
+        "nationality": "Indian",
+        "age": {
+          "min": 16,
+          "max": 35
+        },
+        "qualification": "HSC / Equivalent",
+        "coApplicant": "Parents, Siblings Spouse, Grand Parents, Parents in law, Maternal/Paternal Uncle.",
+        "universityStrictness": "Open to all [List exists]",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "0.42%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 0.42
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.42,
+            "max_percent": 0.42,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 5,
+          "max": 10
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "Hybrid"
+      }
+    ]
+  },
+  "lender": {
+    "name": "ICICI Bank",
+    "sector": "Private - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 5000000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 12,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": null
+        },
+        "periodDisplay": "6 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 30000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 9,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 12,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": null
+        },
+        "periodDisplay": "6 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

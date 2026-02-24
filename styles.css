@@ -1,0 +1,857 @@
+/* Comparison table – header always visible when scrolled; borders between blocks; readable font */
+
+:root {
+  --bg: #f5f7fa;
+  --card: #fff;
+  --border: #e0e4e9;
+  --block-border: #5b6370;
+  --col-border: #d0d5dc;
+  --primary: #0066cc;
+  --text: #1a1d21;
+  --text-strong: #0d0f12;
+  --header-bg: #e8ecf1;
+  --header-group: #d0d8e2;
+  --sticky-shadow: 4px 0 12px rgba(0,0,0,0.08);
+  --sticky-col-1-width: 5.5rem;
+  --sticky-col-2-width: 4.5rem;
+  --sticky-col-3-width: 1.75rem;
+  --table-font-size: 12px;
+  --table-padding-y: 1px;
+  --table-padding-x: 1px;
+  --header-font-size: 11px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+.app {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+  padding: clamp(6px, 2vw, 12px);
+}
+
+/* Gender + Loan amount filter above table */
+.query-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+}
+.query-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.query-field label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+.query-gender {
+  display: flex;
+  gap: 0.25rem;
+}
+.query-btn {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+}
+.query-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.query-btn[aria-pressed="true"] {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+#queryLoanAmount {
+  width: 10rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--text);
+}
+#queryLoanAmount:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.query-inputs select {
+  min-width: 12rem;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--card);
+  color: var(--text);
+}
+.query-inputs select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.query-security .query-btn {
+  min-width: 5rem;
+}
+
+/* Header stays visible: header and body scroll in sync (JS syncs scrollLeft) */
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--block-border);
+  border-radius: 6px;
+  background: var(--card);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* Header stays visible on vertical scroll until last row (sticky on outer) */
+.table-header-outer {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  background: var(--card);
+  isolation: isolate;
+}
+.table-header-outer .table-header-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  border-bottom: 2px solid var(--block-border);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  background: var(--card);
+}
+.comparison-table-header,
+.comparison-table-header thead {
+  background: var(--header-bg);
+}
+/* When scrolled horizontally, show clear right border on first header block for differentiation */
+.table-container.has-h-scrolled .comparison-table-header .header-row .th-group.sticky-group,
+.table-container.has-h-scrolled .comparison-table-header .th-col.sticky-col-3 {
+  border-right: 2px solid var(--block-border);
+  box-shadow: var(--sticky-shadow);
+}
+.table-header-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.table-body-wrap {
+  position: relative;
+  z-index: 0;
+  overflow-x: auto;
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table-header,
+.comparison-table-body {
+  width: 100%;
+  min-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: var(--table-font-size);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+.comparison-table-body {
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: var(--table-padding-y) var(--table-padding-x);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.comparison-table thead th {
+  text-align: center;
+  background: var(--header-bg);
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.comparison-table .header-row .th-group {
+  background: var(--header-group);
+  font-size: var(--header-font-size);
+  padding: 1px var(--table-padding-x);
+}
+
+.comparison-table .th-col-select-only .th-col-inner {
+  justify-content: center;
+  min-width: 0;
+}
+.comparison-table .th-col-select-only .th-col-label,
+.comparison-table .th-col-select-only .header-icons {
+  display: none;
+}
+.comparison-table .th-col-select-only input.select-all-checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  cursor: pointer;
+}
+
+/* Main header row: thin bottom line so borders don’t override */
+.comparison-table thead .header-row th {
+  border-bottom: none;
+}
+.comparison-table thead .subheader-row th {
+  border-top: none;
+}
+
+/* Line between header and subheader – full width to last column (table row) */
+.comparison-table .header-divider-row {
+  height: 2px;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  vertical-align: top;
+}
+.comparison-table .header-divider-cell {
+  height: 2px;
+  padding: 0;
+  border: none;
+  background: var(--block-border);
+  line-height: 0;
+  vertical-align: top;
+}
+
+/* Border between main header blocks – subtle, doesn’t override */
+.comparison-table .th-group-end {
+  border-right: 1px solid var(--block-border);
+}
+
+/* First header block (Sector: Lender, Sector, Select) stays visible on horizontal scroll */
+.comparison-table-header .th-col.sticky-col,
+.comparison-table-header .th-group.sticky-group {
+  position: sticky;
+  z-index: 2;
+  background: var(--header-bg);
+  box-shadow: var(--sticky-shadow);
+}
+.comparison-table-header .header-row .th-group.sticky-group {
+  background: var(--header-group);
+}
+.comparison-table-header .th-col.sticky-col-1 {
+  left: 0;
+  min-width: var(--sticky-col-1-width);
+  max-width: var(--sticky-col-1-width);
+}
+.comparison-table-header .th-col.sticky-col-2 {
+  left: var(--sticky-col-1-width);
+  min-width: var(--sticky-col-2-width);
+  max-width: var(--sticky-col-2-width);
+}
+.comparison-table-header .th-col.sticky-col-3 {
+  left: calc(var(--sticky-col-1-width) + var(--sticky-col-2-width));
+  min-width: var(--sticky-col-3-width);
+  max-width: var(--sticky-col-3-width);
+}
+/* First main header cell (Sector) spans the 3 sticky columns – make it sticky */
+.comparison-table-header .header-row .th-group:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  min-width: calc(var(--sticky-col-1-width) + var(--sticky-col-2-width) + var(--sticky-col-3-width));
+  max-width: calc(var(--sticky-col-1-width) + var(--sticky-col-2-width) + var(--sticky-col-3-width));
+  background: var(--header-group);
+  box-shadow: var(--sticky-shadow);
+}
+
+.comparison-table .subheader-row .th-col {
+  font-weight: 500;
+  font-size: var(--header-font-size);
+  padding: 1px var(--table-padding-x);
+  min-width: 0;
+  max-width: 20ch;
+  overflow: hidden;
+  isolation: isolate;
+  border-right: 1px solid var(--col-border);
+}
+.comparison-table .subheader-row .th-col .th-col-inner {
+  overflow: visible;
+  max-width: 100%;
+}
+
+/* Subheader: label and icons on one line, readable (no overlap) */
+.th-col-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 2px;
+  max-width: 100%;
+  min-width: 0;
+}
+.th-col-label {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+  margin-right: 4px;
+}
+.comparison-table .th-col.sticky-col .th-col-label {
+  flex: 0 1 auto;
+}
+.header-icons {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: 2px;
+}
+
+/* Faint border between every column; subtle border between blocks */
+.comparison-table td {
+  border-right: 1px solid var(--col-border);
+}
+.comparison-table .th-col-group-end,
+.comparison-table .td-col-group-end {
+  border-right: 1px solid var(--block-border);
+}
+
+.comparison-table thead .header-row th {
+  background: var(--header-group);
+}
+
+.comparison-table thead .subheader-row th {
+  background: var(--header-bg);
+}
+
+/* Sticky columns (body table only) */
+.comparison-table-body .th-col.sticky-col,
+.comparison-table-body td.sticky-col {
+  position: sticky;
+  z-index: 1;
+  background: inherit;
+  box-shadow: var(--sticky-shadow);
+}
+
+.comparison-table-body thead .th-col.sticky-col {
+  z-index: 2;
+  background: var(--header-bg);
+}
+
+.comparison-table-body thead .subheader-row .th-col.sticky-col {
+  background: var(--header-bg);
+}
+
+.comparison-table-body .sticky-col.sticky-col-1 {
+  left: 0;
+  min-width: var(--sticky-col-1-width);
+  max-width: var(--sticky-col-1-width);
+}
+
+.comparison-table-body .sticky-col.sticky-col-2 {
+  left: var(--sticky-col-1-width);
+  min-width: var(--sticky-col-2-width);
+  max-width: var(--sticky-col-2-width);
+}
+
+.comparison-table-body .sticky-col.sticky-col-3 {
+  left: calc(var(--sticky-col-1-width) + var(--sticky-col-2-width));
+  min-width: var(--sticky-col-3-width);
+  max-width: var(--sticky-col-3-width);
+}
+
+.comparison-table-body tbody tr:nth-child(even) td.sticky-col {
+  background: #fafbfc;
+}
+
+.comparison-table-body tbody tr:hover td.sticky-col {
+  background: #f0f4f8;
+}
+
+.comparison-table .sticky-col {
+  white-space: normal;
+}
+
+.comparison-table tbody td {
+  text-align: left;
+}
+
+.comparison-table-body tbody tr {
+  background: var(--card);
+}
+
+.comparison-table-body tbody tr:nth-child(even) {
+  background: #fafbfc;
+}
+
+.comparison-table-body tbody tr:hover {
+  background: #f0f4f8;
+}
+
+.comparison-table td {
+  max-width: 20ch;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* Info trigger wrap: icon + popover */
+.info-trigger-wrap {
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: help;
+  vertical-align: middle;
+}
+.info-icon-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  padding: 0 1px 1px 1px;
+  color: #1a1d21;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  border-radius: 50%;
+  border: 2px solid #1a1d21;
+  box-sizing: border-box;
+}
+
+.info-popover {
+  position: fixed;
+  z-index: 10000;
+  display: none;
+  background: #1f2937;
+  color: #f3f4f6;
+  padding: 10px 14px;
+  border-radius: 8px;
+  max-width: min(320px, 90vw);
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 400;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  pointer-events: none;
+}
+
+.info-popover.visible {
+  display: block;
+  pointer-events: auto;
+}
+
+#infoPopoverPortal.info-popover {
+  z-index: 10000;
+}
+
+.info-popover-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.15);
+  color: #f3f4f6;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.info-popover-close:hover {
+  background: rgba(255,255,255,0.25);
+}
+@media (hover: none) {
+  .info-popover.visible .info-popover-close {
+    display: flex;
+  }
+  .info-popover.visible {
+    padding-top: 28px;
+  }
+}
+.info-popover-text {
+  display: block;
+  color: #f3f4f6;
+}
+
+.info-popover::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 6px solid transparent;
+  border-right-color: #1f2937;
+  border-left-width: 0;
+}
+
+.info-popover.arrow-right::before {
+  left: auto;
+  right: -6px;
+  border-right-color: transparent;
+  border-left-color: #1f2937;
+  border-right-width: 0;
+  border-left-width: 6px;
+}
+
+.info-popover.arrow-top::before {
+  left: 50%;
+  top: -6px;
+  right: auto;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: #1f2937;
+  border-top-width: 0;
+}
+
+/* Filter trigger on subheaders (all except Select) */
+.filter-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--card);
+  color: var(--text);
+  font-size: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+  line-height: 1;
+}
+.filter-trigger:hover {
+  background: var(--header-group);
+  border-color: var(--block-border);
+}
+.filter-trigger.is-sorted,
+.filter-trigger.is-filtered {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.filter-trigger.is-sorted:hover,
+.filter-trigger.is-filtered:hover {
+  background: #0052a3;
+  border-color: #0052a3;
+  color: #fff;
+}
+.filter-trigger:focus-visible,
+.info-icon:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.table-container:focus {
+  outline: none;
+}
+.table-container:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Filter dropdown panel (Sort + Filter by condition + Filter by values) */
+.filter-panel {
+  display: none;
+  position: fixed;
+  z-index: 1100;
+  min-width: 200px;
+  max-width: min(280px, 88vw);
+  max-height: min(72vh, 400px);
+  overflow: hidden;
+  flex-direction: column;
+  background: var(--card);
+  border: 1px solid var(--block-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  padding: 8px 10px;
+  font-size: 12px;
+}
+.filter-panel.visible {
+  display: flex;
+}
+.filter-panel .filter-section {
+  margin-bottom: 6px;
+  flex-shrink: 0;
+}
+.filter-panel .filter-section.filter-section-values {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+}
+.filter-panel .filter-section.filter-section-values .filter-section-title,
+.filter-panel .filter-section.filter-section-values .filter-values-buttons,
+.filter-panel .filter-section.filter-section-values .filter-values-search {
+  flex-shrink: 0;
+}
+.filter-panel .filter-values-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  align-items: center;
+  margin-bottom: 3px;
+}
+.filter-panel .filter-values-buttons button {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-size: 12px;
+  cursor: pointer;
+}
+.filter-panel .filter-values-buttons .filter-ok {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.filter-panel .filter-section:last-of-type {
+  margin-bottom: 8px;
+}
+.filter-panel .filter-clear-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-top: 4px;
+  align-items: center;
+}
+.filter-panel .filter-clear-buttons .filter-sort-option {
+  flex-shrink: 0;
+  width: auto;
+  display: inline-block;
+  margin-bottom: 0;
+}
+.filter-panel .filter-section-title {
+  font-weight: 600;
+  color: var(--text-strong);
+  margin-bottom: 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.filter-panel .filter-sort-option,
+.filter-panel .filter-condition-option {
+  display: block;
+  width: 100%;
+  padding: 5px 6px;
+  margin-bottom: 1px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-size: 12px;
+}
+.filter-panel .filter-sort-option:hover,
+.filter-panel .filter-condition-option:hover {
+  background: var(--header-bg);
+}
+.filter-panel .filter-sort-option.filter-sort-option-active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 500;
+}
+.filter-panel .filter-section.filter-section-active .filter-section-title {
+  color: var(--primary);
+  font-weight: 700;
+}
+.filter-panel .filter-section.filter-section-active {
+  border-left: 3px solid var(--primary);
+  padding-left: 9px;
+}
+.filter-panel .filter-condition-input {
+  width: 100%;
+  margin-top: 3px;
+  padding: 5px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.filter-panel .filter-values-list {
+  flex: 1 1 auto;
+  min-height: 100px;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 3px;
+  padding: 3px 0;
+}
+.filter-panel .filter-values-list::-webkit-scrollbar {
+  width: 8px;
+}
+.filter-panel .filter-values-list::-webkit-scrollbar-track {
+  background: var(--header-bg);
+  border-radius: 4px;
+}
+.filter-panel .filter-values-list::-webkit-scrollbar-thumb {
+  background: var(--block-border);
+  border-radius: 4px;
+}
+.filter-panel .filter-values-list::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+.filter-panel .filter-values-item {
+  display: flex;
+  align-items: center;
+  padding: 3px 6px;
+  gap: 5px;
+  cursor: pointer;
+}
+.filter-panel .filter-values-item:hover {
+  background: var(--header-bg);
+}
+.filter-panel .filter-values-item input {
+  margin: 0;
+  cursor: pointer;
+}
+.filter-panel .filter-values-search {
+  width: 100%;
+  padding: 5px 6px;
+  margin-bottom: 3px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+.filter-panel .filter-actions {
+  display: none;
+}
+.filter-panel button:focus-visible,
+.filter-panel select:focus-visible,
+.filter-panel input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Select column: smaller */
+.comparison-table .td-select {
+  min-width: var(--sticky-col-3-width);
+  text-align: center;
+}
+
+.comparison-table .td-select input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  min-height: 14px;
+  cursor: pointer;
+}
+
+/* Mobile: larger font for readability (Amazon/Apple-style – min 14px content, 12px headers) */
+@media (max-width: 767px) {
+  .comparison-table-header,
+  .comparison-table-body {
+    font-size: 14px;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 2px 3px;
+  }
+  .comparison-table .header-row .th-group,
+  .comparison-table .subheader-row .th-col {
+    font-size: 12px;
+    padding: 1px 2px;
+  }
+  .info-icon,
+  .info-icon-inner {
+    width: 12px;
+    height: 12px;
+    min-width: 12px;
+    min-height: 12px;
+  }
+  .info-icon-inner {
+    font-size: 11px;
+    border-width: 1.5px;
+  }
+  .filter-trigger {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    min-height: 14px;
+  }
+  .comparison-table .td-select input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+  }
+}
+
+@media (max-width: 359px) {
+  .comparison-table-header,
+  .comparison-table-body {
+    font-size: 13px;
+  }
+  .comparison-table .header-row .th-group,
+  .comparison-table .subheader-row .th-col {
+    font-size: 12px;
+  }
+  .comparison-table th,
+  .comparison-table td {
+    padding: 1px 2px;
+  }
+}

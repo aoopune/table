@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Bank JSON (one file per bank)",
+  "description": "Data model for data/banks/<slug>.json. Supports all app queries: Gender, Loan amount, Security, Level of study, Country (via institutes.json), University (via instituteWiseChanges + instituteCriteria + institutes.json).",
+  "type": "object",
+  "required": [ "lender", "offers" ],
+  "properties": {
+    "lender": {
+      "type": "string",
+      "description": "Display name; must match STATIC_DATA_BY_LENDER and institutes.json lenderName",
+      "minLength": 1
+    },
+    "offers": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/Offer" }
+    }
+  },
+  "definitions": {
+    "Offer": {
+      "type": "object",
+      "description": "One offer (row candidate). Query dimensions are required so any filter combination works.",
+      "required": [ "gender", "minLoan", "maxLoan", "security", "levelOfStudy", "instituteWiseChanges" ],
+      "properties": {
+        "gender": {
+          "type": "string",
+          "enum": [ "Male", "Female", "Equal" ],
+          "description": "Query: Gender"
+        },
+        "minLoan": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Query: Loan amount (₹)"
+        },
+        "maxLoan": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Query: Loan amount (₹); use 99999999 for no cap"
+        },
+        "security": {
+          "type": "string",
+          "enum": [ "Yes", "No" ],
+          "description": "Query: Security type (Yes=Secured, No=Unsecured)"
+        },
+        "levelOfStudy": {
+          "type": "string",
+          "description": "Query: Level of education (substring match)"
+        },
+        "instituteWiseChanges": {
+          "type": "string",
+          "enum": [ "Yes", "No" ],
+          "description": "Query: University (if Yes, instituteCriteria must match institutes.json)"
+        },
+        "instituteCriteria": {
+          "type": "string",
+          "description": "Required when instituteWiseChanges is Yes; used with institutes.json for University filter"
+        },
+        "interestRate": { "type": "string" },
+        "typeOfInterestRate": { "type": "string" },
+        "margin": { "type": "string" },
+        "processingFees": { "type": "string" },
+        "refundableProcessingFees": { "type": "string" },
+        "repaymentTenure": { "type": "string" },
+        "moratoriumPeriod": { "type": "string" },
+        "paymentDuringMoratorium": { "type": "string" },
+        "securityWeightage": { "type": "string" },
+        "others": { "type": "string" },
+        "lender": { "type": "string" },
+        "sector": { "type": "string" },
+        "delayedEmiPayment": { "type": "string" },
+        "nationality": { "type": "string" },
+        "age": { "type": "string" },
+        "qualification": { "type": "string" },
+        "coApplicant": { "type": "string" },
+        "universityStrictness": { "type": "string" },
+        "avgTimeToSanction": { "type": "string" },
+        "dedicatedCaseManager": { "type": "string" },
+        "onboardingProcess": { "type": "string" },
+        "select": { "type": "boolean" }
+      }
+    }
+  }
+}

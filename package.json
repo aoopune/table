@@ -1,0 +1,15 @@
+{
+  "name": "table-bank-queries",
+  "version": "1.0.0",
+  "description": "Query bank offers using json-rules-engine",
+  "type": "module",
+  "scripts": {
+    "query": "node scripts/query-offers.js",
+    "start": "node server.js",
+    "test": "node scripts/test-banks-table.cjs",
+    "validate:rules": "node scripts/validate-rules-engine.js"
+  },
+  "dependencies": {
+    "json-rules-engine": "^6.2.0"
+  }
+}

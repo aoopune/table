@@ -1,0 +1,152 @@
+{
+  "generated": "2026-02-23T20:32:57.899Z",
+  "description": "Combinations with their outputs - showing only successful matches (banks returned)",
+  "totalCombinations": 1000,
+  "successfulCombinations": 6,
+  "successRate": "0.60%",
+  "results": [
+    {
+      "id": 21,
+      "combination": {
+        "gender": "Male",
+        "loanAmount": "₹50,000",
+        "loanType": "Secured",
+        "country": "Australia",
+        "university": "Central Queensland University CQUniversity",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 11,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Yes Bank",
+          "DCB Bank",
+          "RBL Bank",
+          "Tata Capital",
+          "InCred",
+          "ICICI Bank",
+          "Credila",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    },
+    {
+      "id": 981,
+      "combination": {
+        "gender": "Male",
+        "loanAmount": "₹3.00Cr",
+        "loanType": "Unsecured",
+        "country": "Antigua and Barbuda",
+        "university": "American University of Antigua (AUA) College of Medicine",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 6,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Tamilnad Mercantile Bank",
+          "Avanse",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    },
+    {
+      "id": 984,
+      "combination": {
+        "gender": "Female",
+        "loanAmount": "₹3.00Cr",
+        "loanType": "Unsecured",
+        "country": "Zambia",
+        "university": "University of Zambia",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 6,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Tamilnad Mercantile Bank",
+          "Avanse",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    },
+    {
+      "id": 987,
+      "combination": {
+        "gender": "Male",
+        "loanAmount": "₹3Cr",
+        "loanType": "Unsecured",
+        "country": "Zambia",
+        "university": "University of Zambia",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 6,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Tamilnad Mercantile Bank",
+          "Avanse",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    },
+    {
+      "id": 992,
+      "combination": {
+        "gender": "Female",
+        "loanAmount": "₹3Cr",
+        "loanType": "Unsecured",
+        "country": "Zimbabwe",
+        "university": "University of Zimbabwe",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 6,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Tamilnad Mercantile Bank",
+          "Avanse",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    },
+    {
+      "id": 998,
+      "combination": {
+        "gender": "Female",
+        "loanAmount": "₹3Cr",
+        "loanType": "Unsecured",
+        "country": "Antigua and Barbuda",
+        "university": "American University of Antigua (AUA) College of Medicine",
+        "course": "Any course"
+      },
+      "output": {
+        "banksReturned": 6,
+        "banks": [
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Punjab National Bank",
+          "Tamilnad Mercantile Bank",
+          "Avanse",
+          "Auxilo"
+        ],
+        "hasResults": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-applicant by Bank</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 1.5rem; background: #1a1a1a; color: #e0e0e0; }
+    h1 { font-size: 1.25rem; margin-bottom: 1rem; }
+    .table-wrap { overflow-x: auto; border: 1px solid #444; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #333; }
+    th { background: #2a2a2a; font-weight: 600; color: #aaa; position: sticky; top: 0; }
+    tr:hover td { background: #252525; }
+    td:first-child { white-space: nowrap; color: #8ab4f8; }
+    td:nth-child(2), td:nth-child(3) { max-width: 420px; word-wrap: break-word; }
+  </style>
+</head>
+<body>
+  <h1>Co-applicant by Bank</h1>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Bank file</th>
+          <th>coApplicant (_keyTree)</th>
+          <th>coapplicant (in offers)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>aditya-birla-capital.json</td><td>Parents, Siblings, or any other individual</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>auxilo.json</td><td>Parent, Sibling, Legal guardian, or a relative</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>avanse.json</td><td>Parent, Sibling, Legal guardian, or a relative</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>axis-bank.json</td><td>Parents, Sibilings or Guarantor</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>bank-of-baroda.json</td><td>Parents</td><td>Mandatory Co-applicant; + Third-party guarantee + assignment of future income; + assignment of future income</td></tr>
+        <tr><td>bank-of-india.json</td><td>N/A</td><td>(varies by offer)</td></tr>
+        <tr><td>bank-of-maharashtra.json</td><td>null</td><td>Mandatory Co-applicant + CGFSEL cover; Mandatory Co-applicant</td></tr>
+        <tr><td>canara-bank.json</td><td>Parents or Guardian</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>city-union-bank.json</td><td>Parents, Spouse, Parents-in-law</td><td>Mandatory Co-applicant; + Third-party guarantee</td></tr>
+        <tr><td>credila.json</td><td>null</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>dcb-bank.json</td><td>Parents or Guarontor</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>dhanlaxmi-bank.json</td><td>null</td><td>Mandatory Co-applicant; + assignment of future income</td></tr>
+        <tr><td>edgro.json</td><td>Parents, Siblings, Spouse, Paternal or Maternal relative or a legal guardian.</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>federal-bank.json</td><td>Parents, Siblings or Spouse</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>icici-bank.json</td><td>Parents, Siblings Spouse, Grand Parents, Parents in law, Maternal/Paternal Uncle.</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>idbi-bank.json</td><td>null</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>idfc-first-bank.json</td><td>Parents or Siblings</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>incred.json</td><td>Parent, Sibling, Legal guardian, or a relative.</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>indian-overseas-bank.json</td><td>null</td><td>Mandatory Co-applicant; + assignment of future income</td></tr>
+        <tr><td>jammu--kashmir-bank.json</td><td>Parent or Guardian</td><td>Mandatory Co-applicant; + assignment of future income</td></tr>
+        <tr><td>jammu-and-kashmir-grameen-bank.json</td><td>Parents</td><td>Mandatory Co-applicant; + Third-party guarantee or CGFSEL cover; + assignment of future income</td></tr>
+        <tr><td>karnataka-bank.json</td><td>null</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>karur-vyasa-bank.json</td><td>Parents, Parents- in - law, Spouse and (some other close relatives)</td><td>Mandatory Co-applicant; + Third-party guarantee or CGFSEL cover</td></tr>
+        <tr><td>leap-finance.json</td><td>null</td><td>None</td></tr>
+        <tr><td>mpower.json</td><td>(in _keyTree)</td><td>(varies by offer)</td></tr>
+        <tr><td>nainital-bank.json</td><td>null</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>poonawalla-fincorp.json</td><td>Parents, Parents-in-law, Siblings, Spouse, First Cousins, Parents' Siblings</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>prodigy.json</td><td>(in _keyTree)</td><td>(varies by offer)</td></tr>
+        <tr><td>punjab-national-bank.json</td><td>null</td><td>Mandatory Co-applicant; Mandatory Co-applicant + CGFSEL cover</td></tr>
+        <tr><td>punjab-national-bank-relational-example.json</td><td>null</td><td>Mandatory Co-applicant; Mandatory Co-applicant + CGFSEL cover</td></tr>
+        <tr><td>rbl-bank.json</td><td>Parents, Siblings, Spouse</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>saraswat-co-operative-bank.json</td><td>Parent, Sponsor, Relative</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>south-indian-bank.json</td><td>Parent, Guardian, or Spouse</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>state-bank-of-india.json</td><td>Parent, Spouse, Parents-in-law, Sibling, or Guardian</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>tamilnad-mercantile-bank.json</td><td>Parents</td><td>Mandatory Co-applicant; + Third-party guarantee</td></tr>
+        <tr><td>tata-capital.json</td><td>Parents, Siblings, Spouse, Grandparents, Parents-in-law, Maternal/Paternal uncle</td><td>Mandatory Co-applicant</td></tr>
+        <tr><td>uco-bank.json</td><td>Parents</td><td>Mandatory Co-applicant + CGFSEL cover; Mandatory Co-applicant</td></tr>
+        <tr><td>union-bank-of-india.json</td><td>Parents or Spouse</td><td>Mandatory Co-applicant (and variants)</td></tr>
+        <tr><td>yes-bank.json</td><td>Parents, Siblings, and Uncle/Aunt.</td><td>Mandatory Co-applicant (and variants)</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

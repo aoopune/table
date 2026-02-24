@@ -1,0 +1,435 @@
+{
+  "generated": "2026-02-23T19:51:50.404Z",
+  "totalAmounts": 71,
+  "strategy": "Thresholds + Mid-points + Psychological + Verification",
+  "amounts": [
+    1,
+    50000,
+    75000,
+    100000,
+    200000,
+    250000,
+    300000,
+    400000,
+    400001,
+    450000,
+    500000,
+    500001,
+    625000,
+    750000,
+    750001,
+    875000,
+    999000,
+    1000000,
+    1000001,
+    1001000,
+    1200000,
+    1250000,
+    1500000,
+    1750000,
+    1800000,
+    2000000,
+    2000001,
+    2250000,
+    2500000,
+    2750000,
+    3000000,
+    3000001,
+    3500000,
+    4000000,
+    4000001,
+    4500000,
+    4999000,
+    5000000,
+    5001000,
+    5500000,
+    6000000,
+    6100000,
+    6200000,
+    6200001,
+    6850000,
+    7000000,
+    7500000,
+    7750000,
+    8000000,
+    8000001,
+    8250000,
+    8500000,
+    9000000,
+    9250000,
+    9999000,
+    10000000,
+    10000001,
+    10001000,
+    11000000,
+    11250000,
+    12500000,
+    13750000,
+    15000000,
+    17500000,
+    18000000,
+    19999000,
+    20000000,
+    20001000,
+    25000000,
+    29999000,
+    30000000
+  ],
+  "formatted": [
+    {
+      "amount": 1,
+      "display": "₹1",
+      "isThreshold": true
+    },
+    {
+      "amount": 50000,
+      "display": "₹50000",
+      "isThreshold": false
+    },
+    {
+      "amount": 75000,
+      "display": "₹75000",
+      "isThreshold": false
+    },
+    {
+      "amount": 100000,
+      "display": "₹1L",
+      "isThreshold": true
+    },
+    {
+      "amount": 200000,
+      "display": "₹2L",
+      "isThreshold": false
+    },
+    {
+      "amount": 250000,
+      "display": "₹2.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 300000,
+      "display": "₹3L",
+      "isThreshold": false
+    },
+    {
+      "amount": 400000,
+      "display": "₹4L",
+      "isThreshold": true
+    },
+    {
+      "amount": 400001,
+      "display": "₹4.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 450000,
+      "display": "₹4.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 500000,
+      "display": "₹5L",
+      "isThreshold": true
+    },
+    {
+      "amount": 500001,
+      "display": "₹5.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 625000,
+      "display": "₹6.25L",
+      "isThreshold": false
+    },
+    {
+      "amount": 750000,
+      "display": "₹7.50L",
+      "isThreshold": true
+    },
+    {
+      "amount": 750001,
+      "display": "₹7.50L",
+      "isThreshold": true
+    },
+    {
+      "amount": 875000,
+      "display": "₹8.75L",
+      "isThreshold": false
+    },
+    {
+      "amount": 999000,
+      "display": "₹9.99L",
+      "isThreshold": false
+    },
+    {
+      "amount": 1000000,
+      "display": "₹10L",
+      "isThreshold": true
+    },
+    {
+      "amount": 1000001,
+      "display": "₹10.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 1001000,
+      "display": "₹10.01L",
+      "isThreshold": false
+    },
+    {
+      "amount": 1200000,
+      "display": "₹12L",
+      "isThreshold": false
+    },
+    {
+      "amount": 1250000,
+      "display": "₹12.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 1500000,
+      "display": "₹15L",
+      "isThreshold": true
+    },
+    {
+      "amount": 1750000,
+      "display": "₹17.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 1800000,
+      "display": "₹18L",
+      "isThreshold": false
+    },
+    {
+      "amount": 2000000,
+      "display": "₹20L",
+      "isThreshold": true
+    },
+    {
+      "amount": 2000001,
+      "display": "₹20.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 2250000,
+      "display": "₹22.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 2500000,
+      "display": "₹25L",
+      "isThreshold": true
+    },
+    {
+      "amount": 2750000,
+      "display": "₹27.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 3000000,
+      "display": "₹30L",
+      "isThreshold": true
+    },
+    {
+      "amount": 3000001,
+      "display": "₹30.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 3500000,
+      "display": "₹35L",
+      "isThreshold": false
+    },
+    {
+      "amount": 4000000,
+      "display": "₹40L",
+      "isThreshold": true
+    },
+    {
+      "amount": 4000001,
+      "display": "₹40.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 4500000,
+      "display": "₹45L",
+      "isThreshold": false
+    },
+    {
+      "amount": 4999000,
+      "display": "₹49.99L",
+      "isThreshold": false
+    },
+    {
+      "amount": 5000000,
+      "display": "₹50L",
+      "isThreshold": true
+    },
+    {
+      "amount": 5001000,
+      "display": "₹50.01L",
+      "isThreshold": false
+    },
+    {
+      "amount": 5500000,
+      "display": "₹55L",
+      "isThreshold": false
+    },
+    {
+      "amount": 6000000,
+      "display": "₹60L",
+      "isThreshold": true
+    },
+    {
+      "amount": 6100000,
+      "display": "₹61L",
+      "isThreshold": false
+    },
+    {
+      "amount": 6200000,
+      "display": "₹62L",
+      "isThreshold": true
+    },
+    {
+      "amount": 6200001,
+      "display": "₹62.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 6850000,
+      "display": "₹68.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 7000000,
+      "display": "₹70L",
+      "isThreshold": false
+    },
+    {
+      "amount": 7500000,
+      "display": "₹75L",
+      "isThreshold": true
+    },
+    {
+      "amount": 7750000,
+      "display": "₹77.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 8000000,
+      "display": "₹80L",
+      "isThreshold": true
+    },
+    {
+      "amount": 8000001,
+      "display": "₹80.00L",
+      "isThreshold": true
+    },
+    {
+      "amount": 8250000,
+      "display": "₹82.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 8500000,
+      "display": "₹85L",
+      "isThreshold": true
+    },
+    {
+      "amount": 9000000,
+      "display": "₹90L",
+      "isThreshold": false
+    },
+    {
+      "amount": 9250000,
+      "display": "₹92.50L",
+      "isThreshold": false
+    },
+    {
+      "amount": 9999000,
+      "display": "₹99.99L",
+      "isThreshold": false
+    },
+    {
+      "amount": 10000000,
+      "display": "₹1Cr",
+      "isThreshold": true
+    },
+    {
+      "amount": 10000001,
+      "display": "₹1.00Cr",
+      "isThreshold": true
+    },
+    {
+      "amount": 10001000,
+      "display": "₹1.00Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 11000000,
+      "display": "₹1.10Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 11250000,
+      "display": "₹1.13Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 12500000,
+      "display": "₹1.25Cr",
+      "isThreshold": true
+    },
+    {
+      "amount": 13750000,
+      "display": "₹1.38Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 15000000,
+      "display": "₹1.50Cr",
+      "isThreshold": true
+    },
+    {
+      "amount": 17500000,
+      "display": "₹1.75Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 18000000,
+      "display": "₹1.80Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 19999000,
+      "display": "₹2.00Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 20000000,
+      "display": "₹2Cr",
+      "isThreshold": true
+    },
+    {
+      "amount": 20001000,
+      "display": "₹2.00Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 25000000,
+      "display": "₹2.50Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 29999000,
+      "display": "₹3.00Cr",
+      "isThreshold": false
+    },
+    {
+      "amount": 30000000,
+      "display": "₹3Cr",
+      "isThreshold": true
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Prodigy",
+      "sector": "Private - Company"
+    },
+    "offers": [
+      {
+        "level_of_study": "Postgraduate (De / Di)",
+        "nationality": "Any student",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": null,
+        "coApplicant": null,
+        "universityStrictness": "Listed only",
+        "delayed_emi_payment": null,
+        "Average_Time_To_Sanction": {
+          "min": 2,
+          "max": 5
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "100% Digital"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Prodigy",
+    "sector": "Private - Company"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "None",
+      "interest": {
+        "rate": 9.66,
+        "type": "Floating"
+      },
+      "repayment_tenure": 15,
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Listed",
+        "level_of_study": "Postgraduate (De / Di)"
+      },
+      "processing_fees": {
+        "structure": "flat",
+        "displayText": "₹50,000",
+        "flat_inr": 50000,
+        "percent": null,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": 50000,
+          "max_inr": 50000,
+          "percent": null,
+          "is_nil": false,
+          "is_flat_only": true,
+          "has_percent": false,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 3,
+          "max": 6
+        },
+        "periodDisplay": "3/6 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

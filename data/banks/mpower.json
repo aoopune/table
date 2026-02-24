@@ -1,0 +1,92 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Mpower",
+      "sector": "Private - Company"
+    },
+    "offers": [
+      {
+        "level_of_study": "Postgraduate (De / Di)",
+        "nationality": "Any student",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": "HSC + UG",
+        "coApplicant": null,
+        "universityStrictness": "Listed only",
+        "delayed_emi_payment": null,
+        "Average_Time_To_Sanction": {
+          "min": 2,
+          "max": 5
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "100% Digital"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Mpower",
+    "sector": "Private - Company"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "None",
+      "interest": {
+        "rate": 9.99,
+        "type": "Fixed"
+      },
+      "repayment_tenure": {
+        "tenure": 10,
+        "type": null
+      },
+      "margin": 99,
+      "institute": {
+        "changes": true,
+        "criteria": "Listed",
+        "level_of_study": "Postgraduate (De / Di)"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "5.00%",
+        "flat_inr": null,
+        "percent": 5,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": null
+        },
+        "periodDisplay": "6 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "STEM, Healthcare & MBA (Within 2 yrs of UG)",
+      "countryScope": null
+    }
+  ]
+}

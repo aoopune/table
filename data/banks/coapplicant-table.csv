@@ -1,0 +1,40 @@
+Bank file,coApplicant (_keyTree),coapplicant (in offers)
+aditya-birla-capital.json,"Parents, Siblings, or any other individual",Mandatory Co-applicant
+auxilo.json,"Parent, Sibling, Legal guardian, or a relative",Mandatory Co-applicant
+avanse.json,"Parent, Sibling, Legal guardian, or a relative",Mandatory Co-applicant
+axis-bank.json,"Parents, Sibilings or Guarantor",Mandatory Co-applicant
+bank-of-baroda.json,Parents,"Mandatory Co-applicant; + Third-party guarantee + assignment of future income; + assignment of future income"
+bank-of-india.json,N/A,(varies by offer)
+bank-of-maharashtra.json,null,"Mandatory Co-applicant + CGFSEL cover; Mandatory Co-applicant"
+canara-bank.json,Parents or Guardian,Mandatory Co-applicant (and variants)
+city-union-bank.json,"Parents, Spouse, Parents-in-law","Mandatory Co-applicant; + Third-party guarantee"
+credila.json,null,Mandatory Co-applicant
+dcb-bank.json,Parents or Guarontor,Mandatory Co-applicant
+dhanlaxmi-bank.json,null,"Mandatory Co-applicant; + assignment of future income"
+edgro.json,"Parents, Siblings, Spouse, Paternal or Maternal relative or a legal guardian.",Mandatory Co-applicant (and variants)
+federal-bank.json,"Parents, Siblings or Spouse",Mandatory Co-applicant
+icici-bank.json,"Parents, Siblings Spouse, Grand Parents, Parents in law, Maternal/Paternal Uncle.",Mandatory Co-applicant
+idbi-bank.json,null,Mandatory Co-applicant (and variants)
+idfc-first-bank.json,Parents or Siblings,Mandatory Co-applicant (and variants)
+incred.json,"Parent, Sibling, Legal guardian, or a relative.",Mandatory Co-applicant
+indian-overseas-bank.json,null,"Mandatory Co-applicant; + assignment of future income"
+jammu--kashmir-bank.json,Parent or Guardian,"Mandatory Co-applicant; + assignment of future income"
+jammu-and-kashmir-grameen-bank.json,Parents,"Mandatory Co-applicant; + Third-party guarantee or CGFSEL cover; + assignment of future income"
+karnataka-bank.json,null,Mandatory Co-applicant
+karur-vyasa-bank.json,"Parents, Parents- in - law, Spouse and (some other close relatives)","Mandatory Co-applicant; + Third-party guarantee or CGFSEL cover"
+leap-finance.json,null,None
+mpower.json,(in _keyTree),(varies by offer)
+nainital-bank.json,null,Mandatory Co-applicant
+poonawalla-fincorp.json,"Parents, Parents-in-law, Siblings, Spouse, First Cousins, Parents' Siblings",Mandatory Co-applicant
+prodigy.json,(in _keyTree),(varies by offer)
+punjab-national-bank.json,null,"Mandatory Co-applicant; Mandatory Co-applicant + CGFSEL cover"
+punjab-national-bank-relational-example.json,null,"Mandatory Co-applicant; Mandatory Co-applicant + CGFSEL cover"
+rbl-bank.json,"Parents, Siblings, Spouse",Mandatory Co-applicant
+saraswat-co-operative-bank.json,"Parent, Sponsor, Relative",Mandatory Co-applicant
+south-indian-bank.json,"Parent, Guardian, or Spouse",Mandatory Co-applicant
+state-bank-of-india.json,"Parent, Spouse, Parents-in-law, Sibling, or Guardian",Mandatory Co-applicant (and variants)
+tamilnad-mercantile-bank.json,Parents,"Mandatory Co-applicant; + Third-party guarantee"
+tata-capital.json,"Parents, Siblings, Spouse, Grandparents, Parents-in-law, Maternal/Paternal uncle",Mandatory Co-applicant
+uco-bank.json,Parents,"Mandatory Co-applicant + CGFSEL cover; Mandatory Co-applicant"
+union-bank-of-india.json,Parents or Spouse,Mandatory Co-applicant (and variants)
+yes-bank.json,"Parents, Siblings, and Uncle/Aunt.",Mandatory Co-applicant (and variants)

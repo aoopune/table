@@ -1,0 +1,231 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Bank of Maharashtra",
+      "sector": "Public - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "Postgraduate (De / Di) Prof. / Tech. / Doctrate courses",
+        "nationality": "Indian",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": null,
+        "coApplicant": null,
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "0.20%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 0.2
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.2,
+            "max_percent": 0.2,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 10,
+          "max": 15
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Branch only"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Bank of Maharashtra",
+    "sector": "Public - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant + CGFSEL cover",
+      "interest": {
+        "rate": 10.05,
+        "type": "Floating"
+      },
+      "repayment_period": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400001,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant + CGFSEL cover",
+      "interest": {
+        "rate": 10.05,
+        "type": "Floating"
+      },
+      "repayment_period": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750001,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 9.7,
+        "type": "Floating"
+      },
+      "repayment_period": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "1.00%",
+        "flat_inr": null,
+        "percent": 1,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 1,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    }
+  ]
+}

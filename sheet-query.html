@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheet query – Filter &amp; group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --border: #2d3a4d;
+      --text: #e6edf3;
+      --muted: #8b9cb3;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #22c55e;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 1.75rem; font-weight: 700; margin: 0 0 0.25rem 0; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+    .card h2 { font-size: 1.1rem; font-weight: 600; margin: 0 0 1rem 0; color: var(--muted); }
+    .form-row { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; }
+    .field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .field label { font-size: 0.8rem; font-weight: 500; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+    .field input, .field select { font: inherit; font-family: 'JetBrains Mono', monospace; padding: 0.6rem 0.85rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); min-width: 160px; }
+    .btn { font: inherit; font-weight: 600; padding: 0.65rem 1.25rem; border: none; border-radius: 8px; background: var(--accent); color: #fff; cursor: pointer; }
+    .btn:hover { background: var(--accent-hover); }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .error { background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.3); color: #fca5a5; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.9rem; }
+    .count { font-size: 0.9rem; color: var(--muted); }
+    .count strong { color: var(--success); }
+    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { text-align: left; padding: 0.7rem 0.9rem; border-bottom: 1px solid var(--border); }
+    th { font-weight: 600; color: var(--muted); font-size: 0.75rem; letter-spacing: 0.04em; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(59, 130, 246, 0.06); }
+    .empty { text-align: center; padding: 3rem 1rem; color: var(--muted); }
+    pre { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; overflow-x: auto; background: var(--bg); padding: 1rem; border-radius: 8px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sheet query – Filter &amp; group</h1>
+    <p class="sub">Load the Loan data matrix from the Google Sheet (via server proxy), then filter and group in the client.</p>
+
+    <div class="card">
+      <h2>Load sheet</h2>
+      <div class="form-row">
+        <button type="button" class="btn" id="load-btn">Load sheet data</button>
+        <span class="count" id="count"></span>
+      </div>
+    </div>
+
+    <div id="error-zone"></div>
+
+    <div class="card">
+      <h2>Filter &amp; group (example)</h2>
+      <p style="color: var(--muted); font-size: 0.9rem; margin-bottom: 1rem;">
+        Filter: Lender = &quot;Punjab National Bank&quot;, Gender in [Female, Equal]. Group by Interest rate.
+      </p>
+      <div id="grouped-output"></div>
+    </div>
+
+    <div class="card">
+      <h2>Filtered rows (preview)</h2>
+      <div class="table-wrap">
+        <table id="results-table">
+          <thead>
+            <tr id="results-head"></tr>
+          </thead>
+          <tbody id="results-body">
+            <tr><td colspan="10" class="empty">Click &quot;Load sheet data&quot; first.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loadBtn = document.getElementById('load-btn');
+    const countEl = document.getElementById('count');
+    const errorZone = document.getElementById('error-zone');
+    const resultsHead = document.getElementById('results-head');
+    const resultsBody = document.getElementById('results-body');
+    const groupedOutput = document.getElementById('grouped-output');
+
+    function showError(msg) {
+      errorZone.innerHTML = msg ? `<div class="error">${msg}</div>` : '';
+    }
+
+    let sheetData = null;
+
+    loadBtn.addEventListener('click', async () => {
+      showError('');
+      loadBtn.disabled = true;
+      try {
+        const res = await fetch('/api/sheet');
+        const data = await res.json();
+        if (!res.ok) {
+          showError(data.error || 'Failed to load sheet');
+          return;
+        }
+        sheetData = data;
+        countEl.innerHTML = `<strong>${(data.rows || []).length}</strong> rows, <strong>${(data.headers || []).length}</strong> columns.`;
+
+        // Example: filter by lender and gender
+        const filtered = (data.rows || []).filter(
+          (row) =>
+            row['Lender'] === 'Punjab National Bank' &&
+            (row['Gender'] === 'Female' || row['Gender'] === 'Equal')
+        );
+
+        // Example: group by interest rate
+        const byRate = filtered.reduce((acc, row) => {
+          const rate = row['Interest rate'] ?? 'unknown';
+          if (!acc[rate]) acc[rate] = [];
+          acc[rate].push(row);
+          return acc;
+        }, {});
+
+        // Render grouped summary
+        groupedOutput.innerHTML = '<pre>' + JSON.stringify(
+          Object.fromEntries(
+            Object.entries(byRate).map(([rate, rows]) => [rate, rows.length])
+          ),
+          null,
+          2
+        ) + '</pre>';
+
+        // Render table (first 3 columns + a few more)
+        const headers = data.headers || [];
+        const showCols = headers.slice(0, 8);
+        resultsHead.innerHTML = showCols.map((h) => `<th>${h}</th>`).join('');
+        if (filtered.length === 0) {
+          resultsBody.innerHTML = '<tr><td colspan="' + showCols.length + '" class="empty">No rows after filter.</td></tr>';
+        } else {
+          resultsBody.innerHTML = filtered
+            .slice(0, 50)
+            .map((row) =>
+              '<tr>' + showCols.map((h) => `<td>${(row[h] ?? '').toString().slice(0, 80)}</td>`).join('') + '</tr>'
+            )
+            .join('');
+        }
+      } catch (err) {
+        showError(err.message || 'Network error');
+      } finally {
+        loadBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1001 @@
+ID,Gender,Loan Amount,Loan Type,Country,University,Course,Based On Pattern,Expected Banks
+1,"Male","₹49K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+2,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+3,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+4,"Female","₹2.71Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+5,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+6,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+7,"Male","₹2.91Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+8,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+9,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+10,"Female","₹2.83Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+11,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+12,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+13,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+14,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+15,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+16,"Female","₹2.82Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+17,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+18,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+19,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+20,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+21,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+22,"Female","₹2.71Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+23,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+24,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+25,"Male","₹45K","Secured","Australia","N/A","Any course","₹50K Australia",11
+26,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+27,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+28,"Female","₹2.90Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+29,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+30,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+31,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+32,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+33,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+34,"Female","₹2.84Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+35,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+36,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+37,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+38,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+39,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+40,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+41,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+42,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+43,"Male","₹2.85Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+44,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+45,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+46,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+47,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+48,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+49,"Male","₹49K","Secured","Australia","N/A","Any course","₹50K Australia",11
+50,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+51,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+52,"Female","₹2.99Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+53,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+54,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+55,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+56,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+57,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+58,"Female","₹2.89Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+59,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+60,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+61,"Male","₹48K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+62,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+63,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+64,"Female","₹2.81Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+65,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+66,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+67,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+68,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+69,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+70,"Female","₹2.86Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+71,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+72,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+73,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+74,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+75,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+76,"Female","₹2.88Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+77,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+78,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+79,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+80,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+81,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+82,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+83,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+84,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+85,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+86,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+87,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+88,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+89,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+90,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+91,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+92,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+93,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+94,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+95,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+96,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+97,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+98,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+99,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+100,"Female","₹2.77Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+101,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+102,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+103,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+104,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+105,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+106,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+107,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+108,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+109,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+110,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+111,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+112,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+113,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+114,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+115,"Male","₹2.86Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+116,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+117,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+118,"Female","₹2.74Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+119,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+120,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+121,"Male","₹48K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+122,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+123,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+124,"Female","₹2.85Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+125,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+126,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+127,"Male","₹2.92Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+128,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+129,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+130,"Female","₹2.99Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+131,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+132,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+133,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+134,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+135,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+136,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+137,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+138,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+139,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+140,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+141,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+142,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+143,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+144,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+145,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+146,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+147,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+148,"Female","₹2.75Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+149,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+150,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+151,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+152,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+153,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+154,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+155,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+156,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+157,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+158,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+159,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+160,"Female","₹2.75Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+161,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+162,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+163,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+164,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+165,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+166,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+167,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+168,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+169,"Male","₹46K","Secured","Australia","N/A","Any course","₹50K Australia",11
+170,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+171,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+172,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+173,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+174,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+175,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+176,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+177,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+178,"Female","₹2.79Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+179,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+180,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+181,"Male","₹46K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+182,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+183,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+184,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+185,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+186,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+187,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+188,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+189,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+190,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+191,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+192,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+193,"Male","₹55K","Secured","Australia","N/A","Any course","₹50K Australia",11
+194,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+195,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+196,"Female","₹2.76Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+197,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+198,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+199,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+200,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+201,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+202,"Female","₹2.80Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+203,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+204,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+205,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+206,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+207,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+208,"Female","₹2.71Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+209,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+210,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+211,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+212,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+213,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+214,"Female","₹2.86Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+215,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+216,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+217,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+218,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+219,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+220,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+221,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+222,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+223,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+224,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+225,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+226,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+227,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+228,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+229,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+230,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+231,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+232,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+233,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+234,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+235,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+236,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+237,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+238,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+239,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+240,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+241,"Male","₹46K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+242,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+243,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+244,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+245,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+246,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+247,"Male","₹2.84Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+248,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+249,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+250,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+251,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+252,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+253,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+254,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+255,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+256,"Female","₹2.80Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+257,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+258,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+259,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+260,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+261,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+262,"Female","₹2.90Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+263,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+264,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+265,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+266,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+267,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+268,"Female","₹2.91Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+269,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+270,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+271,"Male","₹2.93Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+272,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+273,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+274,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+275,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+276,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+277,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+278,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+279,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+280,"Female","₹2.82Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+281,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+282,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+283,"Male","₹2.79Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+284,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+285,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+286,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+287,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+288,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+289,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+290,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+291,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+292,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+293,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+294,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+295,"Male","₹2.92Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+296,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+297,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+298,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+299,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+300,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+301,"Male","₹49K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+302,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+303,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+304,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+305,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+306,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+307,"Male","₹2.99Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+308,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+309,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+310,"Female","₹2.75Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+311,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+312,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+313,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+314,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+315,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+316,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+317,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+318,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+319,"Male","₹2.71Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+320,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+321,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+322,"Female","₹2.92Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+323,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+324,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+325,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+326,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+327,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+328,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+329,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+330,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+331,"Male","₹2.75Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+332,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+333,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+334,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+335,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+336,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+337,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+338,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+339,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+340,"Female","₹2.91Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+341,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+342,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+343,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+344,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+345,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+346,"Female","₹2.96Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+347,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+348,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+349,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+350,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+351,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+352,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+353,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+354,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+355,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+356,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+357,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+358,"Female","₹2.83Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+359,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+360,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+361,"Male","₹47K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+362,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+363,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+364,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+365,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+366,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+367,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+368,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+369,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+370,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+371,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+372,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+373,"Male","₹46K","Secured","Australia","N/A","Any course","₹50K Australia",11
+374,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+375,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+376,"Female","₹2.87Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+377,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+378,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+379,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+380,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+381,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+382,"Female","₹2.94Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+383,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+384,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+385,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+386,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+387,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+388,"Female","₹2.83Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+389,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+390,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+391,"Male","₹2.89Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+392,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+393,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+394,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+395,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+396,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+397,"Male","₹45K","Secured","Australia","N/A","Any course","₹50K Australia",11
+398,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+399,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+400,"Female","₹2.83Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+401,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+402,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+403,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+404,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+405,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+406,"Female","₹2.98Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+407,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+408,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+409,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+410,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+411,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+412,"Female","₹2.95Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+413,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+414,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+415,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+416,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+417,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+418,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+419,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+420,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+421,"Male","₹49K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+422,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+423,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+424,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+425,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+426,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+427,"Male","₹2.74Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+428,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+429,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+430,"Female","₹2.78Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+431,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+432,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+433,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+434,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+435,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+436,"Female","₹2.78Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+437,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+438,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+439,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+440,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+441,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+442,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+443,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+444,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+445,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+446,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+447,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+448,"Female","₹2.94Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+449,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+450,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+451,"Male","₹2.89Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+452,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+453,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+454,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+455,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+456,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+457,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+458,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+459,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+460,"Female","₹2.79Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+461,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+462,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+463,"Male","₹2.98Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+464,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+465,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+466,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+467,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+468,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+469,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+470,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+471,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+472,"Female","₹2.91Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+473,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+474,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+475,"Male","₹2.76Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+476,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+477,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+478,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+479,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+480,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+481,"Male","₹55K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+482,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+483,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+484,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+485,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+486,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+487,"Male","₹2.98Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+488,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+489,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+490,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+491,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+492,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+493,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+494,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+495,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+496,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+497,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+498,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+499,"Male","₹2.79Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+500,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+501,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+502,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+503,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+504,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+505,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+506,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+507,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+508,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+509,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+510,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+511,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+512,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+513,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+514,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+515,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+516,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+517,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+518,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+519,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+520,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+521,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+522,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+523,"Male","₹2.71Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+524,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+525,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+526,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+527,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+528,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+529,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+530,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+531,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+532,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+533,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+534,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+535,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+536,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+537,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+538,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+539,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+540,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+541,"Male","₹48K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+542,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+543,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+544,"Female","₹2.89Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+545,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+546,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+547,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+548,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+549,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+550,"Female","₹2.76Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+551,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+552,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+553,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+554,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+555,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+556,"Female","₹2.76Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+557,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+558,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+559,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+560,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+561,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+562,"Female","₹2.73Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+563,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+564,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+565,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+566,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+567,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+568,"Female","₹2.86Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+569,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+570,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+571,"Male","₹2.74Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+572,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+573,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+574,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+575,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+576,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+577,"Male","₹49K","Secured","Australia","N/A","Any course","₹50K Australia",11
+578,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+579,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+580,"Female","₹2.96Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+581,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+582,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+583,"Male","₹2.84Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+584,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+585,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+586,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+587,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+588,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+589,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+590,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+591,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+592,"Female","₹2.80Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+593,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+594,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+595,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+596,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+597,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+598,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+599,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+600,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+601,"Male","₹52K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+602,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+603,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+604,"Female","₹2.84Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+605,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+606,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+607,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+608,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+609,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+610,"Female","₹2.90Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+611,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+612,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+613,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+614,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+615,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+616,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+617,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+618,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+619,"Male","₹2.96Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+620,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+621,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+622,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+623,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+624,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+625,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+626,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+627,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+628,"Female","₹2.94Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+629,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+630,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+631,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+632,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+633,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+634,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+635,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+636,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+637,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+638,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+639,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+640,"Female","₹2.87Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+641,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+642,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+643,"Male","₹2.81Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+644,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+645,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+646,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+647,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+648,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+649,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+650,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+651,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+652,"Female","₹2.81Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+653,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+654,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+655,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+656,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+657,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+658,"Female","₹2.87Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+659,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+660,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+661,"Male","₹48K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+662,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+663,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+664,"Female","₹2.99Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+665,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+666,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+667,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+668,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+669,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+670,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+671,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+672,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+673,"Male","₹46K","Secured","Australia","N/A","Any course","₹50K Australia",11
+674,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+675,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+676,"Female","₹2.73Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+677,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+678,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+679,"Male","₹2.91Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+680,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+681,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+682,"Female","₹2.81Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+683,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+684,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+685,"Male","₹45K","Secured","Australia","N/A","Any course","₹50K Australia",11
+686,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+687,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+688,"Female","₹2.81Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+689,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+690,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+691,"Male","₹2.72Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+692,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+693,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+694,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+695,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+696,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+697,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+698,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+699,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+700,"Female","₹2.76Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+701,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+702,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+703,"Male","₹2.82Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+704,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+705,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+706,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+707,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+708,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+709,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+710,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+711,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+712,"Female","₹2.85Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+713,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+714,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+715,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+716,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+717,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+718,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+719,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+720,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+721,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+722,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+723,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+724,"Female","₹2.78Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+725,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+726,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+727,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+728,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+729,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+730,"Female","₹2.90Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+731,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+732,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+733,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+734,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+735,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+736,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+737,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+738,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+739,"Male","₹2.82Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+740,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+741,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+742,"Female","₹2.96Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+743,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+744,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+745,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+746,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+747,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+748,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+749,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+750,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+751,"Male","₹2.84Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+752,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+753,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+754,"Female","₹2.96Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+755,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+756,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+757,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+758,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+759,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+760,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+761,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+762,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+763,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+764,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+765,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+766,"Female","₹2.78Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+767,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+768,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+769,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+770,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+771,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+772,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+773,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+774,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+775,"Male","₹2.86Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+776,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+777,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+778,"Female","₹2.90Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+779,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+780,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+781,"Male","₹48K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+782,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+783,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+784,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+785,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+786,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+787,"Male","₹2.88Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+788,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+789,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+790,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+791,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+792,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+793,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+794,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+795,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+796,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+797,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+798,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+799,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+800,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+801,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+802,"Female","₹2.70Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+803,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+804,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+805,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+806,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+807,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+808,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+809,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+810,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+811,"Male","₹2.74Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+812,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+813,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+814,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+815,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+816,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+817,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+818,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+819,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+820,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+821,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+822,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+823,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+824,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+825,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+826,"Female","₹2.96Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+827,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+828,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+829,"Male","₹55K","Secured","Australia","N/A","Any course","₹50K Australia",11
+830,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+831,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+832,"Female","₹2.96Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+833,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+834,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+835,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+836,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+837,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+838,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+839,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+840,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+841,"Male","₹51K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+842,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+843,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+844,"Female","₹2.73Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+845,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+846,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+847,"Male","₹2.87Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+848,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+849,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+850,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+851,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+852,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+853,"Male","₹51K","Secured","Australia","N/A","Any course","₹50K Australia",11
+854,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+855,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+856,"Female","₹2.94Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+857,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+858,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+859,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+860,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+861,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+862,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+863,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+864,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+865,"Male","₹49K","Secured","Australia","N/A","Any course","₹50K Australia",11
+866,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+867,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+868,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+869,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+870,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+871,"Male","₹2.87Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+872,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+873,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+874,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+875,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+876,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+877,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+878,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+879,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+880,"Female","₹2.85Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+881,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+882,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+883,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+884,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+885,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+886,"Female","₹2.98Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+887,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+888,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+889,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+890,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+891,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+892,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+893,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+894,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+895,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+896,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+897,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+898,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+899,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+900,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+901,"Male","₹47K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+902,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+903,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+904,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+905,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+906,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+907,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+908,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+909,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+910,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+911,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+912,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+913,"Male","₹47K","Secured","Australia","N/A","Any course","₹50K Australia",11
+914,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+915,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+916,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+917,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+918,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+919,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+920,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+921,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+922,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+923,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+924,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+925,"Male","₹54K","Secured","Australia","N/A","Any course","₹50K Australia",11
+926,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+927,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+928,"Female","₹2.86Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+929,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+930,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+931,"Male","₹2.79Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+932,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+933,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+934,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+935,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+936,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+937,"Male","₹46K","Secured","Australia","N/A","Any course","₹50K Australia",11
+938,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+939,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+940,"Female","₹2.95Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+941,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+942,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+943,"Male","₹2.99Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+944,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+945,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+946,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+947,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+948,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+949,"Male","₹46K","Secured","Australia","N/A","Any course","₹50K Australia",11
+950,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+951,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+952,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+953,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+954,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+955,"Male","₹2.73Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+956,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+957,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+958,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+959,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+960,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+961,"Male","₹51K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+962,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+963,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+964,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+965,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+966,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+967,"Male","₹2.91Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+968,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+969,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+970,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+971,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+972,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+973,"Male","₹53K","Secured","Australia","N/A","Any course","₹50K Australia",11
+974,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+975,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+976,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+977,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+978,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+979,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+980,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+981,"Male","₹50K","Unsecured","Australia","N/A","Any course","₹50K Australia",11
+982,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+983,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+984,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+985,"Male","₹48K","Secured","Australia","N/A","Any course","₹50K Australia",11
+986,"Female","₹3.00Cr","Secured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+987,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+988,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+989,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+990,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+991,"Male","₹3.00Cr","Secured","Zambia","N/A","Any course","₹3Cr Zambia",6
+992,"Female","₹3.00Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+993,"Male","₹50K","Secured","Australia","N/A","Any course","₹50K Australia",11
+994,"Female","₹2.86Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+995,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+996,"Female","₹3.00Cr","Secured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6
+997,"Male","₹52K","Secured","Australia","N/A","Any course","₹50K Australia",11
+998,"Female","₹3.00Cr","Unsecured","Antigua and Barbuda","N/A","Any course","₹3.00Cr Antigua and Barbuda",6
+999,"Male","₹3.00Cr","Unsecured","Zambia","N/A","Any course","₹3Cr Zambia",6
+1000,"Female","₹2.95Cr","Unsecured","Zimbabwe","N/A","Any course","₹3Cr Zimbabwe",6

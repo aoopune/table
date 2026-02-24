@@ -1,0 +1,232 @@
+{
+  "totalBanks": 38,
+  "uniqueThresholds": 32,
+  "thresholds": [
+    1,
+    100000,
+    400000,
+    400001,
+    500000,
+    500001,
+    750000,
+    750001,
+    1000000,
+    1000001,
+    1500000,
+    2000000,
+    2000001,
+    2500000,
+    3000000,
+    3000001,
+    4000000,
+    4000001,
+    5000000,
+    6000000,
+    6200000,
+    6200001,
+    7500000,
+    8000000,
+    8000001,
+    8500000,
+    10000000,
+    10000001,
+    12500000,
+    15000000,
+    20000000,
+    30000000
+  ],
+  "minAmount": 1,
+  "maxAmount": 30000000,
+  "bankRanges": [
+    {
+      "bank": "aditya-birla-capital",
+      "min": 1,
+      "max": 1500000
+    },
+    {
+      "bank": "auxilo",
+      "min": 1,
+      "max": "Unlimited"
+    },
+    {
+      "bank": "avanse",
+      "min": 100000,
+      "max": "Unlimited"
+    },
+    {
+      "bank": "axis-bank",
+      "min": 1,
+      "max": 4000000
+    },
+    {
+      "bank": "bank-of-baroda",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "bank-of-india",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "bank-of-maharashtra",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "canara-bank",
+      "min": 750000,
+      "max": 10000000
+    },
+    {
+      "bank": "city-union-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "credila",
+      "min": 1,
+      "max": 7500000
+    },
+    {
+      "bank": "dcb-bank",
+      "min": 1,
+      "max": 10000000
+    },
+    {
+      "bank": "dhanlaxmi-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "edgro",
+      "min": 1,
+      "max": 10000000
+    },
+    {
+      "bank": "federal-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "icici-bank",
+      "min": 1,
+      "max": 5000000
+    },
+    {
+      "bank": "idbi-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "idfc-first-bank",
+      "min": 1,
+      "max": 750000
+    },
+    {
+      "bank": "incred",
+      "min": 1,
+      "max": 7500000
+    },
+    {
+      "bank": "indian-overseas-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "jammu--kashmir-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "jammu-and-kashmir-grameen-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "karnataka-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "karur-vyasa-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "leap-finance",
+      "min": 1,
+      "max": 10000000
+    },
+    {
+      "bank": "mpower",
+      "min": 1,
+      "max": 10000000
+    },
+    {
+      "bank": "nainital-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "poonawalla-fincorp",
+      "min": 1,
+      "max": 10000000
+    },
+    {
+      "bank": "prodigy",
+      "min": 1,
+      "max": "Unlimited"
+    },
+    {
+      "bank": "punjab-national-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "rbl-bank",
+      "min": 1,
+      "max": 750000
+    },
+    {
+      "bank": "saraswat-co-operative-bank",
+      "min": 1,
+      "max": 500000
+    },
+    {
+      "bank": "south-indian-bank",
+      "min": 1,
+      "max": 750000
+    },
+    {
+      "bank": "state-bank-of-india",
+      "min": 750000,
+      "max": 5000000
+    },
+    {
+      "bank": "tamilnad-mercantile-bank",
+      "min": 1,
+      "max": 400000
+    },
+    {
+      "bank": "tata-capital",
+      "min": 1,
+      "max": 8500000
+    },
+    {
+      "bank": "uco-bank",
+      "min": 1,
+      "max": 750000
+    },
+    {
+      "bank": "union-bank-of-india",
+      "min": 750000,
+      "max": 4000000
+    },
+    {
+      "bank": "yes-bank",
+      "min": 1,
+      "max": 12500000
+    }
+  ]
+}

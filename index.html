@@ -1,0 +1,1940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Loan Offers – Query by Gender, Amount, Loan type, Country, University, Level</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --border: #2d3a4d;
+      --text: #e6edf3;
+      --muted: #8b9cb3;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --success: #22c55e;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem 0;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0 0 1rem 0;
+      color: var(--muted);
+    }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .field label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .field input:not([type="radio"]), .field select {
+      font: inherit;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.6rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text);
+      min-width: 160px;
+    }
+    .choice-group {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 200px;
+      background: var(--bg);
+    }
+    .choice-option {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      min-width: 96px;
+      border-right: 1px solid var(--border);
+    }
+    .choice-option:last-child {
+      border-right: none;
+    }
+    .choice-option input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .choice-option span {
+      width: 100%;
+      text-align: center;
+      padding: 0.6rem 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text);
+      background: transparent;
+      transition: background 0.15s, color 0.15s;
+    }
+    .choice-option input[type="radio"]:checked + span {
+      background: rgba(59, 130, 246, 0.18);
+      color: #fff;
+    }
+    .choice-option:hover span {
+      background: rgba(59, 130, 246, 0.08);
+    }
+    .combo {
+      position: relative;
+      min-width: 200px;
+    }
+    .combo input {
+      width: 100%;
+      min-width: 200px;
+      padding-right: 4.8rem;
+    }
+    .combo-search {
+      position: absolute;
+      top: 50%;
+      right: 1.7rem;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: 0.78rem;
+      pointer-events: none;
+    }
+    .combo-clear {
+      position: absolute;
+      top: 50%;
+      right: 2.55rem;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0.1rem 0.2rem;
+      line-height: 1;
+      display: none;
+    }
+    .combo-clear:hover {
+      color: var(--text);
+    }
+    .combo-toggle {
+      position: absolute;
+      top: 50%;
+      right: 0.3rem;
+      transform: translateY(-50%);
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.85rem;
+      padding: 0.1rem 0.25rem;
+      line-height: 1;
+    }
+    .combo-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 4px);
+      max-height: 220px;
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      z-index: 20;
+      display: none;
+    }
+    .combo-option {
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      font: inherit;
+      font-family: 'JetBrains Mono', monospace;
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+    }
+    .combo-option:hover {
+      background: rgba(59, 130, 246, 0.12);
+    }
+    .field input:focus, .field select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+    .btn {
+      font: inherit;
+      font-weight: 600;
+      padding: 0.65rem 1.25rem;
+      border: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--accent-hover); }
+    .btn:disabled { opacity: 0.6; cursor: not-allowed; }
+    .results-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .results-head h2 { margin: 0; }
+    .count {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .count strong { color: var(--success); }
+    .query-summary { font-size: 0.85rem; margin: 0 0 0.75rem 0; }
+    .query-summary.muted { color: var(--muted); }
+    code { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; background: var(--border); padding: 0.15em 0.4em; border-radius: 4px; }
+    .processing-fees-cell { position: relative; display: inline-block; padding-right: 1.4em; }
+    .refundable-star { position: absolute; top: 0; right: 0; cursor: help; color: var(--accent); font-size: 0.85em; }
+    .refundable-tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.8rem; z-index: 1000; box-shadow: var(--shadow); pointer-events: none; }
+    .table-wrap {
+      overflow-x: auto;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.7rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+    }
+    th {
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(59, 130, 246, 0.06); }
+    td .num { font-family: 'JetBrains Mono', monospace; }
+    td.bank-name-cell,
+    td.sector-name-cell {
+      vertical-align: top;
+      background: rgba(59, 130, 246, 0.08);
+      border-right: 1px solid var(--border);
+    }
+    td.bank-name-cell { font-weight: 600; }
+    td.sector-name-cell { font-weight: 500; }
+    tr.bank-group-first td.bank-name-cell,
+    tr.bank-group-first td.sector-name-cell { border-top: 2px solid var(--border); }
+    tr.bank-group-last td { border-bottom: 2px solid var(--border); }
+    .listed-universities-trigger {
+      border: none;
+      background: transparent;
+      color: var(--accent);
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      font: inherit;
+      text-align: left;
+    }
+    .lender-name {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .view-details-trigger {
+      border: none;
+      background: transparent;
+      color: var(--accent);
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 0;
+      font: inherit;
+      font-size: 0.82rem;
+      text-align: left;
+    }
+    .listed-popup-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      padding: 1rem;
+    }
+    .listed-popup {
+      width: min(640px, 94vw);
+      max-height: 78vh;
+      overflow: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1rem;
+    }
+    .listed-popup-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .listed-popup-title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .listed-popup-close {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 0.3rem 0.55rem;
+      font: inherit;
+    }
+    .listed-popup-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+    .listed-popup-list li {
+      margin: 0.25rem 0;
+    }
+    .listed-popup-meta {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0 0 0.6rem 0;
+    }
+    .listed-popup-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 0 0 0.6rem 0;
+    }
+    .listed-popup-search {
+      flex: 1;
+      min-width: 180px;
+      max-width: 320px;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 0.35rem 0.55rem;
+      font: inherit;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.84rem;
+    }
+    .listed-popup-switch {
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      border-radius: 6px;
+      cursor: pointer;
+      padding: 0.35rem 0.6rem;
+      font: inherit;
+      font-size: 0.85rem;
+    }
+    .listed-criteria-group {
+      margin: 0.75rem 0 0.9rem 0;
+    }
+    .listed-criteria-head {
+      margin: 0 0 0.35rem 0;
+      font-size: 0.86rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .details-sections {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.7rem;
+    }
+    .details-section {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.6rem 0.7rem;
+      background: rgba(59, 130, 246, 0.04);
+    }
+    .details-section-title {
+      margin: 0 0 0.35rem 0;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .details-section-list {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+    .details-section-list li {
+      margin: 0.2rem 0;
+    }
+    .details-section-empty {
+      margin: 0;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    .audience-rate {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+    }
+    .audience-badge {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.02rem 0.36rem;
+      font-size: 0.64rem;
+      color: var(--muted);
+      white-space: nowrap;
+      background: rgba(59, 130, 246, 0.08);
+      line-height: 1.2;
+    }
+    td.changed-cell {
+      animation: changedCellFlash 3s ease-out;
+    }
+    @keyframes changedCellFlash {
+      0% {
+        box-shadow: inset 0 0 0 9999px rgba(250, 204, 21, 0.38);
+      }
+      100% {
+        box-shadow: inset 0 0 0 9999px rgba(250, 204, 21, 0);
+      }
+    }
+    .empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+    .error {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #fca5a5;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .loading { opacity: 0.7; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <!-- INJECT_SHARED -->
+  <div class="wrap">
+    <h1>Bank Loan Offers – Query</h1>
+    <p class="sub">Enter Gender, Loan amount, Loan type, Country, University, and Level of study. The table shows all banks that have offers matching your criteria, line by line.</p>
+
+    <div class="card">
+      <h2>Query (6 inputs)</h2>
+      <form id="query-form" class="form-row">
+        <div class="field">
+          <label for="gender-male">Gender</label>
+          <div class="choice-group" role="radiogroup" aria-label="Gender">
+            <label class="choice-option" for="gender-male">
+              <input type="radio" id="gender-male" name="gender" value="Male">
+              <span>Male</span>
+            </label>
+            <label class="choice-option" for="gender-female">
+              <input type="radio" id="gender-female" name="gender" value="Female" checked>
+              <span>Female</span>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="amount">Loan amount (₹)</label>
+          <input type="number" id="amount" name="amount" min="1" step="1" value="7000000" placeholder="e.g. 7000000">
+        </div>
+        <div class="field">
+          <label for="secured-yes">Loan type</label>
+          <div class="choice-group" role="radiogroup" aria-label="Loan type">
+            <label class="choice-option" for="secured-yes">
+              <input type="radio" id="secured-yes" name="secured" value="true" checked>
+              <span>Secured</span>
+            </label>
+            <label class="choice-option" for="secured-no">
+              <input type="radio" id="secured-no" name="secured" value="false">
+              <span>Unsecured</span>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="country">Country</label>
+          <div class="combo" id="country-combo">
+            <input id="country" name="country" placeholder="Select or search" autocomplete="off">
+            <button type="button" class="combo-clear" id="country-clear" aria-label="Clear country">x</button>
+            <span class="combo-search" aria-hidden="true">🔍</span>
+            <button type="button" class="combo-toggle" id="country-toggle" aria-label="Show country options">▼</button>
+            <div class="combo-menu" id="country-menu"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="university">University</label>
+          <div class="combo" id="university-combo">
+            <input id="university" name="university" placeholder="Select or search" autocomplete="off">
+            <button type="button" class="combo-clear" id="university-clear" aria-label="Clear university">x</button>
+            <span class="combo-search" aria-hidden="true">🔍</span>
+            <button type="button" class="combo-toggle" id="university-toggle" aria-label="Show university options">▼</button>
+            <div class="combo-menu" id="university-menu"></div>
+          </div>
+          <p id="institutes-hint" class="query-summary muted" style="display:none; margin:0.25rem 0 0 0; font-size:0.8rem;">Open this page from the server (e.g. <code>http://localhost:3080</code> after running <code>npm start</code>) to load countries and universities.</p>
+        </div>
+        <div class="field">
+          <label for="levelOfStudy">Level of study</label>
+          <div class="combo" id="level-combo">
+            <input id="levelOfStudy" name="levelOfStudy" placeholder="Select or search" autocomplete="off">
+            <button type="button" class="combo-clear" id="level-clear" aria-label="Clear level of study">x</button>
+            <span class="combo-search" aria-hidden="true">🔍</span>
+            <button type="button" class="combo-toggle" id="level-toggle" aria-label="Show level options">▼</button>
+            <div class="combo-menu" id="level-menu"></div>
+          </div>
+        </div>
+        <div class="field">
+          <button type="submit" class="btn" id="run-btn">Run query</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="error-zone"></div>
+
+    <div class="card">
+      <div class="results-head">
+        <h2>Banks that match your criteria (one row per offer)</h2>
+        <span class="count" id="count">Run a query to see results.</span>
+      </div>
+      <p class="query-summary muted" id="query-summary" aria-live="polite"></p>
+      <div class="table-wrap">
+        <table id="results-table">
+          <thead id="results-thead">
+            <tr><th>Lender</th><th>Sector</th></tr>
+          </thead>
+          <tbody id="results-body">
+            <tr><td colspan="2" class="empty">No results yet. Set criteria and click Run query.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('query-form');
+    const runBtn = document.getElementById('run-btn');
+    const resultsBody = document.getElementById('results-body');
+    const countEl = document.getElementById('count');
+    const errorZone = document.getElementById('error-zone');
+    const querySummary = document.getElementById('query-summary');
+
+    const thead = document.getElementById('results-thead');
+    let sharedBankData = window.SHARED_BANK_DATA || null;
+    let institutesList = [];
+    let listedPopupBackdrop = null;
+    let listedPopupState = { bankName: '', criteria: '', mode: 'criteria', search: '' };
+    let detailsPopupBackdrop = null;
+    let viewDetailsData = null;
+    let lenderDetailsMap = new Map();
+    let autoRunTimer = null;
+    let queryRunCounter = 0;
+    const ENABLE_DIFF_HIGHLIGHT = true;
+    const ENABLE_STABLE_RESULTS_ORDER = true;
+    let previousRenderSnapshot = null;
+    const lenderStableOrder = new Map();
+    const FALLBACK_LENDER_ORDER_BASE = 100000;
+    let lenderStableOrderCounter = FALLBACK_LENDER_ORDER_BASE;
+    const bankManifestOrderBySlug = new Map();
+    let countryOptions = [];
+    let universityOptions = [];
+    const levelOptions = [
+      'Any',
+      'Postgraduate (Degree / Diploma)',
+      'Undergraduate (Degree / Diploma)',
+      'Doctrate courses',
+      'Professional or Technical courses',
+      'Executive courses'
+    ];
+    const NOT_IN_LIST_COUNTRY = 'Not in the list';
+    const NOT_IN_LIST_UNIVERSITY = 'Not in the list';
+    const UNIVERSITY_PLACEHOLDER_DEFAULT = 'Select or search';
+    const UNIVERSITY_PLACEHOLDER_COUNTRY_NOT_LISTED = 'Search by university';
+
+    function showError(msg) {
+      errorZone.innerHTML = msg ? `<div class="error">${msg}</div>` : '';
+    }
+
+    function normalizeText(value) {
+      return value != null ? String(value).trim().toLowerCase() : '';
+    }
+
+    function isInstituteChangesEnabled(inst) {
+      if (!inst || typeof inst !== 'object') return false;
+      const value = inst.changes;
+      if (value === true) return true;
+      if (typeof value === 'string') {
+        const normalized = value.trim().toLowerCase();
+        return normalized === 'true' || normalized === 'yes';
+      }
+      return false;
+    }
+
+    function normalizeLenderKey(value) {
+      return String(value || '')
+        .toLowerCase()
+        .replace(/&/g, ' and ')
+        .replace(/[^a-z0-9]/g, '');
+    }
+
+    function normalizeSlug(value) {
+      return String(value || '').trim().toLowerCase();
+    }
+
+    function toDisplayValue(value) {
+      const text = value != null ? String(value).trim() : '';
+      return text || 'N/A';
+    }
+
+    function getDetailsForLender(lenderName) {
+      if (!lenderName || !lenderDetailsMap || !lenderDetailsMap.size) return null;
+      const key = normalizeLenderKey(lenderName);
+      return lenderDetailsMap.get(key) || null;
+    }
+
+    function buildLenderDetailsMap(detailsData) {
+      lenderDetailsMap = new Map();
+      const records = detailsData && Array.isArray(detailsData.records) ? detailsData.records : [];
+      for (const record of records) {
+        const lender = record && record.lender != null ? String(record.lender).trim() : '';
+        if (!lender) continue;
+        lenderDetailsMap.set(normalizeLenderKey(lender), record.details || {});
+      }
+    }
+
+    function sanitizeCriteriaLabel(criteria, country) {
+      const cleanCriteria = criteria != null ? String(criteria).trim() : '';
+      if (!cleanCriteria) return '';
+      const criteriaNorm = normalizeText(cleanCriteria);
+      const countryNorm = normalizeText(country);
+      if (countryNorm && criteriaNorm === countryNorm) return '';
+      return cleanCriteria;
+    }
+
+    function getBankCriteriaUniversityMap(bankName) {
+      const target = normalizeText(bankName);
+      const grouped = {};
+      if (!target) return grouped;
+      for (const row of (institutesList || [])) {
+        if (normalizeText(row.lenderName) !== target) continue;
+        const criteria = sanitizeCriteriaLabel(row.criteria, row.country);
+        if (!criteria) continue;
+        const univ = row.university ? String(row.university).trim() : '';
+        if (!univ) continue;
+        if (!grouped[criteria]) grouped[criteria] = [];
+        grouped[criteria].push(univ);
+      }
+      const normalized = {};
+      Object.keys(grouped).forEach((criteria) => {
+        normalized[criteria] = [...new Set(grouped[criteria])].sort((a, b) => a.localeCompare(b));
+      });
+      return normalized;
+    }
+
+    function resolveCriteriaKeys(criteriaKeys, wantedCriteria) {
+      const cleanWanted = wantedCriteria != null ? String(wantedCriteria).trim() : '';
+      if (!cleanWanted) return [];
+      const wantedNorm = normalizeText(cleanWanted);
+      const direct = criteriaKeys.filter((key) => normalizeText(key) === wantedNorm);
+
+      const parts = cleanWanted
+        .split(/\s*\/\s*|\s*\|\s*|\s+or\s+/i)
+        .map((x) => x.trim())
+        .filter(Boolean);
+      const partNorms = parts.map((x) => normalizeText(x));
+
+      const matched = criteriaKeys.filter((key) => {
+        const keyNorm = normalizeText(key);
+        if (!keyNorm) return false;
+        if (wantedNorm.includes(keyNorm) || keyNorm.includes(wantedNorm)) return true;
+        return partNorms.some((part) => part && (keyNorm === part || keyNorm.includes(part) || part.includes(keyNorm)));
+      });
+
+      return [...new Set([...(direct || []), ...(matched || [])])];
+    }
+
+    function getAudienceLabel(genderValue) {
+      const g = normalizeText(genderValue);
+      if (g === 'equal') return 'B';
+      if (g === 'male') return 'M';
+      if (g === 'female') return 'F';
+      return 'N/A';
+    }
+
+    function getInterestRateNumber(rateValue) {
+      if (rateValue == null) return NaN;
+      const parsed = Number(rateValue);
+      return Number.isFinite(parsed) ? parsed : NaN;
+    }
+
+    function ensureListedPopup() {
+      if (listedPopupBackdrop) return listedPopupBackdrop;
+      listedPopupBackdrop = document.createElement('div');
+      listedPopupBackdrop.id = 'listed-popup-backdrop';
+      listedPopupBackdrop.className = 'listed-popup-backdrop';
+      listedPopupBackdrop.innerHTML = [
+        '<div class="listed-popup" role="dialog" aria-modal="true" aria-label="Bank universities list">',
+        '  <div class="listed-popup-head">',
+        '    <h3 id="listed-popup-title" class="listed-popup-title">Listed Universities</h3>',
+        '    <button type="button" class="listed-popup-close" data-close-listed-popup="1">Close</button>',
+        '  </div>',
+        '  <p id="listed-popup-meta" class="listed-popup-meta"></p>',
+        '  <div class="listed-popup-tools">',
+        '    <input id="listed-popup-search" class="listed-popup-search" type="text" placeholder="Search university..." autocomplete="off" />',
+        '    <button type="button" class="listed-popup-switch" data-listed-mode-toggle="1">Show Bank-level List</button>',
+        '  </div>',
+        '  <ul id="listed-popup-list" class="listed-popup-list"></ul>',
+        '</div>'
+      ].join('');
+      document.body.appendChild(listedPopupBackdrop);
+      return listedPopupBackdrop;
+    }
+
+    function closeListedPopup() {
+      const popup = ensureListedPopup();
+      popup.style.display = 'none';
+    }
+
+    function renderListedPopupContent(bankName, criteria, mode) {
+      const popup = ensureListedPopup();
+      const title = popup.querySelector('#listed-popup-title');
+      const meta = popup.querySelector('#listed-popup-meta');
+      const switchBtn = popup.querySelector('[data-listed-mode-toggle]');
+      const searchInput = popup.querySelector('#listed-popup-search');
+      const listEl = popup.querySelector('#listed-popup-list');
+      const byCriteria = getBankCriteriaUniversityMap(bankName);
+      const criteriaKeys = Object.keys(byCriteria).sort((a, b) => a.localeCompare(b));
+      const wantedCriteria = criteria && String(criteria).trim() ? String(criteria).trim() : '';
+      const searchQuery = normalizeText(listedPopupState.search || '');
+      if (searchInput && searchInput.value !== (listedPopupState.search || '')) {
+        searchInput.value = listedPopupState.search || '';
+      }
+
+      title.textContent = bankName ? ('Listed Universities - ' + bankName) : 'Listed Universities';
+
+      if (mode === 'bank') {
+        switchBtn.textContent = 'Show Selected Criteria Only';
+        switchBtn.style.display = wantedCriteria ? 'inline-block' : 'none';
+        const filteredByCriteria = {};
+        for (const key of criteriaKeys) {
+          const list = (byCriteria[key] || []).filter((name) => {
+            if (!searchQuery) return true;
+            return normalizeText(name).includes(searchQuery);
+          });
+          if (list.length) filteredByCriteria[key] = list;
+        }
+        const filteredKeys = Object.keys(filteredByCriteria).sort((a, b) => a.localeCompare(b));
+        if (!filteredKeys.length) {
+          meta.textContent = 'No universities found for this bank in institutes data.';
+          listEl.innerHTML = '<li>N/A</li>';
+        } else {
+          const total = filteredKeys.reduce((acc, key) => acc + filteredByCriteria[key].length, 0);
+          const suffix = searchQuery ? (' (filtered by "' + (listedPopupState.search || '') + '")') : '';
+          meta.textContent = `${total} universities across ${filteredKeys.length} criteria.${suffix}`;
+          listEl.innerHTML = filteredKeys.map((key) => {
+            const list = filteredByCriteria[key] || [];
+            const items = list.length ? list.map((name) => '<li>' + escapeHtml(name) + '</li>').join('') : '<li>N/A</li>';
+            return '<li class="listed-criteria-group">'
+              + '<p class="listed-criteria-head">' + escapeHtml(key) + '</p>'
+              + '<ul class="listed-popup-list">' + items + '</ul>'
+              + '</li>';
+          }).join('');
+        }
+      } else {
+        switchBtn.textContent = 'Show Bank-level List';
+        switchBtn.style.display = 'inline-block';
+        const matchedKeys = resolveCriteriaKeys(criteriaKeys, wantedCriteria);
+        const universities = [...new Set(matchedKeys.flatMap((key) => byCriteria[key] || []))]
+          .filter((name) => {
+            if (!searchQuery) return true;
+            return normalizeText(name).includes(searchQuery);
+          })
+          .sort((a, b) => a.localeCompare(b));
+        if (matchedKeys.length) {
+          const suffix = searchQuery ? (' (filtered by "' + (listedPopupState.search || '') + '")') : '';
+          const criteriaLabel = wantedCriteria || matchedKeys[0];
+          meta.textContent = `${universities.length} universities for criteria: ${criteriaLabel}.${suffix}`;
+          listEl.innerHTML = universities.length
+            ? universities.map((name) => '<li>' + escapeHtml(name) + '</li>').join('')
+            : '<li>N/A</li>';
+        } else {
+          meta.textContent = wantedCriteria
+            ? `No universities found for criteria: ${wantedCriteria}.`
+            : 'No criteria available for this offer.';
+          listEl.innerHTML = '<li>N/A</li>';
+        }
+      }
+      popup.style.display = 'flex';
+    }
+
+    function openListedPopupForBank(bankName, criteria) {
+      listedPopupState = {
+        bankName: bankName || '',
+        criteria: criteria || '',
+        mode: 'criteria',
+        search: ''
+      };
+      renderListedPopupContent(listedPopupState.bankName, listedPopupState.criteria, listedPopupState.mode);
+    }
+
+    function ensureDetailsPopup() {
+      if (detailsPopupBackdrop) return detailsPopupBackdrop;
+      detailsPopupBackdrop = document.createElement('div');
+      detailsPopupBackdrop.id = 'details-popup-backdrop';
+      detailsPopupBackdrop.className = 'listed-popup-backdrop';
+      detailsPopupBackdrop.innerHTML = [
+        '<div class="listed-popup" role="dialog" aria-modal="true" aria-label="Lender details">',
+        '  <div class="listed-popup-head">',
+        '    <h3 id="details-popup-title" class="listed-popup-title">View Details</h3>',
+        '    <button type="button" class="listed-popup-close" data-close-details-popup="1">Close</button>',
+        '  </div>',
+        '  <p id="details-popup-meta" class="listed-popup-meta"></p>',
+        '  <div id="details-popup-content" class="details-sections"></div>',
+        '</div>'
+      ].join('');
+      document.body.appendChild(detailsPopupBackdrop);
+      return detailsPopupBackdrop;
+    }
+
+    function closeDetailsPopup() {
+      const popup = ensureDetailsPopup();
+      popup.style.display = 'none';
+    }
+
+    function renderDetailsSection(label, detailsObj, key) {
+      const section = detailsObj && typeof detailsObj === 'object' ? detailsObj[key] : null;
+      const bullets = section && Array.isArray(section.bullets) ? section.bullets.filter((x) => String(x || '').trim()) : [];
+      const raw = section && section.raw != null ? String(section.raw).trim() : '';
+      const listHtml = bullets.length
+        ? ('<ul class="details-section-list">' + bullets.map((item) => '<li>' + escapeHtml(toDisplayValue(item)) + '</li>').join('') + '</ul>')
+        : ('<p class="details-section-empty">' + escapeHtml(toDisplayValue(raw)) + '</p>');
+      return '<section class="details-section">'
+        + '<p class="details-section-title">' + escapeHtml(label) + '</p>'
+        + listHtml
+        + '</section>';
+    }
+
+    function renderDetailsPopupContent(lenderName) {
+      const popup = ensureDetailsPopup();
+      const title = popup.querySelector('#details-popup-title');
+      const meta = popup.querySelector('#details-popup-meta');
+      const content = popup.querySelector('#details-popup-content');
+      const details = getDetailsForLender(lenderName) || {};
+      const hasData = Object.keys(details).length > 0;
+
+      title.textContent = 'View Details - ' + toDisplayValue(lenderName);
+      meta.textContent = hasData ? 'Standardized lender-level details from uploaded matrix.' : 'No lender-level details found in uploaded matrix for this lender.';
+
+      const sections = [
+        ['Apply via', 'applyVia'],
+        ['Margin', 'margin'],
+        ['Interest Rate', 'interestRate'],
+        ['Loan Amount Covers', 'loanAmountCovers'],
+        ['Other Charges', 'otherCharges'],
+        ['Security', 'security'],
+        ['Course', 'course'],
+        ['Others', 'others']
+      ];
+
+      content.innerHTML = sections.map(([label, key]) => renderDetailsSection(label, details, key)).join('');
+      popup.style.display = 'flex';
+    }
+
+    function openDetailsPopupForLender(lenderName) {
+      renderDetailsPopupContent(lenderName || 'N/A');
+    }
+
+    function fmtObj(v) {
+      if (v == null) return 'N/A';
+      if (typeof v === 'object') return JSON.stringify(v).replace(/^\{|\}$/g, '').replace(/"/g, '');
+      return String(v);
+    }
+    function fmtFees(p) {
+      if (!p || typeof p !== 'object') return 'N/A';
+      const minVal = p.min != null ? '₹' + Number(p.min).toLocaleString('en-IN') : null;
+      const maxVal = p.max != null ? (p.max === 1 ? '1%' : '₹' + Number(p.max).toLocaleString('en-IN')) : null;
+      const parts = [];
+      if (minVal != null) parts.push('Min: ' + minVal);
+      if (maxVal != null) parts.push('Max: ' + maxVal);
+      return parts.length ? parts.join(', ') : 'N/A';
+    }
+    function fmtEligibility(e) {
+      if (!e || typeof e !== 'object') return 'N/A';
+      const parts = [];
+      if (e.nationality) parts.push(e.nationality);
+      if (e.age && typeof e.age === 'object') parts.push('Age ' + (e.age.min ?? '') + '–' + (e.age.max ?? ''));
+      if (e.qualification) parts.push(e.qualification);
+      return parts.length ? parts.join(', ') : fmtObj(e);
+    }
+
+    // Columns and sources per spec: Interest Rate→interest.rate, Type→interest.type, Preferred University right of Type of Rate, Security→security.coverageDisplay (when secured), Repayment→repayment_tenure.tenure, Margin→margin, Processing fees→processing_fees.displayText, Moratorium→moratorium.periodDisplay/paymentDuring, Course→institute.json (bank+university), rest from shared/_keyTree
+    function getColumns(secured, selectedUniversity, selectedCountry) {
+      const universityNorm = normalizeText(selectedUniversity);
+      const countryNorm = normalizeText(selectedCountry);
+      const showPreferredUniversity = !!universityNorm
+        && universityNorm !== normalizeText(NOT_IN_LIST_UNIVERSITY)
+        && countryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
+      const cols = ['Lender', 'Sector', 'Interest Rate', 'Type of Rate'];
+      if (showPreferredUniversity) cols.push('Preferred University');
+      if (secured) cols.push('Security coverage % of loan amount');
+      cols.push('Repayment Tenure', 'Margin (%)', 'Processing fees', 'Moratorium period', 'Payment during moratorium', 'Course', 'Nationality', 'Age', 'Qualification', 'University strictness', 'Delayed EMI payment', 'Avg time to sanction', 'Dedicated case manager', 'Onboarding process');
+      return cols;
+    }
+
+    // Initial header (secured = true, with Security coverage column)
+    (function initTable() {
+      const cols = getColumns(true, '', '');
+      thead.innerHTML = '<tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>';
+      const empty = document.querySelector('#results-body .empty');
+      if (empty) empty.setAttribute('colspan', String(cols.length));
+    })();
+
+    function getCountryScopeLabel(offer) {
+      const scope = offer && typeof offer === 'object' ? offer.countryScope : null;
+      if (!scope || typeof scope !== 'object') return '';
+      const mode = String(scope.mode || '').trim().toLowerCase();
+      if (mode !== 'only' && mode !== 'exclude') return '';
+      if (scope.label != null && String(scope.label).trim()) return String(scope.label).trim();
+      const countries = Array.isArray(scope.countries)
+        ? scope.countries.map((c) => String(c || '').trim()).filter(Boolean)
+        : [];
+      if (!countries.length) return mode === 'only' ? 'Country restricted' : 'Country exclusions';
+      return mode === 'only'
+        ? (countries.join(', ') + ' only')
+        : ('All except ' + countries.join(', '));
+    }
+
+    function getOfferExactKey(row) {
+      const slug = row && row.bankSlug != null ? String(row.bankSlug).trim() : '';
+      const offerIndex = row && row.offer && row.offer._index != null ? String(row.offer._index).trim() : '';
+      if (slug && offerIndex) return slug + '::' + offerIndex;
+      return '';
+    }
+
+    function normalizeKeyPart(value) {
+      return String(value == null ? '' : value).trim().toLowerCase();
+    }
+
+    function getOfferCompareGroupKey(row) {
+      const offer = row && row.offer ? row.offer : {};
+      const institute = offer && offer.institute ? offer.institute : {};
+      const amount = offer && offer.loan && offer.loan.amount ? offer.loan.amount : {};
+      const lenderKey = normalizeKeyPart(row && (row.bankSlug || row.bankName));
+      const amountMin = normalizeKeyPart(amount.min);
+      const amountMax = normalizeKeyPart(amount.max);
+      const instituteChanges = normalizeKeyPart(institute.changes);
+      const instituteCriteria = normalizeKeyPart(institute.criteria);
+      const levelOfStudy = normalizeKeyPart(institute.level_of_study);
+      const course = normalizeKeyPart(offer.course);
+      const rateType = normalizeKeyPart(offer && offer.interest ? offer.interest.type : '');
+      return [
+        lenderKey,
+        amountMin,
+        amountMax,
+        instituteChanges,
+        instituteCriteria,
+        levelOfStudy,
+        course,
+        rateType
+      ].join('::');
+    }
+
+    function cellComparableValue(cell) {
+      if (cell == null) return 'N/A';
+      if (typeof cell === 'object') {
+        if (cell.kind === 'interestAudience') {
+          return [cell.rate || 'N/A', cell.audience || 'N/A', cell.rateText || ''].join(' | ');
+        }
+        if (cell.kind === 'listedUniversityOnly') {
+          return [cell.label || 'Listed Only', cell.bankName || '', cell.criteria || ''].join(' | ');
+        }
+        try {
+          return JSON.stringify(cell);
+        } catch {
+          return String(cell);
+        }
+      }
+      return String(cell);
+    }
+
+    function getStableOfferIndex(row) {
+      const offerIndex = row && row.offer && row.offer._index != null ? Number(row.offer._index) : NaN;
+      if (Number.isFinite(offerIndex)) return offerIndex;
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    function getStableLoanMin(row) {
+      const minVal = row && row.offer && row.offer.loan && row.offer.loan.amount ? Number(row.offer.loan.amount.min) : NaN;
+      if (Number.isFinite(minVal)) return minVal;
+      return Number.MAX_SAFE_INTEGER;
+    }
+
+    function compareRowsForStableOrder(a, b) {
+      const lenderA = normalizeText(a && a.bankName);
+      const lenderB = normalizeText(b && b.bankName);
+      const orderA = lenderStableOrder.has(lenderA) ? lenderStableOrder.get(lenderA) : Number.MAX_SAFE_INTEGER;
+      const orderB = lenderStableOrder.has(lenderB) ? lenderStableOrder.get(lenderB) : Number.MAX_SAFE_INTEGER;
+      if (orderA !== orderB) return orderA - orderB;
+
+      const lenderCmp = lenderA.localeCompare(lenderB);
+      if (lenderCmp !== 0) return lenderCmp;
+
+      const idxA = getStableOfferIndex(a);
+      const idxB = getStableOfferIndex(b);
+      if (idxA !== idxB) return idxA - idxB;
+
+      const loanMinA = getStableLoanMin(a);
+      const loanMinB = getStableLoanMin(b);
+      if (loanMinA !== loanMinB) return loanMinA - loanMinB;
+
+      const typeA = normalizeText(a && a.offer && a.offer.interest ? a.offer.interest.type : '');
+      const typeB = normalizeText(b && b.offer && b.offer.interest ? b.offer.interest.type : '');
+      const typeCmp = typeA.localeCompare(typeB);
+      if (typeCmp !== 0) return typeCmp;
+
+      const rateA = a && a.offer && a.offer.interest ? Number(a.offer.interest.rate) : NaN;
+      const rateB = b && b.offer && b.offer.interest ? Number(b.offer.interest.rate) : NaN;
+      if (Number.isFinite(rateA) && Number.isFinite(rateB) && rateA !== rateB) return rateA - rateB;
+
+      return 0;
+    }
+
+    function fmtAge(ageObj) {
+      if (ageObj == null) return 'N/A';
+      if (typeof ageObj === 'string') return ageObj.trim() || 'N/A';
+      if (typeof ageObj !== 'object') return 'N/A';
+      const min = ageObj.min;
+      const max = ageObj.max;
+      if (min == null && max == null) return 'N/A';
+      if (Number(max) === 99) return (min != null ? String(min) : '') + '+';
+      if (min != null && max != null) return min + '–' + max;
+      if (min != null) return String(min);
+      if (max != null) return String(max);
+      return 'N/A';
+    }
+
+    function normalizeUniversityText(value) {
+      return String(value || '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s]/g, ' ')
+        .replace(/\s+/g, ' ')
+        .trim();
+    }
+
+    function universityTextMatches(queryText, candidateText) {
+      const query = normalizeUniversityText(queryText);
+      const candidate = normalizeUniversityText(candidateText);
+      if (!query || !candidate) return false;
+      return candidate.includes(query) || query.includes(candidate);
+    }
+
+    /** Delayed EMI payment: use display when present (new model), else legacy min–max or primitive. */
+    function fmtDelayedEmiPayment(v) {
+      if (v == null) return 'N/A';
+      if (typeof v === 'string' || typeof v === 'number') return String(v).trim() || 'N/A';
+      if (typeof v !== 'object') return 'N/A';
+      if (v.display != null && String(v.display).trim()) return String(v.display).trim();
+      const min = v.min;
+      const max = v.max;
+      if (min == null && max == null) return 'N/A';
+      if (min != null && max != null) return String(min) + '–' + String(max);
+      if (min != null) return String(min);
+      if (max != null) return String(max);
+      return 'N/A';
+    }
+
+    const SHARED_COL_COUNT = 8; // Nationality, Age, Qualification, University strictness, Delayed EMI, Avg time, Dedicated case manager, Onboarding (after offer cols)
+    function sharedCells(shared, offer) {
+      const def = () => Array(SHARED_COL_COUNT).fill('N/A');
+      if (!shared || typeof shared !== 'object') return def();
+      const nationality = shared.nationality ?? shared.eligibility?.nationality;
+      const ageObj = shared.age || shared.eligibility?.age;
+      const qual = shared.qualification ?? shared.eligibility?.qualification;
+      const univStrict = shared.universityStrictness ?? shared.eligibility?.universityStrictness;
+      const delayedEmi = shared.delayed_emi_payment;
+      const delayedEmiDisplay = delayedEmi && typeof delayedEmi === 'object' && delayedEmi.displayText != null ? String(delayedEmi.displayText).trim() : (typeof delayedEmi === 'string' ? delayedEmi : 'N/A');
+      const avgTime = shared.Average_Time_To_Sanction;
+      const avgTimeStr = avgTime != null && typeof avgTime === 'object' && (avgTime.min != null || avgTime.max != null) ? (avgTime.min ?? '') + (avgTime.min != null && avgTime.max != null ? '–' : '') + (avgTime.max ?? '') : (avgTime != null ? String(avgTime) : 'N/A');
+      return [
+        nationality ?? 'N/A',
+        fmtAge(ageObj),
+        qual ?? 'N/A',
+        univStrict ?? 'N/A',
+        delayedEmiDisplay,
+        avgTimeStr,
+        shared.dedicatedCaseManager != null ? (shared.dedicatedCaseManager ? 'Yes' : 'No') : 'N/A',
+        (shared.onboarding_process ?? 'N/A')
+      ];
+    }
+
+    /** Return array of cell values for one offer (no bank name). Course: when Level=Any or University=Not in list use offer.course; else use institutes.json. */
+    function getOfferCells(row, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity) {
+      const o = row.offer;
+      const shared = row.shared || null;
+      const coverageStr = (ox) => (ox?.security?.coverageDisplay != null ? String(ox.security.coverageDisplay) : 'N/A');
+      const tenureVal = o.repayment_tenure != null && typeof o.repayment_tenure === 'object' ? (o.repayment_tenure.tenure ?? 'N/A') : (o.repayment_tenure ?? 'N/A');
+      const processingVal = o.processing_fees != null && typeof o.processing_fees === 'object' ? (o.processing_fees.displayText ?? 'N/A') : 'N/A';
+      const moratorium = o.moratorium;
+      const periodDisplay = moratorium != null && typeof moratorium === 'object' ? (moratorium.periodDisplay ?? 'N/A') : 'N/A';
+      const paymentDuring = moratorium != null && typeof moratorium === 'object' ? (moratorium.paymentDuring ?? 'N/A') : 'N/A';
+      const instituteChanges = o && o.institute ? o.institute.changes : null;
+      const isInstituteWiseChanges = isInstituteChangesEnabled(o && o.institute ? o.institute : null);
+      const instituteCriteria = o && o.institute && o.institute.criteria != null ? String(o.institute.criteria).trim() : '';
+      let preferredUniversity = 'N/A';
+      const selectedUniversityNorm = normalizeText(selectedUniversity);
+      const isUniversitySelected = !!selectedUniversityNorm;
+      const isUniversityNotInListSelected = selectedUniversityNorm === normalizeText(NOT_IN_LIST_UNIVERSITY);
+      const lenderHasSelectedUniversity = isUniversitySelected && !isUniversityNotInListSelected
+        ? (institutesList || []).some((i) => normalizeText(i.lenderName) === normalizeText(row.bankName) && universityTextMatches(selectedUniversity, i.university || ''))
+        : false;
+
+      if (isUniversitySelected) {
+        if (isUniversityNotInListSelected) {
+          preferredUniversity = 'No';
+        } else if (isInstituteWiseChanges && lenderHasSelectedUniversity) {
+          preferredUniversity = {
+            kind: 'listedUniversityOnly',
+            label: instituteCriteria ? ('Listed Only - ' + instituteCriteria) : 'Listed Only',
+            bankName: row.bankName,
+            criteria: instituteCriteria
+          };
+        } else {
+          preferredUniversity = 'No';
+        }
+      } else if (isInstituteWiseChanges) {
+        preferredUniversity = {
+          kind: 'listedUniversityOnly',
+          label: instituteCriteria ? ('Listed Only - ' + instituteCriteria) : 'Listed Only',
+          bankName: row.bankName,
+          criteria: instituteCriteria
+        };
+      } else {
+        preferredUniversity = 'Open to All';
+      }
+      // Course source rule:
+      // - Preferred University = Yes -> institutes.json course
+      // - Preferred University = No / Not in list -> bank JSON offer.course
+      const normalizedUniversity = selectedUniversity != null ? String(selectedUniversity).trim().toLowerCase() : '';
+      const isUniversityNotInList = !normalizedUniversity || normalizedUniversity === normalizeText(NOT_IN_LIST_UNIVERSITY);
+      const isPreferredUniversity = preferredUniversity === 'Yes';
+      const courseValue = (!isUniversityNotInList && isPreferredUniversity)
+        ? 'N/A'
+        : (o.course ?? 'N/A');
+      const rateLabel = o.interest?.rate != null ? o.interest.rate + '%' : 'N/A';
+      const rateNumber = getInterestRateNumber(o.interest?.rate);
+      const audienceLabel = getAudienceLabel(o.gender);
+      let cells = [
+        {
+          kind: 'interestAudience',
+          rate: rateLabel,
+          audience: audienceLabel,
+          rateNumber,
+          rateText: rateLabel
+        },
+        o.interest?.type ?? 'N/A'
+      ];
+      if (includePreferredUniversity) cells.push(preferredUniversity);
+      if (secured) cells.push(coverageStr(o));
+      const marginValue = (o.margin != null && Number(o.margin) === 99) ? 'N/A' : (o.margin ?? 'N/A');
+      cells.push(tenureVal, marginValue, processingVal, periodDisplay, paymentDuring, courseValue);
+      cells = cells.concat(sharedCells(shared, o));
+      return cells;
+    }
+
+    function renderRows(rows, secured, selectedUniversity, levelOfStudy, selectedCountry) {
+      const orderedRows = Array.isArray(rows) ? rows.slice() : [];
+      for (const row of orderedRows) {
+        const bankSlug = normalizeSlug(row && row.bankSlug);
+        const lenderKey = normalizeText(row && row.bankName);
+        if (!lenderKey) continue;
+        if (!lenderStableOrder.has(lenderKey)) {
+          if (bankSlug && bankManifestOrderBySlug.has(bankSlug)) {
+            lenderStableOrder.set(lenderKey, bankManifestOrderBySlug.get(bankSlug));
+          } else {
+            lenderStableOrder.set(lenderKey, lenderStableOrderCounter++);
+          }
+        }
+      }
+      if (ENABLE_STABLE_RESULTS_ORDER) {
+        orderedRows.sort(compareRowsForStableOrder);
+      }
+      const selectedUniversityNorm = normalizeText(selectedUniversity);
+      const selectedCountryNorm = normalizeText(selectedCountry);
+      const includePreferredUniversity = !!selectedUniversityNorm
+        && selectedUniversityNorm !== normalizeText(NOT_IN_LIST_UNIVERSITY)
+        && selectedCountryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
+      const cols = getColumns(secured, selectedUniversity, selectedCountry);
+      const dataColumns = cols.slice(2);
+      const colCount = cols.length;
+      const canDiffWithPrevious = ENABLE_DIFF_HIGHLIGHT
+        && !!previousRenderSnapshot;
+      const currentSnapshotEntries = [];
+      thead.innerHTML = '<tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>';
+
+      if (!orderedRows.length) {
+        countEl.textContent = '0 matches.';
+        resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
+        previousRenderSnapshot = {
+          byExactKey: new Map(),
+          byGroupKey: new Map()
+        };
+        return;
+      }
+
+      const bankGroups = [];
+      const seen = new Set();
+      const lenderSectorMap = new Map();
+      for (const row of orderedRows) {
+        const lender = row.bankName;
+        const sectorVal = row.sector != null ? String(row.sector).trim() : '';
+        if (!lenderSectorMap.has(lender)) {
+          lenderSectorMap.set(lender, sectorVal || 'N/A');
+        } else {
+          const existing = lenderSectorMap.get(lender);
+          if ((!existing || existing === 'N/A') && sectorVal) {
+            lenderSectorMap.set(lender, sectorVal);
+          }
+        }
+      }
+      for (const row of orderedRows) {
+        const name = row.bankName;
+        if (!seen.has(name)) {
+          seen.add(name);
+          bankGroups.push(orderedRows.filter(r => r.bankName === name));
+        }
+      }
+
+      countEl.innerHTML = `<strong>${orderedRows.length}</strong> offer${orderedRows.length === 1 ? '' : 's'} from <strong>${bankGroups.length}</strong> bank${bankGroups.length === 1 ? '' : 's'}.`;
+
+      const tableRows = bankGroups.map((group, bankIdx) => {
+        const bankName = group[0].bankName;
+        const sector = lenderSectorMap.get(bankName) || 'N/A';
+        const n = group.length;
+        const consumedPreviousEntries = new Set();
+        const rowsHtml = group.map((row, i) => {
+          const exactKey = getOfferExactKey(row);
+          const groupKey = getOfferCompareGroupKey(row);
+          const cells = getOfferCells(row, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+          const comparableCells = cells.map(cellComparableValue);
+          const comparableByColumn = {};
+          for (let idx = 0; idx < dataColumns.length; idx++) {
+            comparableByColumn[dataColumns[idx]] = comparableCells[idx];
+          }
+          currentSnapshotEntries.push({ exactKey, groupKey, comparableCells, comparableByColumn });
+          let prevComparableCells = null;
+          let prevComparableByColumn = null;
+          if (canDiffWithPrevious) {
+            if (exactKey && previousRenderSnapshot.byExactKey.has(exactKey)) {
+              const exactMatch = previousRenderSnapshot.byExactKey.get(exactKey);
+              prevComparableCells = exactMatch.comparableCells;
+              prevComparableByColumn = exactMatch.comparableByColumn || null;
+              consumedPreviousEntries.add(exactMatch.entryId);
+            } else if (groupKey && previousRenderSnapshot.byGroupKey.has(groupKey)) {
+              const candidates = previousRenderSnapshot.byGroupKey.get(groupKey);
+              const candidate = candidates.find((item) => !consumedPreviousEntries.has(item.entryId));
+              if (candidate) {
+                prevComparableCells = candidate.comparableCells;
+                prevComparableByColumn = candidate.comparableByColumn || null;
+                consumedPreviousEntries.add(candidate.entryId);
+              }
+            }
+          }
+          const tds = cells.map((cell, cellIdx) => {
+            const columnName = dataColumns[cellIdx];
+            const hasComparableColumn = !!(prevComparableByColumn && columnName && Object.prototype.hasOwnProperty.call(prevComparableByColumn, columnName));
+            const hasComparableIndex = Array.isArray(prevComparableCells) && cellIdx < prevComparableCells.length;
+            const previousCellValue = hasComparableColumn
+              ? prevComparableByColumn[columnName]
+              : (hasComparableIndex ? prevComparableCells[cellIdx] : null);
+            const isChangedCell = previousCellValue != null && previousCellValue !== comparableCells[cellIdx];
+            const cls = typeof cell === 'number' ? 'num' : '';
+            if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
+              const rate = escapeHtml(cell.rate || 'N/A');
+              const audience = escapeHtml(cell.audience || 'N/A');
+              const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
+              const searchValue = [cell.rateText || '', cell.audience || ''].join(' ').trim();
+              const rateCellClass = [cls, 'interest-rate-cell', isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${rateCellClass}" data-rate-number="${escapeHtml(sortValue)}" data-rate-text="${escapeHtml(searchValue)}"><span class="audience-rate"><span>${rate}</span><span class="audience-badge">${audience}</span></span></td>`;
+            }
+            if (cell && typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
+              const label = escapeHtml(cell.label || 'Listed Only');
+              const bank = escapeHtml(cell.bankName || bankName || '');
+              const criteria = escapeHtml(cell.criteria || '');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"><button type="button" class="listed-universities-trigger" data-listed-bank="${bank}" data-listed-criteria="${criteria}">${label}</button></td>`;
+            }
+            const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+            return `<td class="${cellClass}">${cell ?? 'N/A'}</td>`;
+          }).join('');
+          const isFirst = i === 0;
+          const isLast = i === n - 1;
+          let trClass = '';
+          if (isFirst) trClass = ' bank-group-first';
+          if (isLast) trClass += ' bank-group-last';
+          if (isFirst) {
+            return '<tr class="bank-block' + trClass + '"><td rowspan="' + n + '" class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td rowspan="' + n + '" class="sector-name-cell">' + escapeHtml(sector) + '</td>' + tds + '</tr>';
+          }
+          return '<tr class="bank-block' + trClass + '">' + tds + '</tr>';
+        });
+        return rowsHtml.join('');
+      }).join('');
+      resultsBody.innerHTML = tableRows;
+      const byExactKey = new Map();
+      const byGroupKey = new Map();
+      currentSnapshotEntries.forEach((entry, idx) => {
+        const stored = {
+          entryId: idx,
+          exactKey: entry.exactKey,
+          groupKey: entry.groupKey,
+          comparableCells: entry.comparableCells,
+          comparableByColumn: entry.comparableByColumn
+        };
+        if (entry.exactKey) byExactKey.set(entry.exactKey, stored);
+        if (entry.groupKey) {
+          if (!byGroupKey.has(entry.groupKey)) byGroupKey.set(entry.groupKey, []);
+          byGroupKey.get(entry.groupKey).push(stored);
+        }
+      });
+      previousRenderSnapshot = {
+        byExactKey,
+        byGroupKey
+      };
+    }
+
+    async function runQueryFromForm() {
+      showError('');
+      querySummary.textContent = '';
+      const gender = form.gender.value;
+      const amountRaw = (form.amount.value || '').replace(/,/g, '');
+      const amount = amountRaw ? Number(amountRaw) : 0;
+      const secured = form.secured.value === 'true';
+      const country = (form.country && form.country.value) ? form.country.value.trim() : '';
+      const university = (form.university && form.university.value) ? form.university.value.trim() : '';
+      const levelOfStudy = (form.levelOfStudy && form.levelOfStudy.value) ? form.levelOfStudy.value.trim() : '';
+      const query = { gender, amount, secured, country, university, levelOfStudy };
+      const runId = ++queryRunCounter;
+      runBtn.disabled = true;
+      form.classList.add('loading');
+      try {
+        const res = await fetch('/api/query-all', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(query)
+        });
+        const text = await res.text();
+        let data;
+        try {
+          data = text ? JSON.parse(text) : {};
+        } catch (_) {
+          if (runId !== queryRunCounter) return;
+          showError(res.status === 404 ? 'API not found. Open this app at http://localhost:3080 (run "npm start" in the Table folder).' : ('Server error: ' + (text || res.statusText || 'Invalid response')));
+          renderRows([], secured, '', '', country);
+          return;
+        }
+        if (runId !== queryRunCounter) return;
+        if (!res.ok) {
+          showError(data.error || 'Request failed');
+          renderRows([], secured, '', '', country);
+          return;
+        }
+        const securedResp = data.secured !== false;
+        const selectedUniv = university || '';
+        const levelOfStudyVal = (form.levelOfStudy && form.levelOfStudy.value) ? form.levelOfStudy.value.trim() : '';
+        renderRows(data.rows || [], securedResp, selectedUniv, levelOfStudyVal, country);
+        const parts = [`Gender=${gender}`, `Amount=₹${amount.toLocaleString('en-IN')}`, secured ? 'Secured' : 'Unsecured'];
+        if (country) parts.push(`Country=${country}`);
+        if (selectedUniv) parts.push(`University=${selectedUniv}`);
+        else parts.push('University=Not in the list');
+        if (levelOfStudy && levelOfStudy !== 'Any') parts.push(`Level=${levelOfStudy}`);
+        querySummary.textContent = 'Query: ' + parts.join(', ');
+      } catch (err) {
+        if (runId !== queryRunCounter) return;
+        showError(err.message || 'Network error');
+        renderRows([], form.secured.value === 'true', '', '', country);
+      } finally {
+        if (runId === queryRunCounter) {
+          runBtn.disabled = false;
+          form.classList.remove('loading');
+        }
+      }
+    }
+
+    function scheduleAutoRun() {
+      if (autoRunTimer) clearTimeout(autoRunTimer);
+      autoRunTimer = setTimeout(() => {
+        autoRunTimer = null;
+        runQueryFromForm();
+      }, 280);
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (autoRunTimer) {
+        clearTimeout(autoRunTimer);
+        autoRunTimer = null;
+      }
+      runQueryFromForm();
+    });
+
+    async function loadAndRunDefault() {
+      try {
+        const defaultQuery = { gender: 'Female', amount: 7000000, secured: true };
+        const res = await fetch('/api/query-all', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(defaultQuery)
+        });
+        const text = await res.text();
+        let data;
+        try {
+          data = text ? JSON.parse(text) : {};
+        } catch (_) {
+          return;
+        }
+        if (res.ok && data) {
+          renderRows(data.rows || [], data.secured !== false, '', 'Any', '');
+          form.gender.value = defaultQuery.gender;
+          form.amount.value = String(defaultQuery.amount);
+          form.secured.value = String(defaultQuery.secured);
+          querySummary.textContent = 'Query: Gender=' + defaultQuery.gender + ', Amount=₹70,00,000, Secured';
+        }
+      } catch (_) {}
+    }
+
+    document.body.addEventListener('click', function(e) {
+      const listedTrigger = e.target.closest('.listed-universities-trigger');
+      if (listedTrigger) {
+        const bankName = listedTrigger.getAttribute('data-listed-bank') || '';
+        const criteria = listedTrigger.getAttribute('data-listed-criteria') || '';
+        openListedPopupForBank(bankName, criteria);
+        return;
+      }
+
+      const detailsTrigger = e.target.closest('.view-details-trigger');
+      if (detailsTrigger) {
+        const lenderName = detailsTrigger.getAttribute('data-details-bank') || '';
+        openDetailsPopupForLender(lenderName);
+        return;
+      }
+
+      const modeToggle = e.target.closest('[data-listed-mode-toggle]');
+      if (modeToggle) {
+        if (!listedPopupState.bankName) return;
+        listedPopupState.mode = listedPopupState.mode === 'bank' ? 'criteria' : 'bank';
+        renderListedPopupContent(listedPopupState.bankName, listedPopupState.criteria, listedPopupState.mode);
+        return;
+      }
+
+      const closeListed = e.target.closest('[data-close-listed-popup]');
+      if (closeListed) {
+        closeListedPopup();
+        return;
+      }
+
+      const closeDetails = e.target.closest('[data-close-details-popup]');
+      if (closeDetails) {
+        closeDetailsPopup();
+        return;
+      }
+
+      if (listedPopupBackdrop && e.target === listedPopupBackdrop) {
+        closeListedPopup();
+        return;
+      }
+
+      if (detailsPopupBackdrop && e.target === detailsPopupBackdrop) {
+        closeDetailsPopup();
+        return;
+      }
+
+      const star = e.target.closest('.refundable-star');
+      if (!star) return;
+      const existing = document.getElementById('refundable-tooltip');
+      if (existing) existing.remove();
+      const tip = document.createElement('div');
+      tip.id = 'refundable-tooltip';
+      tip.className = 'refundable-tooltip';
+      tip.textContent = 'Refundable';
+      tip.style.left = '-9999px';
+      document.body.appendChild(tip);
+      const r = star.getBoundingClientRect();
+      requestAnimationFrame(function() {
+        tip.style.left = Math.max(4, r.right - tip.offsetWidth) + 'px';
+        tip.style.top = (r.top - tip.offsetHeight - 6) + 'px';
+      });
+      setTimeout(function() { tip.remove(); }, 2000);
+    });
+
+    document.body.addEventListener('input', function(e) {
+      const search = e.target.closest('#listed-popup-search');
+      if (!search || !listedPopupState.bankName) return;
+      listedPopupState.search = search.value || '';
+      renderListedPopupContent(listedPopupState.bankName, listedPopupState.criteria, listedPopupState.mode);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && listedPopupBackdrop && listedPopupBackdrop.style.display !== 'none') {
+        closeListedPopup();
+        return;
+      }
+      if (e.key === 'Escape' && detailsPopupBackdrop && detailsPopupBackdrop.style.display !== 'none') {
+        closeDetailsPopup();
+      }
+    });
+
+    function getCountrySelect() { return document.getElementById('country'); }
+    function getUniversitySelect() { return document.getElementById('university'); }
+    function getCountryMenu() { return document.getElementById('country-menu'); }
+    function getUniversityMenu() { return document.getElementById('university-menu'); }
+    function getLevelSelect() { return document.getElementById('levelOfStudy'); }
+    function getLevelMenu() { return document.getElementById('level-menu'); }
+    function getCountryToggle() { return document.getElementById('country-toggle'); }
+    function getUniversityToggle() { return document.getElementById('university-toggle'); }
+    function getLevelToggle() { return document.getElementById('level-toggle'); }
+    function getCountryClear() { return document.getElementById('country-clear'); }
+    function getUniversityClear() { return document.getElementById('university-clear'); }
+    function getLevelClear() { return document.getElementById('level-clear'); }
+
+    function hideComboMenus() {
+      const cm = getCountryMenu();
+      const um = getUniversityMenu();
+      const lm = getLevelMenu();
+      if (cm) cm.style.display = 'none';
+      if (um) um.style.display = 'none';
+      if (lm) lm.style.display = 'none';
+    }
+
+    function setClearVisible(button, visible) {
+      if (!button) return;
+      button.style.display = visible ? 'block' : 'none';
+    }
+
+    function syncClearButtons() {
+      const country = getCountrySelect();
+      const university = getUniversitySelect();
+      const level = getLevelSelect();
+      setClearVisible(getCountryClear(), !!(country && String(country.value || '').trim()));
+      setClearVisible(getUniversityClear(), !!(university && String(university.value || '').trim()));
+      setClearVisible(getLevelClear(), !!(level && String(level.value || '').trim()));
+    }
+
+    function renderComboMenu(kind, forceOpen) {
+      const input = kind === 'country' ? getCountrySelect() : (kind === 'university' ? getUniversitySelect() : getLevelSelect());
+      const menu = kind === 'country' ? getCountryMenu() : (kind === 'university' ? getUniversityMenu() : getLevelMenu());
+      const options = kind === 'country' ? countryOptions : (kind === 'university' ? universityOptions : levelOptions);
+      if (!input || !menu) return;
+      const search = forceOpen ? '' : String(input.value || '').trim().toLowerCase();
+      if (!forceOpen && !search) {
+        menu.style.display = 'none';
+        menu.innerHTML = '';
+        return;
+      }
+      const filtered = options.filter((v) => !search || String(v).toLowerCase().includes(search));
+      if (!filtered.length) {
+        menu.style.display = 'none';
+        menu.innerHTML = '';
+        return;
+      }
+      menu.innerHTML = filtered.map((v) => '<button type="button" class="combo-option" data-value="' + escapeHtml(v) + '">' + escapeHtml(v) + '</button>').join('');
+      menu.style.display = 'block';
+    }
+
+    function findCountryForUniversity(universityName) {
+      const target = normalizeText(universityName);
+      if (!target || target === normalizeText(NOT_IN_LIST_UNIVERSITY)) return '';
+      const match = (institutesList || []).find((row) => normalizeText(row.university) === target && row.country);
+      return match && match.country ? String(match.country).trim() : '';
+    }
+
+    function updateUniversityPlaceholder() {
+      const university = getUniversitySelect();
+      const country = getCountrySelect();
+      if (!university) return;
+      const countryValue = country && country.value ? String(country.value).trim() : '';
+      const isCountryNotInList = normalizeText(countryValue) === normalizeText(NOT_IN_LIST_COUNTRY);
+      university.placeholder = isCountryNotInList
+        ? UNIVERSITY_PLACEHOLDER_COUNTRY_NOT_LISTED
+        : UNIVERSITY_PLACEHOLDER_DEFAULT;
+    }
+
+    function syncCountryFromUniversity(universityName) {
+      const countryValue = findCountryForUniversity(universityName);
+      const country = getCountrySelect();
+      if (!country || !countryValue) return;
+      const currentCountry = country.value ? String(country.value).trim() : '';
+      if (normalizeText(currentCountry) === normalizeText(NOT_IN_LIST_COUNTRY)) return;
+      country.value = countryValue;
+      populateUniversities();
+    }
+
+    function bindComboHandlers() {
+      const country = getCountrySelect();
+      const university = getUniversitySelect();
+      const level = getLevelSelect();
+      const countryToggle = getCountryToggle();
+      const universityToggle = getUniversityToggle();
+      const levelToggle = getLevelToggle();
+      const countryMenu = getCountryMenu();
+      const universityMenu = getUniversityMenu();
+      const levelMenu = getLevelMenu();
+      const countryClear = getCountryClear();
+      const universityClear = getUniversityClear();
+      const levelClear = getLevelClear();
+
+      if (country) {
+        country.addEventListener('input', function () {
+          populateUniversities();
+          renderComboMenu('country', false);
+          syncClearButtons();
+        });
+        country.addEventListener('focus', function () {
+          hideComboMenus();
+          renderComboMenu('country', true);
+        });
+        country.addEventListener('click', function () {
+          hideComboMenus();
+          renderComboMenu('country', true);
+        });
+      }
+      if (university) {
+        university.addEventListener('input', function () {
+          renderComboMenu('university', false);
+          syncClearButtons();
+        });
+        university.addEventListener('change', function () {
+          syncCountryFromUniversity(university.value || '');
+          syncClearButtons();
+        });
+        university.addEventListener('focus', function () {
+          hideComboMenus();
+          renderComboMenu('university', true);
+        });
+        university.addEventListener('click', function () {
+          hideComboMenus();
+          renderComboMenu('university', true);
+        });
+      }
+      if (level) {
+        level.addEventListener('input', function () {
+          renderComboMenu('level', false);
+          syncClearButtons();
+        });
+        level.addEventListener('focus', function () {
+          hideComboMenus();
+          renderComboMenu('level', true);
+        });
+        level.addEventListener('click', function () {
+          hideComboMenus();
+          renderComboMenu('level', true);
+        });
+      }
+
+      if (countryClear) {
+        countryClear.addEventListener('click', function () {
+          if (country) country.value = '';
+          populateUniversities();
+          hideComboMenus();
+          syncClearButtons();
+          scheduleAutoRun();
+        });
+      }
+      if (universityClear) {
+        universityClear.addEventListener('click', function () {
+          if (university) university.value = '';
+          hideComboMenus();
+          syncClearButtons();
+          scheduleAutoRun();
+        });
+      }
+      if (levelClear) {
+        levelClear.addEventListener('click', function () {
+          if (level) level.value = '';
+          hideComboMenus();
+          syncClearButtons();
+          scheduleAutoRun();
+        });
+      }
+
+      if (countryToggle) {
+        countryToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const open = countryMenu && countryMenu.style.display === 'block';
+          hideComboMenus();
+          if (!open) renderComboMenu('country', true);
+        });
+      }
+      if (universityToggle) {
+        universityToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const open = universityMenu && universityMenu.style.display === 'block';
+          hideComboMenus();
+          if (!open) renderComboMenu('university', true);
+        });
+      }
+      if (levelToggle) {
+        levelToggle.addEventListener('click', function (e) {
+          e.preventDefault();
+          const open = levelMenu && levelMenu.style.display === 'block';
+          hideComboMenus();
+          if (!open) renderComboMenu('level', true);
+        });
+      }
+
+      if (countryMenu) {
+        countryMenu.addEventListener('click', function (e) {
+          const opt = e.target.closest('.combo-option');
+          if (!opt) return;
+          const value = opt.getAttribute('data-value') || '';
+          if (country) country.value = value;
+          populateUniversities();
+          scheduleAutoRun();
+          hideComboMenus();
+          syncClearButtons();
+        });
+      }
+      if (universityMenu) {
+        universityMenu.addEventListener('click', function (e) {
+          const opt = e.target.closest('.combo-option');
+          if (!opt) return;
+          const value = opt.getAttribute('data-value') || '';
+          if (university) university.value = value;
+          syncCountryFromUniversity(value);
+          scheduleAutoRun();
+          hideComboMenus();
+          syncClearButtons();
+        });
+      }
+      if (levelMenu) {
+        levelMenu.addEventListener('click', function (e) {
+          const opt = e.target.closest('.combo-option');
+          if (!opt) return;
+          const value = opt.getAttribute('data-value') || '';
+          if (level) level.value = value;
+          scheduleAutoRun();
+          hideComboMenus();
+          syncClearButtons();
+        });
+      }
+
+      document.addEventListener('click', function (e) {
+        const inCountry = e.target.closest('#country-combo');
+        const inUniversity = e.target.closest('#university-combo');
+        const inLevel = e.target.closest('#level-combo');
+        if (!inCountry && !inUniversity && !inLevel) hideComboMenus();
+      });
+    }
+
+    function populateCountries() {
+      const countries = [...new Set(institutesList.map((i) => i.country).filter(Boolean))].sort();
+      const sel = getCountrySelect();
+      if (!sel) return;
+      countryOptions = [NOT_IN_LIST_COUNTRY].concat(countries);
+      const current = sel.value;
+      if (countryOptions.includes(current)) sel.value = current;
+      const hint = document.getElementById('institutes-hint');
+      if (hint) hint.style.display = countries.length ? 'none' : 'block';
+      populateUniversities();
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s;
+      return div.innerHTML;
+    }
+
+    function cleanInstituteText(value) {
+      if (value == null) return '';
+      let text = String(value).trim();
+      if (!text) return '';
+      text = text.replace(/""/g, '"');
+      text = text.replace(/^\s*"+/, '').replace(/"+\s*$/, '').trim();
+      return text;
+    }
+
+    function normalizeInstituteRow(row) {
+      if (!row || typeof row !== 'object') return row;
+      const normalized = { ...row };
+      let university = row.university != null ? String(row.university).trim() : '';
+      let country = row.country != null ? String(row.country).trim() : '';
+      const criteria = row.criteria != null ? String(row.criteria).trim() : '';
+      const hasSplitUniversity = /^\s*"/.test(university) && /"\s*$/.test(country);
+      let normalizedCriteria = cleanInstituteText(criteria);
+      if (hasSplitUniversity) {
+        const left = cleanInstituteText(university);
+        const right = cleanInstituteText(country);
+        university = [left, right].filter(Boolean).join(', ');
+        country = cleanInstituteText(criteria) || right;
+        // For split rows, criteria field is often shifted and unreliable.
+        normalizedCriteria = '';
+      } else {
+        university = cleanInstituteText(university);
+        country = cleanInstituteText(country);
+        normalizedCriteria = sanitizeCriteriaLabel(normalizedCriteria, country);
+      }
+      normalized.lenderName = cleanInstituteText(row.lenderName);
+      normalized.university = university;
+      normalized.country = country;
+      normalized.criteria = normalizedCriteria;
+      normalized.course = cleanInstituteText(row.course);
+      return normalized;
+    }
+
+    function populateUniversities() {
+      const countrySel = getCountrySelect();
+      const univSel = getUniversitySelect();
+      if (!univSel) return;
+      const country = countrySel && countrySel.value ? countrySel.value.trim() : '';
+      const isCountryNotInList = normalizeText(country) === normalizeText(NOT_IN_LIST_COUNTRY);
+      updateUniversityPlaceholder();
+      let list = institutesList;
+      if (country && !isCountryNotInList) {
+        list = list.filter((i) => i.country === country);
+      }
+      const universities = [NOT_IN_LIST_UNIVERSITY].concat([...new Set(list.map((i) => i.university).filter(Boolean))].sort());
+      universityOptions = universities;
+      const current = univSel.value;
+      if (universities.includes(current)) {
+        univSel.value = current;
+      } else {
+        univSel.value = '';
+      }
+    }
+
+    async function loadInstitutes() {
+      institutesList = [];
+      // Try API first, then static JSON (works when server serves from project root)
+      const urls = ['/api/institutes', '/data/institutes.json'];
+      for (const url of urls) {
+        try {
+          const res = await fetch(url);
+          const text = await res.text();
+          if (res.ok && text) {
+            const data = JSON.parse(text);
+            institutesList = Array.isArray(data) ? data.map(normalizeInstituteRow) : [];
+            if (institutesList.length) break;
+          }
+        } catch (_) {}
+      }
+      populateCountries();
+    }
+
+    async function loadViewDetails() {
+      viewDetailsData = null;
+      lenderDetailsMap = new Map();
+      const urls = ['/data/view-details-abroad.json'];
+      for (const url of urls) {
+        try {
+          const res = await fetch(url);
+          const text = await res.text();
+          if (res.ok && text) {
+            const data = JSON.parse(text);
+            viewDetailsData = data;
+            buildLenderDetailsMap(viewDetailsData);
+            if (lenderDetailsMap.size) break;
+          }
+        } catch (_) {}
+      }
+    }
+
+    async function loadBankManifestOrder() {
+      bankManifestOrderBySlug.clear();
+      const urls = ['/data/banks/manifest.json'];
+      for (const url of urls) {
+        try {
+          const res = await fetch(url);
+          const text = await res.text();
+          if (!res.ok || !text) continue;
+          const data = JSON.parse(text);
+          if (!Array.isArray(data)) continue;
+          data.forEach((slug, idx) => {
+            const key = normalizeSlug(slug);
+            if (key) bankManifestOrderBySlug.set(key, idx);
+          });
+          return;
+        } catch (_) {}
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', async () => {
+      await Promise.all([loadInstitutes(), loadViewDetails(), loadBankManifestOrder()]);
+      bindComboHandlers();
+      syncClearButtons();
+      form.addEventListener('input', function (e) {
+        const target = e.target;
+        if (!target || !target.name) return;
+        if (['gender', 'amount', 'secured', 'country', 'university', 'levelOfStudy'].includes(target.name)) {
+          scheduleAutoRun();
+        }
+      });
+      form.addEventListener('change', function (e) {
+        const target = e.target;
+        if (!target || !target.name) return;
+        if (['gender', 'amount', 'secured', 'country', 'university', 'levelOfStudy'].includes(target.name)) {
+          scheduleAutoRun();
+        }
+      });
+      loadAndRunDefault();
+    });
+  </script>
+</body>
+</html>

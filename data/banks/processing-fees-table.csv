@@ -1,0 +1,40 @@
+Bank file,min,max,refundable
+aditya-birla-capital.json,0,1,false
+auxilo.json,0,2,false
+avanse.json,0,1.5,false
+axis-bank.json,0,2,false
+bank-of-baroda.json,"0; 1","0; 10000",false
+bank-of-india.json,10000,0,false
+bank-of-maharashtra.json,0,1,false
+canara-bank.json,20000,0.5,false
+city-union-bank.json,0,0.2,false
+credila.json,0,1,false
+dcb-bank.json,0,0.5,false
+dhanlaxmi-bank.json,0,1.5,false
+edgro.json,0,2,false
+federal-bank.json,0,1,false
+icici-bank.json,0,2,false
+idbi-bank.json,5000,1,false
+idfc-first-bank.json,0,1.5,false
+incred.json,0,1,false
+indian-overseas-bank.json,0,1,false
+jammu--kashmir-bank.json,0,1.5,false
+jammu-and-kashmir-grameen-bank.json,10000,1,false
+karnataka-bank.json,10000,0,false
+karur-vyasa-bank.json,10000,0,false
+leap-finance.json,0,3,false
+mpower.json,0,5,false
+nainital-bank.json,"0; 0.5; 1",varies,false
+poonawalla-fincorp.json,0,0,false
+prodigy.json,50000,0,false
+punjab-national-bank.json,10000,1,true
+punjab-national-bank-relational-example.json,10000,1,true
+rbl-bank.json,0,0,false
+saraswat-co-operative-bank.json,10000,0.5,false
+south-indian-bank.json,0,1,false
+state-bank-of-india.json,10000,0,false
+tamilnad-mercantile-bank.json,"0; 1",varies,false
+tata-capital.json,0,2,false
+uco-bank.json,0,0,false
+union-bank-of-india.json,10000,0,false
+yes-bank.json,0,2,false

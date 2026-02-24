@@ -1,0 +1,128 @@
+{
+  "_description": "Schema for delayed_emi_payment field. Supports simple %, conditional (days/loan amount/quota), narrative text, and mixed (percent + fixed Rs). Use 'display' for table UI; use 'summary' or 'rules' for client-side queries.",
+  "oneOf": [
+    { "$ref": "#/definitions/SimplePercent" },
+    { "$ref": "#/definitions/SimpleFixed" },
+    { "$ref": "#/definitions/Conditional" },
+    { "$ref": "#/definitions/Narrative" },
+    { "$ref": "#/definitions/LegacyMinMax" }
+  ],
+  "definitions": {
+    "SimplePercent": {
+      "type": "object",
+      "description": "Single percentage (or range) per month. Most banks.",
+      "required": ["type", "unit", "display"],
+      "properties": {
+        "type": { "const": "simple" },
+        "unit": { "const": "percent_per_month" },
+        "min": { "type": "number", "description": "Min % per month" },
+        "max": { "type": "number", "description": "Max % per month; omit or same as min for fixed %" },
+        "display": { "type": "string", "description": "Human-readable for table cell, e.g. '0.2%'" },
+        "summary": { "$ref": "#/definitions/Summary" }
+      }
+    },
+    "SimpleFixed": {
+      "type": "object",
+      "description": "Fixed amount e.g. Rs per day.",
+      "required": ["type", "unit", "display"],
+      "properties": {
+        "type": { "const": "simple" },
+        "unit": { "enum": ["rupees_per_day", "rupees_per_month", "rupees_one_time"] },
+        "amount": { "type": "number" },
+        "display": { "type": "string" },
+        "summary": { "$ref": "#/definitions/Summary" }
+      }
+    },
+    "Conditional": {
+      "type": "object",
+      "description": "Slabs/rules by days overdue, loan amount, or quota. Enables client queries.",
+      "required": ["type", "unit", "rules", "display"],
+      "properties": {
+        "type": { "const": "conditional" },
+        "unit": { "enum": ["percent_per_month", "rupees_per_day", "mixed"] },
+        "rules": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/Rule" }
+        },
+        "display": { "type": "string", "description": "Full text for table, e.g. '0.2% if <60 days, 0.42% if >60 days'" },
+        "summary": { "$ref": "#/definitions/Summary" }
+      }
+    },
+    "Narrative": {
+      "type": "object",
+      "description": "No structured rate; text only (As per contract, As per default slab).",
+      "required": ["type", "display"],
+      "properties": {
+        "type": { "const": "narrative" },
+        "display": { "type": "string" }
+      }
+    },
+    "LegacyMinMax": {
+      "type": "object",
+      "description": "Backward compatibility: min/max only (numbers or strings). Client treats as display min–max or uses display if present.",
+      "properties": {
+        "min": {},
+        "max": {},
+        "display": { "type": "string" }
+      }
+    },
+    "Rule": {
+      "type": "object",
+      "required": ["value"],
+      "properties": {
+        "condition": { "$ref": "#/definitions/Condition" },
+        "value": { "$ref": "#/definitions/RuleValue" }
+      }
+    },
+    "Condition": {
+      "type": "object",
+      "description": "Exactly one of these keys; all comparisons inclusive where applicable.",
+      "oneOf": [
+        { "required": ["days_overdue_lt"] },
+        { "required": ["days_overdue_lte"] },
+        { "required": ["days_overdue_gt"] },
+        { "required": ["days_overdue_gte"] },
+        { "required": ["loan_amount_lakh_lt"] },
+        { "required": ["loan_amount_lakh_lte"] },
+        { "required": ["loan_amount_lakh_gt"] },
+        { "required": ["loan_amount_lakh_gte"] },
+        { "required": ["quota"] }
+      ],
+      "properties": {
+        "days_overdue_lt": { "type": "number", "description": "Applicable when days overdue < N" },
+        "days_overdue_lte": { "type": "number" },
+        "days_overdue_gt": { "type": "number" },
+        "days_overdue_gte": { "type": "number" },
+        "loan_amount_lakh_lt": { "type": "number", "description": "Loan < N lakh" },
+        "loan_amount_lakh_lte": { "type": "number" },
+        "loan_amount_lakh_gt": { "type": "number" },
+        "loan_amount_lakh_gte": { "type": "number" },
+        "quota": { "type": "string", "enum": ["management", "general"], "description": "e.g. Mgmt quota" }
+      }
+    },
+    "RuleValue": {
+      "type": "object",
+      "description": "One of: percent (per month), percent with cap, percent of EMI bounced, or fixed.",
+      "properties": {
+        "percent": { "type": "number" },
+        "per": { "type": "string", "enum": ["month"] },
+        "cap_rupees": { "type": "number" },
+        "of": { "type": "string", "enum": ["emi_bounced"] },
+        "min_rupees": { "type": "number" },
+        "max_rupees": { "type": "number" },
+        "rupees_per_day": { "type": "number" },
+        "fixed_rupees": { "type": "number" }
+      }
+    },
+    "Summary": {
+      "type": "object",
+      "description": "For client queries: worst-case and best-case numeric bounds across all rules.",
+      "properties": {
+        "maxPercentPerMonth": { "type": "number" },
+        "minPercentPerMonth": { "type": "number" },
+        "maxRupeesPerDay": { "type": "number" },
+        "minRupeesPerDay": { "type": "number" }
+      }
+    }
+  }
+}

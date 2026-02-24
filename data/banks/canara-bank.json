@@ -1,0 +1,428 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Canara Bank",
+      "sector": "Public - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "Postgraduate (De)",
+        "nationality": "Indian",
+        "age": {
+          "min": 18,
+          "max": 99
+        },
+        "qualification": "HSC + UG",
+        "coApplicant": "Parents or Guardian",
+        "universityStrictness": "Open to all [List exists]",
+        "delayed_emi_payment": {
+          "structure": "tiered",
+          "displayText": "0.08% if loan < Rs. 2 lakh, 0.2% if loan > Rs. 2 lakh",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": {
+                "type": "loan_amount_inr",
+                "operator": "lt",
+                "value": 200000
+              },
+              "rate": {
+                "percent": 0.08
+              }
+            },
+            {
+              "condition": {
+                "type": "loan_amount_inr",
+                "operator": "gt",
+                "value": 200000
+              },
+              "rate": {
+                "percent": 0.2
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.08,
+            "max_percent": 0.2,
+            "has_days_tier": false,
+            "has_loan_amount_tier": true,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 5,
+          "max": 10
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Branch only"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Canara Bank",
+    "sector": "Public - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "75%–<100%",
+        "coveragePct": {
+          "minPct": 75,
+          "maxPct": 100
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 9.85,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "50%–<75%",
+        "coveragePct": {
+          "minPct": 50,
+          "maxPct": 75
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 10.1,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 9.25,
+        "type": "Floating"
+      },
+      "repayment_tenure": 15,
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "75%–<100%",
+        "coveragePct": {
+          "minPct": 75,
+          "maxPct": 100
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 10.6,
+        "type": "Fixed"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "50%–<75%",
+        "coveragePct": {
+          "minPct": 50,
+          "maxPct": 75
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 10.85,
+        "type": "Fixed"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 750000,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + assignment of future income",
+      "interest": {
+        "rate": 10.35,
+        "type": "Fixed"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "Excluding moratorium"
+      },
+      "margin": 10,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Postgraduate (De)"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹20,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 20000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 20000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    }
+  ]
+}

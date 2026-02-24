@@ -1,0 +1,411 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "City Union Bank",
+      "sector": "Private - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses",
+        "nationality": "Indian",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": null,
+        "coApplicant": "Parents, Spouse , Parents-in-law",
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "1%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 1
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 1,
+            "max_percent": 1,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 10,
+          "max": 15
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Hybrid"
+      }
+    ]
+  },
+  "lender": {
+    "name": "City Union Bank",
+    "sector": "Private - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Male",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 13.4,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 0,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Male",
+      "loan": {
+        "amount": {
+          "min": 400001,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + Third-party guarantee",
+      "interest": {
+        "rate": 13.4,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Male",
+      "loan": {
+        "amount": {
+          "min": 750001,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 13.4,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Female",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11.2,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 0,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Female",
+      "loan": {
+        "amount": {
+          "min": 400001,
+          "max": 750000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant + Third-party guarantee",
+      "interest": {
+        "rate": 11.2,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Female",
+      "loan": {
+        "amount": {
+          "min": 750001,
+          "max": 99999999
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11.2,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 7,
+        "type": null
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "0.20%",
+        "flat_inr": null,
+        "percent": 0.2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 0.2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 12
+        },
+        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

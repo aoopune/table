@@ -1,0 +1,231 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Karnataka Bank",
+      "sector": "Private - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "XXXXXX",
+        "nationality": "Indian",
+        "age": {
+          "min": 16,
+          "max": 35
+        },
+        "qualification": "HSC + UG",
+        "coApplicant": null,
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "0.25%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 0.25
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.25,
+            "max_percent": 0.25,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 10,
+          "max": 15
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Branch only"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Karnataka Bank",
+    "sector": "Private - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 400000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 9.39,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 0,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "flat",
+        "displayText": "₹10,000",
+        "flat_inr": 10000,
+        "percent": null,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": 10000,
+          "max_inr": 10000,
+          "percent": null,
+          "is_nil": false,
+          "is_flat_only": true,
+          "has_percent": false,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 18
+        },
+        "periodDisplay": "6 or 18 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 400001,
+          "max": 4000000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 9.39,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "flat",
+        "displayText": "₹10,000",
+        "flat_inr": 10000,
+        "percent": null,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": 10000,
+          "max_inr": 10000,
+          "percent": null,
+          "is_nil": false,
+          "is_flat_only": true,
+          "has_percent": false,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 18
+        },
+        "periodDisplay": "6 or 18 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 4000001,
+          "max": 20000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 9.39,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "excluding moratorium"
+      },
+      "margin": 15,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "flat",
+        "displayText": "₹10,000",
+        "flat_inr": 10000,
+        "percent": null,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": 10000,
+          "max_inr": 10000,
+          "percent": null,
+          "is_nil": false,
+          "is_flat_only": true,
+          "has_percent": false,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 6,
+          "max": 18
+        },
+        "periodDisplay": "6 or 18 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

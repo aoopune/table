@@ -1,0 +1,114 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "EdGro",
+      "sector": "Private - NBFC"
+    },
+    "offers": [
+      {
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses",
+        "nationality": "Any student",
+        "age": {
+          "min": 18,
+          "max": null
+        },
+        "qualification": "HSC",
+        "coApplicant": "Parents, Siblings, Spouse, Paternal or Maternal relative or a legal guardian.",
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "mixed",
+          "displayText": "Rs. 25/day",
+          "period": "per_day",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "amount_inr": 25
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": null,
+            "max_percent": null,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": 25
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 5,
+          "max": 10
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "100% Digital"
+      }
+    ]
+  },
+  "lender": {
+    "name": "EdGro",
+    "sector": "Private - NBFC"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 11.5,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": null
+      },
+      "margin": 0,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "2.00%",
+        "flat_inr": null,
+        "percent": 2,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 2,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": 36
+        },
+        "periodDisplay": "12/36 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

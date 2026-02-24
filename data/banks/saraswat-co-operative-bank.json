@@ -1,0 +1,174 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Saraswat Co-operative Bank",
+      "sector": "Private - Bank"
+    },
+    "offers": [
+      {
+        "level_of_study": "XXXXXX",
+        "nationality": "Indian",
+        "age": {
+          "min": null,
+          "max": null
+        },
+        "qualification": null,
+        "coApplicant": "Parent, Sponsor, Relative",
+        "universityStrictness": "Open to all",
+        "delayed_emi_payment": {
+          "structure": "simple",
+          "displayText": "0.20%",
+          "period": "per_month",
+          "rules": [
+            {
+              "condition": null,
+              "rate": {
+                "percent": 0.2
+              }
+            }
+          ],
+          "summary": {
+            "min_percent": 0.2,
+            "max_percent": 0.2,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": false,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 5,
+          "max": 10
+        },
+        "dedicatedCaseManager": false,
+        "onboarding_process": "Branch only"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Saraswat Co-operative Bank",
+    "sector": "Private - Bank"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 500000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 8.5,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "including moratorium"
+      },
+      "margin": 99,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹10,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 10000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 10000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    },
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 500001,
+          "max": 30000000
+        }
+      },
+      "security": {
+        "required": true,
+        "coverageDisplay": "≥100%",
+        "coveragePct": {
+          "minPct": 100,
+          "maxPct": null
+        }
+      },
+      "coapplicant": "Mandatory Co-applicant",
+      "interest": {
+        "rate": 8.5,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": "including moratorium"
+      },
+      "margin": 99,
+      "institute": {
+        "changes": false,
+        "criteria": null,
+        "level_of_study": "XXXXXX"
+      },
+      "processing_fees": {
+        "structure": "percent_with_max_cap",
+        "displayText": "0.5%, Max. ₹10,000",
+        "flat_inr": null,
+        "percent": 0.5,
+        "min_inr": null,
+        "max_inr": 10000,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": 10000,
+          "percent": 0.5,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": true
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any Course",
+      "countryScope": null
+    }
+  ]
+}

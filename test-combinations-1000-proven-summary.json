@@ -1,0 +1,11 @@
+{
+  "generated": "2026-02-23T20:41:30.452Z",
+  "sourceFile": "test-combinations-1000-proven.json",
+  "totalCombinations": 1000,
+  "successful": 1000,
+  "errors": 0,
+  "successRate": "100.00%",
+  "emptyResults": 1000,
+  "withResults": 0,
+  "resultsWithBanks": []
+}

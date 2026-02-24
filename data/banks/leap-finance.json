@@ -1,0 +1,107 @@
+{
+  "_comment": "Relational / expression-tree style. Filled from Numerical data abroad sheet. security.required can be true or false; when false, weightage is \"None\".",
+  "_keyTree": {
+    "lender": {
+      "name": "Leap finance",
+      "sector": "Private - Company"
+    },
+    "offers": [
+      {
+        "level_of_study": "Postgraduate (De / Di)",
+        "nationality": "Any student",
+        "age": {
+          "min": 18,
+          "max": null
+        },
+        "qualification": null,
+        "coApplicant": null,
+        "universityStrictness": "Listed only",
+        "delayed_emi_payment": {
+          "structure": "contract",
+          "displayText": "N/A",
+          "period": "per_month",
+          "rules": [],
+          "summary": {
+            "min_percent": null,
+            "max_percent": null,
+            "has_days_tier": false,
+            "has_loan_amount_tier": false,
+            "has_quota_condition": false,
+            "is_as_per_contract": true,
+            "cap_max_inr": null,
+            "fixed_per_day_inr": null
+          }
+        },
+        "Average_Time_To_Sanction": {
+          "min": 2,
+          "max": 5
+        },
+        "dedicatedCaseManager": true,
+        "onboarding_process": "100% Digital"
+      }
+    ]
+  },
+  "lender": {
+    "name": "Leap finance",
+    "sector": "Private - Company"
+  },
+  "offers": [
+    {
+      "gender": "Equal",
+      "loan": {
+        "amount": {
+          "min": 1,
+          "max": 10000000
+        }
+      },
+      "security": {
+        "required": false,
+        "coverageDisplay": "None",
+        "coveragePct": null
+      },
+      "coapplicant": "None",
+      "interest": {
+        "rate": 8.49,
+        "type": "Floating"
+      },
+      "repayment_tenure": {
+        "tenure": 15,
+        "type": null
+      },
+      "margin": 0,
+      "institute": {
+        "changes": true,
+        "criteria": "Listed",
+        "level_of_study": "Postgraduate (De / Di)"
+      },
+      "processing_fees": {
+        "structure": "percent_only",
+        "displayText": "3.00%",
+        "flat_inr": null,
+        "percent": 3,
+        "min_inr": null,
+        "max_inr": null,
+        "refundable": false,
+        "summary": {
+          "min_inr": null,
+          "max_inr": null,
+          "percent": 3,
+          "is_nil": false,
+          "is_flat_only": false,
+          "has_percent": true,
+          "has_cap": false
+        }
+      },
+      "moratorium": {
+        "periodMonths": {
+          "min": 12,
+          "max": null
+        },
+        "periodDisplay": "12 months",
+        "paymentDuring": "Optional"
+      },
+      "course": "Any course",
+      "countryScope": null
+    }
+  ]
+}

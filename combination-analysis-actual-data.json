@@ -1,0 +1,53 @@
+{
+  "actualData": {
+    "countries": 114,
+    "totalUniversities": 3505,
+    "avgUniversitiesPerCountry": 30.75,
+    "courses": 141,
+    "topCountries": [
+      {
+        "country": "United States of America",
+        "universities": 1036
+      },
+      {
+        "country": "China",
+        "universities": 338
+      },
+      {
+        "country": "Germany",
+        "universities": 154
+      },
+      {
+        "country": "United Kingdom",
+        "universities": 142
+      },
+      {
+        "country": "Japan",
+        "universities": 119
+      }
+    ]
+  },
+  "testParameters": {
+    "genders": 2,
+    "loanAmounts": 71,
+    "loanTypes": 2
+  },
+  "calculations": {
+    "method1_average": 141515496,
+    "method2_exact": 140354220
+  },
+  "samplingStrategies": {
+    "strategyA": {
+      "combinations": 22825080,
+      "description": "Sample 5 universities per country"
+    },
+    "strategyB": {
+      "combinations": 108519240,
+      "description": "Top 20 countries with all universities"
+    },
+    "strategyC": {
+      "combinations": 42600,
+      "description": "Sample 5 countries, 3 universities, 10 courses"
+    }
+  }
+}

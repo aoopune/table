@@ -1,0 +1,98 @@
+,,,Dynamic data,,,,,,,,,STATIC data,,,,,STATIC data,,
+,,,Loan features,,,,,,,,,Eligibility criteria,,,,,Customer service,,
+Lender,Link of the lender to be given in the name,Sector,"Interest rate
+(in % p.a. onwards)",Type of interest rate,"Margin
+(in % of loan amount)","Processing fees
+(Max. % of loan amount)",Refundable Processing fees,"Repayment Tenure
+(Max. in years)","Moratorium period
+(course period plus)",Payment during moratorium,"Delayed EMI payment
+Per month ",Nationality,Age (in years),Qualification,Co-applicant,University Strictness,"Avg. Time to Sanction
+(Business Days)",Dedicated Case Manager,Onboarding process
+Info button data,,,"Calculation methodology - 
+Simple interest method during moratorium period & compounding interest method thereafter except TATA Capital which only uses simple interest method","Types -
+Floating - Linked to floating base rate + Risk premium (depending on profile)
+Fixed - Linked to fixed base rate + Risk premium (depending on profile)
+MCLR Linked Rate - Marginal Cost of Funds Based Lending Rate
+
+Floating rate base types - 
+RBLR/RLLR - Repo rate Based Lending Rate 
+CRP - Credit Risk Premium
+BSD  - Base Rate (BR) Spread Discount
+EBLR - External Benchmark Lending Rate",Amount to paid by student’s own pocket,"To process your application lenders charge processing fee.
+
+Excluding taxes.",Either after disbursement or confirmation of sanction,Payable in Equal Monthly Installments (EMIs),"No payment period. 
+EMI starts after moratorium period.","Options - Partial Simple Interest (PSI), Simple Interest (SI) or EMI 
+
+If not paid, It's added to principal & to be paid in EMIs after moratorium period.",For the delayed period for the default amount,"OCI – Overseas Citizen of India
+PIO – Person of Indian Origin
+NRI – Non-Resident Indian",Provable as on the date of application,,"Compulsorily strong financial background is required)
+
+2 types:
+Financial / Primary & 
+Non-financial / Secondary
+
+If co-applicant outside of family:
+Sufficient proof of relationship is necessary.",,,"Handles Documentation, Application, Paperwork, Disbursement & others",Application process
+State Bank of India,https://sbi.bank.in/web/personal-banking/loans/education-loans/,Public bank,,,,,,,,,"0.2% if <60 days
+0.42%, if>60 days",Indian / OCI (resident in India),18+,HSC + UG,"Parent, Spouse, Parents-in-law, Sibling, or Guardian",Open to all [List exists],10-15,Yes,Branch only
+Bank of India,https://bankofindia.bank.in/education-loan/,Public bank,,,,,,,,,"0.08% if <60 days
+0.2%, if>60 days",Indian,-,HSC,No Criteria,Open to all [List exists],10-15,No,Branch only
+Union Bank of India,https://www.unionbankofindia.bank.in/en/details/,Public bank,,,,,,,,,0.20%,Indian,18+,HSC + UG,Parents or Spouse,Open to all [List exists],10-15,No,Branch only
+Punjab National Bank,https://pnb.bank.in/pnb-udaan.html,Public bank,,,,,,,,,0.20% - 0.25%,Indian,18+,HSC / Equivalent,No Criteria,Open to all [List exists],5-10,Yes,Branch only
+Bank of Baroda,https://bankofbaroda.bank.in/personal-banking/loans/education-loan/,Public bank,,,,,,,,,"0.2% , if the loan > Rs. 4 Lakh.",Indian,18+,HSC / Equivalent,Parents,Open to all [List exists],5-10,Yes,Branch only
+Canara Bank,https://www.canarabank.bank.in/,Public bank,,,,,,,,,"0.08%, if loan < Rs. 2 lakh
+0.2%, if loan >Rs. 2 lakh",Indian,18+,HSC + UG,Parents or Guardian,Open to all [List exists],5-10,No,Branch only
+Bank of Maharashtra,https://bankofmaharashtra.bank.in/model-education-loan-scheme ,Public bank,,,,,,,,,0.20%,Indian,-,-,No Criteria,Open to all,10-15,No,Branch only
+ICICI Bank,https://www.icici.bank.in/personal-banking/loans/education-loan?ITM=nli_home_na_megamenuItem_4_CMS_loans_educationLoan_NLI ,Private bank,,,,,,,,,0.42%,Indian,16-35,HSC / Equivalent,"Parents, Siblings Spouse, Grand Parents, Parents in law, Maternal/Paternal Uncle.",Open to all [List exists],5-10,Yes,Hybrid 
+Axis bank,https://www.axis.bank.in/loans/education-loan,Private bank,,,,,,,,,0.66%,Indian (Citizenship),-,HSC + UG,"Parents, Sibilings or Guarantor",Open to all [List exists],5-10,Yes,Hybrid 
+Credilla,https://www.credila.com/,Private - NBFC,,,,,,,,,2%,Indian,-,-,No Criteria,Open to all,2-5,Yes,Hybrid
+Yes Bank,https://www.credila.com/study-abroad,Private bank,,,,,,,,,As per contract,Indian,-,HSC / Equivalent,"Parents, Siblings, and Uncle/Aunt.",Open to all [List exists],5-10,Yes,Hybrid 
+IDFC First Bank,https://www.idfcfirst.bank.in/personal-banking/loans/education-loan?icid=el_loanstab_knowmore,Private bank,,,,,,,,,"2%, Max. Rs. 300
+7.5% of EMI bounced Min. Rs. 400 & Max. Rs.1000",Indian / NRI,18+,HSC / Equivalent,Parents or Siblings,Open to all [List exists],5-10,Yes,Hybrid 
+DCB Bank,https://www.dcb.bank.in/personal/loans/dcb-education-loan,Private bank,,,,,,,,,As per default amount slab,Indian,-,HSC / Equivalent,Parents or Guarontor,Open to all,15-20,Yes,Hybrid 
+Federal Bank,https://www.federal.bank.in/special-vidya-loan,Private bank,,,,,,,,,1.50%,Indian,18-45,HSC,"Parents, Siblings or Spouse",Listed only,10-15,No,Hybrid 
+Karur Vyasa Bank,https://www.kvb.bank.in/personal/loans/educational-loan/,Private bank,,,,,,,,,0.25%,Indian,-,HSC,"Parents, Parents- in - law, Spouse and (some other close relatives)",Open to all,5-10,No,Hybrid 
+Karnataka bank,https://www.karnatakabank.bank.in/personal/loans/kbl-peak-education-loan,Public bank,,,,,,,,,0.25%,Indian,16-35,HSC + UG,No Criteria,Open to all,10-15,No,Branch only
+IDBI Bank,https://www.idbi.bank.in/education-loan.aspx#type-of-schema,Private bank,,,,,,,,,"0.2%,if loan >Rs. 4 lakhs 
+If Mgmt. quota 0.2%",Indian / NRI,-,-,No Criteria,Open to all [List exists],10-15,No,Hybrid 
+Auxilo,https://www.auxilo.com/education-loan,Private - NBFC,,,,,,,,,1.50%,Indian,18-35,HSC + UG,"Parent, Sibling, Legal guardian, or a relative.
+
+Co-papplicant will be primary debtor.",Open to all,2-5,Yes,Hybrid
+Avanse,https://www.avanse.com/ ,Private - NBFC,,,,,,,,,2%,Indian,18+,HSC + UG,"Parent, Sibling, Legal guardian, or a relative.
+
+Co-papplicant will be primary debtor.",Open to all,2-5,Yes,Hybrid
+Poonawalla Fincorp,,Private - NBFC,,,,,,,,,2%,Indian / OCI,16-50,-,"Parents, Parents-in-law, Siblings, Spouse, First Cousins, Parents' Siblings
+
+Co-applicant age if:
+Salaried, 21 – 60 years
+Self-employed,: 21 to 65 years
+
+Non-financial Co-applicant: 21 – 80 years",Open to all,2-5,Yes,Hybrid
+Incred,,Private - NBFC,,,,,,,,,Not available,Indian,18+,-,"Parent, Sibling, Legal guardian, or a relative.",Open to all,2-5,Yes,100% Digital
+Tata Capital,,Private - NBFC,,,,,,,,,3%,Indian,18-35,HSC / Equivalent,"Parents, Siblings, Spouse, Grandparents, Parents-in-law, Maternal/Paternal uncle",Open to all,2-5,Yes,Hybrid
+Prodigy,,Private - Foreign company,,,,,,,,,Not available,Any student,-,-,No Criteria,Listed only,2-5,Yes,100% Digital
+Mpower,,Private - Foreign company,,,,,,,,,Not available,Any student,-,HSC + UG,No Criteria,Listed only,2-5,Yes,100% Digital
+Saraswat Co-operative Bank,,Public - Co-operative Bank,,,,,,,,,0.20%,Indian,-,-,"Parent, Sponsor, Relative
+
+If Minor student: Parent is applicant
+
+Undertaking: Minor will be added as guarantor on attaining majority or before parent’s retirement",Open to all,5-10,No,Branch only
+Dhanlaxmi Bank,,Private bank,,,,,,,,,0.25%,Indian,18+,-,No Criteria,Open to all,10-15,No,Hybrid 
+Aditya Birla capital,,Private - NBFC,,,,,,,,,3%,Indian,21-60,Salaried / Self-employed,"Parents, Siblings, or any other individual. ",Open to all,5-10,Yes,Hybrid
+Leap Finance,,Private - Foreign company,,,,,,,,,Not available,Any student,18+,-,No Criteria,Listed only,2-5,Yes,100% Digital
+Indian Overseas Bank,,Public bank,,,,,,,,,0.20%,Indian / NRI / PIO / OCI,-,HSC,No Criteria,Open to all,10-15,No,Branch only
+RBL Bank,,Private bank,,,,,,,,,2%,Indian,-,-,"Parents, Siblings, Spouse",Open to all,15-20,Yes,Hybrid 
+EdGro,,Private - NBFC,,,,,,,,,Rs. 25/day,Any student,18+,HSC,"Parents, Siblings, Spouse, Paternal or Maternal relative or a legal guardian. ",Open to all,5-10,Yes,100% Digital
+Jammu and Kashmir Grameen Bank,,Public - Regional Rural Bank,,,,,,,,,0.20%,Resident of J&K State,18+,HSC + Entrance test,Parents,Open to all,15-20,No,Branch only
+UCO Bank,,Public bank,,,,,,,,,2%,Indian,"28/30 - UG/PG - General
+30/33 - UG/PG - SC ST",HSC / Equivalent + Entrance Test / Merit Based,Parents,Open to all,10-15,No,Branch only
+Tamilnad Mercantile Bank,,Private bank,,,,,,,,,0.17%,Indian,-,-,Parents,Open to all,10-15,No,Hybrid 
+City Union Bank,,Private bank,,,,,,,,,1%,Indian,-,-,"Parents, Spouse , Parents-in-law",Open to all,10-15,No,Hybrid 
+Nainital Bank,,Private bank,,,,,,,,,2%,Indian,-,-,No criteria,Open to all,10-15,No,Hybrid 
+South Indian Bank,,Private bank,,,,,,,,,1.50%,Indian,17-35,-,"Parent, Guardian, or Spouse
+
+Note  - Co-borrower must have a minimum monthly income of Rs. 40,000/-",Open to all,5-10,No,Hybrid 
+Jammu & Kashmir Bank,,Private bank,,,,,,,,,0.20%,"Indian / NRI
+
+For abroad - OCI resident in India 
+For India - OCI resident outside India",-,-,Parent or Guardian,Open to all,10-15,No,Hybrid 

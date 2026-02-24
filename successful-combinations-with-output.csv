@@ -1,0 +1,7 @@
+ID,Gender,Loan Amount,Loan Type,Country,University,Course,Banks Returned,Banks List
+21,"Male","₹50,000","Secured","Australia","Central Queensland University CQUniversity","Any course",11,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Yes Bank; DCB Bank; RBL Bank; Tata Capital; InCred; ICICI Bank; Credila; Auxilo"
+981,"Male","₹3.00Cr","Unsecured","Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Tamilnad Mercantile Bank; Avanse; Auxilo"
+984,"Female","₹3.00Cr","Unsecured","Zambia","University of Zambia","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Tamilnad Mercantile Bank; Avanse; Auxilo"
+987,"Male","₹3Cr","Unsecured","Zambia","University of Zambia","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Tamilnad Mercantile Bank; Avanse; Auxilo"
+992,"Female","₹3Cr","Unsecured","Zimbabwe","University of Zimbabwe","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Tamilnad Mercantile Bank; Avanse; Auxilo"
+998,"Female","₹3Cr","Unsecured","Antigua and Barbuda","American University of Antigua (AUA) College of Medicine","Any course",6,"Punjab National Bank; Punjab National Bank; Punjab National Bank; Tamilnad Mercantile Bank; Avanse; Auxilo"
