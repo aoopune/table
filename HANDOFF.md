@@ -49,6 +49,10 @@ Table/
 └── docs/               # DATA_AND_ARCHITECTURE.md, etc.
 ```
 
+### UI / Layout (do not revert)
+
+- **Results table width:** The results table card (`.results-card`) is intentionally full-width so the table uses the same horizontal space as the input section above it. It uses `width: calc(100% + 3rem)` and `margin-left/right: -1.5rem` (same as `.query-card`). **Do not remove or change these styles** — the table must stay fully utilised on the sides.
+
 ---
 
 ## 4. Data Model (Summary)
@@ -85,7 +89,7 @@ Table/
 | Interest Rate | `offer.interest.rate` |
 | Type of Rate | `offer.interest.type` |
 | **Preferred University** | Yes if (bank, selected university) exists in institutes.json; No otherwise; N/A if no university selected |
-| Security coverage % of loan amount | `offer.security.coverageDisplay` — **only when Secured** is selected |
+| Security coverage % | `offer.security.coverageDisplay` — **only when Secured** is selected |
 | Repayment Tenure | `offer.repayment_tenure.tenure` |
 | Margin (%) | `offer.margin` |
 | Processing fees | `offer.processing_fees.displayText` |

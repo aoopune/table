@@ -6,7 +6,7 @@
   <title>Bank Loan Offers – Query by Gender, Amount, Loan type, Country, University, Level</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0c1116;
@@ -26,7 +26,7 @@
     body {
       margin: 0;
       min-height: 100vh;
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: 'Montserrat', system-ui, sans-serif;
       background: radial-gradient(circle at 15% 0%, rgba(239, 111, 46, 0.16), transparent 42%),
         radial-gradient(circle at 80% 10%, rgba(45, 212, 191, 0.12), transparent 45%),
         linear-gradient(180deg, #0b1116 0%, #0c1116 100%);
@@ -53,7 +53,7 @@
       font-size: 1.7rem;
       font-weight: 600;
       letter-spacing: -0.01em;
-      font-family: 'Space Grotesk', system-ui, sans-serif;
+      font-family: 'Montserrat', system-ui, sans-serif;
     }
     .sub {
       color: var(--muted);
@@ -74,6 +74,19 @@
     }
     .query-card {
       overflow-x: visible;
+      overflow-y: visible;
+      width: calc(100% + 3rem);
+      margin-left: -1.5rem;
+      margin-right: -1.5rem;
+      border-radius: 0;
+      z-index: 20;
+    }
+    /* Results table card: MUST stay full-width (same as .query-card) so table uses full horizontal space. Do not remove width/margin. */
+    .results-card {
+      z-index: 1;
+      position: relative;
+      overflow-x: visible;
+      overflow-y: visible;
       width: calc(100% + 3rem);
       margin-left: -1.5rem;
       margin-right: -1.5rem;
@@ -89,8 +102,8 @@
     }
     .form-row {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr auto;
-      column-gap: 0.5rem;
+      grid-template-columns: 1fr 1fr minmax(14rem, 1fr) 1fr 1fr 1fr auto;
+      column-gap: 1rem;
       row-gap: 0.25rem;
       align-items: start;
       width: 100%;
@@ -99,8 +112,47 @@
       align-self: center;
       justify-self: end;
     }
+    /* Mobile / tablet: 3 inputs left, 3 inputs right, then submit and table */
+    @media (max-width: 991px) {
+      .form-row {
+        grid-template-columns: minmax(11rem, 1fr) minmax(11rem, 1fr);
+        grid-template-rows: auto auto auto auto;
+        grid-auto-flow: column;
+        row-gap: 0.75rem;
+        column-gap: 1.25rem;
+      }
+      .form-row .field label {
+        white-space: normal;
+        text-align: left;
+      }
+      .form-row .field:nth-child(1),
+      .form-row .field:nth-child(3) {
+        min-width: 11rem;
+      }
+      .form-row .choice-group {
+        overflow: visible;
+        flex-wrap: nowrap;
+        min-width: min(100%, 11rem);
+      }
+      .form-row .choice-option {
+        white-space: nowrap;
+      }
+      .field.submit-field {
+        grid-column: 1 / -1;
+        grid-row: 4;
+        justify-self: stretch;
+        align-self: center;
+      }
+      .field.submit-field .btn {
+        width: 100%;
+      }
+    }
     .field.submit-field .btn {
       width: auto;
+    }
+    .field.submit-field .count {
+      display: block;
+      margin-top: 0.5rem;
     }
     .field {
       display: flex;
@@ -116,10 +168,11 @@
       letter-spacing: 0;
       line-height: 1.3;
       white-space: nowrap;
+      text-align: center;
     }
     .field input:not([type="radio"]), .field select {
       font: inherit;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Montserrat', system-ui, sans-serif;
       font-size: 0.92rem;
       padding: 0.3rem 0.55rem;
       border: 1px solid rgba(255, 255, 255, 0.1);
@@ -151,7 +204,6 @@
       cursor: pointer;
       flex-shrink: 0;
       white-space: nowrap;
-      min-width: 0;
     }
     .choice-option input[type="radio"] {
       width: 14px;
@@ -176,28 +228,22 @@
     .combo input {
       width: 100%;
       min-width: 0;
-      padding-right: 3.2rem;
-    }
-    .combo-search {
-      position: absolute;
-      top: 50%;
-      right: 1.4rem;
-      transform: translateY(-50%);
-      color: var(--muted);
-      font-size: 0.68rem;
-      pointer-events: none;
+      min-height: 46px;
+      padding: 0.65rem 5rem 0.65rem 0.9rem;
+      font-size: 0.92rem;
+      box-sizing: border-box;
     }
     .combo-clear {
       position: absolute;
       top: 50%;
-      right: 2.15rem;
+      right: 2.6rem;
       transform: translateY(-50%);
       border: none;
       background: transparent;
       color: var(--muted);
       cursor: pointer;
-      font-size: 0.78rem;
-      padding: 0.1rem 0.2rem;
+      font-size: 0.9rem;
+      padding: 0.2rem 0.3rem;
       line-height: 1;
       display: none;
     }
@@ -207,15 +253,31 @@
     .combo-toggle {
       position: absolute;
       top: 50%;
-      right: 0.3rem;
+      right: 0;
       transform: translateY(-50%);
       border: none;
       background: transparent;
       color: var(--muted);
       cursor: pointer;
-      font-size: 0.78rem;
-      padding: 0.1rem 0.25rem;
+      font-size: 0.9rem;
+      padding: 0.2rem 0.4rem;
       line-height: 1;
+    }
+    @media (max-width: 768px) {
+      .combo input {
+        min-height: 48px;
+        padding: 0.75rem 5.25rem 0.75rem 1rem;
+      }
+      .combo-clear { right: 2.85rem; font-size: 0.95rem; }
+      .combo-toggle { right: 0; font-size: 0.95rem; }
+    }
+    @media (max-width: 480px) {
+      .combo input {
+        min-height: 50px;
+        padding: 0.85rem 5.5rem 0.85rem 1.1rem;
+      }
+      .combo-clear { right: 3rem; font-size: 1rem; }
+      .combo-toggle { right: 0; font-size: 1rem; }
     }
     .combo-menu {
       position: absolute;
@@ -231,7 +293,6 @@
       z-index: 10000;
       display: none;
     }
-    }
     .combo-option {
       width: 100%;
       text-align: left;
@@ -239,7 +300,7 @@
       background: transparent;
       color: var(--text);
       font: inherit;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Montserrat', system-ui, sans-serif;
       padding: 0.5rem 0.75rem;
       cursor: pointer;
     }
@@ -285,44 +346,159 @@
     .count strong { color: var(--success); }
     .query-summary { font-size: 0.85rem; margin: 0 0 0.75rem 0; }
     .query-summary.muted { color: var(--muted); }
-    code { font-family: 'IBM Plex Mono', monospace; font-size: 0.9em; background: rgba(17, 28, 35, 0.9); padding: 0.15em 0.4em; border-radius: 4px; }
+    code { font-family: 'Montserrat', system-ui, sans-serif; font-size: 0.9em; background: rgba(17, 28, 35, 0.9); padding: 0.15em 0.4em; border-radius: 4px; }
     .processing-fees-cell { position: relative; display: inline-block; padding-right: 1.4em; }
     .refundable-star { position: absolute; top: 0; right: 0; cursor: help; color: var(--accent); font-size: 0.85em; }
     .refundable-tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.8rem; z-index: 1000; box-shadow: var(--shadow); pointer-events: none; }
     .table-wrap {
+      --sticky-col1-width: 20ch;
+      --sticky-col2-width: 15ch;
       overflow-x: auto;
+      overflow-y: auto;
+      max-height: 75vh;
       border-radius: 14px;
       border: 1px solid rgba(255, 255, 255, 0.08);
       background: rgba(12, 17, 22, 0.7);
       position: relative;
       z-index: 1;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .table-wrap::-webkit-scrollbar {
+      display: none;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      font-size: 0.78rem;
     }
     th, td {
       text-align: left;
-      padding: 0.75rem 0.95rem;
+      padding: 0.2rem 0.95rem;
+      line-height: 1.2;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      white-space: nowrap;
+      min-height: 1.8em;
+      height: 1.8em;
+      box-sizing: border-box;
     }
     th {
       font-weight: 600;
       color: rgba(148, 163, 184, 0.85);
       text-transform: uppercase;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
+    .th-head {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .th-sort-filter-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 1rem;
+      height: 1rem;
+      color: var(--muted);
+      opacity: 0.85;
+    }
+    .th-sort-filter-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    th:hover .th-sort-filter-icon {
+      color: var(--accent-2);
+      opacity: 1;
+    }
+    #results-table thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: rgba(12, 17, 22, 0.98);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+    }
+    #results-table thead th:first-child {
+      position: sticky;
+      top: 0;
+      left: 0;
+      z-index: 4;
+      width: var(--sticky-col1-width);
+      min-width: var(--sticky-col1-width);
+      max-width: var(--sticky-col1-width);
+      box-sizing: border-box;
+      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+    #results-table thead th:nth-child(2) {
+      position: sticky;
+      top: 0;
+      left: var(--sticky-col1-width);
+      z-index: 4;
+      width: var(--sticky-col2-width);
+      min-width: var(--sticky-col2-width);
+      max-width: var(--sticky-col2-width);
+      box-sizing: border-box;
+      background: #0c1116;
+      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+    #results-table th[data-column-key="Course"],
+    #results-table th[data-column-key="Delayed EMI payment"],
+    #results-table td[data-column-key="Course"],
+    #results-table td[data-column-key="Delayed EMI payment"] {
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 1.8em;
+    }
     tr:last-child td { border-bottom: none; }
     tr:hover td { background: rgba(45, 212, 191, 0.08); }
-    td .num { font-family: 'IBM Plex Mono', monospace; }
+    tr:hover td.bank-name-cell,
+    tr:hover td.sector-name-cell { background: #0f1c1a; }
+    td .num { font-family: 'Montserrat', system-ui, sans-serif; }
     td.bank-name-cell,
     td.sector-name-cell {
       vertical-align: top;
       background: rgba(239, 111, 46, 0.08);
       border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    #results-table td.bank-name-cell {
+      position: sticky;
+      left: 0;
+      z-index: 2;
+      width: var(--sticky-col1-width);
+      min-width: var(--sticky-col1-width);
+      max-width: var(--sticky-col1-width);
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: #0f1418;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      isolation: isolate;
+      transform: translateZ(0);
+    }
+    #results-table td.sector-name-cell {
+      position: sticky;
+      left: var(--sticky-col1-width);
+      z-index: 3;
+      width: var(--sticky-col2-width);
+      min-width: var(--sticky-col2-width);
+      max-width: var(--sticky-col2-width);
+      box-sizing: border-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      background: #0f1418;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      isolation: isolate;
+      transform: translateZ(0);
     }
     td.bank-name-cell { font-weight: 600; }
     td.sector-name-cell { font-weight: 500; }
@@ -425,7 +601,7 @@
       border-radius: 6px;
       padding: 0.35rem 0.55rem;
       font: inherit;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Montserrat', system-ui, sans-serif;
       font-size: 0.84rem;
     }
     .listed-popup-switch {
@@ -521,6 +697,92 @@
       font-size: 0.9rem;
     }
     .loading { opacity: 0.7; pointer-events: none; }
+    .th-head-clickable { cursor: pointer; }
+    .th-sort-filter-icon--active { color: var(--accent-2); opacity: 1; }
+    .column-filter-dropdown {
+      position: fixed;
+      z-index: 10001;
+      min-width: 200px;
+      max-width: 320px;
+      max-height: 70vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 0.35rem 0;
+      display: none;
+    }
+    .column-filter-dropdown.is-open { display: block; }
+    .column-filter-dropdown .cfd-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      padding: 0.45rem 0.75rem;
+      font: inherit;
+      font-size: 0.88rem;
+      cursor: pointer;
+    }
+    .column-filter-dropdown .cfd-item:hover { background: rgba(45, 212, 191, 0.15); }
+    .column-filter-dropdown .cfd-item.cfd-active { background: rgba(45, 212, 191, 0.2); font-weight: 600; }
+    .column-filter-dropdown .cfd-submenu {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      min-width: 180px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 0.35rem 0;
+      display: none;
+    }
+    .column-filter-dropdown .cfd-submenu.is-open { display: block; }
+    .column-filter-dropdown .cfd-condition {
+      padding: 0.5rem 0.75rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .column-filter-dropdown .cfd-condition select,
+    .column-filter-dropdown .cfd-condition input {
+      width: 100%;
+      margin-top: 0.25rem;
+      padding: 0.35rem 0.5rem;
+      font: inherit;
+      background: rgba(11,17,22,0.8);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      color: var(--text);
+    }
+    .column-filter-dropdown .cfd-condition-ok { margin-top: 0.5rem; }
+    .filter-by-values-panel {
+      position: fixed;
+      z-index: 10002;
+      min-width: 260px;
+      max-width: 360px;
+      max-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 0.75rem;
+    }
+    .filter-by-values-panel:not(.is-open) { display: none; }
+    .filter-by-values-panel.is-open { display: flex; }
+    .filter-by-values-panel .fbv-title { font-weight: 600; margin: 0 0 0.5rem 0; font-size: 0.9rem; flex-shrink: 0; }
+    .filter-by-values-panel .fbv-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; font-size: 0.82rem; color: var(--muted); flex-shrink: 0; }
+    .filter-by-values-panel .fbv-search { width: 100%; padding: 0.35rem 0.5rem; margin-bottom: 0.5rem; font: inherit; background: rgba(11,17,22,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: var(--text); flex-shrink: 0; box-sizing: border-box; }
+    .filter-by-values-panel .fbv-list { max-height: 280px; min-height: 0; overflow-y: auto; overflow-x: hidden; }
+    .filter-by-values-panel .fbv-row { display: flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0; cursor: pointer; }
+    .filter-by-values-panel .fbv-row:hover { background: rgba(45,212,191,0.1); }
+    .filter-by-values-panel .fbv-row input { margin: 0; }
+    .filter-by-values-panel .fbv-footer { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -564,7 +826,6 @@
           <div class="combo" id="country-combo">
             <input id="country" name="country" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="country-clear" aria-label="Clear country">x</button>
-            <span class="combo-search" aria-hidden="true">🔍</span>
             <button type="button" class="combo-toggle" id="country-toggle" aria-label="Show country options">▼</button>
             <div class="combo-menu" id="country-menu"></div>
           </div>
@@ -574,7 +835,6 @@
           <div class="combo" id="university-combo">
             <input id="university" name="university" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="university-clear" aria-label="Clear university">x</button>
-            <span class="combo-search" aria-hidden="true">🔍</span>
             <button type="button" class="combo-toggle" id="university-toggle" aria-label="Show university options">▼</button>
             <div class="combo-menu" id="university-menu"></div>
           </div>
@@ -585,24 +845,20 @@
           <div class="combo" id="level-combo">
             <input id="levelOfStudy" name="levelOfStudy" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="level-clear" aria-label="Clear level of study">x</button>
-            <span class="combo-search" aria-hidden="true">🔍</span>
             <button type="button" class="combo-toggle" id="level-toggle" aria-label="Show level options">▼</button>
             <div class="combo-menu" id="level-menu"></div>
           </div>
         </div>
         <div class="field submit-field">
           <button type="submit" class="btn" id="run-btn">Submit</button>
+          <span class="count" id="count">Run a query to see results.</span>
         </div>
       </form>
     </div>
 
     <div id="error-zone"></div>
 
-    <div class="card">
-      <div class="results-head">
-        <h2>Banks that match your criteria (one row per offer)</h2>
-        <span class="count" id="count">Run a query to see results.</span>
-      </div>
+    <div class="card results-card">
       <p class="query-summary muted" id="query-summary" aria-live="polite"></p>
       <div class="table-wrap">
         <table id="results-table">
@@ -642,6 +898,13 @@
     const FALLBACK_LENDER_ORDER_BASE = 100000;
     let lenderStableOrderCounter = FALLBACK_LENDER_ORDER_BASE;
     const bankManifestOrderBySlug = new Map();
+    let columnFilterState = {};
+    let columnSortState = {};
+    let filterByValuesDraft = null;
+    let columnFilterDropdownEl = null;
+    let filterByValuesPanelEl = null;
+    let lastRenderedRows = [];
+    let lastRenderParams = null;
     let countryOptions = [];
     let universityOptions = [];
     const levelOptions = [
@@ -982,15 +1245,79 @@
         && countryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
       const cols = ['Lender', 'Sector', 'Interest Rate', 'Type of Rate'];
       if (showPreferredUniversity) cols.push('Preferred University');
-      if (secured) cols.push('Security coverage % of loan amount');
+      if (secured) cols.push('Security coverage %');
       cols.push('Repayment Tenure', 'Margin (%)', 'Processing fees', 'Moratorium period', 'Payment during moratorium', 'Course', 'Nationality', 'Age', 'Qualification', 'University strictness', 'Delayed EMI payment', 'Avg time to sanction', 'Dedicated case manager', 'Onboarding process');
       return cols;
     }
 
+    const COLUMN_TYPE = {
+      'Lender': 'text',
+      'Sector': 'text',
+      'Interest Rate': 'number',
+      'Type of Rate': 'text',
+      'Preferred University': 'text',
+      'Security coverage %': 'number',
+      'Repayment Tenure': 'text',
+      'Margin (%)': 'number',
+      'Processing fees': 'text',
+      'Moratorium period': 'text',
+      'Payment during moratorium': 'text',
+      'Course': 'text',
+      'Nationality': 'text',
+      'Age': 'text',
+      'Qualification': 'text',
+      'University strictness': 'text',
+      'Delayed EMI payment': 'text',
+      'Avg time to sanction': 'text',
+      'Dedicated case manager': 'text',
+      'Onboarding process': 'text'
+    };
+    function getColumnType(columnKey) {
+      return COLUMN_TYPE[columnKey] || 'text';
+    }
+
+    function getCellValueForColumn(row, columnKey, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity) {
+      if (columnKey === 'Lender') return row.bankName != null ? String(row.bankName).trim() : '';
+      if (columnKey === 'Sector') return row.sector != null ? String(row.sector).trim() : '';
+      const idx = dataColumns.indexOf(columnKey);
+      if (idx < 0) return '';
+      const cells = getOfferCells(row, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+      const cell = cells[idx];
+      if (cell == null) return '';
+      if (typeof cell === 'object' && cell.kind === 'interestAudience') {
+        return Number.isFinite(cell.rateNumber) ? cell.rateNumber : (cell.rateText || '');
+      }
+      if (typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
+        return cell.label || 'Listed Only';
+      }
+      return cell;
+    }
+
+    function getCellDisplayForFilterValues(cellValue) {
+      const s = cellValue != null ? String(cellValue).trim() : '';
+      return s === '' ? '(Blanks)' : s;
+    }
+
+    function getCellComparableForSort(cellValue, columnKey) {
+      const type = getColumnType(columnKey);
+      if (type === 'number') {
+        const n = Number(cellValue);
+        return Number.isFinite(n) ? n : (String(cellValue != null ? cellValue : '').trim() || '');
+      }
+      return String(cellValue != null ? cellValue : '').trim().toLowerCase();
+    }
+
+    const SORT_FILTER_ICON = '<span class="th-sort-filter-icon" aria-label="Sort or filter" title="Sort or filter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
+    function thWithIcon(label, columnKey) {
+      const key = columnKey != null ? columnKey : label;
+      const activeClass = (columnFilterState[key] || columnSortState[key]) ? ' th-sort-filter-icon--active' : '';
+      const icon = '<span class="th-sort-filter-icon' + activeClass + '" aria-label="Sort or filter" title="' + ((columnFilterState[key] || columnSortState[key]) ? 'Filter applied' : 'Sort or filter') + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
+      return '<th data-column-key="' + escapeHtml(key) + '"><span class="th-head th-head-clickable">' + escapeHtml(label) + icon + '</span></th>';
+    }
     // Initial header (secured = true, with Security coverage column)
     (function initTable() {
       const cols = getColumns(true, '', '');
-      thead.innerHTML = '<tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>';
+      thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
       const empty = document.querySelector('#results-body .empty');
       if (empty) empty.setAttribute('colspan', String(cols.length));
     })();
@@ -1247,6 +1574,447 @@
       return cells;
     }
 
+    function hasActiveFilterOrSort() {
+      if (Object.keys(columnSortState).some(function(k) { return columnSortState[k]; })) return true;
+      return Object.keys(columnFilterState).some(function(k) { return columnFilterState[k]; });
+    }
+
+    function rowMatchesCondition(row, columnKey, filterSpec, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity) {
+      const raw = getCellValueForColumn(row, columnKey, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+      const displayStr = getCellDisplayForFilterValues(raw);
+      const str = String(raw != null ? raw : '').trim();
+      const strLower = str.toLowerCase();
+      const num = Number(raw);
+      const isNum = Number.isFinite(num);
+      const colType = getColumnType(columnKey);
+      const op = filterSpec.operator;
+      const val = filterSpec.value;
+      const val2 = filterSpec.value2;
+      if (op === 'none') return true;
+      if (op === 'is_empty') return str === '';
+      if (op === 'is_not_empty') return str !== '';
+      if (op === 'text_contains') return strLower.includes(String(val || '').toLowerCase());
+      if (op === 'text_does_not_contain') return !strLower.includes(String(val || '').toLowerCase());
+      if (op === 'text_starts_with') return strLower.startsWith(String(val || '').toLowerCase());
+      if (op === 'text_ends_with') return strLower.endsWith(String(val || '').toLowerCase());
+      if (op === 'text_is_exactly') return str === String(val != null ? val : '').trim();
+      if (op === 'greater_than') return isNum && num > Number(val);
+      if (op === 'greater_than_or_equal') return isNum && num >= Number(val);
+      if (op === 'less_than') return isNum && num < Number(val);
+      if (op === 'less_than_or_equal') return isNum && num <= Number(val);
+      if (op === 'is_equal_to') return colType === 'number' ? (isNum && num === Number(val)) : (str === String(val != null ? val : '').trim());
+      if (op === 'is_not_equal_to') return colType === 'number' ? (!isNum || num !== Number(val)) : (str !== String(val != null ? val : '').trim());
+      if (op === 'is_between') return isNum && num >= Number(val) && num <= Number(val2);
+      if (op === 'is_not_between') return isNum && (num < Number(val) || num > Number(val2));
+      return true;
+    }
+
+    function applyFilters(rows, cols, dataColumns, secured, selectedUniversity, levelOfStudy, selectedCountry, exceptColumnKey) {
+      let out = rows;
+      const includePreferredUniversity = !!normalizeText(selectedUniversity) && normalizeText(selectedUniversity) !== normalizeText(NOT_IN_LIST_UNIVERSITY) && normalizeText(selectedCountry) !== normalizeText(NOT_IN_LIST_COUNTRY);
+      cols.forEach(function(columnKey) {
+        if (exceptColumnKey && columnKey === exceptColumnKey) return;
+        const spec = columnFilterState[columnKey];
+        if (!spec) return;
+        if (spec.type === 'condition' && spec.condition) {
+          out = out.filter(function(row) {
+            return rowMatchesCondition(row, columnKey, spec.condition, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+          });
+        } else if (spec.type === 'values') {
+          if (!Array.isArray(spec.selectedValues) || spec.selectedValues.length === 0) {
+            out = [];
+          } else {
+            out = out.filter(function(row) {
+              const raw = getCellValueForColumn(row, columnKey, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+              const displayStr = getCellDisplayForFilterValues(raw);
+              return spec.selectedValues.indexOf(displayStr) !== -1;
+            });
+          }
+        }
+      });
+      return out;
+    }
+
+    function applySort(rows, cols, dataColumns, secured, selectedUniversity, levelOfStudy, selectedCountry) {
+      const sortColumn = Object.keys(columnSortState).find(function(k) { return columnSortState[k] && columnSortState[k].direction; });
+      if (!sortColumn || !columnSortState[sortColumn].direction) return rows;
+      const direction = columnSortState[sortColumn].direction;
+      const includePreferredUniversity = !!normalizeText(selectedUniversity) && normalizeText(selectedUniversity) !== normalizeText(NOT_IN_LIST_UNIVERSITY) && normalizeText(selectedCountry) !== normalizeText(NOT_IN_LIST_COUNTRY);
+      return rows.slice().sort(function(a, b) {
+        const va = getCellComparableForSort(getCellValueForColumn(a, sortColumn, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity), sortColumn);
+        const vb = getCellComparableForSort(getCellValueForColumn(b, sortColumn, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity), sortColumn);
+        let cmp = 0;
+        if (typeof va === 'number' && typeof vb === 'number') cmp = va - vb;
+        else cmp = String(va).localeCompare(String(vb), undefined, { sensitivity: 'base' });
+        return direction === 'desc' ? -cmp : cmp;
+      });
+    }
+
+    function renderRowsFlat(flatRows, secured, selectedUniversity, levelOfStudy, selectedCountry) {
+      const selectedUniversityNorm = normalizeText(selectedUniversity);
+      const selectedCountryNorm = normalizeText(selectedCountry);
+      const includePreferredUniversity = !!selectedUniversityNorm && selectedUniversityNorm !== normalizeText(NOT_IN_LIST_UNIVERSITY) && selectedCountryNorm !== normalizeText(NOT_IN_LIST_COUNTRY);
+      const cols = getColumns(secured, selectedUniversity, selectedCountry);
+      const dataColumns = cols.slice(2);
+      const colCount = cols.length;
+      thead.innerHTML = '<tr>' + cols.map(function(c) { return thWithIcon(c, c); }).join('') + '</tr>';
+      if (!flatRows.length) {
+        countEl.textContent = '0 matches.';
+        resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
+        previousRenderSnapshot = { byExactKey: new Map(), byGroupKey: new Map() };
+        return;
+      }
+      countEl.innerHTML = '<strong>' + flatRows.length + '</strong> offer' + (flatRows.length === 1 ? '' : 's') + '.';
+      const canDiffWithPrevious = ENABLE_DIFF_HIGHLIGHT && !!previousRenderSnapshot;
+      const currentSnapshotEntries = [];
+      const tableRows = flatRows.map(function(row) {
+        const bankName = row.bankName || '';
+        const sector = row.sector != null ? String(row.sector).trim() : 'N/A';
+        const cells = getOfferCells(row, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
+        const comparableCells = cells.map(cellComparableValue);
+        const comparableByColumn = {};
+        dataColumns.forEach(function(col, idx) { comparableByColumn[col] = comparableCells[idx]; });
+        currentSnapshotEntries.push({ exactKey: getOfferExactKey(row), groupKey: getOfferCompareGroupKey(row), comparableCells: comparableCells, comparableByColumn: comparableByColumn });
+        const tds = cells.map(function(cell, cellIdx) {
+          const columnName = dataColumns[cellIdx];
+          const dataCol = ' data-column-key="' + escapeHtml(columnName) + '"';
+          const cls = typeof cell === 'number' ? 'num' : '';
+          if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
+            const rate = escapeHtml(cell.rate || 'N/A');
+            const audience = escapeHtml(cell.audience || 'N/A');
+            const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
+            const searchValue = [cell.rateText || '', cell.audience || ''].join(' ').trim();
+            return '<td class="' + [cls, 'interest-rate-cell'].filter(Boolean).join(' ') + '"' + dataCol + ' data-rate-number="' + escapeHtml(sortValue) + '" data-rate-text="' + escapeHtml(searchValue) + '"><span class="audience-rate"><span>' + rate + '</span><span class="audience-badge">' + audience + '</span></span></td>';
+          }
+          if (cell && typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
+            const label = escapeHtml(cell.label || 'Listed Only');
+            const bank = escapeHtml(cell.bankName || bankName || '');
+            const criteria = escapeHtml(cell.criteria || '');
+            return '<td class="' + cls + '"' + dataCol + '><button type="button" class="listed-universities-trigger" data-listed-bank="' + bank + '" data-listed-criteria="' + criteria + '">' + label + '</button></td>';
+          }
+          return '<td class="' + cls + '"' + dataCol + '>' + (cell != null ? escapeHtml(String(cell)) : 'N/A') + '</td>';
+        });
+        return '<tr><td class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td class="sector-name-cell">' + escapeHtml(sector) + '</td>' + tds.join('') + '</tr>';
+      });
+      resultsBody.innerHTML = tableRows.join('');
+      const byExactKey = new Map();
+      const byGroupKey = new Map();
+      currentSnapshotEntries.forEach(function(entry, idx) {
+        const stored = { entryId: idx, exactKey: entry.exactKey, groupKey: entry.groupKey, comparableCells: entry.comparableCells, comparableByColumn: entry.comparableByColumn };
+        if (entry.exactKey) byExactKey.set(entry.exactKey, stored);
+        if (entry.groupKey) {
+          if (!byGroupKey.has(entry.groupKey)) byGroupKey.set(entry.groupKey, []);
+          byGroupKey.get(entry.groupKey).push(stored);
+        }
+      });
+      previousRenderSnapshot = { byExactKey: byExactKey, byGroupKey: byGroupKey };
+      bindColumnFilterDropdown();
+    }
+
+    const FILTER_OPERATORS = [
+      { id: 'none', label: 'None', inputKind: 'none' },
+      { id: 'is_empty', label: 'Is empty', inputKind: 'none' },
+      { id: 'is_not_empty', label: 'Is not empty', inputKind: 'none' },
+      { id: 'text_contains', label: 'Text contains', inputKind: 'text' },
+      { id: 'text_does_not_contain', label: 'Text does not contain', inputKind: 'text' },
+      { id: 'text_starts_with', label: 'Text starts with', inputKind: 'text' },
+      { id: 'text_ends_with', label: 'Text ends with', inputKind: 'text' },
+      { id: 'text_is_exactly', label: 'Text is exactly', inputKind: 'text' },
+      { id: 'greater_than', label: 'Greater than', inputKind: 'number' },
+      { id: 'greater_than_or_equal', label: 'Greater than or equal to', inputKind: 'number' },
+      { id: 'less_than', label: 'Less than', inputKind: 'number' },
+      { id: 'less_than_or_equal', label: 'Less than or equal to', inputKind: 'number' },
+      { id: 'is_equal_to', label: 'Is equal to', inputKind: 'typeAware' },
+      { id: 'is_not_equal_to', label: 'Is not equal to', inputKind: 'typeAware' },
+      { id: 'is_between', label: 'Is between', inputKind: 'numberRange' },
+      { id: 'is_not_between', label: 'Is not between', inputKind: 'numberRange' }
+    ];
+    function getOperatorsForColumn(columnKey) {
+      const colType = getColumnType(columnKey);
+      return FILTER_OPERATORS.filter(function(op) {
+        if (op.inputKind === 'none') return true;
+        if (op.id.startsWith('text_')) return colType === 'text';
+        if (['greater_than', 'greater_than_or_equal', 'less_than', 'less_than_or_equal', 'is_between', 'is_not_between'].indexOf(op.id) !== -1) return colType === 'number';
+        if (op.inputKind === 'typeAware') return true;
+        return true;
+      });
+    }
+
+    function ensureColumnFilterDropdown() {
+      if (columnFilterDropdownEl) return columnFilterDropdownEl;
+      columnFilterDropdownEl = document.createElement('div');
+      columnFilterDropdownEl.className = 'column-filter-dropdown';
+      columnFilterDropdownEl.setAttribute('role', 'menu');
+      document.body.appendChild(columnFilterDropdownEl);
+      return columnFilterDropdownEl;
+    }
+
+    function ensureFilterByValuesPanel() {
+      if (filterByValuesPanelEl) return filterByValuesPanelEl;
+      filterByValuesPanelEl = document.createElement('div');
+      filterByValuesPanelEl.className = 'filter-by-values-panel';
+      filterByValuesPanelEl.innerHTML = '<div class="fbv-title">Filter by values</div><div class="fbv-toolbar"><span class="fbv-displaying">Displaying 0</span><span><button type="button" class="fbv-select-all">Select all</button> | <button type="button" class="fbv-clear">Clear</button></span></div><input type="text" class="fbv-search" placeholder="Search..." autocomplete="off"/><div class="fbv-list"></div><div class="fbv-footer"><button type="button" class="fbv-cancel">Cancel</button><button type="button" class="fbv-ok">OK</button></div>';
+      document.body.appendChild(filterByValuesPanelEl);
+      return filterByValuesPanelEl;
+    }
+
+    function closeColumnFilterDropdown() {
+      if (columnFilterDropdownEl) columnFilterDropdownEl.classList.remove('is-open');
+    }
+
+    function openColumnFilterDropdown(columnKey, thEl) {
+      const dropdown = ensureColumnFilterDropdown();
+      const colType = getColumnType(columnKey);
+      const sortAscLabel = colType === 'number' ? 'Sort smallest to largest' : 'Sort A to Z';
+      const sortDescLabel = colType === 'number' ? 'Sort largest to smallest' : 'Sort Z to A';
+      const sortState = columnSortState[columnKey];
+      const filterState = columnFilterState[columnKey];
+      const hasSort = sortState && sortState.direction;
+      const hasFilter = filterState && (filterState.type === 'condition' || filterState.type === 'values');
+      let html = '<button type="button" class="cfd-item cfd-sort-asc" data-direction="asc">' + sortAscLabel + '</button><button type="button" class="cfd-item cfd-sort-desc" data-direction="desc">' + sortDescLabel + '</button><div class="cfd-divider" style="height:1px;background:rgba(255,255,255,0.06);margin:0.25rem 0;"></div><button type="button" class="cfd-item cfd-filter-condition">Filter by condition</button><button type="button" class="cfd-item cfd-filter-values">Filter by values</button>';
+      if (hasSort || hasFilter) {
+        html += '<div class="cfd-divider" style="height:1px;background:rgba(255,255,255,0.06);margin:0.25rem 0;"></div>';
+        if (hasSort) html += '<button type="button" class="cfd-item cfd-clear-sort">Clear sort</button>';
+        if (hasFilter) html += '<button type="button" class="cfd-item cfd-clear-filter">Clear filter</button>';
+      }
+      dropdown.innerHTML = html;
+      const sortAscBtn = dropdown.querySelector('.cfd-sort-asc');
+      const sortDescBtn = dropdown.querySelector('.cfd-sort-desc');
+      if (sortState && sortState.direction === 'asc') sortAscBtn.classList.add('cfd-active');
+      if (sortState && sortState.direction === 'desc') sortDescBtn.classList.add('cfd-active');
+      if (filterState && filterState.type === 'condition') dropdown.querySelector('.cfd-filter-condition').classList.add('cfd-active');
+      if (filterState && filterState.type === 'values') dropdown.querySelector('.cfd-filter-values').classList.add('cfd-active');
+      var rect = thEl.getBoundingClientRect();
+      dropdown.style.left = rect.left + 'px';
+      dropdown.style.top = (rect.bottom + 4) + 'px';
+      dropdown.classList.add('is-open');
+      dropdown.dataset.columnKey = columnKey;
+      sortAscBtn.onclick = function() {
+        columnSortState = {};
+        columnSortState[columnKey] = { direction: 'asc' };
+        closeColumnFilterDropdown();
+        if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+      };
+      sortDescBtn.onclick = function() {
+        columnSortState = {};
+        columnSortState[columnKey] = { direction: 'desc' };
+        closeColumnFilterDropdown();
+        if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+      };
+      dropdown.querySelector('.cfd-filter-condition').onclick = function() {
+        showConditionSubmenu(dropdown, columnKey, thEl);
+      };
+      dropdown.querySelector('.cfd-filter-values').onclick = function() {
+        openFilterByValuesPanel(columnKey);
+      };
+      const clearSortBtn = dropdown.querySelector('.cfd-clear-sort');
+      if (clearSortBtn) {
+        clearSortBtn.onclick = function() {
+          delete columnSortState[columnKey];
+          closeColumnFilterDropdown();
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+        };
+      }
+      const clearFilterBtn = dropdown.querySelector('.cfd-clear-filter');
+      if (clearFilterBtn) {
+        clearFilterBtn.onclick = function() {
+          delete columnFilterState[columnKey];
+          closeColumnFilterDropdown();
+          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+        };
+      }
+    }
+
+    function clearConditionBuilders(dropdown) {
+      dropdown.querySelectorAll('.cfd-condition').forEach(function(el) { el.remove(); });
+    }
+
+    function showConditionSubmenu(dropdown, columnKey, thEl) {
+      clearConditionBuilders(dropdown);
+      const operators = getOperatorsForColumn(columnKey);
+      const sub = document.createElement('div');
+      sub.className = 'cfd-submenu is-open';
+      sub.innerHTML = operators.map(function(op) { return '<button type="button" class="cfd-item cfd-op" data-operator="' + escapeHtml(op.id) + '">' + escapeHtml(op.label) + '</button>'; }).join('');
+      var condRect = dropdown.getBoundingClientRect();
+      sub.style.left = (condRect.width + 4) + 'px';
+      sub.style.top = '0';
+      dropdown.appendChild(sub);
+      sub.querySelectorAll('.cfd-op').forEach(function(btn) {
+        btn.onclick = function() {
+          const opId = btn.dataset.operator;
+          const op = FILTER_OPERATORS.find(function(o) { return o.id === opId; });
+          sub.remove();
+          showConditionInputs(dropdown, columnKey, op, thEl);
+        };
+      });
+    }
+
+    function showConditionInputs(dropdown, columnKey, op, thEl) {
+      clearConditionBuilders(dropdown);
+      const kind = op.inputKind;
+      let html = '<div class="cfd-condition"><label>' + escapeHtml(op.label) + '</label>';
+      if (kind === 'text' || kind === 'typeAware') {
+        const ph = kind === 'text' ? 'Enter text' : (getColumnType(columnKey) === 'number' ? 'Enter value' : 'Enter text');
+        html += '<input type="' + (getColumnType(columnKey) === 'number' ? 'number' : 'text') + '" class="cfd-input cfd-value" placeholder="' + ph + '"/>';
+      } else if (kind === 'number') {
+        html += '<input type="number" class="cfd-input cfd-value" placeholder="Enter value"/>';
+      } else if (kind === 'numberRange') {
+        html += '<input type="number" class="cfd-input cfd-value" placeholder="From"/> <input type="number" class="cfd-input cfd-value2" placeholder="To"/>';
+      }
+      html += '<div class="cfd-condition-ok"><button type="button" class="btn cfd-ok">OK</button></div></div>';
+      const wrap = document.createElement('div');
+      wrap.innerHTML = html;
+      dropdown.appendChild(wrap.firstElementChild);
+      const conditionDiv = dropdown.querySelector('.cfd-condition');
+      const okBtn = conditionDiv.querySelector('.cfd-ok');
+      const existing = columnFilterState[columnKey] && columnFilterState[columnKey].condition;
+      if (existing) {
+        const v0 = conditionDiv.querySelector('.cfd-value');
+        if (v0) v0.value = existing.value != null ? existing.value : '';
+        const v1 = conditionDiv.querySelector('.cfd-value2');
+        if (v1) v1.value = existing.value2 != null ? existing.value2 : '';
+      }
+      okBtn.onclick = function() {
+        const valEl = conditionDiv.querySelector('.cfd-value');
+        const val2El = conditionDiv.querySelector('.cfd-value2');
+        const value = valEl ? valEl.value : '';
+        const value2 = val2El ? val2El.value : '';
+        if (op.id === 'none') {
+          delete columnFilterState[columnKey];
+        } else {
+          columnFilterState[columnKey] = { type: 'condition', condition: { operator: op.id, value: value, value2: value2 } };
+        }
+        closeColumnFilterDropdown();
+        if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+      };
+    }
+
+    function openFilterByValuesPanel(columnKey) {
+      const panel = ensureFilterByValuesPanel();
+      if (!lastRenderParams) return;
+      const includePreferredUniversity = !!normalizeText(lastRenderParams.selectedUniversity) && normalizeText(lastRenderParams.selectedUniversity) !== normalizeText(NOT_IN_LIST_UNIVERSITY) && normalizeText(lastRenderParams.selectedCountry) !== normalizeText(NOT_IN_LIST_COUNTRY);
+      const cols = getColumns(lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.selectedCountry);
+      const dataColumns = cols.slice(2);
+      const filteredForValues = applyFilters(lastRenderedRows, cols, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry, columnKey);
+      const rowsToUse = hasActiveFilterOrSort() ? applySort(filteredForValues, cols, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry) : filteredForValues;
+      const uniqueValues = [];
+      const seen = {};
+      rowsToUse.forEach(function(row) {
+        const raw = getCellValueForColumn(row, columnKey, dataColumns, lastRenderParams.secured, lastRenderParams.selectedUniversity, institutesList, lastRenderParams.levelOfStudy, includePreferredUniversity);
+        const displayStr = getCellDisplayForFilterValues(raw);
+        if (!seen[displayStr]) { seen[displayStr] = true; uniqueValues.push(displayStr); }
+      });
+      uniqueValues.sort(function(a, b) {
+        if (a === '(Blanks)') return 1;
+        if (b === '(Blanks)') return -1;
+        return a.localeCompare(b, undefined, { sensitivity: 'base' });
+      });
+      const applied = (columnFilterState[columnKey] && columnFilterState[columnKey].type === 'values' && columnFilterState[columnKey].selectedValues) ? columnFilterState[columnKey].selectedValues.slice() : uniqueValues.slice();
+      filterByValuesDraft = { columnKey: columnKey, selectedValues: applied.slice(), allValues: uniqueValues };
+      panel.querySelector('.fbv-displaying').textContent = 'Displaying ' + applied.length;
+      panel.querySelector('.fbv-list').innerHTML = uniqueValues.map(function(v) {
+        const checked = applied.indexOf(v) !== -1 ? ' checked' : '';
+        return '<label class="fbv-row"><input type="checkbox" data-value="' + escapeHtml(v) + '"' + checked + '/><span>' + escapeHtml(v) + '</span></label>';
+      }).join('');
+      panel.querySelector('.fbv-search').value = '';
+      panel.classList.add('is-open');
+      panel.dataset.columnKey = columnKey;
+      var th = thead ? Array.prototype.find.call(thead.querySelectorAll('th'), function(t) { return t.getAttribute('data-column-key') === columnKey; }) : null;
+      var dropdownOpen = columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open');
+      if (dropdownOpen && columnFilterDropdownEl.getBoundingClientRect) {
+        var dropRect = columnFilterDropdownEl.getBoundingClientRect();
+        panel.style.left = dropRect.left + 'px';
+        panel.style.top = (dropRect.bottom + 4) + 'px';
+        var panelRect = panel.getBoundingClientRect();
+        var viewportRight = window.innerWidth || document.documentElement.clientWidth;
+        var viewportBottom = window.innerHeight || document.documentElement.clientHeight;
+        if (panelRect.right > viewportRight) panel.style.left = (viewportRight - panelRect.width - 8) + 'px';
+        else if (dropRect.left < 8) panel.style.left = '8px';
+        if (panelRect.bottom > viewportBottom) panel.style.top = (viewportBottom - panelRect.height - 8) + 'px';
+      } else if (th) {
+        var rect = th.getBoundingClientRect();
+        panel.style.left = rect.left + 'px';
+        panel.style.top = (rect.bottom + 4) + 'px';
+        var panelRect = panel.getBoundingClientRect();
+        var viewportRight = window.innerWidth || document.documentElement.clientWidth;
+        if (panelRect.right > viewportRight) panel.style.left = (viewportRight - panelRect.width - 8) + 'px';
+        else if (rect.left < 8) panel.style.left = '8px';
+      } else {
+        var tableWrap = document.querySelector('.table-wrap');
+        var tr = tableWrap ? tableWrap.getBoundingClientRect() : null;
+        if (tr) { panel.style.left = (tr.left + 8) + 'px'; panel.style.top = (tr.top + 50) + 'px'; }
+      }
+      function updateDisplaying() {
+        var chks = panel.querySelectorAll('.fbv-list input:checked');
+        panel.querySelector('.fbv-displaying').textContent = 'Displaying ' + chks.length;
+        filterByValuesDraft.selectedValues = Array.from(chks).map(function(c) { return c.dataset.value; });
+      }
+      panel.querySelectorAll('.fbv-list input').forEach(function(cb) {
+        cb.onchange = updateDisplaying;
+      });
+      panel.querySelector('.fbv-select-all').onclick = function() {
+        panel.querySelectorAll('.fbv-list input').forEach(function(c) { c.checked = true; });
+        updateDisplaying();
+      };
+      panel.querySelector('.fbv-clear').onclick = function() {
+        panel.querySelectorAll('.fbv-list input').forEach(function(c) { c.checked = false; });
+        updateDisplaying();
+      };
+      panel.querySelector('.fbv-search').oninput = function() {
+        var q = (this.value || '').toLowerCase();
+        panel.querySelectorAll('.fbv-row').forEach(function(row) {
+          var text = (row.textContent || '').toLowerCase();
+          row.style.display = q && !text.includes(q) ? 'none' : '';
+        });
+      };
+      panel.querySelector('.fbv-cancel').onclick = function() {
+        panel.classList.remove('is-open');
+        filterByValuesDraft = null;
+      };
+      panel.querySelector('.fbv-ok').onclick = function() {
+        columnFilterState[columnKey] = { type: 'values', selectedValues: filterByValuesDraft.selectedValues.slice() };
+        panel.classList.remove('is-open');
+        filterByValuesDraft = null;
+        if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
+      };
+    }
+
+    function bindColumnFilterDropdown() {
+      if (thead.dataset.columnFilterBound) return;
+      thead.dataset.columnFilterBound = '1';
+      thead.addEventListener('click', handleThHeadClick);
+    }
+    function handleThHeadClick(e) {
+      const head = e.target.closest('.th-head-clickable');
+      if (!head) return;
+      const th = head.closest('th');
+      if (!th || !th.dataset.columnKey) return;
+      e.preventDefault();
+      e.stopPropagation();
+      openColumnFilterDropdown(th.dataset.columnKey, th);
+    }
+    document.addEventListener('click', function(e) {
+      if (!document.contains(e.target)) return;
+      var insideDropdown = columnFilterDropdownEl && columnFilterDropdownEl.contains(e.target);
+      var insidePanel = filterByValuesPanelEl && filterByValuesPanelEl.contains(e.target);
+      var onTh = e.target.closest('th');
+      if (insideDropdown || insidePanel || onTh) return;
+      if (columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open')) closeColumnFilterDropdown();
+      if (filterByValuesPanelEl && filterByValuesPanelEl.classList.contains('is-open')) {
+        filterByValuesPanelEl.classList.remove('is-open');
+        filterByValuesDraft = null;
+      }
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeColumnFilterDropdown();
+        if (filterByValuesPanelEl && filterByValuesPanelEl.classList.contains('is-open')) {
+          filterByValuesPanelEl.classList.remove('is-open');
+          filterByValuesDraft = null;
+        }
+      }
+    });
+
     function renderRows(rows, secured, selectedUniversity, levelOfStudy, selectedCountry) {
       const orderedRows = Array.isArray(rows) ? rows.slice() : [];
       for (const row of orderedRows) {
@@ -1272,20 +2040,26 @@
       const cols = getColumns(secured, selectedUniversity, selectedCountry);
       const dataColumns = cols.slice(2);
       const colCount = cols.length;
+      lastRenderedRows = orderedRows;
+      lastRenderParams = { secured: secured, selectedUniversity: selectedUniversity, levelOfStudy: levelOfStudy, selectedCountry: selectedCountry };
+      if (!orderedRows.length) {
+        countEl.textContent = '0 matches.';
+        thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
+        resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
+        previousRenderSnapshot = { byExactKey: new Map(), byGroupKey: new Map() };
+        bindColumnFilterDropdown();
+        return;
+      }
+      if (hasActiveFilterOrSort()) {
+        const filtered = applyFilters(orderedRows, cols, dataColumns, secured, selectedUniversity, levelOfStudy, selectedCountry, null);
+        const filteredAndSorted = applySort(filtered, cols, dataColumns, secured, selectedUniversity, levelOfStudy, selectedCountry);
+        renderRowsFlat(filteredAndSorted, secured, selectedUniversity, levelOfStudy, selectedCountry);
+        return;
+      }
       const canDiffWithPrevious = ENABLE_DIFF_HIGHLIGHT
         && !!previousRenderSnapshot;
       const currentSnapshotEntries = [];
-      thead.innerHTML = '<tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>';
-
-      if (!orderedRows.length) {
-        countEl.textContent = '0 matches.';
-        resultsBody.innerHTML = '<tr><td colspan="' + colCount + '" class="empty">No banks with matching offers for this criteria.</td></tr>';
-        previousRenderSnapshot = {
-          byExactKey: new Map(),
-          byGroupKey: new Map()
-        };
-        return;
-      }
+      thead.innerHTML = '<tr>' + cols.map(c => thWithIcon(c, c)).join('') + '</tr>';
 
       const bankGroups = [];
       const seen = new Set();
@@ -1347,6 +2121,7 @@
           }
           const tds = cells.map((cell, cellIdx) => {
             const columnName = dataColumns[cellIdx];
+            const dataCol = ` data-column-key="${escapeHtml(columnName)}"`;
             const hasComparableColumn = !!(prevComparableByColumn && columnName && Object.prototype.hasOwnProperty.call(prevComparableByColumn, columnName));
             const hasComparableIndex = Array.isArray(prevComparableCells) && cellIdx < prevComparableCells.length;
             const previousCellValue = hasComparableColumn
@@ -1360,17 +2135,17 @@
               const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
               const searchValue = [cell.rateText || '', cell.audience || ''].join(' ').trim();
               const rateCellClass = [cls, 'interest-rate-cell', isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
-              return `<td class="${rateCellClass}" data-rate-number="${escapeHtml(sortValue)}" data-rate-text="${escapeHtml(searchValue)}"><span class="audience-rate"><span>${rate}</span><span class="audience-badge">${audience}</span></span></td>`;
+              return `<td class="${rateCellClass}"${dataCol} data-rate-number="${escapeHtml(sortValue)}" data-rate-text="${escapeHtml(searchValue)}"><span class="audience-rate"><span>${rate}</span><span class="audience-badge">${audience}</span></span></td>`;
             }
             if (cell && typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
               const label = escapeHtml(cell.label || 'Listed Only');
               const bank = escapeHtml(cell.bankName || bankName || '');
               const criteria = escapeHtml(cell.criteria || '');
               const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
-              return `<td class="${cellClass}"><button type="button" class="listed-universities-trigger" data-listed-bank="${bank}" data-listed-criteria="${criteria}">${label}</button></td>`;
+              return `<td class="${cellClass}"${dataCol}><button type="button" class="listed-universities-trigger" data-listed-bank="${bank}" data-listed-criteria="${criteria}">${label}</button></td>`;
             }
             const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
-            return `<td class="${cellClass}">${cell ?? 'N/A'}</td>`;
+            return `<td class="${cellClass}"${dataCol}>${cell ?? 'N/A'}</td>`;
           }).join('');
           const isFirst = i === 0;
           const isLast = i === n - 1;
@@ -1405,6 +2180,7 @@
         byExactKey,
         byGroupKey
       };
+      bindColumnFilterDropdown();
     }
 
     async function runQueryFromForm() {
@@ -1452,7 +2228,7 @@
         if (selectedUniv) parts.push(`University=${selectedUniv}`);
         else parts.push('University=Not in the list');
         if (levelOfStudy && levelOfStudy !== 'Any') parts.push(`Level=${levelOfStudy}`);
-        querySummary.textContent = 'Query: ' + parts.join(', ');
+        querySummary.textContent = '';
       } catch (err) {
         if (runId !== queryRunCounter) return;
         showError(err.message || 'Network error');

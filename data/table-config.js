@@ -22,7 +22,7 @@ const TABLE_CONFIG = {
         { id: 'interestRate', label: 'Interest Rate', type: 'text' },
         { id: 'typeOfInterestRate', label: 'Type of Rate', type: 'text' },
         { id: 'preferredUniversity', label: 'Preferred University', type: 'text' },
-        { id: 'securityCoverage', label: 'Security coverage % of loan amount', type: 'text' },
+        { id: 'securityCoverage', label: 'Security coverage %', type: 'text' },
         { id: 'repaymentTenure', label: 'Repayment Tenure', type: 'text' },
         { id: 'margin', label: 'Margin (%)', type: 'text' },
         { id: 'processingFees', label: 'Processing fees', type: 'text' },
