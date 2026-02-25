@@ -293,8 +293,14 @@ const MIMES = {
   '.js': 'application/javascript',
   '.json': 'application/json',
   '.css': 'text/css',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp'
 };
+const BINARY_EXTENSIONS = new Set(['.png', '.jpg', '.jpeg', '.webp', '.ico']);
 
 const server = createServer(async (req, res) => {
   const port = server.address() ? server.address().port : BASE_PORT;
@@ -367,6 +373,39 @@ const server = createServer(async (req, res) => {
       res.writeHead(500, { 'Content-Type': 'application/json' });
       res.end(JSON.stringify({ error: String(err.message) }));
     }
+    return;
+  }
+
+  // API: GET /api/logo/:slug – serve lender logo (tries .svg, .png, .jpg, .webp)
+  if (pathname.startsWith('/api/logo/') && req.method === 'GET') {
+    const slug = pathname.slice('/api/logo/'.length).replace(/[^a-z0-9-]/gi, '').trim();
+    if (!slug) {
+      res.writeHead(400, { 'Content-Type': 'text/plain' });
+      return res.end('Bad slug');
+    }
+    const LOGO_DIR = join(__dirname, 'assets', 'logo');
+    const exts = [
+      { ext: '.svg', mime: 'image/svg+xml', binary: false },
+      { ext: '.png', mime: 'image/png', binary: true },
+      { ext: '.jpg', mime: 'image/jpeg', binary: true },
+      { ext: '.webp', mime: 'image/webp', binary: true }
+    ];
+    for (const { ext, mime, binary } of exts) {
+      const filePath = join(LOGO_DIR, slug + ext);
+      if (existsSync(filePath)) {
+        try {
+          const content = binary ? readFileSync(filePath) : readFileSync(filePath, 'utf-8');
+          res.writeHead(200, { 'Content-Type': mime });
+          res.end(content);
+        } catch {
+          res.writeHead(500);
+          res.end('Error reading file');
+        }
+        return;
+      }
+    }
+    res.writeHead(404, { 'Content-Type': 'text/plain' });
+    res.end('Logo not found');
     return;
   }
 
@@ -476,21 +515,28 @@ const server = createServer(async (req, res) => {
   if (!pathname.startsWith('/api') && existsSync(filePath)) {
     const ext = extname(filePath);
     const mime = MIMES[ext] || 'application/octet-stream';
+    const isBinary = BINARY_EXTENSIONS.has(ext);
     try {
-      let content = readFileSync(filePath, 'utf-8');
-      if ((pathname === '/' || pathname === '/index.html') && content.includes('<!-- INJECT_SHARED -->')) {
-        let shared = null;
-        try {
-          shared = getSharedFromFile('punjab-national-bank');
-        } catch (_) {
-          try { shared = getShared('punjab-national-bank'); } catch (_2) {}
+      if (isBinary) {
+        const content = readFileSync(filePath);
+        res.writeHead(200, { 'Content-Type': mime });
+        res.end(content);
+      } else {
+        let content = readFileSync(filePath, 'utf-8');
+        if ((pathname === '/' || pathname === '/index.html') && content.includes('<!-- INJECT_SHARED -->')) {
+          let shared = null;
+          try {
+            shared = getSharedFromFile('punjab-national-bank');
+          } catch (_) {
+            try { shared = getShared('punjab-national-bank'); } catch (_2) {}
+          }
+          const json = JSON.stringify(shared).replace(/<\/script/gi, '<\\/script');
+          const inject = '<script>window.SHARED_BANK_DATA=' + json + ';</script>';
+          content = content.replace('<!-- INJECT_SHARED -->', inject);
         }
-        const json = JSON.stringify(shared).replace(/<\/script/gi, '<\\/script');
-        const inject = '<script>window.SHARED_BANK_DATA=' + json + ';</script>';
-        content = content.replace('<!-- INJECT_SHARED -->', inject);
+        res.writeHead(200, { 'Content-Type': mime });
+        res.end(content);
       }
-      res.writeHead(200, { 'Content-Type': mime });
-      res.end(content);
     } catch {
       res.writeHead(500);
       res.end('Error reading file');

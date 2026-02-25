@@ -7,8 +7,9 @@
     },
     "offers": [
       {
+        "logo": "idbi-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Doctrate courses",
-        "nationality": "Indian / NRI",
+        "nationality": "Indian/NRI",
         "age": {
           "min": null,
           "max": null

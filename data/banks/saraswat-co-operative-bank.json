@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "saraswat-co-operative-bank",
         "level_of_study": "XXXXXX",
         "nationality": "Indian",
         "age": {

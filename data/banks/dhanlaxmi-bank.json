@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "dhanlaxmi-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di)",
         "nationality": "Indian",
         "age": {
@@ -104,7 +105,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 after getting job, whichever is earlier",
+        "periodDisplay": "6 post-job",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -161,7 +162,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 after getting job, whichever is earlier",
+        "periodDisplay": "6 post-job",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -221,7 +222,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 after getting job, whichever is earlier",
+        "periodDisplay": "6 post-job",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",

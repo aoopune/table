@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "tamilnad-mercantile-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses",
         "nationality": "Indian",
         "age": {
@@ -104,7 +105,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
+        "periodDisplay": "12 / 6 post job (earlier)",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -161,7 +162,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
+        "periodDisplay": "12 / 6 post job (earlier)",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -218,7 +219,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
+        "periodDisplay": "12 / 6 post job (earlier)",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "punjab-national-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate / Exec. courses",
         "nationality": "Indian",
         "age": {

@@ -7,8 +7,9 @@
     },
     "offers": [
       {
+        "logo": "jammu-and-kashmir-grameen-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. courses",
-        "nationality": "Resident of J&K State",
+        "nationality": "Resident of J&K",
         "age": {
           "min": 18,
           "max": null

@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "axis-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Doctrate courses",
         "nationality": "Indian",
         "age": {

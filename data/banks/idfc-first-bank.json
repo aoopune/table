@@ -7,8 +7,9 @@
     },
     "offers": [
       {
+        "logo": "idfc-first-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses",
-        "nationality": "Indian / NRI",
+        "nationality": "Indian/NRI",
         "age": {
           "min": 18,
           "max": null

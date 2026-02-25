@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "bank-of-baroda",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses / Exec. courses",
         "nationality": "Indian",
         "age": {

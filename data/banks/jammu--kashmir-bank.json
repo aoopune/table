@@ -7,8 +7,9 @@
     },
     "offers": [
       {
+        "logo": "jammu--kashmir-bank",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Govt. approved courses",
-        "nationality": "Indian / NRI / OCI - resident in India",
+        "nationality": "Indian/NRI/OCI",
         "age": {
           "min": null,
           "max": null

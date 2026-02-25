@@ -7,8 +7,9 @@
     },
     "offers": [
       {
+        "logo": "state-bank-of-india",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di) Prof. / Tech. / Doctrate courses",
-        "nationality": "Indian / OCI (resident in India)",
+        "nationality": "Indian/OCI",
         "age": {
           "min": 18,
           "max": null

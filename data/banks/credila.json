@@ -7,6 +7,7 @@
     },
     "offers": [
       {
+        "logo": "credila",
         "level_of_study": "Undergraduate (De / Di) Postgraduate (De / Di)",
         "nationality": "Indian",
         "age": {
