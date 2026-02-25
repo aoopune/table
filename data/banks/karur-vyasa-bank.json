@@ -104,7 +104,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -161,7 +161,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -221,7 +221,7 @@
           "min": 6,
           "max": 12
         },
-        "periodDisplay": "12 months or 6 months after getting job, whichever is earlier",
+        "periodDisplay": "12 or 6 after getting job, whichever is earlier",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",

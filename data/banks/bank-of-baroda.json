@@ -15,7 +15,7 @@
         },
         "qualification": "HSC / Equivalent",
         "coApplicant": "Parents",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "tiered",
           "displayText": "0.2% if loan > Rs. 4 Lakh (per month)",
@@ -111,7 +111,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -170,7 +170,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -229,7 +229,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -285,7 +285,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -344,7 +344,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -403,7 +403,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -462,7 +462,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -521,7 +521,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -577,7 +577,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -633,7 +633,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -692,7 +692,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -748,7 +748,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -811,7 +811,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -877,7 +877,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -940,7 +940,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -996,7 +996,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1055,7 +1055,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1111,7 +1111,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -1174,7 +1174,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -1240,7 +1240,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course",
@@ -1303,7 +1303,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1359,7 +1359,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1418,7 +1418,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1474,7 +1474,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1530,7 +1530,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"
@@ -1589,7 +1589,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Specified or Any course"

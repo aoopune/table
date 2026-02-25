@@ -15,7 +15,7 @@
         },
         "qualification": "HSC + UG",
         "coApplicant": "Parent, Spouse, Parents-in-law, Sibling, or Guardian",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "tiered",
           "displayText": "0.2% if <60 days, 0.42% if >60 days",
@@ -118,7 +118,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -178,7 +178,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",
@@ -238,7 +238,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any Course",

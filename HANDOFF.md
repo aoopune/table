@@ -62,7 +62,7 @@ Table/
 - **`lender`**: `{ name, sector }`.
 - **`offers`**: Array of offers. Each offer has at least:
   - **Query fields:** `gender`, `loan.amount.min`, `loan.amount.max`, `security.required`, and optionally `security.coverageDisplay`.
-  - **Display fields:** `interest.rate`, `interest.type`, `repayment_tenure.tenure`, `margin`, `processing_fees.displayText`, `moratorium.periodDisplay`, `moratorium.paymentDuring`, `course`.
+  - **Display fields:** `interest.rate`, `interest.type`, `repayment_tenure.tenure`, `margin`, `processing_fees.displayText`, `moratorium.periodDisplay` (with " *" when `moratorium.paymentDuring` is Mandatory), `course`.
 - **`_keyTree`**: Optional; `_keyTree.offers[0]` is “shared” row data (one row per bank): `level_of_study`, `age`, `qualification`, `coApplicant`, `universityStrictness`, `delayed_emi_payment` (with `displayText`), `Average_Time_To_Sanction`, `dedicatedCaseManager`, `onboarding_process`.
 
 ### Institutes (`data/institutes.json`)
@@ -93,8 +93,7 @@ Table/
 | Repayment Tenure | `offer.repayment_tenure.tenure` |
 | Margin (%) | `offer.margin` |
 | Processing fees | `offer.processing_fees.displayText` |
-| Moratorium period | `offer.moratorium.periodDisplay` |
-| Payment during moratorium | `offer.moratorium.paymentDuring` |
+| Moratorium period | `offer.moratorium.periodDisplay`; " *" appended when `offer.moratorium.paymentDuring` is Mandatory (tooltip explains payment-during-moratorium and the star) |
 | **Course** | See below |
 | Age, Qualification, Co-applicant, University strictness | `shared` (_keyTree / merged static) |
 | Delayed EMI payment | `shared.delayed_emi_payment.displayText` |

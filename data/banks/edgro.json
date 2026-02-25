@@ -104,7 +104,7 @@
           "min": 12,
           "max": 36
         },
-        "periodDisplay": "12/36 months",
+        "periodDisplay": "12/36",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

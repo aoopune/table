@@ -15,7 +15,7 @@
         },
         "qualification": "HSC / Equivalent",
         "coApplicant": "Parents or Siblings",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "mixed",
           "displayText": "2%, Max. Rs. 300. 7.5% of EMI bounced Min. Rs. 400 & Max. Rs. 1000",
@@ -113,7 +113,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -170,7 +170,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -230,7 +230,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

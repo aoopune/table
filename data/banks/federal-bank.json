@@ -104,7 +104,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -161,7 +161,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -221,7 +221,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

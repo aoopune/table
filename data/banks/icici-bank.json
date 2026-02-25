@@ -15,7 +15,7 @@
         },
         "qualification": "HSC / Equivalent",
         "coApplicant": "Parents, Siblings Spouse, Grand Parents, Parents in law, Maternal/Paternal Uncle.",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "simple",
           "displayText": "0.42%",
@@ -104,7 +104,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -164,7 +164,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

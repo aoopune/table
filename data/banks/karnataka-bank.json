@@ -104,7 +104,7 @@
           "min": 6,
           "max": 18
         },
-        "periodDisplay": "6 or 18 months",
+        "periodDisplay": "6 or 18",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -161,7 +161,7 @@
           "min": 6,
           "max": 18
         },
-        "periodDisplay": "6 or 18 months",
+        "periodDisplay": "6 or 18",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -221,7 +221,7 @@
           "min": 6,
           "max": 18
         },
-        "periodDisplay": "6 or 18 months",
+        "periodDisplay": "6 or 18",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

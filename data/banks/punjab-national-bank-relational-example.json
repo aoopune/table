@@ -17,7 +17,7 @@
         },
         "qualification": "HSC / Equivalent",
         "coApplicant": null,
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "min": 0.2,
           "max": 0.2

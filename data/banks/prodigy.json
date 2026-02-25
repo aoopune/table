@@ -79,7 +79,7 @@
           "min": 3,
           "max": 6
         },
-        "periodDisplay": "3/6 months",
+        "periodDisplay": "3/6",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

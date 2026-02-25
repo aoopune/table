@@ -3,33 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bank Loan Offers – Query by Gender, Amount, Loan type, Country, University, Level</title>
+  <title>Bank Loan Offers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0c1116;
-      --surface: #111c23;
-      --surface-soft: rgba(17, 28, 35, 0.72);
-      --border: #23303b;
-      --text: #e7eef6;
-      --muted: #94a3b8;
-      --accent: #ef6f2e;
-      --accent-hover: #f28b55;
-      --accent-2: #2dd4bf;
+      --bg: #e8f0fe;
+      --surface: #fff;
+      --surface-soft: rgba(255, 255, 255, 0.95);
+      --border: #90caf9;
+      --text: #000;
+      --muted: #333;
+      --accent: #1565c0;
+      --accent-hover: #0d47a1;
+      --accent-2: #1976d2;
       --success: #22c55e;
       --radius: 14px;
-      --shadow: 0 18px 45px rgba(3, 8, 14, 0.35);
+      --shadow: 0 18px 45px rgba(21, 101, 192, 0.15);
+    }
+    .th-head-icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
       font-family: 'Montserrat', system-ui, sans-serif;
-      background: radial-gradient(circle at 15% 0%, rgba(239, 111, 46, 0.16), transparent 42%),
-        radial-gradient(circle at 80% 10%, rgba(45, 212, 191, 0.12), transparent 45%),
-        linear-gradient(180deg, #0b1116 0%, #0c1116 100%);
+      background: radial-gradient(circle at 15% 0%, rgba(21, 101, 192, 0.12), transparent 42%),
+        radial-gradient(circle at 80% 10%, rgba(33, 150, 243, 0.08), transparent 45%),
+        linear-gradient(180deg, #e3f2fd 0%, #e8f0fe 100%);
       color: var(--text);
       line-height: 1.5;
     }
@@ -37,16 +42,25 @@
       content: '';
       position: fixed;
       inset: 0;
-      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(21, 101, 192, 0.06) 1px, transparent 1px);
       background-size: 26px 26px;
-      opacity: 0.25;
+      opacity: 0.5;
       pointer-events: none;
       z-index: -1;
     }
     .wrap {
       max-width: 1240px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem 3rem;
+      padding: 0 1.5rem 3rem;
+    }
+    .page-header {
+      padding-top: 0;
+      padding-bottom: 1.5rem;
+      text-align: center;
+    }
+    .page-header .sub {
+      margin-left: auto;
+      margin-right: auto;
     }
     h1 {
       margin: 0 0 0.4rem 0;
@@ -63,7 +77,7 @@
     }
     .card {
       background: var(--surface-soft);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 0.3rem 0.4rem;
       margin-bottom: 0.2rem;
@@ -82,7 +96,7 @@
       z-index: 20;
     }
     /* Results table card: MUST stay full-width (same as .query-card) so table uses full horizontal space. Do not remove width/margin. */
-    /* CRITICAL: No backdrop-filter/transform here – they create a new containing block and break position:sticky on thead th. */
+    /* CRITICAL: No backdrop-filter/transform/filter here – they create a new containing block and break position:sticky on thead th. */
     .results-card {
       z-index: 1;
       position: relative;
@@ -93,19 +107,21 @@
       margin-right: -1.5rem;
       border-radius: 0;
       backdrop-filter: none;
+      transform: none;
+      filter: none;
     }
     .card h2 {
       font-size: 0.95rem;
       font-weight: 600;
       margin: 0 0 0.3rem 0;
-      color: var(--accent-2);
+      color: var(--accent);
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
     .form-row {
       display: grid;
-      grid-template-columns: 1fr 1fr minmax(14rem, 1fr) 1fr 1fr 1fr auto;
-      column-gap: 1rem;
+      grid-template-columns: 1fr 0.5fr minmax(14rem, 1fr) 1fr 1fr 1fr minmax(1rem, auto);
+      column-gap: 0.2rem;
       row-gap: 0.25rem;
       align-items: start;
       width: 100%;
@@ -113,6 +129,9 @@
     .field.submit-field {
       align-self: center;
       justify-self: end;
+      align-items: center;
+      min-width: 1rem;
+      width: fit-content;
     }
     /* Mobile / tablet: 3 inputs left, 3 inputs right, then submit and table */
     @media (max-width: 991px) {
@@ -127,14 +146,17 @@
         white-space: normal;
         text-align: left;
       }
+      .form-row .field > label {
+        justify-content: flex-start;
+      }
       .form-row .field:nth-child(1),
       .form-row .field:nth-child(3) {
-        min-width: 11rem;
+        min-width: 13rem;
       }
       .form-row .choice-group {
         overflow: visible;
         flex-wrap: nowrap;
-        min-width: min(100%, 11rem);
+        min-width: min(100%, 13rem);
       }
       .form-row .choice-option {
         white-space: nowrap;
@@ -142,19 +164,23 @@
       .field.submit-field {
         grid-column: 1 / -1;
         grid-row: 4;
-        justify-self: stretch;
+        justify-self: center;
         align-self: center;
       }
       .field.submit-field .btn {
-        width: 100%;
+        width: auto;
+        max-width: 10rem;
       }
     }
     .field.submit-field .btn {
       width: auto;
+      max-width: 10rem;
     }
     .field.submit-field .count {
       display: block;
-      margin-top: 0.5rem;
+      margin-top: 0;
+      font-size: 0.75rem;
+      white-space: nowrap;
     }
     .field {
       display: flex;
@@ -172,31 +198,49 @@
       white-space: nowrap;
       text-align: center;
     }
+    .field > label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      width: 100%;
+    }
+    .field > label .th-info-icon {
+      margin-left: 0.1rem;
+    }
     .field input:not([type="radio"]), .field select {
       font: inherit;
       font-family: 'Montserrat', system-ui, sans-serif;
-      font-size: 0.92rem;
-      padding: 0.3rem 0.55rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 6px;
-      background: rgba(11, 17, 22, 0.8);
+      font-size: 0.8rem;
+      padding: 0.2rem 0.2rem;
+      border: 1px solid #000;
+      border-radius: 1px;
+      background: #fff;
       color: var(--text);
       min-width: 0;
       min-height: 36px;
       width: 100%;
       box-sizing: border-box;
     }
+    .form-row .field:nth-child(2) {
+      align-items: center;
+    }
+    #amount {
+      width: calc(13ch + 0.5rem);
+      max-width: calc(13ch + 0.5rem);
+      box-sizing: border-box;
+    }
     .choice-group {
       display: flex;
-      gap: 1rem;
+      gap: 0.5rem;
       margin-top: 0;
       width: 100%;
-      padding: 0.3rem 0.55rem;
+      padding: 0.4rem 0.8rem;
       border: 1px solid transparent;
       box-sizing: border-box;
       min-height: 36px;
       align-items: center;
-      overflow: hidden;
+      overflow: visible;
       background: transparent;
     }
     .choice-option {
@@ -232,13 +276,17 @@
       min-width: 0;
       min-height: 46px;
       padding: 0.65rem 5rem 0.65rem 0.9rem;
-      font-size: 0.92rem;
+      font-size: 0.72rem;
       box-sizing: border-box;
+      border: 1px solid #000;
+      border-radius: 1px;
+      background: #fff;
+      color: var(--text);
     }
     .combo-clear {
       position: absolute;
       top: 50%;
-      right: 2.6rem;
+      right: 1.2rem;
       transform: translateY(-50%);
       border: none;
       background: transparent;
@@ -278,7 +326,7 @@
         min-height: 50px;
         padding: 0.85rem 5.5rem 0.85rem 1.1rem;
       }
-      .combo-clear { right: 3rem; font-size: 1rem; }
+      .combo-clear { right: 1.5rem; font-size: 1rem; }
       .combo-toggle { right: 0; font-size: 1rem; }
     }
     .combo-menu {
@@ -286,10 +334,12 @@
       left: 0;
       right: 0;
       top: calc(100% + 4px);
+      min-width: 22rem;
       max-height: 220px;
       overflow-y: auto;
-      background: #0f1720;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow-x: auto;
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: 8px;
       box-shadow: var(--shadow);
       z-index: 10000;
@@ -297,28 +347,31 @@
     }
     .combo-option {
       width: 100%;
+      min-width: max-content;
       text-align: left;
       border: none;
       background: transparent;
       color: var(--text);
       font: inherit;
       font-family: 'Montserrat', system-ui, sans-serif;
-      padding: 0.5rem 0.75rem;
+      font-size: 0.72rem;
+      white-space: nowrap;
+      padding: 0 0.5rem;
       cursor: pointer;
     }
     .combo-option:hover {
-      background: rgba(45, 212, 191, 0.12);
+      background: rgba(21, 101, 192, 0.08);
     }
     .field input:focus, .field select:focus {
       outline: none;
-      border-color: rgba(239, 111, 46, 0.65);
-      box-shadow: 0 0 0 3px rgba(239, 111, 46, 0.2);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
     }
     .btn {
       font: inherit;
       font-weight: 600;
       padding: 0.3rem 1rem;
-      background: linear-gradient(135deg, var(--accent), #f8a65a);
+      background: linear-gradient(135deg, var(--accent), #1976d2);
       color: #fff;
       border: none;
       border-radius: 6px;
@@ -328,9 +381,9 @@
       transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
       height: 36px;
       min-width: 90px;
-      box-shadow: 0 8px 20px rgba(239, 111, 46, 0.25);
+      box-shadow: 0 8px 20px rgba(21, 101, 192, 0.25);
     }
-    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(239, 111, 46, 0.3); }
+    .btn:hover { transform: translateY(-1px); box-shadow: 0 12px 24px rgba(21, 101, 192, 0.3); }
     .btn:disabled { opacity: 0.6; cursor: not-allowed; }
     .results-head {
       display: flex;
@@ -345,30 +398,33 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-    .count strong { color: var(--success); }
+    .count strong { color: var(--accent); }
     .query-summary { font-size: 0.85rem; margin: 0 0 0.75rem 0; }
     .query-summary.muted { color: var(--muted); }
-    code { font-family: 'Montserrat', system-ui, sans-serif; font-size: 0.9em; background: rgba(17, 28, 35, 0.9); padding: 0.15em 0.4em; border-radius: 4px; }
+    code { font-family: 'Montserrat', system-ui, sans-serif; font-size: 0.9em; background: rgba(21, 101, 192, 0.12); padding: 0.15em 0.4em; border-radius: 4px; color: var(--text); }
     .processing-fees-cell { position: relative; display: inline-block; padding-right: 1.4em; }
     .refundable-star { position: absolute; top: 0; right: 0; cursor: help; color: var(--accent); font-size: 0.85em; }
-    .refundable-tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.8rem; z-index: 1000; box-shadow: var(--shadow); pointer-events: none; }
+    .refundable-tooltip { position: fixed; background: #fff; border: 1px solid var(--border); padding: 0.35rem 0.6rem; border-radius: 6px; font-size: 0.8rem; z-index: 1000; box-shadow: var(--shadow); pointer-events: none; color: var(--text); }
     .table-wrap {
-      --sticky-col1-width: 20ch;
-      --sticky-col2-width: 15ch;
+      --sticky-col1-width: 15ch;
+      --sticky-col2-width: 10ch;
       --sticky-col3-width: 3.5ch;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(12, 17, 22, 0.7);
+      border-radius: 0;
+      border: 1px solid var(--border);
+      background: #fff;
       position: relative;
       z-index: 1;
     }
-    /* Single scroll container for BOTH axes so sticky left + sticky top work in Chrome */
+    /* Single scroll container: when scrolling DOWN header row sticks; when scrolling RIGHT Lender, Sector, checkbox cols stick */
+    /* Fixed height so vertical scroll happens HERE (not on page) – required for sticky header */
     .table-scroll-inner {
       overflow: auto;
       width: 100%;
+      height: 75vh;
       max-height: 75vh;
+      -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
-      scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+      scrollbar-color: rgba(21, 101, 192, 0.3) transparent;
     }
     .table-scroll-inner::-webkit-scrollbar {
       width: 8px;
@@ -378,8 +434,8 @@
       background: transparent;
     }
     .table-scroll-inner::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 4px;
+      background: rgba(21, 101, 192, 0.35);
+      border-radius: 0;
     }
     table {
       width: 100%;
@@ -392,27 +448,41 @@
     #results-table col.sticky-col-2 { width: var(--sticky-col2-width); }
     #results-table col.sticky-col-3 { width: var(--sticky-col3-width); }
     th, td {
-      text-align: left;
-      padding: 0.2rem 0.95rem;
-      line-height: 1.2;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      text-align: center;
+      padding: 0.2rem 0.3rem;
+      line-height: 1.5;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
       white-space: nowrap;
       min-height: 1.8em;
       height: 1.8em;
+    }
+    #results-table tbody tr,
+    #results-table td {
+      background: #fff !important;
+      color: #000;
       box-sizing: border-box;
     }
+    #results-table th:last-child,
+    #results-table td:last-child { border-right: none; }
     th {
       font-weight: 600;
-      color: rgba(148, 163, 184, 0.85);
-      text-transform: uppercase;
+      color: var(--muted);
       font-size: 0.68rem;
       letter-spacing: 0.04em;
       white-space: nowrap;
     }
     .th-head {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 0.35rem;
+      gap: 0.25rem;
+    }
+    .th-head-label { display: block; }
+    .th-head-icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     .th-sort-filter-icon {
       display: inline-flex;
@@ -429,7 +499,7 @@
       height: 100%;
     }
     th:hover .th-sort-filter-icon {
-      color: var(--accent-2);
+      color: var(--accent);
       opacity: 1;
     }
     #results-table thead {
@@ -441,8 +511,9 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: #0c1116;
-      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.2);
     }
     #results-table thead th:first-child {
       position: -webkit-sticky;
@@ -454,9 +525,16 @@
       min-width: var(--sticky-col1-width);
       max-width: var(--sticky-col1-width);
       box-sizing: border-box;
-      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
-      background: #0c1116;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.2);
+      background: var(--accent);
+      color: #fff;
       will-change: transform;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 1.8em;
+      text-align: left;
     }
     #results-table thead th:nth-child(2) {
       position: -webkit-sticky;
@@ -468,9 +546,16 @@
       min-width: var(--sticky-col2-width);
       max-width: var(--sticky-col2-width);
       box-sizing: border-box;
-      background: #0c1116;
-      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.2);
       will-change: transform;
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 1.8em;
+      text-align: left;
     }
     #results-table thead th:nth-child(3) {
       position: -webkit-sticky;
@@ -484,8 +569,9 @@
       box-sizing: border-box;
       padding-left: 0;
       padding-right: 0;
-      background: #0c1116;
-      box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06), 0 1px 0 rgba(255, 255, 255, 0.06);
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.2);
       will-change: transform;
     }
     #results-table thead th.offer-checkbox-header {
@@ -498,29 +584,53 @@
       justify-content: center;
       align-items: center;
     }
-    #results-table thead th.offer-checkbox-header input { cursor: pointer; accent-color: var(--accent); }
+    #results-table thead th.offer-checkbox-header input { cursor: pointer; accent-color: #fff; }
+    #results-table thead .th-sort-filter-icon,
+    #results-table thead .th-info-icon { color: rgba(255,255,255,0.95); }
+    #results-table thead .th-sort-filter-icon:hover,
+    #results-table thead .th-info-icon:hover,
+    #results-table thead .th-sort-filter-icon--active { color: #fff; opacity: 1; }
+    #results-table thead th.header-has-sort-or-filter {
+      background: #0d47a1 !important;
+      box-shadow: inset 0 0 0 3px #fff;
+    }
+    #results-table thead th.header-has-sort-or-filter:first-child,
+    #results-table thead th.header-has-sort-or-filter:nth-child(2),
+    #results-table thead th.header-has-sort-or-filter:nth-child(3) {
+      background: #0d47a1 !important;
+      box-shadow: inset 0 0 0 3px #fff;
+    }
     #results-table th[data-column-key="Course"],
     #results-table th[data-column-key="Delayed EMI payment"],
+    #results-table th[data-column-key="Qualification"],
+    #results-table th[data-column-key="Moratorium period"],
+    #results-table th[data-column-key="Preferred University"],
     #results-table td[data-column-key="Course"],
-    #results-table td[data-column-key="Delayed EMI payment"] {
+    #results-table td[data-column-key="Delayed EMI payment"],
+    #results-table td[data-column-key="Qualification"],
+    #results-table td[data-column-key="Moratorium period"],
+    #results-table td[data-column-key="Preferred University"] {
       white-space: normal;
       word-wrap: break-word;
       overflow-wrap: break-word;
       height: auto;
       min-height: 1.8em;
+      max-width: 11em;
+      box-sizing: border-box;
     }
     tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(45, 212, 191, 0.08); }
+    tr:hover td { background: #fff; }
     tr:hover td.bank-name-cell,
-    tr:hover td.sector-name-cell { background: #0f1c1a; }
+    tr:hover td.sector-name-cell { background: #fff; }
     td .num { font-family: 'Montserrat', system-ui, sans-serif; }
     td.bank-name-cell,
     td.sector-name-cell {
       vertical-align: top;
-      background: rgba(239, 111, 46, 0.08);
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      background: #fff;
+      border-right: 1px solid var(--border);
     }
     #results-table td.bank-name-cell {
+      position: -webkit-sticky;
       position: sticky;
       left: 0;
       z-index: 2;
@@ -528,11 +638,15 @@
       min-width: var(--sticky-col1-width);
       max-width: var(--sticky-col1-width);
       box-sizing: border-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      background: #0f1418;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 1.8em;
+      text-align: left;
+      background: #fff;
+      border-right: 1px solid var(--border);
+      box-shadow: 1px 0 2px rgba(21, 101, 192, 0.06);
     }
     #results-table td.sector-name-cell {
       position: -webkit-sticky;
@@ -543,11 +657,15 @@
       min-width: var(--sticky-col2-width);
       max-width: var(--sticky-col2-width);
       box-sizing: border-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      background: #0f1418;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      white-space: normal;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      height: auto;
+      min-height: 1.8em;
+      text-align: left;
+      background: #fff;
+      border-right: 1px solid var(--border);
+      box-shadow: 2px 0 4px rgba(21, 101, 192, 0.08);
     }
     #results-table td.offer-checkbox-cell {
       position: -webkit-sticky;
@@ -559,9 +677,9 @@
       max-width: var(--sticky-col3-width);
       box-sizing: border-box;
       padding: 0.2rem 0;
-      background: #0f1418;
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.25);
+      background: #fff;
+      border-right: 1px solid var(--border);
+      box-shadow: 1px 0 2px rgba(21, 101, 192, 0.06);
       vertical-align: middle;
       text-align: center;
     }
@@ -572,16 +690,24 @@
       cursor: pointer;
       accent-color: var(--accent);
     }
-    tr:hover td.offer-checkbox-cell { background: #0f1c1a; }
+    tr:hover td.offer-checkbox-cell { background: #fff; }
     td.bank-name-cell { font-weight: 600; }
     td.sector-name-cell { font-weight: 500; }
+    tr.bank-group-first td {
+      border-top: 1px solid #000;
+    }
+    tr.bank-group-last td {
+      border-bottom: 1px solid #000;
+    }
+    /* Lender/sector cells have rowspan in grouped view – give them the same bottom border so the line runs full width */
     tr.bank-group-first td.bank-name-cell,
-    tr.bank-group-first td.sector-name-cell { border-top: 2px solid var(--border); }
-    tr.bank-group-last td { border-bottom: 2px solid var(--border); }
+    tr.bank-group-first td.sector-name-cell {
+      border-bottom: 1px solid #000;
+    }
     .listed-universities-trigger {
       border: none;
       background: transparent;
-      color: var(--accent-2);
+      color: var(--accent);
       text-decoration: underline;
       cursor: pointer;
       padding: 0;
@@ -596,7 +722,7 @@
     .view-details-trigger {
       border: none;
       background: transparent;
-      color: var(--accent-2);
+      color: var(--accent);
       text-decoration: underline;
       cursor: pointer;
       padding: 0;
@@ -607,7 +733,7 @@
     .listed-popup-backdrop {
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(13, 71, 161, 0.25);
       display: none;
       align-items: center;
       justify-content: center;
@@ -618,8 +744,8 @@
       width: min(640px, 94vw);
       max-height: 78vh;
       overflow: auto;
-      background: #0f1720;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: #fff;
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 1rem;
@@ -637,8 +763,8 @@
       font-weight: 600;
     }
     .listed-popup-close {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(11, 17, 22, 0.8);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
       color: var(--text);
       border-radius: 6px;
       cursor: pointer;
@@ -668,8 +794,8 @@
       flex: 1;
       min-width: 180px;
       max-width: 320px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(11, 17, 22, 0.8);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
       color: var(--text);
       border-radius: 6px;
       padding: 0.35rem 0.55rem;
@@ -678,8 +804,8 @@
       font-size: 0.84rem;
     }
     .listed-popup-switch {
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(11, 17, 22, 0.8);
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.95);
       color: var(--text);
       border-radius: 6px;
       cursor: pointer;
@@ -706,7 +832,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 8px;
       padding: 0.6rem 0.7rem;
-      background: rgba(239, 111, 46, 0.06);
+      background: rgba(21, 101, 192, 0.06);
     }
     .details-section-title {
       margin: 0 0 0.35rem 0;
@@ -728,12 +854,17 @@
       font-size: 0.9rem;
     }
     .audience-rate {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 0.3rem;
-      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      width: 100%;
+      padding-right: 1.5rem;
+      box-sizing: border-box;
     }
     .audience-badge {
+      position: absolute;
+      right: 0;
       display: inline-block;
       border: 1px solid rgba(255, 255, 255, 0.12);
       border-radius: 999px;
@@ -741,8 +872,11 @@
       font-size: 0.64rem;
       color: var(--muted);
       white-space: nowrap;
-      background: rgba(45, 212, 191, 0.12);
+      background: rgba(21, 101, 192, 0.08);
       line-height: 1.2;
+    }
+    .audience-badge[data-audience-tooltip] {
+      cursor: pointer;
     }
     td.changed-cell {
       animation: changedCellFlash 3s ease-out;
@@ -770,7 +904,7 @@
       font-size: 0.9rem;
     }
     .loading { opacity: 0.7; pointer-events: none; }
-    .th-head-clickable { cursor: pointer; }
+    .th-sort-filter-icon { cursor: pointer; }
     .th-sort-filter-icon--active { color: var(--accent-2); opacity: 1; }
     .th-info-icon {
       display: inline-flex;
@@ -804,6 +938,7 @@
       font-weight: 400;
       color: var(--text);
       line-height: 1.4;
+      white-space: pre-line;
       display: none;
     }
     .th-info-popover.is-open { display: block; }
@@ -835,8 +970,8 @@
       font-size: 0.88rem;
       cursor: pointer;
     }
-    .column-filter-dropdown .cfd-item:hover { background: rgba(45, 212, 191, 0.15); }
-    .column-filter-dropdown .cfd-item.cfd-active { background: rgba(45, 212, 191, 0.2); font-weight: 600; }
+    .column-filter-dropdown .cfd-item:hover { background: rgba(21, 101, 192, 0.12); }
+    .column-filter-dropdown .cfd-item.cfd-active { background: rgba(21, 101, 192, 0.18); font-weight: 600; }
     .column-filter-dropdown .cfd-submenu {
       position: absolute;
       left: 100%;
@@ -858,12 +993,22 @@
     .column-filter-dropdown .cfd-condition input {
       width: 100%;
       margin-top: 0.25rem;
-      padding: 0.35rem 0.5rem;
+      padding: 0.2rem 0.2rem;
       font: inherit;
-      background: rgba(11,17,22,0.8);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 6px;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 1px;
       color: var(--text);
+      min-height: 36px;
+      box-sizing: border-box;
+    }
+    .column-filter-dropdown .cfd-condition select:focus,
+    .column-filter-dropdown .cfd-condition input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
     }
     .column-filter-dropdown .cfd-condition-ok { margin-top: 0.5rem; }
     .filter-by-values-panel {
@@ -885,12 +1030,39 @@
     .filter-by-values-panel.is-open { display: flex; }
     .filter-by-values-panel .fbv-title { font-weight: 600; margin: 0 0 0.5rem 0; font-size: 0.9rem; flex-shrink: 0; }
     .filter-by-values-panel .fbv-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem; font-size: 0.82rem; color: var(--muted); flex-shrink: 0; }
-    .filter-by-values-panel .fbv-search { width: 100%; padding: 0.35rem 0.5rem; margin-bottom: 0.5rem; font: inherit; background: rgba(11,17,22,0.8); border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: var(--text); flex-shrink: 0; box-sizing: border-box; }
+    .filter-by-values-panel .fbv-search {
+      width: 100%;
+      padding: 0.2rem 0.2rem;
+      margin-bottom: 0.5rem;
+      font: inherit;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--text);
+      min-height: 36px;
+      flex-shrink: 0;
+      box-sizing: border-box;
+    }
+    .filter-by-values-panel .fbv-search:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
+    }
     .filter-by-values-panel .fbv-list { max-height: 280px; min-height: 0; overflow-y: auto; overflow-x: hidden; }
     .filter-by-values-panel .fbv-row { display: flex; align-items: center; gap: 0.4rem; padding: 0.25rem 0; cursor: pointer; }
     .filter-by-values-panel .fbv-row:hover { background: rgba(45,212,191,0.1); }
     .filter-by-values-panel .fbv-row input { margin: 0; }
-    .filter-by-values-panel .fbv-footer { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.06); flex-shrink: 0; }
+    .filter-by-values-panel .fbv-footer { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--border); flex-shrink: 0; }
+    .cfp-column-label {
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin: 0 0 0.5rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
     .column-filter-panel {
       display: flex;
       flex-direction: column;
@@ -900,11 +1072,11 @@
       max-height: 80vh;
       overflow-y: auto;
       overflow-x: hidden;
-      background: #1c2128;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-      padding: 0.5rem 0.65rem;
+      background: #fff;
+      border: 0.5px solid var(--border);
+      border-radius: 0;
+      box-shadow: 0 10px 40px rgba(21, 101, 192, 0.2);
+      padding: 0.5rem 0.3rem;
     }
     .column-filter-panel .cfp-section {
       flex-shrink: 0;
@@ -915,7 +1087,7 @@
       font-weight: 700;
       font-size: 0.65rem;
       letter-spacing: 0.08em;
-      color: #9ca3af;
+      color: var(--muted);
       margin: 0 0 0.3rem 0;
       text-transform: uppercase;
     }
@@ -928,17 +1100,17 @@
       text-align: left;
       border: none;
       background: transparent;
-      color: #f1f5f9;
+      color: var(--text);
       padding: 0.25rem 0;
       font: inherit;
       font-size: 0.82rem;
       cursor: pointer;
       margin: 0;
     }
-    .column-filter-panel .cfp-sort-opt:hover { background: rgba(255,255,255,0.08); }
+    .column-filter-panel .cfp-sort-opt:hover { background: rgba(21,101,192,0.08); }
     .column-filter-panel .cfp-sort-opt.cfp-active {
       font-weight: 600;
-      color: var(--accent-2);
+      color: var(--accent);
     }
     .column-filter-panel .cfp-sort-opt.cfp-active::before {
       content: '';
@@ -952,37 +1124,52 @@
     }
     .column-filter-panel .cfp-clear-sort,
     .column-filter-panel .cfp-clear-filter {
-      margin-top: 0.15rem; margin-left: 0.25rem; font-size: 0.7rem; background: none; border: none; color: var(--accent-2); cursor: pointer; padding: 0;
+      margin-top: 0.15rem; margin-left: 0.25rem; font-size: 0.7rem; background: none; border: none; color: var(--accent); cursor: pointer; padding: 0;
     }
     .column-filter-panel .cfp-clear-sort:hover,
     .column-filter-panel .cfp-clear-filter:hover { text-decoration: underline; }
     .column-filter-panel .cfp-condition-select {
       width: 100%;
-      padding: 0.28rem 1.5rem 0.28rem 0.4rem;
+      padding: 0.1rem 0 0 0.1rem;
       font: inherit;
-      background: #252b33;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 5px;
-      color: #f1f5f9;
-      font-size: 0.78rem;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--text);
+      min-height: 25px;
       cursor: pointer;
+      box-sizing: border-box;
       appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23f1f5f9' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-image: url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 12 12'%3E%3Cpath fill='%23f1f5f9' d='M6 8L1 3h10z'/%3E%3C/svg%3E);
       background-repeat: no-repeat;
       background-position: right 0.35rem center;
+    }
+    .column-filter-panel .cfp-condition-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
     }
     .column-filter-panel .cfp-condition-inputs { margin-top: 0.2rem; }
     .column-filter-panel .cfp-condition-inputs input {
       width: 100%;
-      padding: 0.25rem 0.4rem;
+      padding: 0.2rem 0.2rem;
       font: inherit;
-      background: #252b33;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 5px;
-      color: #f1f5f9;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--text);
+      min-height: 36px;
       margin-top: 0.15rem;
       box-sizing: border-box;
-      font-size: 0.78rem;
+    }
+    .column-filter-panel .cfp-condition-inputs input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
     }
     .column-filter-panel .cfp-fbv-actions {
       display: flex;
@@ -995,34 +1182,62 @@
       font: inherit;
       font-size: 0.74rem;
       border: 1px solid rgba(255,255,255,0.15);
-      background: #252b33;
-      color: #f1f5f9;
+      background: #fff;
+      color: var(--text);
       border-radius: 5px;
       cursor: pointer;
     }
-    .column-filter-panel .cfp-fbv-actions button:hover { background: rgba(255,255,255,0.1); }
-    .column-filter-panel .cfp-fbv-actions .cfp-fbv-ok { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .column-filter-panel .cfp-fbv-actions button:hover { background: rgba(21,101,192,0.08); }
+    .column-filter-panel .cfp-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.5rem;
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      flex-shrink: 0;
+    }
+    .column-filter-panel .cfp-footer button {
+      padding: 0.2rem 0.35rem;
+      font: inherit;
+      font-size: 0.74rem;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: #fff;
+      color: var(--text);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .column-filter-panel .cfp-footer button:hover { background: rgba(21,101,192,0.08); }
+    .column-filter-panel .cfp-footer .cfp-ok { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .column-filter-panel .cfp-footer .cfp-ok:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
     .column-filter-panel .cfp-fbv-search {
       width: 100%;
-      padding: 0.25rem 0.4rem;
-      margin-bottom: 0.25rem;
+      padding: 0;
+      margin-bottom: 0.2rem;
       font: inherit;
-      background: #252b33;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 5px;
-      color: #f1f5f9;
-      font-size: 0.78rem;
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 0.8rem;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid var(--border);
+      border-radius: 1px;
+      color: var(--text);
+      min-height: 25px;
       box-sizing: border-box;
+    }
+    .column-filter-panel .cfp-fbv-search:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.2);
     }
     .column-filter-panel .cfp-fbv-list {
       min-height: 72px;
       max-height: 160px;
       overflow-y: auto;
       overflow-x: hidden;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid var(--border);
       border-radius: 5px;
       padding: 0.15rem;
-      background: #252b33;
+      background: #fff;
     }
     .column-filter-panel .cfp-fbv-row {
       display: flex;
@@ -1030,11 +1245,255 @@
       gap: 0.28rem;
       padding: 0.15rem 0.22rem;
       cursor: pointer;
-      color: #f1f5f9;
+      color: var(--text);
       font-size: 0.78rem;
     }
-    .column-filter-panel .cfp-fbv-row:hover { background: rgba(255,255,255,0.08); }
+    .column-filter-panel .cfp-fbv-row:hover { background: rgba(21,101,192,0.06); }
     .column-filter-panel .cfp-fbv-row input { margin: 0; }
+
+    /* ========== MOBILE ONLY (max-width: 767px). Desktop/computer layout unchanged. ========== */
+    @media (max-width: 767px) {
+      .wrap {
+        padding: 0.1rem 0 0.1rem;
+      }
+      h1 {
+        font-size: 1.35rem;
+      }
+      .sub {
+        font-size: 0.9rem;
+        margin-bottom: 1.25rem;
+      }
+      .query-card,
+      .results-card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-auto-flow: column;
+        row-gap: 0.2rem;
+        column-gap: 0.3rem;
+      }
+      .form-row .field:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+        min-width: 0;
+      }
+      .form-row .field:nth-child(2) {
+        grid-column: 1;
+        grid-row: 2;
+        min-width: 0;
+        align-items: flex-start;
+      }
+      .form-row .field:nth-child(3) {
+        grid-column: 1;
+        grid-row: 3;
+        min-width: 0;
+      }
+      .form-row .field:nth-child(4) {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+      }
+      .form-row .field:nth-child(5) {
+        grid-column: 2;
+        grid-row: 2;
+        min-width: 0;
+      }
+      .form-row .field:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+        min-width: 0;
+      }
+      .form-row .field {
+        align-items: flex-start;
+      }
+      .form-row .field label {
+        text-align: left;
+      }
+      .form-row .field > label {
+        justify-content: flex-start;
+      }
+      .form-row .choice-group {
+        min-width: 0;
+        padding-left: 0;
+        padding-right: 0.25rem;
+        gap: 0.35rem;
+        flex-wrap: nowrap;
+      }
+      .form-row .field:nth-child(3) .choice-group {
+        padding-right: 0;
+      }
+      .form-row .choice-option span {
+        font-size: 0.82rem;
+      }
+      .field.submit-field {
+        grid-column: 2;
+        grid-row: 4;
+        justify-self: end;
+        align-self: start;
+        align-items: flex-end;
+      }
+      .field.submit-field .btn {
+        width: auto;
+        max-width: 7rem;
+        min-height: 22px;
+        font-size: 0.88rem;
+        padding: 0.1rem 0.65rem;
+      }
+      .field.submit-field .count {
+        text-align: right;
+        margin-top: 0;
+      }
+      .field input:not([type="radio"]),
+      .field select {
+        min-height: 0;
+        font-size: 15px;
+      }
+      #amount {
+        width: 100%;
+        max-width: none;
+        text-align: left;
+      }
+      .combo input {
+        min-height: 48px;
+        font-size: 0.72rem;
+      }
+      .combo-menu {
+        min-width: 0;
+        max-width: min(22rem, 95vw);
+        max-height: 50vh;
+      }
+      .table-scroll-inner {
+        max-height: 60vh;
+        -webkit-overflow-scrolling: touch;
+      }
+      .table-wrap {
+        --sticky-col1-width: 10ch;
+        --sticky-col2-width: 8ch;
+        --sticky-col3-width: 3.25ch;
+      }
+      #results-table col.sticky-col-1 { width: var(--sticky-col1-width); }
+      #results-table col.sticky-col-2 { width: var(--sticky-col2-width); }
+      #results-table col.sticky-col-3 { width: var(--sticky-col3-width); }
+      table {
+        font-size: 0.72rem;
+      }
+      th, td {
+        padding: 0.1rem 0.2rem;
+        min-height: 2.2em;
+        height: auto;
+      }
+      th {
+        font-size: 0.64rem;
+      }
+      #results-table thead th:first-child {
+        width: var(--sticky-col1-width);
+        min-width: var(--sticky-col1-width);
+        max-width: var(--sticky-col1-width);
+      }
+      #results-table thead th:nth-child(2) {
+        left: var(--sticky-col1-width);
+        width: var(--sticky-col2-width);
+        min-width: var(--sticky-col2-width);
+        max-width: var(--sticky-col2-width);
+      }
+      #results-table thead th:nth-child(3) {
+        left: calc(var(--sticky-col1-width) + var(--sticky-col2-width));
+        width: var(--sticky-col3-width);
+        min-width: var(--sticky-col3-width);
+        max-width: var(--sticky-col3-width);
+      }
+      #results-table td.bank-name-cell {
+        width: var(--sticky-col1-width);
+        min-width: var(--sticky-col1-width);
+        max-width: var(--sticky-col1-width);
+      }
+      #results-table td.sector-name-cell {
+        left: var(--sticky-col1-width);
+        width: var(--sticky-col2-width);
+        min-width: var(--sticky-col2-width);
+        max-width: var(--sticky-col2-width);
+      }
+      #results-table td.offer-checkbox-cell {
+        left: calc(var(--sticky-col1-width) + var(--sticky-col2-width));
+        width: var(--sticky-col3-width);
+        min-width: var(--sticky-col3-width);
+        max-width: var(--sticky-col3-width);
+      }
+      .results-head {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+      }
+      .listed-popup-backdrop {
+        padding: 0.5rem;
+        align-items: flex-start;
+        overflow-y: auto;
+      }
+      .listed-popup {
+        width: min(640px, 96vw);
+        max-width: 100%;
+        max-height: 85vh;
+        padding: 0.85rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      .listed-popup-head {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .listed-popup-title {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: 0.95rem;
+      }
+      .listed-popup-meta {
+        font-size: 0.8rem;
+      }
+      .details-sections {
+        min-width: 0;
+      }
+      .details-section {
+        min-width: 0;
+        padding: 0.5rem 0.6rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .details-section-title {
+        font-size: 0.78rem;
+      }
+      .details-section-list {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+      .details-section-list li {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.4;
+      }
+      .details-section-empty {
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+      .listed-popup-search {
+        max-width: none;
+      }
+      .column-filter-panel,
+      .column-filter-dropdown,
+      .filter-by-values-panel {
+        max-width: min(320px, 92vw);
+      }
+      .th-info-popover {
+        max-width: min(280px, 90vw);
+      }
+    }
   </style>
 </head>
 <body>
@@ -1044,7 +1503,7 @@
     <div class="card query-card">
       <form id="query-form" class="form-row">
         <div class="field">
-          <label for="gender-male">Gender</label>
+          <label for="gender-male">Gender<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="1. Up to ~0.5% lower interest for female students (selected banks).&#10;2. Preferential rates by gender (M/F/B – see Interest rate column)."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
           <div class="choice-group" role="radiogroup" aria-label="Gender">
             <label class="choice-option" for="gender-male">
               <input type="radio" id="gender-male" name="gender" value="Male">
@@ -1057,11 +1516,11 @@
           </div>
         </div>
         <div class="field">
-          <label for="amount">Loan amount (₹)</label>
-          <input type="number" id="amount" name="amount" min="1" max="99999999" step="1" value="7000000" placeholder="e.g. 7000000">
+          <label for="amount">Loan amount (₹)<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="Loans above ₹7.5 lakhs typically require security."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
+          <input type="text" id="amount" name="amount" inputmode="numeric" maxlength="14" value="7000000" placeholder="e.g. 70,00,000" autocomplete="off" data-raw-max="99999999">
         </div>
         <div class="field">
-          <label for="secured-yes">Loan type</label>
+          <label for="secured-yes">Loan type<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="1. Loans above ₹7.5 lakhs typically require security.&#10;2. Secured loans have ~1.5%–2% lower interest than unsecured."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
           <div class="choice-group" role="radiogroup" aria-label="Loan type">
             <label class="choice-option" for="secured-yes">
               <input type="radio" id="secured-yes" name="secured" value="true" checked>
@@ -1074,7 +1533,7 @@
           </div>
         </div>
         <div class="field">
-          <label for="country">Country</label>
+          <label for="country">Country<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="Some lenders offer country and university specific rates. Enter both for accurate results."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
           <div class="combo" id="country-combo">
             <input id="country" name="country" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="country-clear" aria-label="Clear country">x</button>
@@ -1083,7 +1542,7 @@
           </div>
         </div>
         <div class="field">
-          <label for="university">University</label>
+          <label for="university">University<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="Some lenders offer country and university specific rates. Enter both for accurate results."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
           <div class="combo" id="university-combo">
             <input id="university" name="university" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="university-clear" aria-label="Clear university">x</button>
@@ -1093,7 +1552,7 @@
           <p id="institutes-hint" class="query-summary muted" style="display:none; margin:0.25rem 0 0 0; font-size:0.8rem;">Open this page from the server (e.g. <code>http://localhost:3080</code> after running <code>npm start</code>) to load countries and universities.</p>
         </div>
         <div class="field">
-          <label for="levelOfStudy">Level of study</label>
+          <label for="levelOfStudy">Level of study<span class="th-info-icon field-info-icon" aria-label="Info" data-tooltip="Level of study (e.g. Postgraduate, Undergraduate). Affects course and preferred university."><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></span></label>
           <div class="combo" id="level-combo">
             <input id="levelOfStudy" name="levelOfStudy" placeholder="Select or search" autocomplete="off">
             <button type="button" class="combo-clear" id="level-clear" aria-label="Clear level of study">x</button>
@@ -1163,6 +1622,7 @@
     let columnFilterDropdownEl = null;
     let filterByValuesPanelEl = null;
     let headerInfoPopoverEl = null;
+    let fieldLabelPopoverCloseTimeout = null;
     let lastRenderedRows = [];
     let lastRenderParams = null;
     let countryOptions = [];
@@ -1179,6 +1639,48 @@
     const NOT_IN_LIST_UNIVERSITY = 'Not in the list';
     const UNIVERSITY_PLACEHOLDER_DEFAULT = 'Select or search';
     const UNIVERSITY_PLACEHOLDER_COUNTRY_NOT_LISTED = 'Search by university';
+
+    /** Indian comma style: 1,23,45,678 (2-2-2-3 from left). Max 8 digits. */
+    function formatIndianAmount(str) {
+      const digits = String(str).replace(/\D/g, '').slice(0, 8);
+      if (digits.length === 0) return '';
+      if (digits.length <= 3) return digits;
+      let result = digits.slice(-3);
+      let s = digits.slice(0, -3);
+      while (s.length > 0) {
+        result = s.slice(-2) + ',' + result;
+        s = s.slice(0, -2);
+      }
+      return result;
+    }
+
+    function setAmountDisplay(value) {
+      const el = form.amount;
+      if (!el) return;
+      const digits = String(value).replace(/\D/g, '').slice(0, 8);
+      el.value = formatIndianAmount(digits);
+    }
+
+    function bindAmountInput() {
+      const el = form.amount;
+      if (!el) return;
+      el.addEventListener('input', function () {
+        const start = this.selectionStart;
+        const oldValue = this.value;
+        const digitsBefore = (oldValue.slice(0, start).match(/\d/g) || []).length;
+        const digits = oldValue.replace(/\D/g, '').slice(0, 8);
+        const formatted = formatIndianAmount(digits);
+        this.value = formatted;
+        let newPos = 0;
+        let count = 0;
+        for (let i = 0; i < formatted.length && count < digitsBefore; i++) {
+          if (/\d/.test(formatted[i])) count++;
+          newPos = i + 1;
+        }
+        this.setSelectionRange(newPos, newPos);
+      });
+      setAmountDisplay(el.value);
+    }
 
     function showError(msg) {
       errorZone.innerHTML = msg ? `<div class="error">${msg}</div>` : '';
@@ -1288,6 +1790,13 @@
       if (g === 'male') return 'M';
       if (g === 'female') return 'F';
       return 'N/A';
+    }
+    function getAudienceTooltip(audience) {
+      const a = (audience || '').toUpperCase();
+      if (a === 'B') return 'For both, Male & Female';
+      if (a === 'M') return 'Male only';
+      if (a === 'F') return 'Female only';
+      return '';
     }
 
     function getInterestRateNumber(rateValue) {
@@ -1496,7 +2005,7 @@
       return parts.length ? parts.join(', ') : fmtObj(e);
     }
 
-    // Columns and sources per spec: Interest Rate→interest.rate, Type→interest.type, Preferred University right of Type of Rate, Security→security.coverageDisplay (when secured), Repayment→repayment_tenure.tenure, Margin→margin, Processing fees→processing_fees.displayText, Moratorium→moratorium.periodDisplay/paymentDuring, Course→institute.json (bank+university), rest from shared/_keyTree
+    // Columns and sources per spec: Interest Rate→interest.rate, Type→interest.type, Preferred University right of Type of Rate, Security→security.coverageDisplay (when secured), Repayment→repayment_tenure.tenure, Margin→margin, Processing fees→processing_fees.displayText, Moratorium→moratorium.periodDisplay (+ " *" when paymentDuring is Mandatory), Course→institute.json (bank+university), rest from shared/_keyTree
     function getColumns(secured, selectedUniversity, selectedCountry) {
       const universityNorm = normalizeText(selectedUniversity);
       const countryNorm = normalizeText(selectedCountry);
@@ -1506,15 +2015,50 @@
       const cols = ['Lender', 'Sector', 'Interest Rate', 'Type of Rate'];
       if (showPreferredUniversity) cols.push('Preferred University');
       if (secured) cols.push('Security coverage %');
-      cols.push('Repayment Tenure', 'Margin (%)', 'Processing fees', 'Moratorium period', 'Payment during moratorium', 'Course', 'Nationality', 'Age', 'Qualification', 'University strictness', 'Delayed EMI payment', 'Avg time to sanction', 'Dedicated case manager', 'Onboarding process');
+      cols.push('Repayment Tenure', 'Margin (%)', 'Processing fees', 'Moratorium period', 'Course', 'Nationality', 'Age', 'Qualification', 'University strictness', 'Delayed EMI payment', 'Avg time to sanction', 'Dedicated case manager', 'Onboarding process');
       return cols;
     }
 
+    // Display labels for column headers. Keys must match getColumns() and COLUMN_TYPE. Change values here to rename headings.
+    const COLUMN_LABELS = {
+      'Lender': 'Lender',
+      'Sector': 'Sector',
+      'Interest Rate': 'Interest rate (% p.a.)',
+      'Type of Rate': 'Type of Rate',
+      'Preferred University': 'Preferred University',
+      'Security coverage %': 'Security coverage %',
+      'Repayment Tenure': 'Repayment tenure (Max. in years)',
+      'Margin (%)': 'Margin (% of loan amt.)',
+      'Processing fees': 'Processing fees (% of loan amt.)',
+      'Moratorium period': 'Moratorium period (Course period + Months)',
+      'Course': 'Course',
+      'Nationality': 'Nationality',
+      'Age': 'Age (Min. in years)',
+      'Qualification': 'Qualification',
+      'University strictness': 'University strictness',
+      'Delayed EMI payment': 'Delayed EMI payment ( per month)',
+      'Avg time to sanction': 'Avg time to sanction (in B. days)',
+      'Dedicated case manager': 'Dedicated case manager',
+      'Onboarding process': 'Onboarding process'
+    };
+
     // Optional tooltip text for column headers (hover + click). Add entries to show an info icon with this text.
     const COLUMN_HEADER_TOOLTIP = {
-      'Interest Rate': 'Annual interest rate (e.g. fixed or floating) offered for this offer.',
+      'Interest Rate': 'Calculation Methodology - Simple interest during the moratorium period; compound interest thereafter (except Tata Capital, which uses simple interest throughout).',
+      'Type of Rate': '1. Floating - Linked to floating base rate + Risk premium (depending on profile)\n2. Fixed - Linked to fixed base rate + Risk premium (depending on profile)',
       'Preferred University': 'Whether this lender has the selected university in their preferred list.',
-      'Security coverage %': 'Percentage of the loan amount that must be secured (e.g. collateral).'
+      'Security coverage %': 'Percentage of the loan amount that must be secured (e.g. collateral).',
+      'Repayment Tenure': 'Payable in Equal Monthly Installments (EMIs).',
+      'Margin (%)': '1. Amount to be paid by student\'s own pocket.\n2. Scholarship/assistantship can be included\n3. To be provided yearly or at first disbursement on a pro-rata basis',
+      'Processing fees': 'To process your application lenders charge processing fee. Excluding taxes.',
+      'Moratorium period': 'No payment period. EMI starts after moratorium period.\n\nPayment during moratorium:\n1. Options - Payment can be in Partial Simple Interest (PSI), Simple Interest (SI) or EMI\n2. If not paid, it\'s added to principal & to be paid in EMIs after moratorium period.\n3. * Mandatory',
+      'Nationality': '1. OCI – Overseas Citizen of India\n2. PIO – Person of Indian Origin\n3. NRI – Non-Resident Indian',
+      'Age': 'Provable as on the date of application',
+      'Qualification': 'Required qualification to be eligible',
+      'Delayed EMI payment': 'For the delayed period for the default amount',
+      'Avg time to sanction': 'After all the documents are submitted',
+      'Dedicated case manager': 'Handles Documentation, Application, Paperwork, Disbursement & others',
+      'Onboarding process': 'Application process'
     };
 
     const COLUMN_TYPE = {
@@ -1524,18 +2068,17 @@
       'Type of Rate': 'text',
       'Preferred University': 'text',
       'Security coverage %': 'number',
-      'Repayment Tenure': 'text',
+      'Repayment Tenure': 'number',
       'Margin (%)': 'number',
-      'Processing fees': 'text',
-      'Moratorium period': 'text',
-      'Payment during moratorium': 'text',
+      'Processing fees': 'number',
+      'Moratorium period': 'number',
       'Course': 'text',
       'Nationality': 'text',
       'Age': 'text',
       'Qualification': 'text',
       'University strictness': 'text',
       'Delayed EMI payment': 'text',
-      'Avg time to sanction': 'text',
+      'Avg time to sanction': 'number',
       'Dedicated case manager': 'text',
       'Onboarding process': 'text'
     };
@@ -1565,7 +2108,64 @@
       return s === '' ? '(Blanks)' : s;
     }
 
+    function getFirstNumberOfRange(str) {
+      if (str == null || typeof str !== 'string') return NaN;
+      const s = str.trim();
+      const dash = s.indexOf('-');
+      if (dash > 0) {
+        const first = parseFloat(s.slice(0, dash).trim(), 10);
+        return Number.isFinite(first) ? first : NaN;
+      }
+      const n = parseFloat(s, 10);
+      return Number.isFinite(n) ? n : NaN;
+    }
+    function getFirstNumberFromLeft(str) {
+      if (str == null || typeof str !== 'string') return NaN;
+      const m = String(str).trim().match(/\d+/);
+      if (!m) return NaN;
+      const n = parseFloat(m[0], 10);
+      return Number.isFinite(n) ? n : NaN;
+    }
+    function getFirstFullNumberFromLeft(str) {
+      if (str == null || typeof str !== 'string') return NaN;
+      const s = String(str).trim();
+      const m = s.match(/[\d,]+\.?\d*|\.\d+/);
+      if (!m) return NaN;
+      const numStr = m[0].replace(/,/g, '');
+      const n = parseFloat(numStr, 10);
+      return Number.isFinite(n) ? n : NaN;
+    }
     function getCellComparableForSort(cellValue, columnKey) {
+      if (columnKey === 'Avg time to sanction') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstNumberOfRange(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
+      if (columnKey === 'Security coverage %') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstNumberFromLeft(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
+      if (columnKey === 'Repayment Tenure') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstNumberFromLeft(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
+      if (columnKey === 'Margin (%)') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstNumberFromLeft(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
+      if (columnKey === 'Moratorium period') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstNumberFromLeft(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
+      if (columnKey === 'Processing fees') {
+        const str = String(cellValue != null ? cellValue : '').trim();
+        const firstNum = getFirstFullNumberFromLeft(str);
+        return Number.isFinite(firstNum) ? firstNum : (str || '');
+      }
       const type = getColumnType(columnKey);
       if (type === 'number') {
         const n = Number(cellValue);
@@ -1578,11 +2178,20 @@
     const INFO_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>';
     function thWithIcon(label, columnKey) {
       const key = columnKey != null ? columnKey : label;
-      const activeClass = (columnFilterState[key] || columnSortState[key]) ? ' th-sort-filter-icon--active' : '';
-      const icon = '<span class="th-sort-filter-icon' + activeClass + '" aria-label="Sort or filter" title="' + ((columnFilterState[key] || columnSortState[key]) ? 'Filter applied' : 'Sort or filter') + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
-      const tooltipText = COLUMN_HEADER_TOOLTIP[key] != null ? COLUMN_HEADER_TOOLTIP[key] : (label || key);
+      const displayLabel = (COLUMN_LABELS[key] != null ? COLUMN_LABELS[key] : key);
+      const hasSortOrFilter = !!(columnFilterState[key] || columnSortState[key]);
+      const activeClass = hasSortOrFilter ? ' th-sort-filter-icon--active' : '';
+      const icon = '<span class="th-sort-filter-icon' + activeClass + '" aria-label="Sort or filter" title="' + (hasSortOrFilter ? 'Filter applied' : 'Sort or filter') + '"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M7 12h10M10 18h4"/></svg></span>';
+      const tooltipText = COLUMN_HEADER_TOOLTIP[key] != null ? COLUMN_HEADER_TOOLTIP[key] : (displayLabel || key);
       const infoIconHtml = '<span class="th-info-icon" aria-label="Info" title="' + escapeHtml(tooltipText) + '" data-column-tooltip="' + escapeHtml(tooltipText) + '">' + INFO_ICON_SVG + '</span>';
-      return '<th data-column-key="' + escapeHtml(key) + '"><span class="th-head th-head-clickable">' + escapeHtml(label) + infoIconHtml + icon + '</span></th>';
+      const iconsRow = '<span class="th-head-icons">' + infoIconHtml + icon + '</span>';
+      let labelHtml = escapeHtml(displayLabel);
+      const parenIdx = displayLabel.indexOf(' (');
+      if (parenIdx !== -1) {
+        labelHtml = escapeHtml(displayLabel.slice(0, parenIdx)) + '<br>' + escapeHtml(displayLabel.slice(parenIdx + 1));
+      }
+      const thClass = hasSortOrFilter ? ' class="header-has-sort-or-filter"' : '';
+      return '<th' + thClass + ' data-column-key="' + escapeHtml(key) + '"><span class="th-head th-head-clickable"><span class="th-head-label">' + labelHtml + '</span>' + iconsRow + '</span></th>';
     }
     function buildHeaderRow(cols) {
       const firstTwo = cols.slice(0, 2).map(function(c) { return thWithIcon(c, c); }).join('');
@@ -1784,8 +2393,9 @@
       const tenureVal = o.repayment_tenure != null && typeof o.repayment_tenure === 'object' ? (o.repayment_tenure.tenure ?? 'N/A') : (o.repayment_tenure ?? 'N/A');
       const processingVal = o.processing_fees != null && typeof o.processing_fees === 'object' ? (o.processing_fees.displayText ?? 'N/A') : 'N/A';
       const moratorium = o.moratorium;
-      const periodDisplay = moratorium != null && typeof moratorium === 'object' ? (moratorium.periodDisplay ?? 'N/A') : 'N/A';
-      const paymentDuring = moratorium != null && typeof moratorium === 'object' ? (moratorium.paymentDuring ?? 'N/A') : 'N/A';
+      const periodBase = moratorium != null && typeof moratorium === 'object' ? (moratorium.periodDisplay ?? 'N/A') : 'N/A';
+      const paymentDuring = moratorium != null && typeof moratorium === 'object' ? (moratorium.paymentDuring ?? '') : '';
+      const periodDisplay = (periodBase || 'N/A') + (String(paymentDuring).trim() === 'Mandatory' ? ' *' : '');
       const instituteChanges = o && o.institute ? o.institute.changes : null;
       const isInstituteWiseChanges = isInstituteChangesEnabled(o && o.institute ? o.institute : null);
       const instituteCriteria = o && o.institute && o.institute.criteria != null ? String(o.institute.criteria).trim() : '';
@@ -1803,7 +2413,7 @@
         } else if (isInstituteWiseChanges && lenderHasSelectedUniversity) {
           preferredUniversity = {
             kind: 'listedUniversityOnly',
-            label: instituteCriteria ? ('Listed Only - ' + instituteCriteria) : 'Listed Only',
+            label: 'Listed (Check list)',
             bankName: row.bankName,
             criteria: instituteCriteria
           };
@@ -1829,7 +2439,7 @@
       const courseValue = (!isUniversityNotInList && isPreferredUniversity)
         ? 'N/A'
         : (o.course ?? 'N/A');
-      const rateLabel = o.interest?.rate != null ? o.interest.rate + '%' : 'N/A';
+      const rateLabel = o.interest?.rate != null ? o.interest.rate : 'N/A';
       const rateNumber = getInterestRateNumber(o.interest?.rate);
       const audienceLabel = getAudienceLabel(o.gender);
       let cells = [
@@ -1845,7 +2455,7 @@
       if (includePreferredUniversity) cells.push(preferredUniversity);
       if (secured) cells.push(coverageStr(o));
       const marginValue = (o.margin != null && Number(o.margin) === 99) ? 'N/A' : (o.margin ?? 'N/A');
-      cells.push(tenureVal, marginValue, processingVal, periodDisplay, paymentDuring, courseValue);
+      cells.push(tenureVal, marginValue, processingVal, periodDisplay, courseValue);
       cells = cells.concat(sharedCells(shared, o));
       return cells;
     }
@@ -1855,12 +2465,18 @@
       return Object.keys(columnFilterState).some(function(k) { return columnFilterState[k]; });
     }
 
+    function getNumericForFilter(raw, columnKey) {
+      const comparable = getCellComparableForSort(raw, columnKey);
+      if (typeof comparable === 'number' && Number.isFinite(comparable)) return comparable;
+      const n = Number(raw);
+      return Number.isFinite(n) ? n : NaN;
+    }
     function rowMatchesCondition(row, columnKey, filterSpec, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity) {
       const raw = getCellValueForColumn(row, columnKey, dataColumns, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
       const displayStr = getCellDisplayForFilterValues(raw);
       const str = String(raw != null ? raw : '').trim();
       const strLower = str.toLowerCase();
-      const num = Number(raw);
+      const num = getNumericForFilter(raw, columnKey);
       const isNum = Number.isFinite(num);
       const colType = getColumnType(columnKey);
       const op = filterSpec.operator;
@@ -1940,12 +2556,20 @@
         previousRenderSnapshot = { byExactKey: new Map(), byGroupKey: new Map() };
         return;
       }
-      countEl.innerHTML = '<strong>' + flatRows.length + '</strong> offer' + (flatRows.length === 1 ? '' : 's') + '.';
+      const flatBankCount = new Set(flatRows.map(function(r) { return r.bankName || ''; })).size;
+      countEl.innerHTML = '<strong>' + flatRows.length + '</strong> offer' + (flatRows.length === 1 ? '' : 's') + ' from <strong>' + flatBankCount + '</strong> bank' + (flatBankCount === 1 ? '' : 's') + '.';
       const canDiffWithPrevious = ENABLE_DIFF_HIGHLIGHT && !!previousRenderSnapshot;
       const currentSnapshotEntries = [];
-      const tableRows = flatRows.map(function(row) {
+      const tableRows = flatRows.map(function(row, rowIdx) {
         const bankName = row.bankName || '';
         const sector = row.sector != null ? String(row.sector).trim() : 'N/A';
+        const prevBank = rowIdx > 0 ? (flatRows[rowIdx - 1].bankName || '') : '';
+        const nextBank = rowIdx < flatRows.length - 1 ? (flatRows[rowIdx + 1].bankName || '') : '';
+        const isFirstInBank = bankName !== prevBank;
+        const isLastInBank = bankName !== nextBank;
+        let trClass = ' bank-block';
+        if (isFirstInBank) trClass += ' bank-group-first';
+        if (isLastInBank) trClass += ' bank-group-last';
         const cells = getOfferCells(row, secured, selectedUniversity, institutesList, levelOfStudy, includePreferredUniversity);
         const comparableCells = cells.map(cellComparableValue);
         const comparableByColumn = {};
@@ -1958,9 +2582,12 @@
           if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
             const rate = escapeHtml(cell.rate || 'N/A');
             const audience = escapeHtml(cell.audience || 'N/A');
+            const audienceTooltip = getAudienceTooltip(cell.audience);
             const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
             const searchValue = [cell.rateText || '', cell.audience || ''].join(' ').trim();
-            return '<td class="' + [cls, 'interest-rate-cell'].filter(Boolean).join(' ') + '"' + dataCol + ' data-rate-number="' + escapeHtml(sortValue) + '" data-rate-text="' + escapeHtml(searchValue) + '"><span class="audience-rate"><span>' + rate + '</span><span class="audience-badge">' + audience + '</span></span></td>';
+            const badgeTitle = audienceTooltip ? ' title="' + escapeHtml(audienceTooltip) + '"' : '';
+            const badgeDataTooltip = audienceTooltip ? ' data-audience-tooltip="' + escapeHtml(audienceTooltip) + '"' : '';
+            return '<td class="' + [cls, 'interest-rate-cell'].filter(Boolean).join(' ') + '"' + dataCol + ' data-rate-number="' + escapeHtml(sortValue) + '" data-rate-text="' + escapeHtml(searchValue) + '"><span class="audience-rate"><span>' + rate + '</span><span class="audience-badge"' + badgeTitle + badgeDataTooltip + '>' + audience + '</span></span></td>';
           }
           if (cell && typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
             const label = escapeHtml(cell.label || 'Listed Only');
@@ -1971,7 +2598,7 @@
           return '<td class="' + cls + '"' + dataCol + '>' + (cell != null ? escapeHtml(String(cell)) : 'N/A') + '</td>';
         });
         const checkboxTd = '<td class="offer-checkbox-cell"><input type="checkbox" class="offer-checkbox" aria-label="Select offer"></td>';
-        return '<tr><td class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td class="sector-name-cell">' + escapeHtml(sector) + '</td>' + checkboxTd + tds.join('') + '</tr>';
+        return '<tr class="' + trClass.trim() + '"><td class="bank-name-cell"><span class="lender-name">' + escapeHtml(bankName) + '</span><button type="button" class="view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">View Details</button></td><td class="sector-name-cell">' + escapeHtml(sector) + '</td>' + checkboxTd + tds.join('') + '</tr>';
       });
       resultsBody.innerHTML = tableRows.join('');
       const byExactKey = new Map();
@@ -2053,6 +2680,7 @@
       var hasFilter = filterState && (filterState.type === 'condition' || filterState.type === 'values');
       panel.className = 'filter-by-values-panel column-filter-panel';
       panel.innerHTML =
+        '<div class="cfp-column-label">Filter column: ' + escapeHtml(columnKey) + '</div>' +
         '<div class="cfp-section">' +
           '<div class="cfp-section-title">Sort</div>' +
           '<div class="cfp-sort-opts">' +
@@ -2072,11 +2700,13 @@
           '<div class="cfp-fbv-actions">' +
             '<button type="button" class="cfp-fbv-select-all">Select all</button>' +
             '<button type="button" class="cfp-fbv-clear">Clear all</button>' +
-            '<button type="button" class="cfp-fbv-cancel">Cancel</button>' +
-            '<button type="button" class="cfp-fbv-ok">OK</button>' +
           '</div>' +
           '<input type="text" class="cfp-fbv-search" placeholder="Search values..." autocomplete="off"/>' +
           '<div class="cfp-fbv-list"></div>' +
+        '</div>' +
+        '<div class="cfp-footer">' +
+          '<button type="button" class="cfp-cancel">Cancel</button>' +
+          '<button type="button" class="cfp-ok">OK</button>' +
         '</div>';
       panel.dataset.columnKey = columnKey;
       function getThForColumn(key) {
@@ -2092,13 +2722,14 @@
       sortOpts.forEach(function(btn) {
         if (sortState && sortState.direction === btn.dataset.dir) btn.classList.add('cfp-active');
         btn.onclick = function() {
-          columnSortState = {};
-          columnSortState[columnKey] = { direction: btn.dataset.dir };
+          if (sortState && sortState.direction === btn.dataset.dir) {
+            delete columnSortState[columnKey];
+          } else {
+            columnSortState = {};
+            columnSortState[columnKey] = { direction: btn.dataset.dir };
+          }
+          panel.classList.remove('is-open');
           if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
-          requestAnimationFrame(function() {
-            var th = getThForColumn(columnKey);
-            if (th) openColumnFilterPanel(columnKey, th); else panel.classList.remove('is-open');
-          });
         };
       });
       var condSelect = panel.querySelector('.cfp-condition-select');
@@ -2119,23 +2750,13 @@
         }
       }
       renderConditionInputs(condSelect.value);
-      condSelect.onchange = function() {
-        renderConditionInputs(condSelect.value);
-        var op = FILTER_OPERATORS.find(function(o) { return o.id === condSelect.value; });
-        if (op && op.inputKind === 'none') {
-          delete columnFilterState[columnKey];
-          if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
-        }
-      };
+      condSelect.onchange = function() { renderConditionInputs(condSelect.value); };
       var clearSortBtn = panel.querySelector('.cfp-clear-sort');
       if (clearSortBtn) {
         clearSortBtn.onclick = function() {
           delete columnSortState[columnKey];
+          panel.classList.remove('is-open');
           if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
-          requestAnimationFrame(function() {
-            var th = getThForColumn(columnKey);
-            if (th) openColumnFilterPanel(columnKey, th); else panel.classList.remove('is-open');
-          });
         };
       }
       var clearFilterBtn = panel.querySelector('.cfp-clear-filter');
@@ -2159,8 +2780,6 @@
         var value2 = val2El ? val2El.value : '';
         columnFilterState[columnKey] = { type: 'condition', condition: { operator: opId, value: value, value2: value2 } };
       }
-      condInputs.addEventListener('change', function() { applyCondition(); if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry); });
-      condInputs.addEventListener('blur', function() { applyCondition(); if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry); });
       var includePreferredUniversity = !!normalizeText(lastRenderParams.selectedUniversity) && normalizeText(lastRenderParams.selectedUniversity) !== normalizeText(NOT_IN_LIST_UNIVERSITY) && normalizeText(lastRenderParams.selectedCountry) !== normalizeText(NOT_IN_LIST_COUNTRY);
       var cols = getColumns(lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.selectedCountry);
       var dataColumns = cols.slice(2);
@@ -2205,18 +2824,21 @@
           row.style.display = q && !text.includes(q) ? 'none' : '';
         });
       };
-      panel.querySelector('.cfp-fbv-cancel').onclick = function() {
+      panel.querySelector('.cfp-cancel').onclick = function() {
         panel.classList.remove('is-open');
         filterByValuesDraft = null;
       };
-      panel.querySelector('.cfp-fbv-ok').onclick = function() {
-        var selected = filterByValuesDraft.selectedValues.slice();
-        var allVals = filterByValuesDraft.allValues;
-        var effectivelyNoFilter = selected.length === allVals.length && selected.every(function(v) { return allVals.indexOf(v) !== -1; });
-        if (effectivelyNoFilter) {
-          delete columnFilterState[columnKey];
-        } else {
-          columnFilterState[columnKey] = { type: 'values', selectedValues: selected };
+      panel.querySelector('.cfp-ok').onclick = function() {
+        applyCondition();
+        var chks = listEl.querySelectorAll('input:checked');
+        var selected = Array.from(chks).map(function(c) { return c.dataset.value; });
+        var allVals = filterByValuesDraft ? filterByValuesDraft.allValues : [];
+        if (allVals.length > 0) {
+          if (selected.length === 0) {
+            delete columnFilterState[columnKey];
+          } else if (selected.length < allVals.length || !selected.every(function(v) { return allVals.indexOf(v) !== -1; })) {
+            columnFilterState[columnKey] = { type: 'values', selectedValues: selected };
+          }
         }
         panel.classList.remove('is-open');
         filterByValuesDraft = null;
@@ -2228,16 +2850,22 @@
         anchorTh.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'auto' });
       }
       var rect = thEl.getBoundingClientRect();
-      panel.style.left = rect.left + 'px';
-      panel.style.top = (rect.bottom + 4) + 'px';
       panel.classList.add('is-open');
       var panelRect = panel.getBoundingClientRect();
       var vw = window.innerWidth || document.documentElement.clientWidth;
       var vh = window.innerHeight || document.documentElement.clientHeight;
-      if (panelRect.right > vw) panel.style.left = (vw - panelRect.width - 8) + 'px';
-      if (panelRect.left < 8) panel.style.left = '8px';
-      if (panelRect.bottom > vh) panel.style.top = (vh - panelRect.height - 8) + 'px';
-      if (panelRect.top < 8) panel.style.top = '8px';
+      var gap = 4;
+      var topBelow = rect.bottom + gap;
+      var topAbove = rect.top - panelRect.height - gap;
+      if (topBelow + panelRect.height <= vh - 8) {
+        panel.style.top = topBelow + 'px';
+      } else if (topAbove >= 8) {
+        panel.style.top = topAbove + 'px';
+      } else {
+        panel.style.top = Math.max(8, Math.min(topBelow, vh - panelRect.height - 8)) + 'px';
+      }
+      var leftUnderColumn = Math.max(8, Math.min(rect.left, vw - panelRect.width - 8));
+      panel.style.left = leftUnderColumn + 'px';
     }
 
     function ensureHeaderInfoPopover() {
@@ -2266,6 +2894,54 @@
       if (top + 120 > (window.innerHeight || document.documentElement.clientHeight)) top = Math.max(8, rect.top - 10);
       popover.style.left = left + 'px';
       popover.style.top = top + 'px';
+    }
+
+    function bindFieldLabelInfoIcons() {
+      const queryCard = document.querySelector('.query-card');
+      if (!queryCard) return;
+      const icons = queryCard.querySelectorAll('.field-info-icon');
+      const popover = ensureHeaderInfoPopover();
+      const mobile = window.matchMedia('(max-width: 991px)');
+
+      function scheduleClose() {
+        if (fieldLabelPopoverCloseTimeout) clearTimeout(fieldLabelPopoverCloseTimeout);
+        fieldLabelPopoverCloseTimeout = setTimeout(function() { closeHeaderInfoPopover(); fieldLabelPopoverCloseTimeout = null; }, 150);
+      }
+      function cancelClose() {
+        if (fieldLabelPopoverCloseTimeout) { clearTimeout(fieldLabelPopoverCloseTimeout); fieldLabelPopoverCloseTimeout = null; }
+      }
+
+      if (!popover.dataset.fieldHoverBound) {
+        popover.dataset.fieldHoverBound = '1';
+        popover.addEventListener('mouseenter', cancelClose);
+        popover.addEventListener('mouseleave', function() { closeHeaderInfoPopover(); });
+      }
+
+      icons.forEach(function(icon) {
+        const text = icon.getAttribute('data-tooltip');
+        if (!text) return;
+
+        icon.addEventListener('mouseenter', function() {
+          if (mobile.matches) return;
+          cancelClose();
+          openHeaderInfoPopover(text, icon);
+        });
+        icon.addEventListener('mouseleave', function() {
+          if (mobile.matches) return;
+          scheduleClose();
+        });
+
+        icon.addEventListener('click', function(e) {
+          if (!mobile.matches) return;
+          e.preventDefault();
+          e.stopPropagation();
+          if (headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open') && headerInfoPopoverEl.textContent === text) {
+            closeHeaderInfoPopover();
+          } else {
+            openHeaderInfoPopover(text, icon);
+          }
+        });
+      });
     }
 
     function closeColumnFilterDropdown() {
@@ -2299,15 +2975,30 @@
       dropdown.style.top = (rect.bottom + 4) + 'px';
       dropdown.classList.add('is-open');
       dropdown.dataset.columnKey = columnKey;
+      var vw = window.innerWidth || document.documentElement.clientWidth;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var dropRect = dropdown.getBoundingClientRect();
+      if (dropRect.right > vw) dropdown.style.left = Math.max(8, vw - dropRect.width - 8) + 'px';
+      if (dropRect.left < 8) dropdown.style.left = '8px';
+      if (dropRect.bottom > vh) dropdown.style.top = Math.max(8, vh - dropRect.height - 8) + 'px';
+      if (dropRect.top < 8) dropdown.style.top = '8px';
       sortAscBtn.onclick = function() {
-        columnSortState = {};
-        columnSortState[columnKey] = { direction: 'asc' };
+        if (sortState && sortState.direction === 'asc') {
+          delete columnSortState[columnKey];
+        } else {
+          columnSortState = {};
+          columnSortState[columnKey] = { direction: 'asc' };
+        }
         closeColumnFilterDropdown();
         if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
       };
       sortDescBtn.onclick = function() {
-        columnSortState = {};
-        columnSortState[columnKey] = { direction: 'desc' };
+        if (sortState && sortState.direction === 'desc') {
+          delete columnSortState[columnKey];
+        } else {
+          columnSortState = {};
+          columnSortState[columnKey] = { direction: 'desc' };
+        }
         closeColumnFilterDropdown();
         if (lastRenderParams) renderRows(lastRenderedRows, lastRenderParams.secured, lastRenderParams.selectedUniversity, lastRenderParams.levelOfStudy, lastRenderParams.selectedCountry);
       };
@@ -2430,29 +3121,38 @@
       panel.classList.add('is-open');
       panel.dataset.columnKey = columnKey;
       var th = thead ? Array.prototype.find.call(thead.querySelectorAll('th'), function(t) { return t.getAttribute('data-column-key') === columnKey; }) : null;
-      var dropdownOpen = columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open');
-      if (dropdownOpen && columnFilterDropdownEl.getBoundingClientRect) {
-        var dropRect = columnFilterDropdownEl.getBoundingClientRect();
-        panel.style.left = dropRect.left + 'px';
-        panel.style.top = (dropRect.bottom + 4) + 'px';
-        var panelRect = panel.getBoundingClientRect();
-        var viewportRight = window.innerWidth || document.documentElement.clientWidth;
-        var viewportBottom = window.innerHeight || document.documentElement.clientHeight;
-        if (panelRect.right > viewportRight) panel.style.left = (viewportRight - panelRect.width - 8) + 'px';
-        else if (dropRect.left < 8) panel.style.left = '8px';
-        if (panelRect.bottom > viewportBottom) panel.style.top = (viewportBottom - panelRect.height - 8) + 'px';
-      } else if (th) {
+      var vw = window.innerWidth || document.documentElement.clientWidth;
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      if (th) {
         var rect = th.getBoundingClientRect();
-        panel.style.left = rect.left + 'px';
-        panel.style.top = (rect.bottom + 4) + 'px';
         var panelRect = panel.getBoundingClientRect();
-        var viewportRight = window.innerWidth || document.documentElement.clientWidth;
-        if (panelRect.right > viewportRight) panel.style.left = (viewportRight - panelRect.width - 8) + 'px';
-        else if (rect.left < 8) panel.style.left = '8px';
+        var gap = 4;
+        var topBelow = rect.bottom + gap;
+        var topAbove = rect.top - panelRect.height - gap;
+        if (topBelow + panelRect.height <= vh - 8) {
+          panel.style.top = (rect.bottom + gap) + 'px';
+        } else if (topAbove >= 8) {
+          panel.style.top = (rect.top - panelRect.height - gap) + 'px';
+        } else {
+          panel.style.top = Math.max(8, vh - panelRect.height - 8) + 'px';
+        }
+        var leftUnderColumn = Math.max(8, Math.min(rect.left, vw - panelRect.width - 8));
+        panel.style.left = leftUnderColumn + 'px';
       } else {
-        var tableWrap = document.querySelector('.table-wrap');
-        var tr = tableWrap ? tableWrap.getBoundingClientRect() : null;
-        if (tr) { panel.style.left = (tr.left + 8) + 'px'; panel.style.top = (tr.top + 50) + 'px'; }
+        var dropdownOpen = columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open');
+        if (dropdownOpen && columnFilterDropdownEl.getBoundingClientRect) {
+          var dropRect = columnFilterDropdownEl.getBoundingClientRect();
+          panel.style.left = dropRect.left + 'px';
+          panel.style.top = (dropRect.bottom + 4) + 'px';
+          var panelRect = panel.getBoundingClientRect();
+          if (panelRect.right > vw) panel.style.left = Math.max(8, vw - panelRect.width - 8) + 'px';
+          if (panelRect.left < 8) panel.style.left = '8px';
+          if (panelRect.bottom > vh) panel.style.top = Math.max(8, vh - panelRect.height - 8) + 'px';
+        } else {
+          var tableWrap = document.querySelector('.table-wrap');
+          var tr = tableWrap ? tableWrap.getBoundingClientRect() : null;
+          if (tr) { panel.style.left = (tr.left + 8) + 'px'; panel.style.top = (tr.top + 50) + 'px'; }
+        }
       }
       function updateDisplaying() {
         var chks = panel.querySelectorAll('.fbv-list input:checked');
@@ -2520,13 +3220,29 @@
 
     function handleThHeadClick(e) {
       if (e.target.closest('.th-info-icon')) return;
-      const head = e.target.closest('.th-head-clickable');
-      if (!head) return;
-      const th = head.closest('th');
+      const sortFilterIcon = e.target.closest('.th-sort-filter-icon');
+      if (!sortFilterIcon) return;
+      const th = sortFilterIcon.closest('th');
       if (!th || !th.dataset.columnKey) return;
       e.preventDefault();
       e.stopPropagation();
       openColumnFilterPanel(th.dataset.columnKey, th);
+    }
+    var audienceBadgeMobile = window.matchMedia('(max-width: 991px)');
+    if (resultsBody) {
+      resultsBody.addEventListener('click', function(e) {
+        var badge = e.target.closest('.audience-badge');
+        if (!badge || !audienceBadgeMobile.matches) return;
+        var text = badge.getAttribute('data-audience-tooltip');
+        if (!text) return;
+        e.preventDefault();
+        e.stopPropagation();
+        if (headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open') && headerInfoPopoverEl.textContent === text) {
+          closeHeaderInfoPopover();
+        } else {
+          openHeaderInfoPopover(text, badge);
+        }
+      });
     }
     document.addEventListener('click', function(e) {
       if (!document.contains(e.target)) return;
@@ -2534,9 +3250,10 @@
       var insidePanel = filterByValuesPanelEl && filterByValuesPanelEl.contains(e.target);
       var insideInfoPopover = headerInfoPopoverEl && headerInfoPopoverEl.contains(e.target);
       var onThInfoIcon = e.target.closest('.th-info-icon');
-      var onTh = e.target.closest('th');
-      if (!insideInfoPopover && !onThInfoIcon && headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open')) closeHeaderInfoPopover();
-      if (insideDropdown || insidePanel || onTh) return;
+      var onSortFilterIcon = e.target.closest('.th-sort-filter-icon');
+      var onAudienceBadge = e.target.closest('.audience-badge');
+      if (!insideInfoPopover && !onThInfoIcon && !onAudienceBadge && headerInfoPopoverEl && headerInfoPopoverEl.classList.contains('is-open')) closeHeaderInfoPopover();
+      if (insideDropdown || insidePanel || onSortFilterIcon) return;
       if (columnFilterDropdownEl && columnFilterDropdownEl.classList.contains('is-open')) closeColumnFilterDropdown();
       if (filterByValuesPanelEl && filterByValuesPanelEl.classList.contains('is-open')) {
         filterByValuesPanelEl.classList.remove('is-open');
@@ -2675,10 +3392,13 @@
             if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
               const rate = escapeHtml(cell.rate || 'N/A');
               const audience = escapeHtml(cell.audience || 'N/A');
+              const audienceTooltip = getAudienceTooltip(cell.audience);
               const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
               const searchValue = [cell.rateText || '', cell.audience || ''].join(' ').trim();
               const rateCellClass = [cls, 'interest-rate-cell', isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
-              return `<td class="${rateCellClass}"${dataCol} data-rate-number="${escapeHtml(sortValue)}" data-rate-text="${escapeHtml(searchValue)}"><span class="audience-rate"><span>${rate}</span><span class="audience-badge">${audience}</span></span></td>`;
+              const badgeTitle = audienceTooltip ? ` title="${escapeHtml(audienceTooltip)}"` : '';
+              const badgeDataTooltip = audienceTooltip ? ` data-audience-tooltip="${escapeHtml(audienceTooltip)}"` : '';
+              return `<td class="${rateCellClass}"${dataCol} data-rate-number="${escapeHtml(sortValue)}" data-rate-text="${escapeHtml(searchValue)}"><span class="audience-rate"><span>${rate}</span><span class="audience-badge"${badgeTitle}${badgeDataTooltip}>${audience}</span></span></td>`;
             }
             if (cell && typeof cell === 'object' && cell.kind === 'listedUniversityOnly') {
               const label = escapeHtml(cell.label || 'Listed Only');
@@ -2819,7 +3539,7 @@
         if (res.ok && data) {
           renderRows(data.rows || [], data.secured !== false, '', 'Any', '');
           form.gender.value = defaultQuery.gender;
-          form.amount.value = String(defaultQuery.amount);
+          setAmountDisplay(defaultQuery.amount);
           form.secured.value = String(defaultQuery.secured);
         }
       } catch (_) {}
@@ -3286,6 +4006,7 @@
     window.addEventListener('DOMContentLoaded', async () => {
       await Promise.all([loadInstitutes(), loadViewDetails(), loadBankManifestOrder()]);
       bindComboHandlers();
+      bindFieldLabelInfoIcons();
       syncClearButtons();
       form.addEventListener('input', function (e) {
         const target = e.target;
@@ -3301,6 +4022,7 @@
           scheduleAutoRun();
         }
       });
+      bindAmountInput();
       loadAndRunDefault();
     });
   </script>

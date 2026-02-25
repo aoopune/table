@@ -15,7 +15,7 @@
         },
         "qualification": "HSC + UG",
         "coApplicant": "Parents, Sibilings or Guarantor",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "simple",
           "displayText": "0.66%",
@@ -104,7 +104,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any course",
@@ -164,7 +164,7 @@
           "min": 6,
           "max": null
         },
-        "periodDisplay": "6 months",
+        "periodDisplay": "6",
         "paymentDuring": "Optional"
       },
       "course": "Any course",

@@ -1,17 +1,18 @@
 /* Comparison table – header always visible when scrolled; borders between blocks; readable font */
 
 :root {
-  --bg: #f5f7fa;
+  --bg: #e8f0fe;
   --card: #fff;
-  --border: #e0e4e9;
-  --block-border: #5b6370;
-  --col-border: #d0d5dc;
-  --primary: #0066cc;
-  --text: #1a1d21;
-  --text-strong: #0d0f12;
-  --header-bg: #e8ecf1;
-  --header-group: #d0d8e2;
-  --sticky-shadow: 4px 0 12px rgba(0,0,0,0.08);
+  --border: #b8d4f0;
+  --block-border: #1565c0;
+  --col-border: #c5daf5;
+  --primary: #1565c0;
+  --text: #000;
+  --text-strong: #000;
+  --header-bg: #1565c0;
+  --header-group: #1565c0;
+  --header-text: #fff;
+  --sticky-shadow: 4px 0 12px rgba(21,101,192,0.12);
   --sticky-col-1-width: 5.5rem;
   --sticky-col-2-width: 4.5rem;
   --sticky-col-3-width: 1.75rem;
@@ -41,6 +42,17 @@ body {
   color: var(--text);
   background: var(--bg);
   overflow-x: hidden;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--primary);
 }
 
 @media (max-width: 767px) {
@@ -112,10 +124,10 @@ body {
   border-color: var(--primary);
 }
 
-/* Loan amount: max 8 digits – narrow input, no spinner, minimal padding */
+/* Loan amount: Indian format (e.g. 1,23,45,678) – max 8 digits */
 #amount {
-  width: calc(8ch + 0.4rem);
-  max-width: calc(8ch + 0.4rem);
+  width: calc(13ch + 0.4rem);
+  max-width: calc(13ch + 0.4rem);
   padding: 0.4rem 0.2rem;
   font-size: 0.875rem;
   border: 1px solid var(--border);
@@ -123,12 +135,6 @@ body {
   background: var(--card);
   color: var(--text);
   box-sizing: border-box;
-  -moz-appearance: textfield;
-}
-#amount::-webkit-outer-spin-button,
-#amount::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 #amount:focus {
   outline: none;
@@ -229,11 +235,12 @@ body {
   text-align: center;
   background: var(--header-bg);
   font-weight: 600;
-  color: var(--text-strong);
+  color: var(--header-text);
 }
 
 .comparison-table .header-row .th-group {
   background: var(--header-group);
+  color: var(--header-text);
   font-size: var(--header-font-size);
   padding: 1px var(--table-padding-x);
 }
@@ -274,7 +281,7 @@ body {
   height: 2px;
   padding: 0;
   border: none;
-  background: var(--block-border);
+  background: var(--header-text);
   line-height: 0;
   vertical-align: top;
 }
@@ -422,11 +429,11 @@ body {
 }
 
 .comparison-table-body tbody tr:nth-child(even) td.sticky-col {
-  background: #fafbfc;
+  background: #fff;
 }
 
 .comparison-table-body tbody tr:hover td.sticky-col {
-  background: #f0f4f8;
+  background: #fff;
 }
 
 .comparison-table .sticky-col {
@@ -442,11 +449,11 @@ body {
 }
 
 .comparison-table-body tbody tr:nth-child(even) {
-  background: #fafbfc;
+  background: #fff;
 }
 
 .comparison-table-body tbody tr:hover {
-  background: #f0f4f8;
+  background: #fff;
 }
 
 .comparison-table td {
@@ -484,12 +491,12 @@ body {
   width: 14px;
   height: 14px;
   padding: 0 1px 1px 1px;
-  color: #1a1d21;
+  color: #000;
   font-size: 13px;
   font-weight: bold;
   line-height: 1;
   border-radius: 50%;
-  border: 2px solid #1a1d21;
+  border: 2px solid #000;
   box-sizing: border-box;
 }
 
@@ -497,8 +504,8 @@ body {
   position: fixed;
   z-index: 10000;
   display: none;
-  background: #1f2937;
-  color: #f3f4f6;
+  background: #1565c0;
+  color: #fff;
   padding: 10px 14px;
   border-radius: 8px;
   max-width: min(320px, 90vw);
@@ -527,8 +534,8 @@ body {
   padding: 0;
   border: none;
   border-radius: 4px;
-  background: rgba(255,255,255,0.15);
-  color: #f3f4f6;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
   font-size: 18px;
   line-height: 1;
   cursor: pointer;
@@ -549,7 +556,7 @@ body {
 }
 .info-popover-text {
   display: block;
-  color: #f3f4f6;
+  color: #fff;
 }
 
 .info-popover::before {
@@ -559,7 +566,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   border: 6px solid transparent;
-  border-right-color: #1f2937;
+  border-right-color: #1565c0;
   border-left-width: 0;
 }
 
@@ -567,7 +574,7 @@ body {
   left: auto;
   right: -6px;
   border-right-color: transparent;
-  border-left-color: #1f2937;
+  border-left-color: #1565c0;
   border-right-width: 0;
   border-left-width: 6px;
 }
@@ -578,7 +585,7 @@ body {
   right: auto;
   transform: translateX(-50%);
   border: 6px solid transparent;
-  border-bottom-color: #1f2937;
+  border-bottom-color: #1565c0;
   border-top-width: 0;
 }
 
@@ -613,8 +620,8 @@ body {
 }
 .filter-trigger.is-sorted:hover,
 .filter-trigger.is-filtered:hover {
-  background: #0052a3;
-  border-color: #0052a3;
+  background: #0d47a1;
+  border-color: #0d47a1;
   color: #fff;
 }
 .filter-trigger:focus-visible,

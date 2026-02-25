@@ -15,7 +15,7 @@
         },
         "qualification": "HSC / Equivalent",
         "coApplicant": "Parents, Siblings, and Uncle/Aunt.",
-        "universityStrictness": "Open to all [List exists]",
+        "universityStrictness": "Open to all / listed",
         "delayed_emi_payment": {
           "structure": "contract",
           "displayText": "As per contract",
@@ -100,7 +100,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Mandatory"
       },
       "course": "Any Course",
@@ -160,7 +160,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Mandatory"
       },
       "course": "Any Course",
@@ -220,7 +220,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Mandatory"
       },
       "course": "Any Course",
@@ -280,7 +280,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Mandatory"
       },
       "course": "Any Course",
@@ -340,7 +340,7 @@
           "min": 12,
           "max": null
         },
-        "periodDisplay": "12 months",
+        "periodDisplay": "12",
         "paymentDuring": "Mandatory"
       },
       "course": "Any Course",
