@@ -12,10 +12,11 @@
       --bg: #f8fafc;
       --bg-subtle: #f1f5f9;
       --table-cell-1: #ffffff;
-      --table-cell-2: #fcfcfd;
-      --table-cell-3: #fafbfc;
-      --table-cell-4: #f8f9fa;
+      --table-cell-2: #f8fbfb;
+      --table-cell-3: #f4f9f9;
+      --table-cell-4: #f0f7f6;
       --table-row-hover: rgba(13, 148, 136, 0.1);
+      --table-row-hover-opaque: rgba(224, 242, 241, 0.98);
       --surface: #ffffff;
       --surface-soft: rgba(255, 255, 255, 0.98);
       --border: #e2e8f0;
@@ -208,7 +209,7 @@
     .field label {
       font-size: 1rem;
       font-weight: 600;
-      color: var(--muted);
+      color: var(--accent);
       text-transform: none;
       letter-spacing: 0;
       line-height: 1.5;
@@ -542,6 +543,11 @@
       box-sizing: border-box;
       transition: background var(--transition);
     }
+    /* Non-sticky cells sit behind sticky cols so horizontal scroll doesn’t show through */
+    #results-table tbody td {
+      position: relative;
+      z-index: 0;
+    }
     /* Row + column separation: 2×2 very subtle grid (no borders) */
     #results-table tbody tr:nth-child(odd) td:nth-child(odd) {
       background: var(--table-cell-1) !important;
@@ -736,7 +742,7 @@
     #results-table td.bank-name-cell {
       position: sticky;
       left: 0;
-      z-index: 2;
+      z-index: 10;
       width: var(--sticky-col1-width);
       min-width: var(--sticky-col1-width);
       max-width: var(--sticky-col1-width);
@@ -763,7 +769,7 @@
     #results-table td.sector-name-cell {
       position: sticky;
       left: var(--sticky-col1-width);
-      z-index: 3;
+      z-index: 11;
       width: var(--sticky-col2-width);
       min-width: var(--sticky-col2-width);
       max-width: var(--sticky-col2-width);
@@ -780,7 +786,7 @@
     #results-table td.offer-checkbox-cell {
       position: sticky;
       left: calc(var(--sticky-col1-width) + var(--sticky-col2-width));
-      z-index: 15;
+      z-index: 12;
       width: var(--sticky-col3-width);
       min-width: var(--sticky-col3-width);
       max-width: var(--sticky-col3-width);
@@ -1342,29 +1348,9 @@
       transition: background var(--transition);
     }
     .column-filter-panel .cfp-fbv-actions button:hover { background: var(--bg-subtle); }
-    .column-filter-panel .cfp-footer {
-      display: flex;
-      justify-content: flex-end;
-      gap: 0.5rem;
-      margin-top: 0;
-      padding-top: 0;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      flex-shrink: 0;
-    }
-    .column-filter-panel .cfp-footer button {
-      padding: 0.35rem 0.6rem;
-      font: inherit;
-      font-size: 0.8125rem;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text);
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background var(--transition);
-    }
-    .column-filter-panel .cfp-footer button:hover { background: var(--bg-subtle); }
-    .column-filter-panel .cfp-footer .cfp-ok { background: var(--accent); color: #fff; border-color: var(--accent); }
-    .column-filter-panel .cfp-footer .cfp-ok:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+    .column-filter-panel .cfp-fbv-actions .cfp-cancel { margin-left: auto; }
+    .column-filter-panel .cfp-fbv-actions .cfp-ok { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .column-filter-panel .cfp-fbv-actions .cfp-ok:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
     .column-filter-panel .cfp-fbv-search {
       width: 100%;
       padding: 0;
@@ -1424,6 +1410,15 @@
         margin-left: 0;
         margin-right: 0;
       }
+      .query-card {
+        padding: 0.2rem 0.5rem;
+      }
+      .results-card {
+        padding: 0.1rem 0.4rem;
+      }
+      .form-row .choice-option {
+        padding: 0.5rem 1rem;
+      }
       .form-row {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto auto;
@@ -1471,6 +1466,22 @@
       .form-row .field > label {
         justify-content: flex-start;
       }
+      .choice-group {
+        display: inline-flex;
+        gap: 10px;
+        margin-top: 0;
+        padding: 5px;
+        border-radius: 100px;
+        border: 1px solid var(--border);
+        box-sizing: border-box;
+        height: 40px;
+        min-height: 40px;
+        align-items: center;
+        overflow: hidden;
+        background: var(--bg-subtle);
+        width: 80%;
+        max-width: 100%;
+      }
       .form-row .choice-group {
         min-width: 0;
         padding: 3px;
@@ -1483,7 +1494,7 @@
         padding: 0.3rem 0.5rem;
       }
       .form-row .choice-option span {
-        font-size: 0.8125rem;
+        font-size: 0.85rem;
       }
       .view-details-trigger {
         font-size: inherit;
@@ -1514,8 +1525,9 @@
         font-size: 15px;
       }
       #amount {
-        width: 100%;
-        max-width: none;
+        width: 80%;
+        max-width: 90%;
+        box-sizing: border-box;
         text-align: left;
       }
       .combo input {
@@ -2875,13 +2887,11 @@
           '<div class="cfp-fbv-actions">' +
             '<button type="button" class="cfp-fbv-select-all">Select all</button>' +
             '<button type="button" class="cfp-fbv-clear">Clear all</button>' +
+            '<button type="button" class="cfp-cancel">Cancel</button>' +
+            '<button type="button" class="cfp-ok">OK</button>' +
           '</div>' +
           '<input type="text" class="cfp-fbv-search" placeholder="Search values..." autocomplete="off"/>' +
           '<div class="cfp-fbv-list"></div>' +
-        '</div>' +
-        '<div class="cfp-footer">' +
-          '<button type="button" class="cfp-cancel">Cancel</button>' +
-          '<button type="button" class="cfp-ok">OK</button>' +
         '</div>';
       panel.dataset.columnKey = columnKey;
       function getThForColumn(key) {
