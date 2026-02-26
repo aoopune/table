@@ -10,23 +10,23 @@
   <style>
     :root {
       --bg: #f8fafc;
-      --bg-subtle: #f1f5f9;
+      --bg-subtle: #EEEEEE;
       --table-cell-1: #ffffff;
       --table-cell-2: #f8fbfb;
       --table-cell-3: #f4f9f9;
       --table-cell-4: #f0f7f6;
-      --table-row-hover: rgba(13, 148, 136, 0.1);
-      --table-row-hover-opaque: rgba(224, 242, 241, 0.98);
+      --table-row-hover: rgba(0, 0, 0, 0.04);
+      --table-row-hover-opaque: #EEEEEE;
       --surface: #ffffff;
       --surface-soft: rgba(255, 255, 255, 0.98);
-      --border: #e2e8f0;
-      --border-strong: #cbd5e1;
-      --text: #0f172a;
-      --muted: #64748b;
-      --accent: #0d9488;
-      --accent-hover: #0f766e;
-      --accent-2: #2dd4bf;
-      --accent-muted: rgba(13, 148, 136, 0.08);
+      --border: #EEEEEE;
+      --border-strong: #e0e0e0;
+      --text: #000000;
+      --muted: #333333;
+      --accent: #64748b;
+      --accent-hover: #475569;
+      --accent-2: #94a3b8;
+      --accent-muted: rgba(100, 116, 139, 0.12);
       --success: #059669;
       --radius: 12px;
       --radius-lg: 20px;
@@ -45,7 +45,7 @@
       margin: 0;
       min-height: 100vh;
       font-family: 'Outfit', system-ui, sans-serif;
-      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+      background: linear-gradient(180deg, #f8fafc 0%, #EEEEEE 50%, #e8e8e8 100%);
       color: var(--text);
       line-height: 1.55;
       -webkit-font-smoothing: antialiased;
@@ -99,7 +99,7 @@
       border: 4px solid var(--border);
       z-index: 20;
       padding: 1.5rem 1.75rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.6rem;
       box-shadow: var(--shadow);
       background: var(--surface);
       box-sizing: border-box;
@@ -113,7 +113,7 @@
       width: calc(100% + 3rem);
       margin-left: -1.5rem;
       margin-right: -1.5rem;
-      padding: 0.5rem 0.75rem;
+      padding: 0rem 0rem;
       border-radius: 0;
       border: none;
       box-shadow: none;
@@ -140,11 +140,13 @@
       width: 100%;
     }
     .field.submit-field {
-      align-self: center;
+      align-self: stretch;
       justify-self: end;
-      align-items: center;
+      align-items: flex-end;
       min-width: 1rem;
       width: fit-content;
+      margin-top: 0;
+      justify-content: space-between;
     }
     /* Mobile / tablet: 3 inputs left, 3 inputs right, then submit and table */
     @media (max-width: 991px) {
@@ -191,7 +193,7 @@
     }
     .field.submit-field .count {
       display: block;
-      margin-top: 0;
+      margin: 0;
       font-size: 0.9rem;
       white-space: nowrap;
     }
@@ -209,7 +211,7 @@
     .field label {
       font-size: 1rem;
       font-weight: 600;
-      color: var(--accent);
+      color: #000000;
       text-transform: none;
       letter-spacing: 0;
       line-height: 1.5;
@@ -430,9 +432,9 @@
       font: inherit;
       font-weight: 600;
       padding: 0.5rem 1.25rem;
-      background: var(--accent);
-      color: #fff;
-      border: none;
+      background: #EEEEEE;
+      color: var(--text);
+      border: 1px solid #e0e0e0;
       border-radius: 100px;
       font-size: 0.875rem;
       cursor: pointer;
@@ -442,7 +444,7 @@
       min-width: 100px;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
-    .btn:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
+    .btn:hover { background: #e0e0e0; transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); }
     .btn:active { transform: translateY(0); }
     .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
@@ -459,7 +461,7 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-    .count strong { color: var(--accent); font-weight: 600; }
+    .count strong { color: #000000; font-weight: 600; }
     .query-summary { font-size: 0.85rem; margin: 0 0 0.4rem 0; }
     .query-summary.muted { color: var(--muted); }
     code { font-family: 'Outfit', system-ui, sans-serif; font-size: 0.9em; background: var(--accent-muted); padding: 0.2em 0.5em; border-radius: 6px; color: var(--text); }
@@ -477,14 +479,15 @@
       overflow: visible;
       box-shadow: none;
     }
-    /* This is the only scroll container; thead th stick to this when scrolling down */
+    /* This is the only scroll container; thead th stick to this when scrolling down. Height fits in viewport so only table scrolls, not the page. */
     .table-scroll-inner {
       overflow: auto;
       overflow-x: auto;
       overflow-y: auto;
       width: 100%;
-      height: 85vh;
-      max-height: 85vh;
+      height: calc(100vh - 280px);
+      max-height: calc(100vh - 280px);
+      min-height: 240px;
       border-radius: var(--radius-lg);
       -webkit-overflow-scrolling: touch;
       scrollbar-width: thin;
@@ -503,12 +506,12 @@
       border-radius: 4px;
     }
     .table-scroll-inner::-webkit-scrollbar-thumb {
-      background: rgba(13, 148, 136, 0.28);
+      background: rgba(100, 116, 139, 0.3);
       border-radius: 4px;
       transition: background var(--transition);
     }
     .table-scroll-inner::-webkit-scrollbar-thumb:hover {
-      background: rgba(13, 148, 136, 0.5);
+      background: rgba(100, 116, 139, 0.5);
     }
     .table-scroll-inner::-webkit-scrollbar-thumb:active {
       background: var(--accent);
@@ -529,37 +532,28 @@
     #results-table col.sticky-col-3 { width: var(--sticky-col3-width); }
     th, td {
       text-align: center;
-      padding: 0.1rem 0.4rem;
+      padding: 0.45rem 0.6rem;
       line-height: 1.5;
       border: none;
       white-space: nowrap;
-      min-height: 20em;
+      min-height: 2em;
       height: 3em;
     }
     #results-table tbody tr,
     #results-table td {
-      background: var(--surface) !important;
+      background: #ffffff !important;
       color: var(--text);
       box-sizing: border-box;
       transition: background var(--transition);
     }
     /* Non-sticky cells sit behind sticky cols so horizontal scroll doesn’t show through */
     #results-table tbody td {
+      border-bottom: 1px solid #EEEEEE;
       position: relative;
       z-index: 0;
     }
-    /* Row + column separation: 2×2 very subtle grid (no borders) */
-    #results-table tbody tr:nth-child(odd) td:nth-child(odd) {
-      background: var(--table-cell-1) !important;
-    }
-    #results-table tbody tr:nth-child(odd) td:nth-child(even) {
-      background: var(--table-cell-2) !important;
-    }
-    #results-table tbody tr:nth-child(even) td:nth-child(odd) {
-      background: var(--table-cell-3) !important;
-    }
-    #results-table tbody tr:nth-child(even) td:nth-child(even) {
-      background: var(--table-cell-4) !important;
+    #results-table tbody tr:last-child td {
+      border-bottom: none;
     }
     th {
       font-weight: 600;
@@ -601,19 +595,17 @@
     #results-table thead {
       /* No position: relative – it can create a containing block and break position: sticky on th */
     }
-    /* Sticky header row: stays visible when scrolling down */
+    /* Sticky header row: separate bar like Submit button (no borders, shadow) */
     #results-table thead th {
       position: -webkit-sticky;
       position: sticky;
       top: 0;
       z-index: 20;
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-hover) 100%) !important;
-      color: #fff;
-      /* Divider under header + subtle vertical separator between headers */
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15);
-    }
-    #results-table thead th:last-child {
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06);
+      background: #EEEEEE !important;
+      color: var(--text);
+      border: none;
+      padding: 0.5rem 0.75rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06);
     }
     /* Sticky first column (header): stays visible when scrolling right + down (no will-change to avoid breaking sticky) */
     #results-table thead th:first-child {
@@ -626,9 +618,8 @@
       min-width: var(--sticky-col1-width);
       max-width: var(--sticky-col1-width);
       box-sizing: border-box;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15);
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-hover) 100%) !important;
-      color: #fff;
+      background: #EEEEEE !important;
+      color: var(--text);
       white-space: normal;
       word-wrap: break-word;
       overflow-wrap: break-word;
@@ -647,9 +638,8 @@
       min-width: var(--sticky-col2-width);
       max-width: var(--sticky-col2-width);
       box-sizing: border-box;
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-hover) 100%) !important;
-      color: #fff;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15);
+      background: #EEEEEE !important;
+      color: var(--text);
       white-space: normal;
       word-wrap: break-word;
       overflow-wrap: break-word;
@@ -670,10 +660,8 @@
       box-sizing: border-box;
       padding-left: 0;
       padding-right: 0;
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent-hover) 100%) !important;
-      color: #fff;
-      /* Wide shadow to the right so scrolling content cannot bleed through */
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15);
+      background: #EEEEEE !important;
+      color: var(--text);
     }
     #results-table thead th.offer-checkbox-header {
       padding: 0.2rem 0;
@@ -685,28 +673,28 @@
       justify-content: center;
       align-items: center;
     }
-    #results-table thead th.offer-checkbox-header input { cursor: pointer; accent-color: #fff; }
+    #results-table thead th.offer-checkbox-header input { cursor: pointer; accent-color: var(--text); }
     #results-table thead .th-sort-filter-icon,
-    #results-table thead .th-info-icon { color: rgba(255,255,255,0.9); }
+    #results-table thead .th-info-icon { color: var(--muted); }
     #results-table thead .th-sort-filter-icon:hover,
-    #results-table thead .th-info-icon:hover { color: #fff; }
-    #results-table thead .th-info-icon:hover { background: rgba(255,255,255,0.15); }
-    #results-table thead .th-sort-filter-icon--active { color: #fff; opacity: 1; }
+    #results-table thead .th-info-icon:hover { color: var(--text); }
+    #results-table thead .th-info-icon:hover { background: rgba(0,0,0,0.06); }
+    #results-table thead .th-sort-filter-icon--active { color: var(--text); opacity: 1; }
     #results-table thead th.header-has-sort-or-filter {
-      background: linear-gradient(180deg, var(--accent-hover) 0%, #0f766e 100%) !important;
-      box-shadow: 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15), inset 0 0 0 2px rgba(255,255,255,0.2);
+      background: #EEEEEE !important;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06), inset 0 0 0 2px rgba(0,0,0,0.1);
     }
     #results-table thead th.header-has-sort-or-filter:last-child {
-      box-shadow: 0 2px 0 rgba(0,0,0,0.06), inset 0 0 0 2px rgba(255,255,255,0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06), inset 0 0 0 2px rgba(0,0,0,0.1);
     }
     #results-table thead th.header-has-sort-or-filter:first-child,
     #results-table thead th.header-has-sort-or-filter:nth-child(2),
     #results-table thead th.header-has-sort-or-filter:nth-child(3) {
-      background: linear-gradient(180deg, var(--accent-hover) 0%, #0f766e 100%) !important;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset -1px 0 0 rgba(255,255,255,0.15), inset 0 0 0 2px rgba(255,255,255,0.2);
+      background: #EEEEEE !important;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06), inset 0 0 0 2px rgba(0,0,0,0.1);
     }
     #results-table thead th:last-child.header-has-sort-or-filter {
-      box-shadow: 0 1px 0 rgba(255,255,255,0.12), 0 2px 0 rgba(0,0,0,0.06), inset 0 0 0 2px rgba(255,255,255,0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), 0 2px 6px rgba(0, 0, 0, 0.06), inset 0 0 0 2px rgba(0,0,0,0.1);
     }
     #results-table th[data-column-key="Course"],
     #results-table th[data-column-key="Delayed EMI payment"],
@@ -725,6 +713,13 @@
       min-height: 1.8em;
       max-width: 11em;
       box-sizing: border-box;
+    }
+    #results-table thead th[data-column-key="Moratorium period"] {
+      white-space: nowrap;
+      max-width: none;
+    }
+    #results-table thead th[data-column-key="Moratorium period"] .th-head-label {
+      white-space: nowrap;
     }
     td .num { font-family: 'Outfit', system-ui, sans-serif; }
     td.bank-name-cell,
@@ -757,13 +752,7 @@
       isolation: isolate;
     }
     #results-table td.bank-name-cell .lender-logo {
-      display: block;
-      width: 35px;
-      height: 35px;
-      object-fit: contain;
-      pointer-events: none;
-      border-radius: 6px;
-      margin-top: 4px;
+      display: none;
     }
     /* Sticky second column (body): opaque + isolation so other cols' data never shows through */
     #results-table td.sector-name-cell {
@@ -794,7 +783,7 @@
       padding: 0.2rem 0;
       vertical-align: middle;
       text-align: center;
-      background: var(--table-cell-3) !important;
+      background: #ffffff !important;
       isolation: isolate;
     }
     #results-table td.offer-checkbox-cell .offer-checkbox,
@@ -840,11 +829,12 @@
       display: block;
       font-weight: 600;
       margin-bottom: 0;
+      color: #000000;
     }
     .view-details-trigger {
       border: none;
       background: transparent;
-      color: var(--accent);
+      color: #000000;
       text-decoration: none;
       cursor: pointer;
       padding: 0;
@@ -1737,8 +1727,8 @@
           </div>
         </div>
         <div class="field submit-field">
-          <button type="submit" class="btn" id="run-btn">Submit</button>
           <span class="count" id="count">Run a query to see results.</span>
+          <button type="submit" class="btn" id="run-btn">Submit</button>
         </div>
       </form>
     </div>
@@ -2199,20 +2189,20 @@
     const COLUMN_LABELS = {
       'Lender': 'Lender',
       'Sector': 'Sector',
-      'Interest Rate': 'ROI (% p.a.)',
+      'Interest Rate': 'ROI',
       'Type of Rate': 'Rate Type',
       'Preferred University': 'Preferred University',
-      'Security coverage %': 'Security %',
-      'Repayment Tenure': 'Max. tenure (yrs)',
-      'Margin (%)': 'Margin (% of loan)',
-      'Processing fees': 'Processing fee (% of loan)',
-      'Moratorium period': 'Moratorium period (Course period + )',
+      'Security coverage %': 'Security cover',
+      'Repayment Tenure': 'Max. tenure',
+      'Margin (%)': 'Margin',
+      'Processing fees': 'Processing fees',
+      'Moratorium period': 'Moratorium (Course +)',
       'Course': 'Course',
       'Nationality': 'Nationality',
-      'Age': 'Min. Age (yrs)',
+      'Age': 'Min. Age',
       'Qualification': 'Qualification',
       'University strictness': 'University Criteria',
-      'Delayed EMI payment': 'Overdue charges (p.m.)',
+      'Delayed EMI payment': 'Overdue fees',
       'Avg time to sanction': 'Sanction time',
       'Dedicated case manager': 'Dedicated manager',
       'Onboarding process': 'Application process'
@@ -2363,7 +2353,7 @@
       const iconsRow = '<span class="th-head-icons"><span class="th-head-icon-left">' + infoIconHtml + '</span><span class="th-head-icon-right">' + icon + '</span></span>';
       let labelHtml = escapeHtml(displayLabel);
       const parenIdx = displayLabel.indexOf(' (');
-      if (parenIdx !== -1) {
+      if (parenIdx !== -1 && key !== 'Moratorium period') {
         labelHtml = escapeHtml(displayLabel.slice(0, parenIdx)) + '<br>' + escapeHtml(displayLabel.slice(parenIdx + 1));
       }
       const thClass = hasSortOrFilter ? ' class="header-has-sort-or-filter"' : '';
@@ -2765,7 +2755,9 @@
           const dataCol = ' data-column-key="' + escapeHtml(columnName) + '"';
           const cls = typeof cell === 'number' ? 'num' : '';
           if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
-            const rate = escapeHtml(cell.rate || 'N/A');
+            const rawRate = cell.rate || 'N/A';
+            const rateDisplay = rawRate === 'N/A' ? 'N/A' : (String(rawRate).trim().endsWith('%') ? String(rawRate) : String(rawRate) + '%');
+            const rate = escapeHtml(rateDisplay);
             const audience = escapeHtml(cell.audience || 'N/A');
             const audienceTooltip = getAudienceTooltip(cell.audience);
             const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
@@ -2780,12 +2772,35 @@
             const criteria = escapeHtml(cell.criteria || '');
             return '<td class="' + cls + '"' + dataCol + '><button type="button" class="listed-universities-trigger" data-listed-bank="' + bank + '" data-listed-criteria="' + criteria + '">' + label + '</button></td>';
           }
+          if (columnName === 'Repayment Tenure' && (cell == null || typeof cell !== 'object')) {
+            const tenureDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().toLowerCase().endsWith('yrs') ? String(cell) : String(cell) + ' yrs');
+            return '<td class="' + cls + '"' + dataCol + '>' + escapeHtml(tenureDisplay) + '</td>';
+          }
+          if (columnName === 'Margin (%)' && (cell == null || typeof cell !== 'object')) {
+            const marginDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().endsWith('%') ? String(cell) : String(cell) + '%');
+            return '<td class="' + cls + '"' + dataCol + '>' + escapeHtml(marginDisplay) + '</td>';
+          }
+          if (columnName === 'Age' && (cell == null || typeof cell !== 'object')) {
+            const ageDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().toLowerCase().endsWith('yrs') || String(cell).trim().toLowerCase().endsWith('yrs.') ? String(cell) : String(cell) + ' yrs.');
+            return '<td class="' + cls + '"' + dataCol + '>' + escapeHtml(ageDisplay) + '</td>';
+          }
+          if (columnName === 'Delayed EMI payment' && (cell == null || typeof cell !== 'object')) {
+            const overdueDisplay = (cell == null || cell === 'N/A') ? 'N/A' : String(cell).replace(/%(?! p\.m\.)/g, '% p.m.');
+            return '<td class="' + cls + '"' + dataCol + '>' + escapeHtml(overdueDisplay) + '</td>';
+          }
+          if (columnName === 'Avg time to sanction' && (cell == null || typeof cell !== 'object')) {
+            if (cell == null || cell === 'N/A') {
+              return '<td class="' + cls + '"' + dataCol + '>N/A</td>';
+            }
+            const raw = String(cell);
+            const trimmedLower = raw.trim().toLowerCase();
+            const daysDisplay = (!/^\d/.test(trimmedLower) || trimmedLower.includes('day')) ? raw : (raw + ' days');
+            return '<td class="' + cls + '"' + dataCol + '>' + escapeHtml(daysDisplay) + '</td>';
+          }
           return '<td class="' + cls + '"' + dataCol + '>' + (cell != null ? escapeHtml(String(cell)) : 'N/A') + '</td>';
         });
         const checkboxTd = '<td class="offer-checkbox-cell"><input type="checkbox" class="offer-checkbox" aria-label="Select offer"></td>';
-        const logoSlug = (row.shared && row.shared.logo) ? String(row.shared.logo).trim() : (row.bankSlug || '');
-        const logoHtml = logoSlug ? '<img class="lender-logo" src="/api/logo/' + escapeHtml(logoSlug) + '" alt="" role="presentation">' : '';
-        return '<tr class="' + trClass.trim() + '"><td class="bank-name-cell" data-details-bank="' + escapeHtml(bankName) + '"><button type="button" class="lender-name view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(bankName) + '</button>' + logoHtml + '</td><td class="sector-name-cell" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(sector) + '</td>' + checkboxTd + tds.join('') + '</tr>';
+        return '<tr class="' + trClass.trim() + '"><td class="bank-name-cell" data-details-bank="' + escapeHtml(bankName) + '"><button type="button" class="lender-name view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(bankName) + '</button></td><td class="sector-name-cell" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(sector) + '</td>' + checkboxTd + tds.join('') + '</tr>';
       });
       resultsBody.innerHTML = tableRows.join('');
       const byExactKey = new Map();
@@ -3575,7 +3590,9 @@
             const isChangedCell = previousCellValue != null && previousCellValue !== comparableCells[cellIdx];
             const cls = typeof cell === 'number' ? 'num' : '';
             if (cell && typeof cell === 'object' && cell.kind === 'interestAudience') {
-              const rate = escapeHtml(cell.rate || 'N/A');
+              const rawRate = cell.rate || 'N/A';
+              const rateDisplay = rawRate === 'N/A' ? 'N/A' : (String(rawRate).trim().endsWith('%') ? String(rawRate) : String(rawRate) + '%');
+              const rate = escapeHtml(rateDisplay);
               const audience = escapeHtml(cell.audience || 'N/A');
               const audienceTooltip = getAudienceTooltip(cell.audience);
               const sortValue = Number.isFinite(cell.rateNumber) ? String(cell.rateNumber) : '';
@@ -3592,6 +3609,37 @@
               const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
               return `<td class="${cellClass}"${dataCol}><button type="button" class="listed-universities-trigger" data-listed-bank="${bank}" data-listed-criteria="${criteria}">${label}</button></td>`;
             }
+            if (columnName === 'Repayment Tenure' && (cell == null || typeof cell !== 'object')) {
+              const tenureDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().toLowerCase().endsWith('yrs') ? String(cell) : String(cell) + ' yrs');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"${dataCol}>${escapeHtml(tenureDisplay)}</td>`;
+            }
+            if (columnName === 'Margin (%)' && (cell == null || typeof cell !== 'object')) {
+              const marginDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().endsWith('%') ? String(cell) : String(cell) + '%');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"${dataCol}>${escapeHtml(marginDisplay)}</td>`;
+            }
+            if (columnName === 'Age' && (cell == null || typeof cell !== 'object')) {
+              const ageDisplay = (cell == null || cell === 'N/A') ? 'N/A' : (String(cell).trim().toLowerCase().endsWith('yrs') || String(cell).trim().toLowerCase().endsWith('yrs.') ? String(cell) : String(cell) + ' yrs.');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"${dataCol}>${escapeHtml(ageDisplay)}</td>`;
+            }
+            if (columnName === 'Delayed EMI payment' && (cell == null || typeof cell !== 'object')) {
+              const overdueDisplay = (cell == null || cell === 'N/A') ? 'N/A' : String(cell).replace(/%(?! p\.m\.)/g, '% p.m.');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"${dataCol}>${escapeHtml(overdueDisplay)}</td>`;
+            }
+            if (columnName === 'Avg time to sanction' && (cell == null || typeof cell !== 'object')) {
+              if (cell == null || cell === 'N/A') {
+                const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+                return `<td class="${cellClass}"${dataCol}>N/A</td>`;
+              }
+              const raw = String(cell);
+              const trimmedLower = raw.trim().toLowerCase();
+              const daysDisplay = (!/^\d/.test(trimmedLower) || trimmedLower.includes('day')) ? raw : (raw + ' days');
+              const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
+              return `<td class="${cellClass}"${dataCol}>${escapeHtml(daysDisplay)}</td>`;
+            }
             const cellClass = [cls, isChangedCell ? 'changed-cell' : ''].filter(Boolean).join(' ');
             return `<td class="${cellClass}"${dataCol}>${cell ?? 'N/A'}</td>`;
           }).join('');
@@ -3601,9 +3649,7 @@
           if (isFirst) trClass = ' bank-group-first';
           if (isLast) trClass += ' bank-group-last';
           if (isFirst) {
-            const logoSlug = (group[0].shared && group[0].shared.logo) ? String(group[0].shared.logo).trim() : (group[0].bankSlug || '');
-            const logoHtml = logoSlug ? '<img class="lender-logo" src="/api/logo/' + escapeHtml(logoSlug) + '" alt="" role="presentation">' : '';
-            return '<tr class="bank-block' + trClass + '"><td rowspan="' + n + '" class="bank-name-cell" data-details-bank="' + escapeHtml(bankName) + '"><button type="button" class="lender-name view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(bankName) + '</button>' + logoHtml + '</td><td rowspan="' + n + '" class="sector-name-cell" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(sector) + '</td>' + checkboxTd + tds + '</tr>';
+            return '<tr class="bank-block' + trClass + '"><td rowspan="' + n + '" class="bank-name-cell" data-details-bank="' + escapeHtml(bankName) + '"><button type="button" class="lender-name view-details-trigger" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(bankName) + '</button></td><td rowspan="' + n + '" class="sector-name-cell" data-details-bank="' + escapeHtml(bankName) + '">' + escapeHtml(sector) + '</td>' + checkboxTd + tds + '</tr>';
           }
           return '<tr class="bank-block' + trClass + '">' + checkboxTd + tds + '</tr>';
         });
