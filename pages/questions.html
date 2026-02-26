@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>See what fits you – Apply Only Once</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main>
+    <h1>See what fits you by answering 6 questions</h1>
+    <p class="page-intro">Takes about 20 seconds. No documents needed. We'll match you with banks that fit your profile.</p>
+    <form id="questions-form" data-testid="questions-form">
+      <div class="card mb-2">
+        <label for="q1">1. Where are you planning to study?</label>
+        <select id="q1" name="q1" required data-testid="q1">
+          <option value="">Select an option</option>
+          <option value="India">India</option>
+          <option value="Abroad">Abroad</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+      </div>
+      <div class="card mb-2">
+        <label for="q2">2. Which level of study are you planning?</label>
+        <select id="q2" name="q2" required data-testid="q2">
+          <option value="">Select an option</option>
+          <option value="Indian school education(10+2)">Indian school education(10+2)</option>
+          <option value="Undergraduate / Bachelors">Undergraduate / Bachelors</option>
+          <option value="Postgraduate / Masters">Postgraduate / Masters</option>
+          <option value="Doctoral / Doctorate / PhD, DPhil">Doctoral / Doctorate / PhD, DPhil</option>
+          <option value="Professional or Technical courses / diploma / certification">Professional or Technical courses / diploma / certification</option>
+          <option value="Executive / part time program">Executive / part time program</option>
+          <option value="Vocational training & Skill development courses">Vocational training & Skill development courses</option>
+        </select>
+      </div>
+      <div class="card mb-2">
+        <label for="q3">3. What is the required loan amount range?</label>
+        <p class="text-secondary">(includes tuition fees, course related fees, living expenses & others)</p>
+        <select id="q3" name="q3" required data-testid="q3">
+          <option value="">Select an option</option>
+          <option value="Up to Rs. 7.50 lakhs">Up to Rs. 7.50 lakhs</option>
+          <option value="Rs. 7.50 lakhs - Rs. 30 lakhs">Rs. 7.50 lakhs - Rs. 30 lakhs</option>
+          <option value="Rs. 30 lakhs - Rs. 50 lakhs">Rs. 30 lakhs - Rs. 50 lakhs</option>
+          <option value="Above 50 lakhs">Above 50 lakhs</option>
+        </select>
+      </div>
+      <div class="card mb-2">
+        <label for="q4">4. Who will be the co-applicant?</label>
+        <p class="text-secondary">(Co-applicant should have a strong financial background)</p>
+        <select id="q4" name="q4" required data-testid="q4">
+          <option value="">Select an option</option>
+          <option value="Parents">Parents</option>
+          <option value="Siblings">Siblings</option>
+          <option value="Blood relative of the family">Blood relative of the family</option>
+          <option value="Legal guardian">Legal guardian</option>
+        </select>
+      </div>
+      <div class="card mb-2">
+        <label for="q5">5. Do you have collateral for the loan?</label>
+        <p class="text-secondary">(Adding collateral can reduce the interest rate by ~1.5%)</p>
+        <select id="q5" name="q5" required data-testid="q5">
+          <option value="">Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+          <option value="Not sure">Not sure</option>
+        </select>
+      </div>
+      <div class="card mb-2">
+        <label for="q6">6. Have you received the admit / offer letter?</label>
+        <p class="text-secondary">(Includes conditional admit / offer letter)</p>
+        <select id="q6" name="q6" required data-testid="q6">
+          <option value="">Select an option</option>
+          <option value="Yes">Yes</option>
+          <option value="Not yet">Not yet</option>
+        </select>
+      </div>
+      <div class="mb-2">
+        <button type="submit" class="btn btn-primary" data-testid="btn-submit-questions">See what fits you</button>
+      </div>
+    </form>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="../js/app.js"></script>
+  <script src="../js/questions.js"></script>
+</body>
+</html>
